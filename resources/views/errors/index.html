@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Booking Form</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      height: 100vh;
+    }
+
+    .room-field {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 12px;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .room-label {
+      min-width: 80px;
+      font-size: 12px;
+      color: #555;
+      text-align: center;
+    }
+
+    .room-counter {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+    }
+
+    .counter-button {
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background: #f9f9f9;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .counter-button:hover {
+      background: #e5e5e5;
+    }
+
+    .counter-input {
+      width: 40px;
+      text-align: center;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 4px;
+      font-size: 12px;
+    }
+
+    .field-info {
+      font-size: 10px;
+      color: #777;
+    }
+
+    .room-container {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .room-item {
+      flex: 1 1 calc(25% - 12px);
+      min-width: 120px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .remove-room-button {
+      background-color: #e57373;
+      color: white;
+      padding: 4px 10px;
+      font-size: 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background-color 0.2s;
+    }
+
+    .remove-room-button:hover {
+      background-color: #f44336;
+    }
+  </style>
+</head>
+<body class="bg-light d-flex justify-content-center align-items-center">
+
+<div class="bg-white shadow-lg rounded-lg p-4 w-100 h-95 overflow-auto">
+  <h2 class="text-lg font-semibold text-center mb-4 text-dark">Fill in Your Details</h2>
+  
+  <form id="bookingForm" class="space-y-4">
+    <!-- Departure City -->
+    <div class="mb-3">
+      <label for="departureCity" class="form-label text-muted">Departure City</label>
+      <select id="departureCity" class="form-select form-select-sm">
+        <option selected>Delhi</option>
+        <option>Mumbai</option>
+        <option>Bangalore</option>
+      </select>
+    </div>
+
+    <!-- Tour Type -->
+    <div class="mb-3">
+      <label for="tourType" class="form-label text-muted">Tour Type</label>
+      <select id="tourType" class="form-select form-select-sm">
+        <option selected>Standard</option>
+        <option>Deluxe</option>
+        <option>Luxury</option>
+      </select>
+    </div>
+
+    <!-- Rooms Section -->
+    <div id="roomsContainer">
+      <!-- Room 1 -->
+      <div class="p-2 bg-light rounded mb-3 room" id="room1">
+        <h3 class="font-weight-bold text-muted mb-2">Room 1</h3>
+        <div class="room-container">
+          <!-- Adults -->
+          <div class="room-item">
+            <span class="room-label">Adults (12+ yrs)</span>
+            <div class="room-counter">
+              <button type="button" class="counter-button" onclick="updateCounter(this, -1)">-</button>
+              <input type="number" name="adults[]" value="2" min="0" max="10" required class="counter-input">
+              <button type="button" class="counter-button" onclick="updateCounter(this, 1)">+</button>
+            </div>
+          </div>
+
+          <!-- Children with bed -->
+          <div class="room-item">
+            <span class="room-label">Children <span class="field-info">(with bed)</span></span>
+            <div class="room-counter">
+              <button type="button" class="counter-button" onclick="updateCounter(this, -1)">-</button>
+              <input type="number" name="childWithBed[]" value="1" min="0" max="10" required class="counter-input">
+              <button type="button" class="counter-button" onclick="updateCounter(this, 1)">+</button>
+            </div>
+          </div>
+
+          <!-- Children without bed -->
+          <div class="room-item">
+            <span class="room-label">Children <span class="field-info">(without bed)</span></span>
+            <div class="room-counter">
+              <button type="button" class="counter-button" onclick="updateCounter(this, -1)">-</button>
+              <input type="number" name="childWithoutBed[]" value="1" min="0" max="10" required class="counter-input">
+              <button type="button" class="counter-button" onclick="updateCounter(this, 1)">+</button>
+            </div>
+          </div>
+
+          <!-- Infants -->
+          <div class="room-item">
+            <span class="room-label">Infants (0-2 yrs)</span>
+            <div class="room-counter">
+              <button type="button" class="counter-button" onclick="updateCounter(this, -1)">-</button>
+              <input type="number" name="infants[]" value="0" min="0" max="10" required class="counter-input">
+              <button type="button" class="counter-button" onclick="updateCounter(this, 1)">+</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add Room Button -->
+    <button type="button" id="addRoomBtn" class="w-100 btn btn-outline-secondary text-muted py-2">
+      + Add Room
+    </button>
+
+    <!-- Date of Travel -->
+    <div class="mb-3">
+      <label for="travelDate" class="form-label text-muted">Date of Travel</label>
+      <input type="date" id="travelDate" value="2024-12-28" class="form-control form-control-sm">
+    </div>
+
+    <!-- Contact Details -->
+    <div class="mb-3">
+      <label class="form-label text-muted">Contact Details</label>
+      <div class="d-flex gap-2">
+        <input type="tel" placeholder="Mobile" class="form-control form-control-sm">
+        <input type="email" placeholder="Email" class="form-control form-control-sm">
+      </div>
+    </div>
+
+    <!-- Privacy Policy -->
+    <div class="form-check">
+      <input id="terms" type="checkbox" required class="form-check-input">
+      <label for="terms" class="form-check-label text-muted">
+        I accept the <a href="#" class="text-primary">Privacy Policy</a> &amp; <a href="#" class="text-primary">Terms & Conditions</a>.
+      </label>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" class="w-100 btn btn-primary mt-4 py-2">
+      Submit
+    </button>
+  </form>
+</div>
+
+<script>
+  let roomCount = 1;
+
+  function updateCounter(button, increment) {
+    const input = button.closest('.room-counter').querySelector('input');
+    let currentValue = parseInt(input.value);
+    currentValue = Math.max(0, currentValue + increment);
+    input.value = currentValue;
+  }
+
+  function removeRoom(roomId) {
+    const roomElement = document.getElementById(`room${roomId}`);
+    roomElement.remove();
+  }
+
+  document.getElementById('addRoomBtn').addEventListener('click', () => {
+    roomCount++;
+
+    const roomContainer = document.getElementById('roomsContainer');
+    const roomHTML = `
+      <div class="p-2 bg-light rounded mb-3 room" id="room${roomCount}">
+        <h3 class="font-weight-bold text-muted mb-2">Room ${roomCount}</h3>
+        <div class="room-container">
+          <!-- Adults -->
+          <div class="room-item">
+            <span class="room-label">Adults (12+ yrs)</span>
+            <div class="room-counter">
+              <button type="button" class="counter-button" onclick="updateCounter(this, -1)">-</button>
+              <input type="number" name="adults[]" value="2" min="0" max="10" required class="counter-input">
+              <button type="button" class="counter-button" onclick="updateCounter(this, 1)">+</button>
+            </div>
+          </div>
+
+          <!-- Children with bed -->
+          <div class="room-item">
+            <span class="room-label">Children <span class="field-info">(with bed)</span></span>
+            <div class="room-counter">
+              <button type="button" class="counter-button" onclick="updateCounter(this, -1)">-</button>
+              <input type="number" name="childWithBed[]" value="1" min="0" max="10" required class="counter-input">
+              <button type="button" class="counter-button" onclick="updateCounter(this, 1)">+</button>
+            </div>
+          </div>
+
+          <!-- Children without bed -->
+          <div class="room-item">
+            <span class="room-label">Children <span class="field-info">(without bed)</span></span>
+            <div class="room-counter">
+              <button type="button" class="counter-button" onclick="updateCounter(this, -1)">-</button>
+              <input type="number" name="childWithoutBed[]" value="1" min="0" max="10" required class="counter-input">
+              <button type="button" class="counter-button" onclick="updateCounter(this, 1)">+</button>
+            </div>
+          </div>
+
+          <!-- Infants -->
+          <div class="room-item">
+            <span class="room-label">Infants (0-2 yrs)</span>
+            <div class="room-counter">
+              <button type="button" class="counter-button" onclick="updateCounter(this, -1)">-</button>
+              <input type="number" name="infants[]" value="0" min="0" max="10" required class="counter-input">
+              <button type="button" class="counter-button" onclick="updateCounter(this, 1)">+</button>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="remove-room-button" onclick="removeRoom(${roomCount})">
+          Remove Room
+        </button>
+      </div>
+    `;
+
+    roomContainer.insertAdjacentHTML('beforeend', roomHTML);
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

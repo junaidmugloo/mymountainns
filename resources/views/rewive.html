@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Review Card with API</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .review-card {
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+    .avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+    }
+    .stars {
+      color: #f1c40f;
+    }
+    .thumbnail {
+      height: 100px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container mt-4" id="reviews-container">
+  <!-- Reviews will be loaded here -->
+</div>
+
+<script>
+  // Your Google Places API key
+  const API_KEY = 'YOUR_API_KEY';
+  const PLACE_ID = 'YOUR_PLACE_ID'; // Replace with your business's place ID
+
+  // Fetch reviews from Google Places API
+  fetch(`https://maps.googleapis.com/maps/api/place/details/json?place_id=${PLACE_ID}&fields=reviews,photos,rating&key=${API_KEY}`)
+    .then(response => response.json())
+    .then(data => {
+      const reviews = data.result.reviews;
+      const reviewsContainer = document.getElementById('reviews-container');
+
+      reviews.forEach(review => {
+        const reviewerName = review.author_name;
+        const reviewText = review.text;
+        const rating = review.rating;
+        const time = new Date(review.time * 1000).toLocaleDateString();
+        const reviewerProfile = review.profile_photo_url;
+        const reviewImages = [];  // You can replace this with real images if the API provides them
+
+        let starsHtml = '';
+        for (let i = 0; i < rating; i++) {
+          starsHtml += '⭐';
+        }
+
+        // Create a new review card
+        const reviewCard = `
+          <div class="review-card">
+            <div class="d-flex">
+              <img src="${reviewerProfile}" class="avatar me-3" alt="Reviewer Avatar">
+              <div>
+                <h5>${reviewerName}</h5>
+                <small>Reviewed: ${time}</small>
+                <div class="stars">${starsHtml}</div>
+              </div>
+            </div>
+            <p class="mt-3">${reviewText}</p>
+            <div class="row mt-3">
+              <div class="col-3">
+                <img src="https://via.placeholder.com/150" class="img-fluid thumbnail" alt="Review Image 1">
+              </div>
+              <div class="col-3">
+                <img src="https://via.placeholder.com/150" class="img-fluid thumbnail" alt="Review Image 2">
+              </div>
+              <div class="col-3">
+                <img src="https://via.placeholder.com/150" class="img-fluid thumbnail" alt="Review Image 3">
+              </div>
+              <div class="col-3 position-relative">
+                <img src="https://via.placeholder.com/150" class="img-fluid thumbnail" alt="Review Image 4">
+                <div class="position-absolute top-50 start-50 translate-middle text-center">
+                  <span style="background-color: rgba(0, 0, 0, 0.7); color: white; padding: 5px 10px; border-radius: 5px;">+28</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+
+        // Append the review card to the container
+        reviewsContainer.innerHTML += reviewCard;
+      });
+    })
+    .catch(error => console.error('Error fetching reviews:', error));
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
