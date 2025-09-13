@@ -1315,7 +1315,7 @@
                     </h2>
                 </div>
                 <div class="testimonial-wrapper">
-                    <div class="swiper testimonial-slider">
+                    {{-- <div class="swiper testimonial-slider">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="testimonial-card-items">
@@ -1415,7 +1415,10 @@
                             <button class="array-prevs">Previews</button>
                             <button class="array-nexts">Next</button>
                         </div>
-                    </div>
+                    </div> --}}
+                    <!-- Elfsight Google Reviews | Untitled Google Reviews -->
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<div class="elfsight-app-e7459153-25bb-40d1-acc5-014653ed396b" data-elfsight-app-lazy></div>
                 </div>
             </div>
         </section>
