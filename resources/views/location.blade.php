@@ -191,7 +191,7 @@
         </div>
         
         <!-- breadcrumb-wrappe-Section Start -->
-        <section class="breadcrumb-wrapper fix bg-cover" style="background-image: url(/mymountains/mymountains/assets/img/breadcrumb/breadcrumb.jpg);">
+        <section class="breadcrumb-wrapper fix bg-cover" style="background-image: url(/mymountains/assets/img/breadcrumb/breadcrumb.jpg);">
             <div class="container">
                 <div class="row">
                     <div class="page-heading">
