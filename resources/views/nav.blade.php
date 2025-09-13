@@ -132,13 +132,6 @@
 <script src="https://elfsightcdn.com/platform.js" async></script>
 <div class="elfsight-app-31a13f8f-ab8f-47d6-9f95-21def2003318" data-elfsight-app-lazy></div>
 
-<style>
-    .scrollable-container__ScrollableContainer-sc-4a637efc-0 
-    {
-
-        display: none !important;
-    }
-</style>
 
 <!-- Elfsight AI Chatbot | Untitled AI Chatbot -->
 <script src="https://elfsightcdn.com/platform.js" async></script>
