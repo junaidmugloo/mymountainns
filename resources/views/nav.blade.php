@@ -60,7 +60,7 @@
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="{{ url("about.html") }}">About Us</a>
+                                            <a href="{{ url("/about") }}">About Us</a>
                                         </li>
                                         <li>
                                             <a href="{{ url("destination-details.html") }}">
