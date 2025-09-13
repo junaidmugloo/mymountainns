@@ -107,14 +107,14 @@
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="{{ url("contact.html") }}">Contact Us</a>
+                                            <a href="{{ url("/location") }}">Contact Us</a>
                                         </li>
                                     </ul>
                                 </nav>
                             </div>
                         </div>
                         <a href="{{ url("#0") }}" class="search-trigger search-icon"><i class="fa-regular fa-magnifying-glass"></i></a>
-                        <a href="{{ url("contact.html") }}" class="theme-btn"> Request A Quote <i class="fa-sharp fa-regular fa-arrow-right"></i></a>
+                        <a href="javascript:void(0)" class="theme-btn"> Request A Quote <i class="fa-sharp fa-regular fa-arrow-right"></i></a>
                         <div class="header__hamburger d-xl-none my-auto">
                             <div class="sidebar__toggle">
                                 <i class="fas fa-bars"></i>

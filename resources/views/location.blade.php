@@ -1,238 +1,366 @@
 <!DOCTYPE html>
 <html lang="en">
+    <!--<< Header Area >>-->
+    
+<!-- Mirrored from ex-coders.com/html/turmet/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 08 Apr 2025 11:50:41 GMT -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    <script src="//code.tidio.co/eye9m7vzljzjpbpghjztcb5n5gijce8m.js" async></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script defer async src='https://cdn.trustindex.io/loader-cert.js?eed023d320640557fc762481dfd'></script>
+        <!-- ========== Meta Tags ========== -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="pixel-drop">
+        <meta name="description" content="Turmet - Travel & Tour Agency HTML Template">
+        <!-- ======== Page title ============ -->
+        <title>My Mountains</title>
+        <!--<< Favcion >>-->
+        <link rel="shortcut icon" href="{{ asset("/mymountains/assets//img/favicon.svg") }}">
+        <!--<< Bootstrap min.css >>-->
+        <link rel="stylesheet" href="{{ asset("/mymountains/assets//css/bootstrap.min.css") }}">
+        <!--<< All Min Css >>-->
+        <link rel="stylesheet" href="{{ asset("/mymountains/assets//css/all.min.css") }}">
+        <!--<< Animate.css >>-->
+        <link rel="stylesheet" href="{{ asset("/mymountains/assets//css/animate.css") }}">
+        <!--<< Magnific Popup.css >>-->
+        <link rel="stylesheet" href="{{ asset("/mymountains/assets//css/magnific-popup.css") }}">
+        <!--<< MeanMenu.css >>-->
+        <link rel="stylesheet" href="{{ asset("/mymountains/assets//css/meanmenu.css") }}">
+        <!--<< Swiper Bundle.css >>-->
+        <link rel="stylesheet" href="{{ asset("/mymountains/assets//css/swiper-bundle.min.css") }}">
+        <!--<< Datepickerboot.css >>-->
+        <link rel="stylesheet" href="{{ asset("/mymountains/assets//css/datepickerboot.css") }}">
+        <!--<< Nice Select.css >>-->
+        <link rel="stylesheet" href="{{ asset("/mymountains/assets//css/nice-select.css") }}">
+        <!--<< Color.css >>-->
+        <link rel="stylesheet" href="{{ asset("/mymountains/assets//css/color.css") }}">
+        <!--<< Main.css >>-->
+        <link rel="stylesheet" href="{{ asset("/mymountains/assets//css/main.css") }}">
+    </head>
+    <body>
 
-    <title>Contact Us</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background: #f0f0f0;
-            font-family: 'Roboto', Arial, sans-serif;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .textcenter {
-            text-align: center;
-        }
-
-        h1 {
-            background: linear-gradient(92deg, #f37022 1.79%, #fcaf17 97.06%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-size: 2.5rem;
-            margin: 20px 0;
-        }
-
-        .seperator {
-            display: inline-block;
-            width: 50px;
-            height: 4px;
-            background: linear-gradient(92deg, #f37022 1.79%, #fcaf17 97.06%);
-            margin: 20px auto;
-        }
-
-        /* Section layout */
-        .section2 {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            margin-top: 25px;
-            gap: 20px;
-        }
-
-        .section2 iframe {
-            flex: 1 1 48%;
-            height: 450px;
-            border: none;
-            border-radius: 10px;
-        }
-
-        .section2 .col2 {
-            flex: 1 1 48%;
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .sec2addr p {
-            margin-bottom: 15px;
-            color: #555;
-        }
-
-        .sec2addr .collig {
-            font-weight: bold;
-        }
-
-        /* Contact form styling */
-        .sec2contactform h3 {
-            font-size: 1.5rem;
-            background: linear-gradient(92deg, #f37022 1.79%, #fcaf17 97.06%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
-        }
-
-        .sec2contactform form input,
-        .sec2contactform form textarea {
-            width: 100%;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            font-size: 1rem;
-        }
-
-        .sec2contactform form input[type="submit"] {
-              background: linear-gradient(92deg, #f37022 1.79%, #fcaf17 97.06%);
-          
-            color: #fff;
-            cursor: pointer;
-            border: none;
-            transition: background 0.3s;
-        }
-
-        .sec2contactform form input[type="submit"]:hover {
-            background: linear-gradient(92deg, #fcaf17  1.79%, #f37022 97.06%);
-        }
-        .section2 iframe{
-            height: auto !important;
-        }
-
-        @media (max-width: 960px) {
-            .section2 {
-                flex-direction: column;
-            }
-
-            .section2 iframe, 
-            .section2 .col2 {
-                flex: 1 1 100%;
-            }
-        }
-
-
-        
-        .HeaderSaleLine_saleIcon__pwEFh {
-         animation: HeaderSaleLine_animateIconMobile__CTSdx 2.5s linear infinite; 
-    }
-
-
-.HeaderSaleLine_saleIcon__pwEFh {
-    display: flex; 
-     animation: HeaderSaleLine_animateIcon__69qO3 4s linear infinite; 
-}
-@media (max-width: 768px) {
-            .ext, .ext2 {
-                font-size: 45px;
-                line-height: 55px;
-            }
-            #glob{
-                display: none;
-            }
-            .fxs{
-                font-size: 0.8rem;
-            }
-        }
-  @keyframes HeaderSaleLine_animateIcon__69qO3{
-    0% {
-    transform: translateX(0);
-    opacity: .01;
-}
-25% {
-    transform: translateX(30vw);
-    opacity: 1;
-}
-
-100% {
-    transform: translateX(35vw);
-    opacity: 0;
-}
-/* 100% {
-    transform: translateX(100vw);
-    opacity: .01;
-} */
-  }
-
-    </style>
-</head>
-<body>
-    <div class="fxs w-100 d-flex fixed-top mb-5 p-1" style=" background: linear-gradient(93deg, #ff7b26, #ec048c);">
-        <svg class="HeaderSaleLine_saleIcon__pwEFh" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M24 0H14.5L5 38H14.5L24 0Z" fill="white" fill-opacity="0.5"></path><path d="M12 0H9.95238L0 38H2.04762L12 0Z" fill="white" fill-opacity="0.5"></path></svg>
-        <a href="tel://7889604545" class="text-light" style="text-decoration: none;"><i class="fa-solid fa-phone"></i> +91-7889-604545</a> <b class="text-light"> &nbsp; &nbsp;|&nbsp; &nbsp;</b>
-        <a href="mailto:joytravelkashmir@gmail.com" style="text-decoration: none;" class="text-light"><i class="fa-solid fa-envelope"></i> joytravelkashmir@gmail.com</a>
-        {{-- <div id="google_translate_element"></div> --}}
-        
-    
-    
-    
-    
-    
-    
-    
-        
-    </div>
-    <div class="container">
-        <div class="textcenter">
-            <h1>Contact Us</h1>
-            <div class="seperator"></div>
+        <!-- Preloader Start -->
+       <div id="preloader" class="preloader">
+            <div class="animation-preloader">
+                <div class="spinner">                
+                </div>
+                <div class="txt-loading">
+                    <span data-text-preloader="M" class="letters-loading">
+                        M
+                    </span>
+                    <span data-text-preloader="o" class="letters-loading">
+                        o
+                    </span>
+                    <span data-text-preloader="u" class="letters-loading">
+                        u
+                    </span>
+                    <span data-text-preloader="n" class="letters-loading">
+                        n
+                    </span>
+                    <span data-text-preloader="t" class="letters-loading">
+                        t
+                    </span>
+                    <span data-text-preloader="a" class="letters-loading">
+                        a
+                    </span>
+                    <span data-text-preloader="i" class="letters-loading">
+                        i
+                    </span>
+                    <span data-text-preloader="n" class="letters-loading">
+                        n
+                    </span>
+                    <span data-text-preloader="s" class="letters-loading">
+                        s
+                    </span>
+                </div>
+                <p class="text-center">Loading</p>
+            </div>
+            <div class="loader">
+                <div class="row">
+                    <div class="col-3 loader-section section-left">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-left">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-right">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-right">
+                        <div class="bg"></div>
+                    </div>
+                </div>
+            </div>
         </div>
+        
+         <!-- Back To Top Start -->
+         <button id="back-top" class="back-to-top">
+            <i class="fa-regular fa-arrow-up"></i>
+        </button>
 
-        <div class="section2">
-            <!-- Google Maps Embed -->
-            <iframe class="sec2addr"  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3304.228778840373!2d74.79874257441763!3d34.089279215776024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e18559d000005b%3A0xa9016ec0314eb984!2sJoy%20Tour%20and%20Travels%20(Kashmir)!5e0!3m2!1sen!2sin!4v1724304113982!5m2!1sen!2sin">
-            </iframe>
+        <!--<< Mouse Cursor Start >>-->  
+        <div class="mouse-cursor cursor-outer"></div>
+        <div class="mouse-cursor cursor-inner"></div>
 
-            <!-- Contact Information -->
-            <div class="col2">
-                
+        <!-- Offcanvas Area Start -->
+        <div class="fix-area">
+            <div class="offcanvas__info">
+                <div class="offcanvas__wrapper">
+                    <div class="offcanvas__content">
+                        <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
+                            <div class="offcanvas__logo">
+                                <a href="{{ url("index.html") }}">
+                                    <img src="{{ asset("/mymountains/assets//img/logo/black-logo.svg") }}" alt="logo-img">
+                                </a>
+                            </div>
+                            <div class="offcanvas__close">
+                                <button>
+                                <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <p class="text d-none d-xl-block">
+                            Nullam dignissim, ante scelerisque the  is euismod fermentum odio sem semper the is erat, a feugiat leo urna eget eros. Duis Aenean a imperdiet risus.
+                        </p>
+                        <div class="mobile-menu fix mb-3"></div>
+                        <div class="offcanvas__contact">
+                            <h4>Contact Info</h4>
+                            <ul>
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon">
+                                        <i class="fal fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-text">
+                                        <a target="_blank" href="{{ url("#") }}">Main Street, Melbourne, Australia</a>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon mr-15">
+                                        <i class="fal fa-envelope"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-text">
+                                        <a href="{{ url("mailto:info@mymountains.in") }}"><span class="mailto:info@mymountains.in">info@mymountains.in</span></a>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon mr-15">
+                                        Main Chowk, Nawab Bazaar, Srinagar             <i class="fal fa-clock"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-text">
+                                        <a target="_blank" href="{{ url("#") }}">Mod-friday, 09am -05pm</a>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon mr-15">
+                                        <i class="far fa-phone"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-text">
+                                        <a href="{{ url("tel:+11002345909") }}">+91-9906786356</a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="header-button mt-4">
+                                <a href="{{ url("contact.html") }}" class="theme-btn"> Request A Quote <i class="fa-sharp fa-regular fa-arrow-right"></i></a>
+                            </div>
+                            <div class="social-icon d-flex align-items-center">
+                                <a href="{{ url("#") }}"><i class="fab fa-facebook-f"></i></a>
+                                <a href="{{ url("#") }}"><i class="fab fa-twitter"></i></a>
+                                <a href="{{ url("#") }}"><i class="fab fa-youtube"></i></a>
+                                <a href="{{ url("#") }}"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="offcanvas__overlay"></div>
 
-                <!-- Contact Form -->
-                <div class="sec2contactform">
-                    <h3>Want to Know More? Drop Us a Mail</h3>
-                    <form action="">
-                        <input type="text" placeholder="First Name" required>
-                        <input type="text" placeholder="Last Name" required>
-                        <input type="email" placeholder="Email" required>
-                        <input type="text" placeholder="Contact Number" required>
-                        <textarea name="message" placeholder="Your message here..." rows="5" required></textarea>
-                        <input type="submit" value="Send">
+        <!-- Header Section Start -->
+       @include('nav')
+
+        <!-- Search Area Start -->
+        <div class="search-wrap">
+            <div class="search-inner">
+                <i class="fas fa-times search-close" id="search-close"></i>
+                <div class="search-cell">
+                    <form method="get">
+                        <div class="search-field-holder">
+                            <input type="search" class="main-search-input" placeholder="Search...">
+                        </div>
                     </form>
                 </div>
             </div>
         </div>
-    </div>
-    @include('footer')
-</body>
+        
+        <!-- breadcrumb-wrappe-Section Start -->
+        <section class="breadcrumb-wrapper fix bg-cover" style="background-image: url(/mymountains/mymountains/assets//img/breadcrumb/breadcrumb.jpg);">
+            <div class="container">
+                <div class="row">
+                    <div class="page-heading">
+                        <h2>Contact Us</h2>
+                        <ul class="breadcrumb-list">
+                            <li>
+                                <a href="{{ url("index.html") }}">Home</a>
+                            </li>
+                            <li><i class="fa-solid fa-chevrons-right"></i></li>
+                            <li>Contact Us</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!-- Contact-us Section Start -->
+        <section class="contact-us-section fix section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="contact-us-main">
+                            <div class="contact-box-items">
+                                <div class="icon">
+                                    <img src="{{ asset("/mymountains/assets//img/icon/18.svg") }}" alt="img">
+                                </div>
+                                <div class="content">
+                                    <h3>
+                                        Our Address
+                                    </h3>
+                                    <p>
+                                        Main Chowk, Nawab Bazaar, Srinagar
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="contact-us-main style-2">
+                            <div class="contact-box-items">
+                                <div class="icon">
+                                    <img src="{{ asset("/mymountains/assets//img/icon/19.svg") }}" alt="img">
+                                </div>
+                                <div class="content">
+                                    <h3>
+                                        <a href="{{ url("mailto:info@tripco.com") }}">info@mymountains.in</a>
+                                    </h3>
+                                    <p>
+                                        Email us anytime for anykind <br> ofquety.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="contact-us-main">
+                            <div class="contact-box-items">
+                                <div class="icon">
+                                    <img src="{{ asset("/mymountains/assets//img/icon/20.svg") }}" alt="img">
+                                </div>
+                                <div class="content">
+                                    <h3>
+                                        <a href="{{ url("tel:Hot+208-666-0112") }}">+91-9906786356</a>
+                                    </h3>
+                                    <p>
+                                        Call us any kind suppor,we will wait for it.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </section>
+
+         <!-- Contact-us Section-2 Start -->
+         <section class="contact-us-section-2 section-bg-2 fix">
+            <div class="container">
+                <div class="contact-us-wrapper">
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <div class="contact-us-contact">
+                                <div class="section-title">
+                                    <span class="sub-title text-white wow fadeInUp">
+                                        Contact us
+                                    </span>
+                                    <h2 class=" text-white wow fadeInUp wow" data-wow-delay=".2s">
+                                        Send Message Anytime
+                                    </h2>
+                                </div>
+                                <div class="comment-form-wrap">
+                                    <form action="#" id="contact-form" method="POST">
+                                        <div class="row g-4">
+                                            <div class="col-lg-6">
+                                                <div class="form-clt">
+                                                    <input type="text" name="name" id="name" placeholder="Your Name">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="form-clt">
+                                                    <input type="text" name="email" id="email4" placeholder="Your Email">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="form-clt">
+                                                    <select class="country-select" style="display: none;">
+                                                        <option value="Residential">Real Estate</option>
+                                                        <option value="01">01</option>
+                                                        <option value="02">02</option>
+                                                     </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="form-clt">
+                                                    <textarea name="message" id="message" placeholder="Your Message"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <button type="submit" class="theme-btn">
+                                                    Submit Massage
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="map-area">
+                                <div class="google-map">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6678.7619084840835!2d144.9618311901502!3d-37.81450084255415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642b4758afc1d%3A0x3119cc820fdfc62e!2sEnvato!5e0!3m2!1sen!2sbd!4v1641984054261!5m2!1sen!2sbd" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </section>
+
+       <!-- Footer Section Start -->
+       @include('footer')
+
+        <!--<< All JS Plugins >>-->
+        <script src="{{ asset("/mymountains/assets//js/jquery-3.7.1.min.js") }}"></script>
+        <!--<< Viewport Js >>-->
+        <script src="{{ asset("/mymountains/assets//js/viewport.jquery.js") }}"></script>
+        <!--<< Bootstrap Js >>-->
+        <script src="{{ asset("/mymountains/assets//js/bootstrap.bundle.min.js") }}"></script>
+        <!--<< nice-selec Js >>-->
+        <script src="{{ asset("/mymountains/assets//js/jquery.nice-select.min.js") }}"></script>
+        <!--<< Waypoints Js >>-->
+        <script src="{{ asset("/mymountains/assets//js/jquery.waypoints.js") }}"></script>
+        <!--<< Counterup Js >>-->
+        <script src="{{ asset("/mymountains/assets//js/jquery.counterup.min.js") }}"></script>
+        <!--<< Swiper Slider Js >>-->
+        <script src="{{ asset("/mymountains/assets//js/swiper-bundle.min.js") }}"></script>
+        <!--<< MeanMenu Js >>-->
+        <script src="{{ asset("/mymountains/assets//js/jquery.meanmenu.min.js") }}"></script>
+        <!--<< Magnific Popup Js >>-->
+        <script src="{{ asset("/mymountains/assets//js/jquery.magnific-popup.min.js") }}"></script>
+        <!--<< Wow Animation Js >>-->
+        <script src="{{ asset("/mymountains/assets//js/wow.min.js") }}"></script>
+         <!--<< Datepicker Js >>-->
+         <script src="{{ asset("/mymountains/assets//js/bootstrap-datepicker.js") }}"></script>
+        <!--<< Ajax Mail Js >>-->
+        <script src="{{ asset("/mymountains/assets//js/ajax-mail.js") }}"></script>
+        <!--<< Main.js >>-->
+        <script src="{{ asset("/mymountains/assets//js/main.js") }}"></script>
+    </body>
+
+<!-- Mirrored from ex-coders.com/html/turmet/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 08 Apr 2025 11:50:43 GMT -->
 </html>
