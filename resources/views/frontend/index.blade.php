@@ -238,7 +238,7 @@
                                                         <img src="{{ asset("mymountains/assets/img/hero/icon-3.png") }}" alt="img">
                                                     </div>
                                                     <div class="content">
-                                                        <h6>Activate Day</h6>
+                                                        <h6>Travel Date</h6>
                                                         <div class="form-clt">
                                                             <input type="date" id="date1" name="date1">
                                                         </div>
@@ -260,7 +260,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <button class="theme-btn" type="submit">Search</button>
+                                                <button class="theme-btn" type="submit">Submit</button>
                                             </div>
                                         </div>
                                         <div class="counter-area">
