@@ -131,3 +131,8 @@
 <!-- Elfsight WhatsApp Chat | Untitled WhatsApp Chat -->
 <script src="https://elfsightcdn.com/platform.js" async></script>
 <div class="elfsight-app-31a13f8f-ab8f-47d6-9f95-21def2003318" data-elfsight-app-lazy></div>
+
+
+<!-- Elfsight AI Chatbot | Untitled AI Chatbot -->
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<div class="elfsight-app-375522b0-6cce-498b-a0a9-b2c0b0a8efaf" data-elfsight-app-lazy></div>
