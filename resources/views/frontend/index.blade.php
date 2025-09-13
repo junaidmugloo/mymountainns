@@ -216,14 +216,9 @@
                                                         <img src="{{ asset("mymountains/assets/img/hero/icon-1.png") }}" alt="img">
                                                     </div>
                                                     <div class="content">
-                                                        <h6>Location</h6>
+                                                        <h6>Enter Name</h6>
                                                         <div class="form">
-                                                            <select class="single-select w-100">
-                                                                <option>Australia</option>
-                                                                <option>India</option>
-                                                                <option>Italy</option>
-                                                                <option>Japan</option>
-                                                            </select>
+                                                            <input type="text" placeholder="Enter Name">
                                                         </div>
                                                     </div>
                                                 </div>
