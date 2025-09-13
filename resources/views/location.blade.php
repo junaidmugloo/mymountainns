@@ -191,7 +191,7 @@
         </div>
         
         <!-- breadcrumb-wrappe-Section Start -->
-        <section class="breadcrumb-wrapper fix bg-cover" style="background-image: url(/mymountains/mymountains/assets//img/breadcrumb/breadcrumb.jpg);">
+        <section class="breadcrumb-wrapper fix bg-cover" style="background-image: url(/mymountains/mymountains/assets/img/breadcrumb/breadcrumb.jpg);">
             <div class="container">
                 <div class="row">
                     <div class="page-heading">
@@ -216,7 +216,7 @@
                         <div class="contact-us-main">
                             <div class="contact-box-items">
                                 <div class="icon">
-                                    <img src="{{ asset("/mymountains/assets//img/icon/18.svg") }}" alt="img">
+                                    <img src="{{ asset("/mymountains/assets/img/icon/18.svg") }}" alt="img">
                                 </div>
                                 <div class="content">
                                     <h3>
@@ -233,7 +233,7 @@
                         <div class="contact-us-main style-2">
                             <div class="contact-box-items">
                                 <div class="icon">
-                                    <img src="{{ asset("/mymountains/assets//img/icon/19.svg") }}" alt="img">
+                                    <img src="{{ asset("/mymountains/assets/img/icon/19.svg") }}" alt="img">
                                 </div>
                                 <div class="content">
                                     <h3>
@@ -250,7 +250,7 @@
                         <div class="contact-us-main">
                             <div class="contact-box-items">
                                 <div class="icon">
-                                    <img src="{{ asset("/mymountains/assets//img/icon/20.svg") }}" alt="img">
+                                    <img src="{{ asset("/mymountains/assets/img/icon/20.svg") }}" alt="img">
                                 </div>
                                 <div class="content">
                                     <h3>
