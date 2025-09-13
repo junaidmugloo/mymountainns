@@ -1,255 +1,735 @@
 <!DOCTYPE html>
 <html lang="en">
-
+    <!--<< Header Area >>-->
+    
+<!-- Mirrored from ex-coders.com/html/turmet/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 08 Apr 2025 11:51:22 GMT -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-    <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
-    <meta name="keywords" content="Kashmir Tour Packages,Joy Tour & Travels">
-    <meta name="author" content="Joy Tour & Travels">
-    <meta name="description" content="Kashmir Tour Packages - Book Kashmir Packages at Best Price with Joy Tour & Travels. Get Best Offers on Kashmir Holiday Packages with Airfare, Hotel and Sightseeing.">
+        <!-- ========== Meta Tags ========== -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="pixel-drop">
+        <meta name="description" content="Turmet - Travel & Tour Agency HTML Template">
+        <!-- ======== Page title ============ -->
+        <title>My Mountains</title>
+        <!--<< Favcion >>-->
+        <link rel="shortcut icon" href="{{ asset("/assets/img/favicon.svg") }}">
+        <!--<< Bootstrap min.css >>-->
+        <link rel="stylesheet" href="{{ asset("/assets/css/bootstrap.min.css") }}">
+        <!--<< All Min Css >>-->
+        <link rel="stylesheet" href="{{ asset("/assets/css/all.min.css") }}">
+        <!--<< Animate.css >>-->
+        <link rel="stylesheet" href="{{ asset("/assets/css/animate.css") }}">
+        <!--<< Magnific Popup.css >>-->
+        <link rel="stylesheet" href="{{ asset("/assets/css/magnific-popup.css") }}">
+        <!--<< MeanMenu.css >>-->
+        <link rel="stylesheet" href="{{ asset("/assets/css/meanmenu.css") }}">
+        <!--<< Swiper Bundle.css >>-->
+        <link rel="stylesheet" href="{{ asset("/assets/css/swiper-bundle.min.css") }}">
+        <!--<< Datepickerboot.css >>-->
+        <link rel="stylesheet" href="{{ asset("/assets/css/datepickerboot.css") }}">
+        <!--<< Nice Select.css >>-->
+        <link rel="stylesheet" href="{{ asset("/assets/css/nice-select.css") }}">
+        <!--<< Color.css >>-->
+        <link rel="stylesheet" href="{{ asset("/assets/css/color.css") }}">
+        <!--<< Main.css >>-->
+        <link rel="stylesheet" href="{{ asset("/assets/css/main.css") }}">
+    </head>
+    <body>
 
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    <script src="//code.tidio.co/eye9m7vzljzjpbpghjztcb5n5gijce8m.js" async></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script defer async src='https://cdn.trustindex.io/loader-cert.js?eed023d320640557fc762481dfd'></script>
-
-    <style>
-
-/* footer css */
-
-
-/* end footer */
-
-
-
-
-
-
-
-        body {
-            font-family: var(--dynamic-font, "Poppins"), Helvetica, sans-serif;
-        }
-
-        .ext {
-            background: linear-gradient(92deg, #f37022 1.79%, #fcaf17 97.06%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-family: Poppins;
-            font-size: 65px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 84px;
-        }
-
-        .about b {
-            text-transform: uppercase;
-            color: #8e8e8e;
-        }
-
-        .about p {
-            color: #202020;
-        }
-
-        .ext2 {
-            color: black;
-            font-family: Poppins;
-            font-size: 65px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 84px;
-        }
-        .ext2 {
-            color: black;
-            font-family: Poppins;
-            font-size: 55px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 84px;
-        }
-
-        @media (max-width: 768px) {
-            .ext, .ext2 {
-                font-size: 45px;
-                line-height: 55px;
-            }
-            #glob{
-                display: none;
-            }
-            .fxs{
-                font-size: 0.8rem;
-            }
-        }
-
-
-
-        .HeaderSaleLine_saleIcon__pwEFh {
-         animation: HeaderSaleLine_animateIconMobile__CTSdx 2.5s linear infinite; 
-    }
-
-
-.HeaderSaleLine_saleIcon__pwEFh {
-    display: flex; 
-     animation: HeaderSaleLine_animateIcon__69qO3 4s linear infinite; 
-}
-
-  @keyframes HeaderSaleLine_animateIcon__69qO3{
-    0% {
-    transform: translateX(0);
-    opacity: .01;
-}
-25% {
-    transform: translateX(30vw);
-    opacity: 1;
-}
-
-100% {
-    transform: translateX(35vw);
-    opacity: 0;
-}
-/* 100% {
-    transform: translateX(100vw);
-    opacity: .01;
-} */
-  }
-
-
-
-  .GradientButton_gradientButtonContainer__2PtZO {
-    display: flex;
-    border-radius: 7px;
-    background: linear-gradient(91deg, #ffba0a, #f37022);
-    box-shadow: 0 0 10px 0 rgba(243, 112, 34, .3);
-    padding: 15px 30px;
-    color: #fff;
-    border: none;
-  }
-    </style>
-</head>
-
-<body>
-    <div class="container-fluid">
-        @include('nav')
-       
-       
+        <!-- Preloader Start -->
+       <div id="preloader" class="preloader">
+            <div class="animation-preloader">
+                <div class="spinner">                
+                </div>
+                <div class="txt-loading">
+                    <span data-text-preloader="M" class="letters-loading">
+                        M
+                    </span>
+                    <span data-text-preloader="o" class="letters-loading">
+                        o
+                    </span>
+                    <span data-text-preloader="u" class="letters-loading">
+                        u
+                    </span>
+                    <span data-text-preloader="n" class="letters-loading">
+                        n
+                    </span>
+                    <span data-text-preloader="t" class="letters-loading">
+                        t
+                    </span>
+                    <span data-text-preloader="a" class="letters-loading">
+                        a
+                    </span>
+                    <span data-text-preloader="i" class="letters-loading">
+                        i
+                    </span>
+                    <span data-text-preloader="n" class="letters-loading">
+                        n
+                    </span>
+                    <span data-text-preloader="s" class="letters-loading">
+                        s
+                    </span>
+                </div>
+                <p class="text-center">Loading</p>
+            </div>
+            <div class="loader">
+                <div class="row">
+                    <div class="col-3 loader-section section-left">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-left">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-right">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-right">
+                        <div class="bg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
         
-        <div class="row about px-5 pt-5">
-            <div class="col-12 col-md-6">
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <b>Joy Tour & Travel</b>
-                <h1 class="ext2">Shaping the</h1>
-                <h1 class="ext">Future Of Travel!</h1>
-                <p>Changing the Way People Travel the World</p>
-                <a href="#abt" style="text-decoration: none;">
-                <button class="GradientButton_gradientButtonContainer__2PtZO">
-                Read more   
-                </button>
-            </a>
-                  
+         <!-- Back To Top Start -->
+         <button id="back-top" class="back-to-top">
+            <i class="fa-regular fa-arrow-up"></i>
+        </button>
+
+        <!--<< Mouse Cursor Start >>-->  
+        <div class="mouse-cursor cursor-outer"></div>
+        <div class="mouse-cursor cursor-inner"></div>
+
+        <!-- Offcanvas Area Start -->
+        <div class="fix-area">
+            <div class="offcanvas__info">
+                <div class="offcanvas__wrapper">
+                    <div class="offcanvas__content">
+                        <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
+                            <div class="offcanvas__logo">
+                                <a href="{{ url("index.html") }}">
+                                    <img src="{{ asset("/assets/img/logo/black-logo.svg") }}" alt="logo-img">
+                                </a>
+                            </div>
+                            <div class="offcanvas__close">
+                                <button>
+                                <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <p class="text d-none d-xl-block">
+                            Nullam dignissim, ante scelerisque the  is euismod fermentum odio sem semper the is erat, a feugiat leo urna eget eros. Duis Aenean a imperdiet risus.
+                        </p>
+                        <div class="mobile-menu fix mb-3"></div>
+                        <div class="offcanvas__contact">
+                            <h4>Contact Info</h4>
+                            <ul>
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon">
+                                        <i class="fal fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-text">
+                                        <a target="_blank" href="{{ url("#") }}">Main Chowk, Nawab Bazaar, Srinagar</a>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon mr-15">
+                                        <i class="fal fa-envelope"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-text">
+                                        <a href="{{ url("mailto:info@mymountains.in") }}"><span class="mailto:info@mymountains.in">info@example.com</span></a>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon mr-15">
+                                        <i class="fal fa-clock"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-text">
+                                        <a target="_blank" href="{{ url("#") }}">Mod-friday, 09am -05pm</a>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon mr-15">
+                                        <i class="far fa-phone"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-text">
+                                        <a href="{{ url("tel:+11002345909") }}">+91-9906786356</a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="header-button mt-4">
+                                <a href="{{ url("contact.html") }}" class="theme-btn"> Request A Quote <i class="fa-sharp fa-regular fa-arrow-right"></i></a>
+                            </div>
+                            <div class="social-icon d-flex align-items-center">
+                                <a href="{{ url("#") }}"><i class="fab fa-facebook-f"></i></a>
+                                <a href="{{ url("#") }}"><i class="fab fa-twitter"></i></a>
+                                <a href="{{ url("#") }}"><i class="fab fa-youtube"></i></a>
+                                <a href="{{ url("#") }}"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-12 col-md-6 mt-4" id="glob">
-                <canvas
-                id="cobe"
-                style="width: 500px; height: 500px"
-                width="800"
-                height="800"
-              ></canvas>
+        </div>
+        <div class="offcanvas__overlay"></div>
+
+        <!-- Header Section Start -->
+       @include('nav')
+
+        <!-- Search Area Start -->
+        <div class="search-wrap">
+            <div class="search-inner">
+                <i class="fas fa-times search-close" id="search-close"></i>
+                <div class="search-cell">
+                    <form method="get">
+                        <div class="search-field-holder">
+                            <input type="search" class="main-search-input" placeholder="Search...">
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
 
-        <div style="background: #f4f6f9" class="mt-5 w-100" id="abt">
-        <h1 class="ext text-center pt-5">About Us</h1>
-        <h1 class="text-center" style="font-weight: bold;font-size:1.2rem;">Welcome to Our Company</h1>
-        <div class="p-5">
-            <p style="text-align:start;color: #515151;font-weight: 400;font-family: Poppins;line-height: 30px;">
+         <!-- breadcrumb-wrappe-Section Start -->
+        <section class="breadcrumb-wrapper fix bg-cover" style="background-image: url(assets/img/breadcrumb/breadcrumb.jpg);">
+            <div class="container">
+                <div class="row">
+                    <div class="page-heading">
+                        <h2>About Us</h2>
+                        <ul class="breadcrumb-list">
+                            <li>
+                                <a href="{{ url("index.html") }}">Home</a>
+                            </li>
+                            <li><i class="fa-solid fa-chevrons-right"></i></li>
+                            <li>About Us</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-              
-                Travel with Joy Tour and Travels - Jammu and Kashmir Travel Packages
-                J
-                oy Tour and Travels - Indian travel agency/tour operators for fulfill your complete travel requirement. Find travel in India, Joy tour and Travels offers you various choices at little amount backed by a good service. We offer you Indian Travel Package, International holidays, flight tickets, Honeymoon Package and several enormous bargains!
-                
-                We are members of Kashmir Tour and Travel Association and approved by Government of Jammu and Kashmir and licensed by Tourism Department of Kashmir. Our made expertise of 28 years and an expert team arrange your vacation during an admirable way. If you're visiting Jammu and Kashmir, our trained team can make sure that you get to explore the Incredible Kashmir, From destinations to holiday to sightseeing, everything are going to be perfectly planned Travel with Joy and obtain your expectations! Joy Travels offer best travel packages to destinations everywhere to Jammu and Kashmir. We have got packages to suit the discerning traveler's budget and savor. Book your dream vacation online. Supported quality and proposals of our travel consultants, we have a tendency to welcome you to decide on from holidays packages and customize them according to your plan.
-                
-                About Us
-                F
-                ounded in 1984 and based in Srinagar India, Joy Tour and Travels is one stop travel house. Joy Travels is not just a name, but it's a commitment. We are a reputed and professionally managed company which has been in the business of Travel & Entertainment and Event Management for over 28 years.
-                
-                Exploring the Jammu and Kashmir can be one of the most rewarding experiences in life. However, planning a trip can be tremendously frustrating especially when one doesn't know where to start. We understand travel needs of all and deliver the best through meticulous planning. Joy Travels brings together a highly trained team of individuals with a combined management experience of over two decades in the travel industry. A team which has the confidence and the expertise to handle the most complex and challenging tasks they are faced with. Our rich experience helps us to understand your needs and give you a product that suits your requirement. Our linkages in the travel domain ensure that we provide our travelers and corporate clients with the best deals.
-                
-                Joy Travels is a member of prestigious trade bodies like Kashmir tour and travel association and Just Dial and approved by Department of Tourism, Government of Jammu and Kashmir.
+        <!-- About-Section Start -->
+        <section class="about-section section-padding fix">
+            <div class="container">
+                <div class="about-wrapper-2">
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <div class="about-image">
+                                <img src="{{ asset("/assets/img/about/03.jpg") }}" alt="img">
+                                <div class="shape-image float-bob-y">
+                                    <img src="{{ asset("/assets/img/about/04.png") }}" alt="img">
+                                </div>
+                                <div class="group-image float-bob-x">
+                                    <img src="{{ asset("/assets/img/about/group.png") }}" alt="img">
+                                </div>
+                                <div class="about-image-2">
+                                    <img src="{{ asset("/assets/img/about/05.jpg") }}" alt="img">
+                                    <div class="plane-shape">
+                                        <img src="{{ asset("/assets/img/about/plane-shape2.png") }}" alt="img">
+                                    </div>
+                                    <div class="circle-image">
+                                        <img src="{{ asset("/assets/img/about/circle.png") }}" alt="img">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="about-content">
+                                <div class="section-title">
+                                    <span class="sub-title wow fadeInUp">
+                                        Get About Us
+                                    </span>
+                                    <h2 class="wow fadeInUp wow" data-wow-delay=".3s">
+                                        We're Strived Only For The
+                                        Best In The World
+                                    </h2>
+                                </div>
+                                <p class="wow fadeInUp wow" data-wow-delay=".5s">
+                                    There are many variations of passages of  available, but the majority have suffered alteration in some form, by injected humour words which don't look even slightly believable injected humour words which
+                                </p>
+                                <div class="about-items wow fadeInUp wow" data-wow-delay=".3s">
+                                    <div class="about-icon-items">
+                                        <div class="icon">
+                                            <img src="{{ asset("/assets/img/check.png") }}" alt="img">
+                                        </div>
+                                        <div class="content">
+                                            <h5>
+                                                Easy Booking <br> System
+                                            </h5>
+                                        </div>
+                                    </div>
+                                    <div class="text">
+                                        <p>
+                                            Our hotel also prides itself on <br> offering exceptional services.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="about-items wow fadeInUp wow" data-wow-delay=".5s">
+                                    <div class="about-icon-items">
+                                        <div class="icon">
+                                            <img src="{{ asset("/assets/img/check.png") }}" alt="img">
+                                        </div>
+                                        <div class="content">
+                                            <h5>
+                                                Easy Booking <br> System
+                                            </h5>
+                                        </div>
+                                    </div>
+                                    <div class="text">
+                                        <p>
+                                            Our hotel also prides itself on <br> offering exceptional services.
+                                        </p>
+                                    </div>
+                                </div>
+                                <a href="{{ url("tour-details.html") }}" class="theme-btn wow fadeInUp wow" data-wow-delay=".7s">Discover More<i class="fa-sharp fa-regular fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            </p>
+        <!-- Travel-Feature-Section Start -->
+        <section class="travel-feature-section section-padding fix section-bg">
+            <div class="shape-1">
+                <img src="{{ asset("/assets/img/plane-shape1.png") }}" alt="img">
+            </div>
+            <div class="shape-2">
+                <img src="{{ asset("/assets/img/plane-shape2.png") }}" alt="img">
+            </div>
+            <div class="container">
+                <div class="feature-wrapper">
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <div class="feature-content">
+                                <div class="section-title">
+                                    <span class="sub-title wow fadeInUp">
+                                        Are you ready to travel?
+                                    </span>
+                                    <h2 class="wow fadeInUp wow" data-wow-delay=".2s">
+                                        World Leading Online Tour Booking Platform
+                                    </h2>
+                                </div>
+                                <p class="wow fadeInUp wow" data-wow-delay=".3s">
+                                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+                                </p>
+                               <div class="feature-area">
+                                    <div class="line-shape">
+                                        <img src="{{ asset("/assets/img/line-shape.png") }}" alt="img">
+                                    </div>
+                                <div class="feature-items wow fadeInUp wow" data-wow-delay=".5s">
+                                    <div class="feature-icon-item">
+                                        <div class="icon">
+                                            <img src="{{ asset("/assets/img/icon/08.svg") }}" alt="img">
+                                        </div>
+                                        <div class="content">
+                                            <h5>
+                                                Most Adventure <Br> 
+                                                Tour Ever
+                                            </h5>
+                                        </div>
+                                    </div>
+                                    <ul class="circle-icon">
+                                        <li>
+                                            <i class="fa-solid fa-badge-check"></i>
+                                        </li>
+                                        <li>
+                                            There are many variations of <br>
+                                             passages of available,
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="feature-items wow fadeInUp wow" data-wow-delay=".7s">
+                                    <div class="feature-icon-item">
+                                        <div class="icon">
+                                            <img src="{{ asset("/assets/img/icon/09.svg") }}" alt="img">
+                                        </div>
+                                        <div class="content">
+                                            <h5>
+                                                Real Tour Starts <br>
+                                                 from Here
+                                            </h5>
+                                        </div>
+                                    </div>
+                                    <ul class="circle-icon">
+                                        <li>
+                                            <i class="fa-solid fa-badge-check"></i>
+                                        </li>
+                                        <li>
+                                            There are many variations of <br>
+                                             passages of available,
+                                        </li>
+                                    </ul>
+                                </div>
+                               </div>
+                               <a href="{{ url("contact.html") }}" class="theme-btn wow fadeInUp wow" data-wow-delay=".9s">Contact US<i class="fa-sharp fa-regular fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="feature-image wow fadeInUp wow" data-wow-delay=".3s">
+                                <img src="{{ asset("/assets/img/man-image.png") }}" alt="img">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!-- Counter-Section Start -->
+        <section class="counter-section theme-bg fix section-bg-3">
+            <div class="container">
+                <div class="counter-wrapper-3">
+                    <div class="counter-items wow fadeInUp wow" data-wow-delay=".2s">
+                        <div class="icon">
+                            <img src="{{ asset("/assets/img/icon/35.svg") }}" alt="img">
+                        </div>
+                        <div class="counter-content">
+                            <h2><span class="count">100,000</span>+</h2>
+                            <p>Our Explorers</p>
+                        </div>
+                    </div>
+                    <div class="counter-items wow fadeInUp wow" data-wow-delay=".4s">
+                        <div class="icon">
+                            <img src="{{ asset("/assets/img/icon/36.svg") }}" alt="img">
+                        </div>
+                        <div class="counter-content">
+                            <h2><span class="count">5,000</span>+</h2>
+                            <p>Destinations</p>
+                        </div>
+                    </div>
+                    <div class="counter-items wow fadeInUp wow" data-wow-delay=".6s">
+                        <div class="icon">
+                            <img src="{{ asset("/assets/img/icon/37.svg") }}" alt="img">
+                        </div>
+                        <div class="counter-content">
+                            <h2><span class="count">10,000</span>+</h2>
+                            <p>More Trips</p>
+                        </div>
+                    </div>
+                    <div class="counter-items style-2 wow fadeInUp wow" data-wow-delay=".8s">
+                        <div class="icon">
+                            <img src="{{ asset("/assets/img/icon/38.svg") }}" alt="img">
+                        </div>
+                        <div class="counter-content">
+                            <h2><span class="count">2,000</span>+</h2>
+                            <p>Luxary Hotel</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section Start -->
+        <section class="team-section fix section-padding">
+            <div class="container">
+                <div class="section-title text-center">
+                    <span class="sub-title wow fadeInUp">
+                        Meet with Guide
+                    </span>
+                    <h2 class="wow fadeInUp wow" data-wow-delay=".2s">Tour Guide</h2>
+                </div>
+                <div class="row">
+                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp wow" data-wow-delay=".2s">
+                        <div class="team-card-item">
+                            <div class="team-image">
+                                <img src="{{ asset("/assets/img/team/01.jpg") }}" alt="img">
+                            </div>
+                            <div class="team-content">
+                                <h4><a href="{{ url("team-details.html") }}">Darlene Robertson</a></h4>
+                                <p>Tourist Guide</p>
+                                <div class="social-profile">
+                                    <ul>
+                                        <li><a href="{{ url("#") }}"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="{{ url("#") }}"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="{{ url("#") }}"><i class="fab fa-linkedin-in"></i></a></li>
+                                        <li><a href="{{ url("#") }}"><i class="fab fa-instagram"></i></a></li>
+                                    </ul>
+                                    <span class="plus-btn"><i class="fas fa-share-alt"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp wow" data-wow-delay=".4s">
+                        <div class="team-card-item">
+                            <div class="team-image">
+                                <img src="{{ asset("/assets/img/team/02.jpg") }}" alt="img">
+                            </div>
+                            <div class="team-content">
+                                <h4><a href="{{ url("team-details.html") }}">Leslie Alexander</a></h4>
+                                <p>Tourist Guide</p>
+                                <div class="social-profile">
+                                    <ul>
+                                        <li><a href="{{ url("#") }}"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="{{ url("#") }}"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="{{ url("#") }}"><i class="fab fa-linkedin-in"></i></a></li>
+                                        <li><a href="{{ url("#") }}"><i class="fab fa-instagram"></i></a></li>
+                                    </ul>
+                                    <span class="plus-btn"><i class="fas fa-share-alt"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp wow" data-wow-delay=".6s">
+                        <div class="team-card-item">
+                            <div class="team-image">
+                                <img src="{{ asset("/assets/img/team/03.jpg") }}" alt="img">
+                            </div>
+                            <div class="team-content">
+                                <h4><a href="{{ url("team-details.html") }}">Ralph Edwards</a></h4>
+                                <p>Tourist Guide</p>
+                                <div class="social-profile">
+                                    <ul>
+                                        <li><a href="{{ url("#") }}"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="{{ url("#") }}"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="{{ url("#") }}"><i class="fab fa-linkedin-in"></i></a></li>
+                                        <li><a href="{{ url("#") }}"><i class="fab fa-instagram"></i></a></li>
+                                    </ul>
+                                    <span class="plus-btn"><i class="fas fa-share-alt"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp wow" data-wow-delay=".8s">
+                        <div class="team-card-item">
+                            <div class="team-image">
+                                <img src="{{ asset("/assets/img/team/04.jpg") }}" alt="img">
+                            </div>
+                            <div class="team-content">
+                                <h4><a href="{{ url("team-details.html") }}">Kathryn Murphy</a></h4>
+                                <p>Tourist Guide</p>
+                                <div class="social-profile">
+                                    <ul>
+                                        <li><a href="{{ url("#") }}"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li><a href="{{ url("#") }}"><i class="fab fa-twitter"></i></a></li>
+                                        <li><a href="{{ url("#") }}"><i class="fab fa-linkedin-in"></i></a></li>
+                                        <li><a href="{{ url("#") }}"><i class="fab fa-instagram"></i></a></li>
+                                    </ul>
+                                    <span class="plus-btn"><i class="fas fa-share-alt"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </section>
+
+         <!-- Testimonial-Section Start -->
+        <section class="testimonial-section section-padding fix bg-cover" style="background-image: url(assets/img/testimonial/testimonial-bg.jpg);">
+            <div class="container">
+                <div class="testimonial-wrapper-3">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-lg-6 wow fadeInUp wow" data-wow-delay=".3s">
+                            <div class="testimonial-image">
+                                <img src="{{ asset("/assets/img/testimonial/03.png") }}" alt="img">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="testimonial-content">
+                                <div class="section-title">
+                                    <span class="sub-title wow fadeInUp">
+                                        Testimonial
+                                    </span>
+                                    <h2 class="wow fadeInUp wow" data-wow-delay=".2s">
+                                        Travelers Love Our locals
+                                    </h2>
+                                </div>
+                                <div class="swiper testimonial-slider3">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="testimonial-card-items">
+                                                <div class="client-info-items">
+                                                    <div class="client-info">
+                                                        <div class="client-image">
+                                                            <img src="{{ asset("/assets/img/testimonial/client-4.png") }}" alt="img">
+                                                        </div>
+                                                        <div class="content">
+                                                            <h4>
+                                                                Kathryn Murphy
+                                                            </h4>
+                                                            <p>
+                                                                Web Designer
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="37" viewBox="0 0 50 37" fill="none">
+                                                            <path d="M0 0V37L18.75 18.5V0H0ZM31.25 0V37L50 18.5V0H31.25Z" fill="#63AB45"/>
+                                                       </svg>
+                                                    </div>
+                                                </div>
+                                                <p>
+                                                    There are many variations of passages of the Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="testimonial-card-items">
+                                                <div class="client-info-items">
+                                                    <div class="client-info">
+                                                        <div class="client-image">
+                                                            <img src="{{ asset("/assets/img/testimonial/client-4.png") }}" alt="img">
+                                                        </div>
+                                                        <div class="content">
+                                                            <h4>
+                                                                Kathryn Murphy
+                                                            </h4>
+                                                            <p>
+                                                                Web Designer
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="37" viewBox="0 0 50 37" fill="none">
+                                                            <path d="M0 0V37L18.75 18.5V0H0ZM31.25 0V37L50 18.5V0H31.25Z" fill="#63AB45"/>
+                                                       </svg>
+                                                    </div>
+                                                </div>
+                                                <p>
+                                                    There are many variations of passages of the Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="testimonial-card-items">
+                                                <div class="client-info-items">
+                                                    <div class="client-info">
+                                                        <div class="client-image">
+                                                            <img src="{{ asset("/assets/img/testimonial/client-4.png") }}" alt="img">
+                                                        </div>
+                                                        <div class="content">
+                                                            <h4>
+                                                                Kathryn Murphy
+                                                            </h4>
+                                                            <p>
+                                                                Web Designer
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="icon">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="37" viewBox="0 0 50 37" fill="none">
+                                                            <path d="M0 0V37L18.75 18.5V0H0ZM31.25 0V37L50 18.5V0H31.25Z" fill="#63AB45"/>
+                                                       </svg>
+                                                    </div>
+                                                </div>
+                                                <p>
+                                                    There are many variations of passages of the Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="array-button">
+                                    <button class="array-prev">
+                                        <i class="fa-regular fa-arrow-up"></i>
+                                    </button>
+                                    <button class="array-next">
+                                        <i class="fa-regular fa-arrow-down"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+          <!-- Instagram Banner Section Start -->
+        <div class="instagram-banner fix section-padding">
+            <div class="instagram-wrapper">
+                <h2 class="text-center wow fadeInUp" data-wow-delay=".3s">Follow Instagram</h2>
+                <div class="swiper instagram-banner-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="instagram-banner-items">
+                                <div class="banner-image">
+                                    <img src="{{ asset("/assets/img/instagram/01.jpg") }}" alt="insta-img">
+                                    <a href="{{ url("index.html") }}" class="icon">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="instagram-banner-items">
+                                <div class="banner-image">
+                                    <img src="{{ asset("/assets/img/instagram/02.jpg") }}" alt="insta-img">
+                                    <a href="{{ url("index.html") }}" class="icon">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="instagram-banner-items">
+                                <div class="banner-image">
+                                    <img src="{{ asset("/assets/img/instagram/03.jpg") }}" alt="insta-img">
+                                    <a href="{{ url("index.html") }}" class="icon">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="instagram-banner-items">
+                                <div class="banner-image">
+                                    <img src="{{ asset("/assets/img/instagram/04.jpg") }}" alt="insta-img">
+                                    <a href="{{ url("index.html") }}" class="icon">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="instagram-banner-items">
+                                <div class="banner-image">
+                                    <img src="{{ asset("/assets/img/instagram/05.jpg") }}" alt="insta-img">
+                                    <a href="{{ url("index.html") }}" class="icon">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="instagram-banner-items">
+                                <div class="banner-image">
+                                    <img src="{{ asset("/assets/img/instagram/06.jpg") }}" alt="insta-img">
+                                    <a href="{{ url("index.html") }}" class="icon">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    <br>
-    <br>
-    <br>
+        <!-- Footer Section Start -->
+        @include('footer')
 
-    </div>
+        <!--<< All JS Plugins >>-->
+        <script src="{{ asset("/assets/js/jquery-3.7.1.min.js") }}"></script>
+        <!--<< Viewport Js >>-->
+        <script src="{{ asset("/assets/js/viewport.jquery.js") }}"></script>
+        <!--<< Bootstrap Js >>-->
+        <script src="{{ asset("/assets/js/bootstrap.bundle.min.js") }}"></script>
+        <!--<< nice-selec Js >>-->
+        <script src="{{ asset("/assets/js/jquery.nice-select.min.js") }}"></script>
+        <!--<< Waypoints Js >>-->
+        <script src="{{ asset("/assets/js/jquery.waypoints.js") }}"></script>
+        <!--<< Counterup Js >>-->
+        <script src="{{ asset("/assets/js/jquery.counterup.min.js") }}"></script>
+        <!--<< Swiper Slider Js >>-->
+        <script src="{{ asset("/assets/js/swiper-bundle.min.js") }}"></script>
+        <!--<< MeanMenu Js >>-->
+        <script src="{{ asset("/assets/js/jquery.meanmenu.min.js") }}"></script>
+         <!--<< Datepicker Js >>-->
+         <script src="{{ asset("/assets/js/bootstrap-datepicker.js") }}"></script>
+        <!--<< Magnific Popup Js >>-->
+        <script src="{{ asset("/assets/js/jquery.magnific-popup.min.js") }}"></script>
+        <!--<< Wow Animation Js >>-->
+        <script src="{{ asset("/assets/js/wow.min.js") }}"></script>
+        <!--<< Main.js >>-->
+        <script src="{{ asset("/assets/js/main.js") }}"></script>
+    </body>
 
-
-
-
-    @include('footer')
-
-</body>
-
-
-
-<script type="module">
-  import createGlobe from 'https://cdn.skypack.dev/cobe'
-
-  let phi = 0
-  let canvas = document.getElementById("cobe")
-
-  const globe = createGlobe(canvas, {
-    devicePixelRatio: 2,
-    width: 1000,
-    height: 1000,
-    phi: 0,
-    theta: 0,
-    dark: 0,
-    diffuse: 1.2,
-    scale: 1,
-    mapSamples: 16000,
-    mapBrightness: 6,
-    baseColor: [1, 1, 1],
-    markerColor: [1, 0.5, 1],
-    glowColor: [1, 1, 1],
-    offset: [0, 0],
-    markers: [
-      { location: [37.7595, -122.4367], size: 0.03 },
-      { location: [40.7128, -74.006], size: 0.1 },
-    ],
-    onRender: (state) => {
-      // Called on every animation frame.
-      // `state` will be an empty object, return updated params.
-      state.phi = phi
-      phi += 0.01
-    },
-  })
-
-
-
-
-
-  
-</script>
-
-
+<!-- Mirrored from ex-coders.com/html/turmet/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 08 Apr 2025 11:51:24 GMT -->
 </html>
