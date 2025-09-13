@@ -215,10 +215,10 @@
                                                     <div class="icon">
                                                         <img src="{{ asset("mymountains/assets/img/hero/icon-1.png") }}" alt="img">
                                                     </div>
-                                                    <div class="content">
+                                                     <div class="content">
                                                         <h6>Enter Name</h6>
-                                                        <div class="form">
-                                                            <input type="text" placeholder="Enter Name">
+                                                        <div class="form-clt">
+                                                            <input type="text" id="name" name="name" placeholder="Enter Name">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -227,14 +227,9 @@
                                                         <img src="{{ asset("mymountains/assets/img/hero/icon-2.png") }}" alt="img">
                                                     </div>
                                                     <div class="content">
-                                                        <h6>Activities Type</h6>
-                                                        <div class="form">
-                                                            <select class="single-select w-100">
-                                                                <option> Activities Type</option>
-                                                                <option> Adventure 02</option>
-                                                                <option>Adventure 03</option>
-                                                                <option> Adventure 04</option>
-                                                            </select>
+                                                        <h6>Enter Contact</h6>
+                                                        <div class="form-clt">
+                                                            <input type="text" id="contact" name="contact" placeholder="Enter Contact">
                                                         </div>
                                                     </div>
                                                 </div>
