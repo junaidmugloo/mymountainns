@@ -68,8 +68,8 @@
                                                 <i class="fa-solid fa-chevron-down"></i>
                                             </a>
                                             <ul class="submenu">
-                                                <li><a href="{{ url("destination.html") }}">our Destination</a></li>
-                                                <li><a href="{{ url("destination-details.html") }}">Destination Details</a></li>
+                                                <li><a href="{{ url("/kashmir") }}">Kashmir</a></li>
+                                                <li><a href="{{ url("/ladakh") }}">Ladakh</a></li>
                                             </ul>
                                         </li>
                                         <li>
@@ -82,7 +82,7 @@
                                                 <li><a href="{{ url("tour-details.html") }}">Tour Details</a></li>
                                             </ul>
                                         </li>
-                                        <li class="has-dropdown">
+                                        {{-- <li class="has-dropdown">
                                             <a href="{{ url("news.html") }}">
                                                 Pages
                                                 <i class="fa-solid fa-chevron-down"></i>
@@ -94,7 +94,7 @@
                                                 <li><a href="{{ url("team-details.html") }}">Team Details</a></li>
                                                 <li><a href="{{ url("faq.html") }}">Our Faq</a></li>
                                             </ul>
-                                        </li>
+                                        </li> --}}
                                        <li>
                                             <a href="{{ url("news-details.html") }}">
                                                 Blog
