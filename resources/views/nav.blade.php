@@ -104,7 +104,7 @@
                                                 <li><a href="{{ url("news-details.html") }}">Blog Details</a></li>
                                             </ul>
                                         </li>
-                                         <li>
+                                        <li>
                                             <a href="{{ url("/about") }}">About Us</a>
                                         </li>
                                         <li>
