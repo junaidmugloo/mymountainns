@@ -59,9 +59,7 @@
                                                 <li><a href="{{ url("index-3.html") }}">Home 03</a></li>
                                             </ul>
                                         </li>
-                                        <li>
-                                            <a href="{{ url("/about") }}">About Us</a>
-                                        </li>
+
                                         <li>
                                             <a href="{{ url("destination-details.html") }}">
                                                 Destinations
@@ -105,6 +103,9 @@
                                                 <li><a href="{{ url("news-classic.html") }}">Blog Classic</a></li>
                                                 <li><a href="{{ url("news-details.html") }}">Blog Details</a></li>
                                             </ul>
+                                        </li>
+                                         <li>
+                                            <a href="{{ url("/about") }}">About Us</a>
                                         </li>
                                         <li>
                                             <a href="{{ url("/location") }}">Contact Us</a>
