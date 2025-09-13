@@ -191,7 +191,7 @@
         </div>
 
          <!-- breadcrumb-wrappe-Section Start -->
-        <section class="breadcrumb-wrapper fix bg-cover" style="background-image: url(assets/img/breadcrumb/breadcrumb.jpg);">
+        <section class="breadcrumb-wrapper fix bg-cover" style="background-image: url(/mymountains/assets/img/breadcrumb/breadcrumb.jpg);">
             <div class="container">
                 <div class="row">
                     <div class="page-heading">
@@ -514,7 +514,7 @@
          </section>
 
          <!-- Testimonial-Section Start -->
-        <section class="testimonial-section section-padding fix bg-cover" style="background-image: url(assets/img/testimonial/testimonial-bg.jpg);">
+        <section class="testimonial-section section-padding fix bg-cover" style="background-image: url(mymountains/assets/img/testimonial/testimonial-bg.jpg);">
             <div class="container">
                 <div class="testimonial-wrapper-3">
                     <div class="row g-4 align-items-center">
