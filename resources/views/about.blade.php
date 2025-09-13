@@ -13,27 +13,27 @@
         <!-- ======== Page title ============ -->
         <title>My Mountains</title>
         <!--<< Favcion >>-->
-        <link rel="shortcut icon" href="{{ asset("/assets/img/favicon.svg") }}">
+        <link rel="shortcut icon" href="{{ asset("/mymountains/assets/img/favicon.svg") }}">
         <!--<< Bootstrap min.css >>-->
-        <link rel="stylesheet" href="{{ asset("/assets/css/bootstrap.min.css") }}">
+        <link rel="stylesheet" href="{{ asset("/mymountains/assets/css/bootstrap.min.css") }}">
         <!--<< All Min Css >>-->
-        <link rel="stylesheet" href="{{ asset("/assets/css/all.min.css") }}">
+        <link rel="stylesheet" href="{{ asset("/mymountains/assets/css/all.min.css") }}">
         <!--<< Animate.css >>-->
-        <link rel="stylesheet" href="{{ asset("/assets/css/animate.css") }}">
+        <link rel="stylesheet" href="{{ asset("/mymountains/assets/css/animate.css") }}">
         <!--<< Magnific Popup.css >>-->
-        <link rel="stylesheet" href="{{ asset("/assets/css/magnific-popup.css") }}">
+        <link rel="stylesheet" href="{{ asset("/mymountains/assets/css/magnific-popup.css") }}">
         <!--<< MeanMenu.css >>-->
-        <link rel="stylesheet" href="{{ asset("/assets/css/meanmenu.css") }}">
+        <link rel="stylesheet" href="{{ asset("/mymountains/assets/css/meanmenu.css") }}">
         <!--<< Swiper Bundle.css >>-->
-        <link rel="stylesheet" href="{{ asset("/assets/css/swiper-bundle.min.css") }}">
+        <link rel="stylesheet" href="{{ asset("/mymountains/assets/css/swiper-bundle.min.css") }}">
         <!--<< Datepickerboot.css >>-->
-        <link rel="stylesheet" href="{{ asset("/assets/css/datepickerboot.css") }}">
+        <link rel="stylesheet" href="{{ asset("/mymountains/assets/css/datepickerboot.css") }}">
         <!--<< Nice Select.css >>-->
-        <link rel="stylesheet" href="{{ asset("/assets/css/nice-select.css") }}">
+        <link rel="stylesheet" href="{{ asset("/mymountains/assets/css/nice-select.css") }}">
         <!--<< Color.css >>-->
-        <link rel="stylesheet" href="{{ asset("/assets/css/color.css") }}">
+        <link rel="stylesheet" href="{{ asset("/mymountains/assets/css/color.css") }}">
         <!--<< Main.css >>-->
-        <link rel="stylesheet" href="{{ asset("/assets/css/main.css") }}">
+        <link rel="stylesheet" href="{{ asset("/mymountains/assets/css/main.css") }}">
     </head>
     <body>
 
@@ -108,7 +108,7 @@
                         <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
                             <div class="offcanvas__logo">
                                 <a href="{{ url("index.html") }}">
-                                    <img src="{{ asset("/assets/img/logo/black-logo.svg") }}" alt="logo-img">
+                                    <img src="{{ asset("/mymountains/assets/img/logo/black-logo.svg") }}" alt="logo-img">
                                 </a>
                             </div>
                             <div class="offcanvas__close">
@@ -215,20 +215,20 @@
                     <div class="row g-4">
                         <div class="col-lg-6">
                             <div class="about-image">
-                                <img src="{{ asset("/assets/img/about/03.jpg") }}" alt="img">
+                                <img src="{{ asset("/mymountains/assets/img/about/03.jpg") }}" alt="img">
                                 <div class="shape-image float-bob-y">
-                                    <img src="{{ asset("/assets/img/about/04.png") }}" alt="img">
+                                    <img src="{{ asset("/mymountains/assets/img/about/04.png") }}" alt="img">
                                 </div>
                                 <div class="group-image float-bob-x">
-                                    <img src="{{ asset("/assets/img/about/group.png") }}" alt="img">
+                                    <img src="{{ asset("/mymountains/assets/img/about/group.png") }}" alt="img">
                                 </div>
                                 <div class="about-image-2">
-                                    <img src="{{ asset("/assets/img/about/05.jpg") }}" alt="img">
+                                    <img src="{{ asset("/mymountains/assets/img/about/05.jpg") }}" alt="img">
                                     <div class="plane-shape">
-                                        <img src="{{ asset("/assets/img/about/plane-shape2.png") }}" alt="img">
+                                        <img src="{{ asset("/mymountains/assets/img/about/plane-shape2.png") }}" alt="img">
                                     </div>
                                     <div class="circle-image">
-                                        <img src="{{ asset("/assets/img/about/circle.png") }}" alt="img">
+                                        <img src="{{ asset("/mymountains/assets/img/about/circle.png") }}" alt="img">
                                     </div>
                                 </div>
                             </div>
@@ -250,7 +250,7 @@
                                 <div class="about-items wow fadeInUp wow" data-wow-delay=".3s">
                                     <div class="about-icon-items">
                                         <div class="icon">
-                                            <img src="{{ asset("/assets/img/check.png") }}" alt="img">
+                                            <img src="{{ asset("/mymountains/assets/img/check.png") }}" alt="img">
                                         </div>
                                         <div class="content">
                                             <h5>
@@ -267,7 +267,7 @@
                                 <div class="about-items wow fadeInUp wow" data-wow-delay=".5s">
                                     <div class="about-icon-items">
                                         <div class="icon">
-                                            <img src="{{ asset("/assets/img/check.png") }}" alt="img">
+                                            <img src="{{ asset("/mymountains/assets/img/check.png") }}" alt="img">
                                         </div>
                                         <div class="content">
                                             <h5>
@@ -292,10 +292,10 @@
         <!-- Travel-Feature-Section Start -->
         <section class="travel-feature-section section-padding fix section-bg">
             <div class="shape-1">
-                <img src="{{ asset("/assets/img/plane-shape1.png") }}" alt="img">
+                <img src="{{ asset("/mymountains/assets/img/plane-shape1.png") }}" alt="img">
             </div>
             <div class="shape-2">
-                <img src="{{ asset("/assets/img/plane-shape2.png") }}" alt="img">
+                <img src="{{ asset("/mymountains/assets/img/plane-shape2.png") }}" alt="img">
             </div>
             <div class="container">
                 <div class="feature-wrapper">
@@ -315,12 +315,12 @@
                                 </p>
                                <div class="feature-area">
                                     <div class="line-shape">
-                                        <img src="{{ asset("/assets/img/line-shape.png") }}" alt="img">
+                                        <img src="{{ asset("/mymountains/assets/img/line-shape.png") }}" alt="img">
                                     </div>
                                 <div class="feature-items wow fadeInUp wow" data-wow-delay=".5s">
                                     <div class="feature-icon-item">
                                         <div class="icon">
-                                            <img src="{{ asset("/assets/img/icon/08.svg") }}" alt="img">
+                                            <img src="{{ asset("/mymountains/assets/img/icon/08.svg") }}" alt="img">
                                         </div>
                                         <div class="content">
                                             <h5>
@@ -342,7 +342,7 @@
                                 <div class="feature-items wow fadeInUp wow" data-wow-delay=".7s">
                                     <div class="feature-icon-item">
                                         <div class="icon">
-                                            <img src="{{ asset("/assets/img/icon/09.svg") }}" alt="img">
+                                            <img src="{{ asset("/mymountains/assets/img/icon/09.svg") }}" alt="img">
                                         </div>
                                         <div class="content">
                                             <h5>
@@ -367,7 +367,7 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="feature-image wow fadeInUp wow" data-wow-delay=".3s">
-                                <img src="{{ asset("/assets/img/man-image.png") }}" alt="img">
+                                <img src="{{ asset("/mymountains/assets/img/man-image.png") }}" alt="img">
                             </div>
                         </div>
                     </div>
@@ -381,7 +381,7 @@
                 <div class="counter-wrapper-3">
                     <div class="counter-items wow fadeInUp wow" data-wow-delay=".2s">
                         <div class="icon">
-                            <img src="{{ asset("/assets/img/icon/35.svg") }}" alt="img">
+                            <img src="{{ asset("/mymountains/assets/img/icon/35.svg") }}" alt="img">
                         </div>
                         <div class="counter-content">
                             <h2><span class="count">100,000</span>+</h2>
@@ -390,7 +390,7 @@
                     </div>
                     <div class="counter-items wow fadeInUp wow" data-wow-delay=".4s">
                         <div class="icon">
-                            <img src="{{ asset("/assets/img/icon/36.svg") }}" alt="img">
+                            <img src="{{ asset("/mymountains/assets/img/icon/36.svg") }}" alt="img">
                         </div>
                         <div class="counter-content">
                             <h2><span class="count">5,000</span>+</h2>
@@ -399,7 +399,7 @@
                     </div>
                     <div class="counter-items wow fadeInUp wow" data-wow-delay=".6s">
                         <div class="icon">
-                            <img src="{{ asset("/assets/img/icon/37.svg") }}" alt="img">
+                            <img src="{{ asset("/mymountains/assets/img/icon/37.svg") }}" alt="img">
                         </div>
                         <div class="counter-content">
                             <h2><span class="count">10,000</span>+</h2>
@@ -408,7 +408,7 @@
                     </div>
                     <div class="counter-items style-2 wow fadeInUp wow" data-wow-delay=".8s">
                         <div class="icon">
-                            <img src="{{ asset("/assets/img/icon/38.svg") }}" alt="img">
+                            <img src="{{ asset("/mymountains/assets/img/icon/38.svg") }}" alt="img">
                         </div>
                         <div class="counter-content">
                             <h2><span class="count">2,000</span>+</h2>
@@ -432,7 +432,7 @@
                     <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp wow" data-wow-delay=".2s">
                         <div class="team-card-item">
                             <div class="team-image">
-                                <img src="{{ asset("/assets/img/team/01.jpg") }}" alt="img">
+                                <img src="{{ asset("/mymountains/assets/img/team/01.jpg") }}" alt="img">
                             </div>
                             <div class="team-content">
                                 <h4><a href="{{ url("team-details.html") }}">Darlene Robertson</a></h4>
@@ -452,7 +452,7 @@
                     <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp wow" data-wow-delay=".4s">
                         <div class="team-card-item">
                             <div class="team-image">
-                                <img src="{{ asset("/assets/img/team/02.jpg") }}" alt="img">
+                                <img src="{{ asset("/mymountains/assets/img/team/02.jpg") }}" alt="img">
                             </div>
                             <div class="team-content">
                                 <h4><a href="{{ url("team-details.html") }}">Leslie Alexander</a></h4>
@@ -472,7 +472,7 @@
                     <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp wow" data-wow-delay=".6s">
                         <div class="team-card-item">
                             <div class="team-image">
-                                <img src="{{ asset("/assets/img/team/03.jpg") }}" alt="img">
+                                <img src="{{ asset("/mymountains/assets/img/team/03.jpg") }}" alt="img">
                             </div>
                             <div class="team-content">
                                 <h4><a href="{{ url("team-details.html") }}">Ralph Edwards</a></h4>
@@ -492,7 +492,7 @@
                     <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp wow" data-wow-delay=".8s">
                         <div class="team-card-item">
                             <div class="team-image">
-                                <img src="{{ asset("/assets/img/team/04.jpg") }}" alt="img">
+                                <img src="{{ asset("/mymountains/assets/img/team/04.jpg") }}" alt="img">
                             </div>
                             <div class="team-content">
                                 <h4><a href="{{ url("team-details.html") }}">Kathryn Murphy</a></h4>
@@ -520,7 +520,7 @@
                     <div class="row g-4 align-items-center">
                         <div class="col-lg-6 wow fadeInUp wow" data-wow-delay=".3s">
                             <div class="testimonial-image">
-                                <img src="{{ asset("/assets/img/testimonial/03.png") }}" alt="img">
+                                <img src="{{ asset("/mymountains/assets/img/testimonial/03.png") }}" alt="img">
                             </div>
                         </div>
                         <div class="col-lg-6">
@@ -540,7 +540,7 @@
                                                 <div class="client-info-items">
                                                     <div class="client-info">
                                                         <div class="client-image">
-                                                            <img src="{{ asset("/assets/img/testimonial/client-4.png") }}" alt="img">
+                                                            <img src="{{ asset("/mymountains/assets/img/testimonial/client-4.png") }}" alt="img">
                                                         </div>
                                                         <div class="content">
                                                             <h4>
@@ -567,7 +567,7 @@
                                                 <div class="client-info-items">
                                                     <div class="client-info">
                                                         <div class="client-image">
-                                                            <img src="{{ asset("/assets/img/testimonial/client-4.png") }}" alt="img">
+                                                            <img src="{{ asset("/mymountains/assets/img/testimonial/client-4.png") }}" alt="img">
                                                         </div>
                                                         <div class="content">
                                                             <h4>
@@ -594,7 +594,7 @@
                                                 <div class="client-info-items">
                                                     <div class="client-info">
                                                         <div class="client-image">
-                                                            <img src="{{ asset("/assets/img/testimonial/client-4.png") }}" alt="img">
+                                                            <img src="{{ asset("/mymountains/assets/img/testimonial/client-4.png") }}" alt="img">
                                                         </div>
                                                         <div class="content">
                                                             <h4>
@@ -641,7 +641,7 @@
                         <div class="swiper-slide">
                             <div class="instagram-banner-items">
                                 <div class="banner-image">
-                                    <img src="{{ asset("/assets/img/instagram/01.jpg") }}" alt="insta-img">
+                                    <img src="{{ asset("/mymountains/assets/img/instagram/01.jpg") }}" alt="insta-img">
                                     <a href="{{ url("index.html") }}" class="icon">
                                         <i class="fa-brands fa-instagram"></i>
                                     </a>
@@ -651,7 +651,7 @@
                         <div class="swiper-slide">
                             <div class="instagram-banner-items">
                                 <div class="banner-image">
-                                    <img src="{{ asset("/assets/img/instagram/02.jpg") }}" alt="insta-img">
+                                    <img src="{{ asset("/mymountains/assets/img/instagram/02.jpg") }}" alt="insta-img">
                                     <a href="{{ url("index.html") }}" class="icon">
                                         <i class="fa-brands fa-instagram"></i>
                                     </a>
@@ -661,7 +661,7 @@
                         <div class="swiper-slide">
                             <div class="instagram-banner-items">
                                 <div class="banner-image">
-                                    <img src="{{ asset("/assets/img/instagram/03.jpg") }}" alt="insta-img">
+                                    <img src="{{ asset("/mymountains/assets/img/instagram/03.jpg") }}" alt="insta-img">
                                     <a href="{{ url("index.html") }}" class="icon">
                                         <i class="fa-brands fa-instagram"></i>
                                     </a>
@@ -671,7 +671,7 @@
                         <div class="swiper-slide">
                             <div class="instagram-banner-items">
                                 <div class="banner-image">
-                                    <img src="{{ asset("/assets/img/instagram/04.jpg") }}" alt="insta-img">
+                                    <img src="{{ asset("/mymountains/assets/img/instagram/04.jpg") }}" alt="insta-img">
                                     <a href="{{ url("index.html") }}" class="icon">
                                         <i class="fa-brands fa-instagram"></i>
                                     </a>
@@ -681,7 +681,7 @@
                         <div class="swiper-slide">
                             <div class="instagram-banner-items">
                                 <div class="banner-image">
-                                    <img src="{{ asset("/assets/img/instagram/05.jpg") }}" alt="insta-img">
+                                    <img src="{{ asset("/mymountains/assets/img/instagram/05.jpg") }}" alt="insta-img">
                                     <a href="{{ url("index.html") }}" class="icon">
                                         <i class="fa-brands fa-instagram"></i>
                                     </a>
@@ -691,7 +691,7 @@
                         <div class="swiper-slide">
                             <div class="instagram-banner-items">
                                 <div class="banner-image">
-                                    <img src="{{ asset("/assets/img/instagram/06.jpg") }}" alt="insta-img">
+                                    <img src="{{ asset("/mymountains/assets/img/instagram/06.jpg") }}" alt="insta-img">
                                     <a href="{{ url("index.html") }}" class="icon">
                                         <i class="fa-brands fa-instagram"></i>
                                     </a>
@@ -706,29 +706,29 @@
         @include('footer')
 
         <!--<< All JS Plugins >>-->
-        <script src="{{ asset("/assets/js/jquery-3.7.1.min.js") }}"></script>
+        <script src="{{ asset("/mymountains/assets/js/jquery-3.7.1.min.js") }}"></script>
         <!--<< Viewport Js >>-->
-        <script src="{{ asset("/assets/js/viewport.jquery.js") }}"></script>
+        <script src="{{ asset("/mymountains/assets/js/viewport.jquery.js") }}"></script>
         <!--<< Bootstrap Js >>-->
-        <script src="{{ asset("/assets/js/bootstrap.bundle.min.js") }}"></script>
+        <script src="{{ asset("/mymountains/assets/js/bootstrap.bundle.min.js") }}"></script>
         <!--<< nice-selec Js >>-->
-        <script src="{{ asset("/assets/js/jquery.nice-select.min.js") }}"></script>
+        <script src="{{ asset("/mymountains/assets/js/jquery.nice-select.min.js") }}"></script>
         <!--<< Waypoints Js >>-->
-        <script src="{{ asset("/assets/js/jquery.waypoints.js") }}"></script>
+        <script src="{{ asset("/mymountains/assets/js/jquery.waypoints.js") }}"></script>
         <!--<< Counterup Js >>-->
-        <script src="{{ asset("/assets/js/jquery.counterup.min.js") }}"></script>
+        <script src="{{ asset("/mymountains/assets/js/jquery.counterup.min.js") }}"></script>
         <!--<< Swiper Slider Js >>-->
-        <script src="{{ asset("/assets/js/swiper-bundle.min.js") }}"></script>
+        <script src="{{ asset("/mymountains/assets/js/swiper-bundle.min.js") }}"></script>
         <!--<< MeanMenu Js >>-->
-        <script src="{{ asset("/assets/js/jquery.meanmenu.min.js") }}"></script>
+        <script src="{{ asset("/mymountains/assets/js/jquery.meanmenu.min.js") }}"></script>
          <!--<< Datepicker Js >>-->
-         <script src="{{ asset("/assets/js/bootstrap-datepicker.js") }}"></script>
+         <script src="{{ asset("/mymountains/assets/js/bootstrap-datepicker.js") }}"></script>
         <!--<< Magnific Popup Js >>-->
-        <script src="{{ asset("/assets/js/jquery.magnific-popup.min.js") }}"></script>
+        <script src="{{ asset("/mymountains/assets/js/jquery.magnific-popup.min.js") }}"></script>
         <!--<< Wow Animation Js >>-->
-        <script src="{{ asset("/assets/js/wow.min.js") }}"></script>
+        <script src="{{ asset("/mymountains/assets/js/wow.min.js") }}"></script>
         <!--<< Main.js >>-->
-        <script src="{{ asset("/assets/js/main.js") }}"></script>
+        <script src="{{ asset("/mymountains/assets/js/main.js") }}"></script>
     </body>
 
 <!-- Mirrored from ex-coders.com/html/turmet/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 08 Apr 2025 11:51:24 GMT -->
