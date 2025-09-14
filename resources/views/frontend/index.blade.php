@@ -272,12 +272,13 @@
                                                         {{$b->offer_line}}
 
                                                     </div>
-                                                    <h1 class="fs-3">
+                                                    <h1>
                                                         {{$b->heading}}
                                                         <br>
                                                         starting at <span class="fs-4 fw-bold"> INR {{$b->discount}} </span><s> INR {{$b->price}}
                                                         </s>
                                                     </h1>
+                                                    <form action="">
                                                     <div class="booking-list-area">
                                                         <div class="booking-list">
                                                             <div class="icon">
@@ -330,6 +331,7 @@
                                                         </div>
                                                         <button class="theme-btn" type="submit">Submit</button>
                                                     </div>
+                                                    </form>
                                                 </div>
                                                 <div class="counter-area">
                                                     <div class="counter-items">
