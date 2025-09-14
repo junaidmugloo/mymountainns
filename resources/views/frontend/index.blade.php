@@ -340,16 +340,16 @@
                                                 <div class="counter-area">
                                                     <div class="counter-items">
                                                         <div class="counter-text">
-                                                            <h2><span class="count">20.5</span>k</h2>
-                                                            <p>Featured Projects</p>
+                                                            <h2><span class="count">5</span></h2>
+                                                            <p>Trust Index</p>
                                                         </div>
                                                         <div class="counter-text">
-                                                            <h2><span class="count">100.5</span>k</h2>
-                                                            <p>Luxury Houses</p>
+                                                            <h2><span class="count">5</span></h2>
+                                                            <p>Google Review</p>
                                                         </div>
                                                         <div class="counter-text">
-                                                            <h2><span class="count">150.5</span>k</h2>
-                                                            <p>Satisficed Clients</p>
+                                                            <h2><span class="count">5</span><i class="fa fa-star" aria-hidden="true"></i></h2>
+                                                            <p>Just Dial</p>
                                                         </div>
                                                     </div>
                                                 </div>
