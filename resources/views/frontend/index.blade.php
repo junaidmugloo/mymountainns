@@ -354,47 +354,7 @@
                                                     </div>
                                                 </div>
 
-                                                   <div class="card-body text-center" id="trip">
-          <div class="row">
-            <div class="col-6 col-md-3 p-3">
-              <span class="d-flex" style="width: 150px;">
-                <span> <i class="fa-solid fa-star sx"  onclick="window.location.href='https://www.trustindex.io/reviews/joytourandtravel.com'" style="color: white;cursor: pointer"></i></span>
-                <span class="text-white">
-                  <h6 class="p-0 pt-1 m-0 text-start text-white"> &nbsp;4.6/5</h6>
-                  <small class="text-start text-white " style="font-size: 0.6rem"> &nbsp;TRUST INDEX</small>
-                </span>
-              </span>
-           </div>
-            <div class="col-6 col-md-3 p-3">
-              <span class="d-flex" style="width: 150px;">
-                <span> <i class="fa-brands fa-google sx" onclick="window.location.href='https://g.co/kgs/CtZ9XWP'" style="color: white; cursor: pointer;"></i></span>
-                <span class="text-white">
-                  <h6 class="p-0 pt-1 m-0 text-start text-white"> &nbsp;4.6/5</h6>
-                  <small class="text-start text-white " style="font-size: 0.6rem"> &nbsp;GOOGLE REVIEW</small>
-                </span>
-              </span>
-
-            </div>
-            <div class="col-6 col-md-3 p-3">
-              <span class="d-flex" style="width: 150px;">
-                <span> <i class="fa-solid fa-star sx" onclick="window.location.href='https://justdial.com/Srinagar/Joy-Tour-and-Travels-Opposite-Fire-Station/9999PX194-X194-130205124520-S1G8_BZDET'" style="color: white;cursor:pointer"></i></span>
-                <span class="text-white">
-                  <h6 class="p-0 pt-1 m-0 text-start text-white"> &nbsp;4.6/5</h6>
-                  <small class="text-start text-white " style="font-size: 0.6rem"> &nbsp;JUST DIAL</small>
-                </span>
-              </span>
-            </div>
-            <div class="col-6 col-md-3 p-3 ">
-              <span class="d-flex" style="width: 150px;">
-                <span><i class="fa-regular fa-star sx" style="color: #ffffff;"></i></span>
-                <span class="text-white">
-                  <h6 class="p-0 pt-1 m-0 text-start text-white"> &nbsp;4.6/5</h6>
-                  <small class="text-start text-white " style="font-size: 0.6rem"> &nbsp;TRIP ADVISOR</small>
-                </span>
-              </span>
-            </div>
-          </div>
-        </div>
+                                                
                                             </div>
                                         </div>
                                     </div>
