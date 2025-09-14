@@ -750,7 +750,7 @@
             <div class="destination-card-items d-flex flex-column w-100" style="height: 100%;">
         
                     <div class="destination-image">
-                        <img src="{{ asset('mymountains/assets/img/destination/01.jpg') }}" alt="img">
+                        <img src="{{ asset('package_images/'.$p->image) }}" alt="img">
                         <div class="heart-icon">
                             <i class="fa-regular fa-heart"></i>
                         </div>
@@ -841,7 +841,7 @@
             <div class="destination-card-items d-flex flex-column w-100" style="height: 100%;">
         
                     <div class="destination-image">
-                        <img src="{{ asset('mymountains/assets/img/destination/02.jpg') }}" alt="img">
+                         <img src="{{ asset('package_images/'.$p->image) }}" alt="img">
                         <div class="heart-icon">
                             <i class="fa-regular fa-heart"></i>
                         </div>
@@ -932,7 +932,7 @@
             <div class="destination-card-items d-flex flex-column w-100" style="height: 100%;">
         
                     <div class="destination-image">
-                        <img src="{{ asset('mymountains/assets/img/destination/01.jpg') }}" alt="img">
+                         <img src="{{ asset('package_images/'.$p->image) }}" alt="img">
                         <div class="heart-icon">
                             <i class="fa-regular fa-heart"></i>
                         </div>
