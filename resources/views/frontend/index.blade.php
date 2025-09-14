@@ -268,11 +268,13 @@
                                     <div class="col-lg-10">
                                         <div class="hero-content">
                                             <div class="sub-title">
-                                                {{$b->heading}}
+                                                 {{$b->offer_line}}
+                            
                                             </div>
                                             <h1>
-                                                {{$b->offer_line}} <br>
-                                                 trip with us
+                                                {{$b->heading}}
+                                                <br>
+                                                 starting at <span class="fs-4 fw-bold"> INR {{$b->discount}} </span><s> INR {{$b->price}} </s>
                                             </h1>
                                             <div class="booking-list-area">
                                                 <div class="booking-list">
