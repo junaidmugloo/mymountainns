@@ -689,7 +689,7 @@
                         <div class="swiper-slide">
                             <div class="feature-tour-items">
                                 <div class="feature-tour-image">
-                                    <img src="{{ asset("/package_images/{{ $p->image }}" ) }}" alt="img">
+                                    <img src="{{ asset('package_images/'.$p->image) }}" alt="img">
                                     <ul class="location">
                                         <li>
                                             <i class="fa-light fa-location-dot"></i>
