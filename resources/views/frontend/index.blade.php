@@ -31,8 +31,9 @@
         <link rel="stylesheet" href="{{ asset("mymountains/assets/css/color.css") }}">
         <!--<< Main.css >>-->
         <link rel="stylesheet" href="{{ asset("mymountains/assets/css/main.css") }}">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     </head>
     <body>
@@ -1658,8 +1659,9 @@
         <script src="{{ asset("mymountains/assets/js/jquery.waypoints.js") }}"></script>
         <!--<< Counterup Js >>-->
         <script src="{{ asset("mymountains/assets/js/jquery.counterup.min.js") }}"></script>
+         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <!--<< Swiper Slider Js >>-->
-        <script src="{{ asset("mymountains/assets/js/swiper-bundle.min.js") }}"></script>
+        {{-- <script src="{{ asset("mymountains/assets/js/swiper-bundle.min.js") }}"></script> --}}
         <!--<< MeanMenu Js >>-->
         <script src="{{ asset("mymountains/assets/js/jquery.meanmenu.min.js") }}"></script>
          <!--<< Datepicker Js >>-->
@@ -1732,26 +1734,27 @@ $("#tform button").prop('disabled', true);
         </script>
 
         {{-- swiper js --}}
-        <script>
-            const swiper = new Swiper(".mySwiper", {
-              slidesPerView: 4,
-              spaceBetween: 20,
-              loop: true,
-              navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-              },
-              pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-              },
-              breakpoints: {
-                1024: { slidesPerView: 4 },
-                768: { slidesPerView: 2 },
-                480: { slidesPerView: 1 }
-              }
-            });
-        </script>
+       <script>
+  const swiper = new Swiper(".mySwiper", {
+    slidesPerView: 4,
+    spaceBetween: 20,
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      480: { slidesPerView: 1 },
+      768: { slidesPerView: 2 },
+      1024: { slidesPerView: 4 }
+    }
+  });
+</script>
+
     </body>
 
 <!-- Mirrored from ex-coders.com/html/turmet/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 08 Apr 2025 11:50:32 GMT -->
