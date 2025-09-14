@@ -258,6 +258,9 @@
             <div class="swiper hero-slider">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
+                        @foreach ($banner as $b)
+                            
+                       
                         <div class="hero-1">
                             <div class="hero-bg bg-cover" style="background-image: url(m/assets/img/hero/01.png);"></div>
                             <div class="container">
@@ -265,10 +268,11 @@
                                     <div class="col-lg-10">
                                         <div class="hero-content">
                                             <div class="sub-title">
-                                                Get unforgettable pleasure with us
+                                                {{$b->heading}}
                                             </div>
                                             <h1>
-                                                Let’s make your best <br> trip with us
+                                                {{$b->offer_line}} <br>
+                                                 trip with us
                                             </h1>
                                             <div class="booking-list-area">
                                                 <div class="booking-list">
@@ -343,201 +347,10 @@
                                 </div>
                             </div>
                         </div>
+
+                         @endforeach
                     </div>
-                    <div class="swiper-slide">
-                        <div class="hero-1">
-                            <div class="hero-bg bg-cover" style="background-image: url(mymountains/assets/img/hero/02.png);"></div>
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-10">
-                                        <div class="hero-content">
-                                            <div class="sub-title">
-                                                Get unforgettable pleasure with us
-                                            </div>
-                                            <h1>
-                                                Let’s make your best <br> trip with us
-                                            </h1>
-                                            <div class="booking-list-area">
-                                                <div class="booking-list">
-                                                    <div class="icon">
-                                                        <img src="{{ asset("mymountains/assets/img/hero/icon-1.png") }}" alt="img">
-                                                    </div>
-                                                    <div class="content">
-                                                        <h6>Location</h6>
-                                                        <div class="form">
-                                                            <select class="single-select w-100">
-                                                                <option>Australia</option>
-                                                                <option>India</option>
-                                                                <option>Italy</option>
-                                                                <option>Japan</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="booking-list">
-                                                    <div class="icon">
-                                                        <img src="{{ asset("mymountains/assets/img/hero/icon-2.png") }}" alt="img">
-                                                    </div>
-                                                    <div class="content">
-                                                        <h6>Activities Type</h6>
-                                                        <div class="form">
-                                                            <select class="single-select w-100">
-                                                                <option> Activities Type</option>
-                                                                <option> Adventure 02</option>
-                                                                <option>Adventure 03</option>
-                                                                <option> Adventure 04</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="booking-list">
-                                                    <div class="icon">
-                                                        <img src="{{ asset("mymountains/assets/img/hero/icon-3.png") }}" alt="img">
-                                                    </div>
-                                                    <div class="content">
-                                                        <h6>Activate Day</h6>
-                                                        <div class="form-clt">
-                                                            <input type="date" id="date2" name="date1">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="booking-list">
-                                                    <div class="icon">
-                                                        <img src="{{ asset("mymountains/assets/img/hero/icon-3.png") }}" alt="img">
-                                                    </div>
-                                                    <div class="content">
-                                                        <h6>Traveler</h6>
-                                                        <div class="form">
-                                                            <select class="single-select w-100">
-                                                                <option>01</option>
-                                                                <option>02</option>
-                                                                <option>03</option>
-                                                                <option>04</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <button class="theme-btn" type="submit">Search</button>
-                                            </div>
-                                        </div>
-                                        <div class="counter-area">
-                                            <div class="counter-items">
-                                                <div class="counter-text">
-                                                    <h2><span class="count">20.5</span>k</h2>
-                                                    <p>Featured Projects</p>
-                                                </div>
-                                                <div class="counter-text">
-                                                    <h2><span class="count">100.5</span>k</h2>
-                                                    <p>Luxury Houses</p>
-                                                </div>
-                                                <div class="counter-text">
-                                                    <h2><span class="count">150.5</span>k</h2>
-                                                    <p>Satisficed Clients</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="hero-1">
-                            <div class="hero-bg bg-cover" style="background-image: url(mymountains/assets/img/hero/03.png);"></div>
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-10">
-                                        <div class="hero-content">
-                                            <div class="sub-title">
-                                                Get unforgettable pleasure with us
-                                            </div>
-                                            <h1>
-                                                Let’s make your best <br> trip with us
-                                            </h1>
-                                            <div class="booking-list-area">
-                                                <div class="booking-list">
-                                                    <div class="icon">
-                                                        <img src="{{ asset("mymountains/assets/img/hero/icon-1.png") }}" alt="img">
-                                                    </div>
-                                                    <div class="content">
-                                                        <h6>Location</h6>
-                                                        <div class="form">
-                                                            <select class="single-select w-100">
-                                                                <option>Australia</option>
-                                                                <option>India</option>
-                                                                <option>Italy</option>
-                                                                <option>Japan</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="booking-list">
-                                                    <div class="icon">
-                                                        <img src="{{ asset("mymountains/assets/img/hero/icon-2.png") }}" alt="img">
-                                                    </div>
-                                                    <div class="content">
-                                                        <h6>Activities Type</h6>
-                                                        <div class="form">
-                                                            <select class="single-select w-100">
-                                                                <option> Activities Type</option>
-                                                                <option> Adventure 02</option>
-                                                                <option>Adventure 03</option>
-                                                                <option> Adventure 04</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="booking-list">
-                                                    <div class="icon">
-                                                        <img src="{{ asset("mymountains/assets/img/hero/icon-3.png") }}" alt="img">
-                                                    </div>
-                                                    <div class="content">
-                                                        <h6>Activate Day</h6>
-                                                        <div class="form-clt">
-                                                            <input type="date" id="date3" name="date1">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="booking-list">
-                                                    <div class="icon">
-                                                        <img src="{{ asset("mymountains/assets/img/hero/icon-3.png") }}" alt="img">
-                                                    </div>
-                                                    <div class="content">
-                                                        <h6>Traveler</h6>
-                                                        <div class="form">
-                                                            <select class="single-select w-100">
-                                                                <option>01</option>
-                                                                <option>02</option>
-                                                                <option>03</option>
-                                                                <option>04</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <button class="theme-btn" type="submit">Search</button>
-                                            </div>
-                                        </div>
-                                        <div class="counter-area">
-                                            <div class="counter-items">
-                                                <div class="counter-text">
-                                                    <h2><span class="count">20.5</span>k</h2>
-                                                    <p>Featured Projects</p>
-                                                </div>
-                                                <div class="counter-text">
-                                                    <h2><span class="count">100.5</span>k</h2>
-                                                    <p>Luxury Houses</p>
-                                                </div>
-                                                <div class="counter-text">
-                                                    <h2><span class="count">150.5</span>k</h2>
-                                                    <p>Satisficed Clients</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </section>
