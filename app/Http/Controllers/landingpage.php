@@ -22,67 +22,85 @@ class landingpage extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        // $packages= PackagesModel::all()->where('category','Kashmir Tour Packages');
-        // $packages= PackagesModel::chunk()->where('category', 'Kashmir Tour Packages');
-        $packages = Cache::remember('packages', 60, function () {
-            return PackagesModel::all()->where('category','Kashmir Tour Packages');
-        });
+{
+    // Kashmir Packages
+    $packages = Cache::remember('packages', 300, function () {
+        return PackagesModel::where('category', 'Kashmir Tour Packages')
+            ->latest('id')   // latest records
+            ->take(10)       // only 10
+            ->get();
+    });
 
-        $packages1 = Cache::remember('packages1', 60, function () {
-            return PackagesModel::all()->where('category','Ladakh Tour Packages');
-        });
-        // $packages1= PackagesModel::all()->where('category','Ladakh Tour Packages');
-        
-        $packages2 = Cache::remember('packages2', 60, function () {
-            return PackagesModel::all()->where('category','Prilgimage Packages');
-        });
+    // Ladakh Packages
+    $packages1 = Cache::remember('packages1', 300, function () {
+        return PackagesModel::where('category', 'Ladakh Tour Packages')
+            ->latest('id')
+            ->take(10)
+            ->get();
+    });
 
-        $honeymoon = Cache::remember('honeymoon', 60, function () {
-            return PackagesModel::all()->where('category','Honeymoon Special');
-        });
-        // $packages2= PackagesModel::all()->where('category','Prilgimage Packages');
-        $premium = Cache::remember('premium', 60, function () {
-            return  PackagesModel::all()->where('category','Premium');
-        });
-       
-        // $premium= PackagesModel::all()->where('category','Premium');
-       
-        $banner = Cache::remember('banner', 60, function () {
-            return  TopSlider::all();
-        });
-       
-        // $banner= TopSlider::all();
-       
-        $faq = Cache::remember('faq', 60, function () {
-            return  FAQ::all();
-        });
-        // $faq= FAQ::all();
+    // Pilgrimage Packages
+    $packages2 = Cache::remember('packages2', 300, function () {
+        return PackagesModel::where('category', 'Prilgimage Packages')
+            ->latest('id')
+            ->take(10)
+            ->get();
+    });
 
-        $offer = Cache::remember('offer', 60, function () {
-            return  Offer::all();
-        });
+    // Honeymoon Packages
+    $honeymoon = Cache::remember('honeymoon', 300, function () {
+        return PackagesModel::where('category', 'Honeymoon Special')
+            ->latest('id')
+            ->take(10)
+            ->get();
+    });
 
-        // $offer= Offer::all();
-        $tagline=CategoryModel::all()->where('name','tagline')->first();
+    // Premium Packages
+    $premium = Cache::remember('premium', 300, function () {
+        return PackagesModel::where('category', 'Premium')
+            ->latest('id')
+            ->take(10)
+            ->get();
+    });
 
-        $images = Cache::remember('images', 60, function () {
-            return  Gallery::all();
-        });
+    // Banner (only 5 banners to keep homepage light)
+    $banner = Cache::remember('banner', 300, function () {
+        return TopSlider::latest('id')->take(5)->get();
+    });
 
-        return view('frontend.index',['packages'=>$packages,
-        'packages1'=>$packages1,
-        'packages2'=>$packages2,
-        'premium'=>$premium,
-        'faq'=>$faq,
-        'offer'=>$offer,
-        'banner'=>$banner,
-        'tagline'=>$tagline,
-        'honeymoon'=>$honeymoon,
-        'images'=>$images
+    // FAQ (only 10 latest FAQs)
+    $faq = Cache::remember('faq', 300, function () {
+        return FAQ::latest('id')->take(10)->get();
+    });
+
+    // Offers (limit 5)
+    $offer = Cache::remember('offer', 300, function () {
+        return Offer::latest('id')->take(5)->get();
+    });
+
+    // Tagline (single record)
+    $tagline = Cache::remember('tagline', 300, function () {
+        return CategoryModel::where('name', 'tagline')->first();
+    });
+
+    // Gallery (latest 20 images only)
+    $images = Cache::remember('images', 300, function () {
+        return Gallery::latest('id')->take(20)->get();
+    });
+
+    return view('index', [
+        'packages'  => $packages,
+        'packages1' => $packages1,
+        'packages2' => $packages2,
+        'premium'   => $premium,
+        'faq'       => $faq,
+        'offer'     => $offer,
+        'banner'    => $banner,
+        'tagline'   => $tagline,
+        'honeymoon' => $honeymoon,
+        'images'    => $images,
     ]);
-    }
-
+}
     public function generatePDF($id)
 {
     $package = PackagesModel::findOrFail($id);
