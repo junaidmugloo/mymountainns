@@ -275,9 +275,12 @@
                                                     <h1>
                                                         {{$b->heading}}
                                                         <br>
-                                                        starting at <span class="fs-4 fw-bold"> INR {{$b->discount}} </span><s> INR {{$b->price}}
-                                                        </s>
+                                                        
+                                                        
                                                     </h1>
+                                                     <div class="sub-title">
+                                                    starting at <span class="fs-4 fw-bold"> INR {{$b->discount}} </span><s> INR {{$b->price}}</s>
+                                                        </div
                                                     <form action="">
                                                     <div class="booking-list-area">
                                                         <div class="booking-list">

@@ -6363,7 +6363,7 @@ span {
   margin-bottom: 10px;
 }
 .hero-1 .hero-content h1 {
-  font-size: 60px;
+  /* font-size: 60px; */
   color: var(--white);
 }
 .hero-1 .hero-content .booking-list-area {
