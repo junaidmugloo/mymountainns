@@ -262,7 +262,7 @@
                             
                        
                         <div class="hero-1">
-                            <div class="hero-bg bg-cover" style="background-image: url(m/assets/img/hero/01.png);"></div>
+                            <div class="hero-bg bg-cover" style="background-image: url(/top_banner_images/{{$b->image}});"></div>
                             <div class="container">
                                 <div class="row">
                                     <div class="col-lg-10">
@@ -271,7 +271,7 @@
                                                  {{$b->offer_line}}
                             
                                             </div>
-                                            <h1>
+                                            <h1 class="fs-3">
                                                 {{$b->heading}}
                                                 <br>
                                                  starting at <span class="fs-4 fw-bold"> INR {{$b->discount}} </span><s> INR {{$b->price}} </s>
