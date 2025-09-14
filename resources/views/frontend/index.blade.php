@@ -177,7 +177,7 @@
         <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
-        <div class="modal-header"   style="background:linear-gradient(93deg,#ff7b26,#ec048c);">
+        <div class="modal-header"   style="background:linear-gradient(93deg,#20c997,#0dcaf0);">
              
         
         <div class="HeaderSaleLine_saleIcon__pwEFh"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M24 0H14.5L5 38H14.5L24 0Z" fill="white" fill-opacity="0.5"></path><path d="M12 0H9.95238L0 38H2.04762L12 0Z" fill="white" fill-opacity="0.5"></path></svg></div>
@@ -185,7 +185,7 @@
           <button type="button" class="btn-close" onclick="clear_head()" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <h5 class="mx-3" style="font-weight:600;">Save up to <x style="color:#F37002;">50% OFF</x></h5>
+          <h5 class="mx-3" style="font-weight:600;">Save up to <x style="color:#20c997;">50% OFF</x></h5>
           <h6 class="mx-3 mb-4" style="font-size:0.8rem;">We’ll be needing some of your basic details to help you better with your trip</h6>
           <form action="" id="tform" style=" justify-content: center;
             display: flex !important;">
@@ -225,7 +225,7 @@
               </div>
               <div class="col-12">
                 <div class="form-group mb-3">
-                  <button  style="background:#e34506;" class="btn text-light d-block w-100">Connect with and
+                  <button  style="background:#20c997;" class="btn text-light d-block w-100">Connect with and
                     Experts</button>
                 </div>
               </div>
