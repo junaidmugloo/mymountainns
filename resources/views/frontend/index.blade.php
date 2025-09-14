@@ -1864,6 +1864,8 @@
         <script src="{{ asset("mymountains/assets/js/wow.min.js") }}"></script>
         <!--<< Main.js >>-->
         <script src="{{ asset("mymountains/assets/js/main.js") }}"></script>
+        {{-- sweet alert --}}
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
         <script>
             $(document).ready(function () {
@@ -1871,6 +1873,56 @@
                     $('#exampleModal').modal('show');
                 }, 5000);
             });
+
+
+            // popup default on site load 
+            $("#tform").submit(function(e){
+
+
+e.preventDefault();
+ $.ajax({
+                       url: '/sendmail',
+                       method: 'POST',
+                       data: new FormData(this),
+                       dataType: 'JSON',
+                       contentType: false,
+                       cache: false,
+                       processData: false,
+                       beforeSend: function() {
+       
+$("#tform button").prop('disabled', true);
+       
+                     },
+                       success:function(response)
+                       {
+                         swal({
+ title: "Thank you!",
+ text: "Our destination expert will reach out to you shortly!!",
+ icon: "success",
+});
+                         
+                      $('#tform').trigger("reset");
+                     
+                      $("#tform button").prop('disabled', false);
+  
+                       },
+                       error: function(response) {
+                        swal({
+ title: "Thank you!",
+ text: "Our destination expert will reach out to you shortly!!",
+ icon: "success",
+});
+                         
+                      $('#tform').trigger("reset");
+                     
+                      $("#tform button").prop('disabled', false);
+                     
+                       }
+                   });
+
+});
+
+
         </script>
     </body>
 

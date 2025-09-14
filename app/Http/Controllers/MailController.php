@@ -30,9 +30,9 @@ class MailController extends Controller
    $response = Http::get('https://crm.joytourandtravels.com/landingpageenquiry.sys', $data2);
  
       Mail::send('mail', $data, function($message) {
-          $message->to('info@joytourandtravel.com', 'Joy Tour & Travels')->subject
+          $message->to('mymountainstourandtravel@gmail.com', 'My Mountains')->subject
           ('New Query');
-          $message->from('leads@joytourandtravel.com','Joy Tour & Travels');
+          $message->from('bookings@mymountains.in','My Mountains');
       });
       echo "ok";
    }
