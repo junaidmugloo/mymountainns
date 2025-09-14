@@ -1,3 +1,29 @@
+<style>
+.HeaderSaleLine_saleIcon__pwEFh {
+         animation: HeaderSaleLine_animateIconMobile__CTSdx 2.5s linear infinite; 
+    }
+
+
+.HeaderSaleLine_saleIcon__pwEFh {
+    display: flex; 
+     animation: HeaderSaleLine_animateIcon__69qO3 4s linear infinite; 
+}
+
+  @keyframes HeaderSaleLine_animateIcon__69qO3{
+    0% {
+    transform: translateX(0);
+    opacity: .01;
+}
+25% {
+    transform: translateX(30vw);
+    opacity: 1;
+}
+
+100% {
+    transform: translateX(35vw);
+    opacity: 0;
+}
+  }</style>
 <header class="header-section-10">
     <div class="header-top-section-new">
         <div class="container-fluid">
