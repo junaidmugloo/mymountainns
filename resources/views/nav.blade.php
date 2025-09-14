@@ -120,15 +120,10 @@
                                             </ul>
                                         </li> --}}
                                        <li>
-                                            <a href="{{ url("news-details.html") }}">
-                                                Blog
-                                                <i class="fa-solid fa-chevron-down"></i>
+                                            <a href="{{ url("/blogs") }}">
+                                                Blog   
                                             </a>
-                                            <ul class="submenu">
-                                                <li><a href="{{ url("news.html") }}">Blog Grid</a></li>
-                                                <li><a href="{{ url("news-classic.html") }}">Blog Classic</a></li>
-                                                <li><a href="{{ url("news-details.html") }}">Blog Details</a></li>
-                                            </ul>
+                                           
                                         </li>
                                         <li>
                                             <a href="{{ url("/about") }}">About Us</a>
@@ -140,7 +135,7 @@
                                 </nav>
                             </div>
                         </div>
-                        <a href="{{ url("#0") }}" class="search-trigger search-icon"><i class="fa-regular fa-user"></i></a>
+                        <a href="{{ url("#0") }}" class="search-trigger search-icon"><i class="fa-regular fa-magnifying-glass"></i></a>
                         <a href="javascript:void(0)" class="theme-btn"> Login <i class="fa-sharp fa-regular fa-arrow-right"></i></a>
                         <div class="header__hamburger d-xl-none my-auto">
                             <div class="sidebar__toggle">
