@@ -1019,7 +1019,7 @@
                     <div class="col-lg-4">
                         <div class="price-items">
                             <div class="price-image wow fadeInUp wow" data-wow-delay=".2s">
-                                <img src="{{ asset("mymountains/assets/img/offer/price.png") }}" alt="img">
+                                <img src="{{ asset("mymountains/assets/img/offer/price.png") }}" alt="img" width="200">
                             </div>
                             <div class="coming-soon-timer">
                                 <div class="timer-content wow fadeInUp" data-wow-delay=".2s">
