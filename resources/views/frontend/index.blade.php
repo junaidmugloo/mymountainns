@@ -743,10 +743,10 @@
                 <!-- Swiper CSS -->
 
 
-<div class="swiper mySwiper">
-    <div class="swiper-wrapper">
+ <div class="swiper tour-slider">
+        <div class="swiper-wrapper">
         @foreach($packages as $p)
-        <div class="swiper-slide d-flex h-100">
+        <div class="swiper-slide  h-100">
             <div class="destination-card-items d-flex flex-column w-100" style="height: 100%;">
         
                     <div class="destination-image">
