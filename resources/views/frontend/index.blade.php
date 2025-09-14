@@ -274,10 +274,11 @@
                                                     </div>
                                                     <h1>
                                                         {{$b->heading}}
-                                                        <br>
+                                                        
                                                         
                                                         
                                                     </h1>
+                                                    <br>
                                                      <div class="sub-title">
                                                     starting at <span class="fs-4 fw-bold"> INR {{$b->discount}} </span><s> INR {{$b->price}}</s>
                                                         </div
