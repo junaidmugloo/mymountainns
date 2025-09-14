@@ -7928,7 +7928,7 @@ input.main-search-input::placeholder {
   cursor: pointer;
 }
 
-.mouse-cursor {
+/* .mouse-cursor {
   position: fixed;
   left: 0;
   top: 0;
@@ -7937,7 +7937,7 @@ input.main-search-input::placeholder {
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
   visibility: hidden;
-}
+} */
 
 .cursor-inner {
   width: 6px;
