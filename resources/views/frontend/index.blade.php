@@ -337,22 +337,91 @@
                                                     </div>
                                                     </form>
                                                 </div>
-                                                <div class="counter-area">
-                                                    <div class="counter-items">
-                                                        <div class="counter-text">
-                                                            <h2><span class="count">5</span></h2>
-                                                            <p>Trust Index</p>
-                                                        </div>
-                                                        <div class="counter-text">
-                                                            <h2><span class="count">5</span></h2>
-                                                            <p>Google Review</p>
-                                                        </div>
-                                                        <div class="counter-text">
-                                                            <h2><span class="count">5</span><i class="fa fa-star" aria-hidden="true"></i></h2>
-                                                            <p>Just Dial</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                <!-- Counter Section -->
+<div class="counter-area">
+  <div class="counter-items">
+    <div class="counter-text">
+      <h2><span class="count">5</span></h2>
+      <p>Trust Index</p>
+    </div>
+    <div class="counter-text">
+      <h2><span class="count">5</span></h2>
+      <p>Google Review</p>
+    </div>
+    <div class="counter-text">
+      <h2><span class="count">5</span> <i class="fa fa-star" aria-hidden="true"></i></h2>
+      <p>Just Dial</p>
+    </div>
+  </div>
+</div>
+
+<!-- CSS -->
+<style>
+.counter-area {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.counter-items {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.counter-text {
+  background: #fff;
+  border-radius: 15px;
+  padding: 25px 40px;
+  min-width: 200px;
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.counter-text:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 12px 30px rgba(0,0,0,0.25);
+}
+
+.counter-text h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #4facfe;
+  margin: 0;
+}
+
+.counter-text p {
+  font-size: 18px;
+  color: #555;
+  margin-top: 8px;
+  font-weight: 500;
+}
+
+.counter-text i {
+  color: gold;
+  margin-left: 5px;
+  font-size: 28px;
+}
+
+/* Optional count animation */
+.count {
+  display: inline-block;
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
+
                                             </div>
                                         </div>
                                     </div>
