@@ -49,7 +49,7 @@
             </div>
         </div>
     </div>
-    <div id="header-sticky" class="header-11">
+    <div id="header-sticky" class="header-1 header-3">
         <div class="container-fluid">
             <div class="mega-menu-wrapper">
                 <div class="header-main">
