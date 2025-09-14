@@ -1002,26 +1002,7 @@
 
 
 
-    <script>
-        const swiper = new Swiper(".mySwiper", {
-          slidesPerView: 4,
-          spaceBetween: 20,
-          loop: true,
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-          pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-          },
-          breakpoints: {
-            1024: { slidesPerView: 4 },
-            768: { slidesPerView: 2 },
-            480: { slidesPerView: 1 }
-          }
-        });
-      </script>
+    
     <!-- Navigation -->
     
 
@@ -1748,6 +1729,28 @@ $("#tform button").prop('disabled', true);
 });
 
 
+        </script>
+
+        {{-- swiper js --}}
+        <script>
+            const swiper = new Swiper(".mySwiper", {
+              slidesPerView: 4,
+              spaceBetween: 20,
+              loop: true,
+              navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+              },
+              pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+              },
+              breakpoints: {
+                1024: { slidesPerView: 4 },
+                768: { slidesPerView: 2 },
+                480: { slidesPerView: 1 }
+              }
+            });
         </script>
     </body>
 
