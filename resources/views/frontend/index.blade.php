@@ -1734,7 +1734,7 @@ $("#tform button").prop('disabled', true);
         </script>
 
         {{-- swiper js --}}
-       <script>
+       {{-- <script>
   const swiper = new Swiper(".mySwiper", {
     slidesPerView: 4,
     spaceBetween: 20,
@@ -1753,7 +1753,7 @@ $("#tform button").prop('disabled', true);
       1024: { slidesPerView: 4 }
     }
   });
-</script>
+</script> --}}
 
     </body>
 
