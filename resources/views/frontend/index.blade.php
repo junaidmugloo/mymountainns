@@ -16,7 +16,7 @@
         <!--<< All Min Css >>-->
         <link rel="stylesheet" href="{{ asset("mymountains/assets/css/all.min.css") }}">
         <!--<< Animate.css >>-->
-        <link rel="stylesheet" href="{{ asset("mymountains/assets/css/animate.css") }}">
+        {{-- <link rel="stylesheet" href="{{ asset("mymountains/assets/css/animate.css") }}"> --}}
         <!--<< Magnific Popup.css >>-->
         <link rel="stylesheet" href="{{ asset("mymountains/assets/css/magnific-popup.css") }}">
         <!--<< MeanMenu.css >>-->
