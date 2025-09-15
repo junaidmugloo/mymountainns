@@ -208,7 +208,7 @@
         </section> --}}
 
         <!-- News-details-Section Start -->
-        <section class="news-details fix section-padding">
+        <section class="news-details fix pt-4">
             <div class="container">
                 <div class="news-details-area">
                     <div class="row g-5">
