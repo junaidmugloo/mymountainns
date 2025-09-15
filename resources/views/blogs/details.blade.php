@@ -349,7 +349,7 @@
         </div>
 
         <!-- breadcrumb-wrappe-Section Start -->
-        <section class="breadcrumb-wrapper fix bg-cover" style="background-image: url(assets/img/breadcrumb/breadcrumb.jpg);">
+        <section class="breadcrumb-wrapper fix bg-cover" style="background-image: url(/mymountains/assets/img/breadcrumb/breadcrumb.jpg);">
             <div class="container">
                 <div class="row">
                     <div class="page-heading">
@@ -374,7 +374,7 @@
                         <div class="col-12 col-lg-8">
                             <div class="blog-post-details">
                                 <div class="single-blog-post">
-                                    <div class="post-featured-thumb bg-cover" style="background-image: url('assets/img/news/post-4.jpg');">
+                                    <div class="post-featured-thumb bg-cover" style="background-image: url('/mymountains/assets/img/news/post-4.jpg');">
                                         <div class="post">
                                             <h3>
                                                 16
@@ -645,7 +645,7 @@
         </section>
 
         <!-- Footer Section Start -->
-        <footer class="footer-section fix bg-cover" style="background-image: url(assets/img/footer/footer-bg.jpg);">
+        <footer class="footer-section fix bg-cover" style="background-image: url(/mymountains/assets/img/footer/footer-bg.jpg);">
             <div class="container">
                 <div class="footer-widget-wrapper-new">
                     <div class="row">
