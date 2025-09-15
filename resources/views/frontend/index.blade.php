@@ -35,7 +35,90 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-        
+        <style>
+            /* Overlay */
+.search-wrap {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(15, 23, 42, 0.95); /* dark bluish overlay */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Inner Box */
+.search-inner {
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  position: relative;
+}
+
+/* Close Icon */
+.search-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.search-close:hover {
+  transform: rotate(90deg);
+  color: #f87171;
+}
+
+/* Input Field */
+.main-search-input {
+  width: 100%;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 50px;
+  outline: none;
+  font-size: 18px;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: box-shadow 0.3s ease;
+}
+.main-search-input:focus {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+/* Search Results */
+#search-results {
+  list-style: none;
+  margin: 20px 0 0;
+  padding: 0;
+  text-align: left;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+
+#search-results li {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 16px;
+  color: #374151;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#search-results li:hover {
+  background: #f3f4f6;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+        </style>
 
     </head>
     <body>
