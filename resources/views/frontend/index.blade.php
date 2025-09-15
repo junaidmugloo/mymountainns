@@ -34,7 +34,21 @@
         
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<style>
+   /* for small and medium screen */
+    @media (max-width: 450px) {
+    .destination-category-section .plane-shape {
+    position: absolute;
+    left: -30px;
+    top: -40px;
+}
 
+.float-bob-x{
+    width: fit-content;
+
+}
+    }
+</style>
         
 
     </head>
