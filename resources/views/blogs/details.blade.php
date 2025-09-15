@@ -219,8 +219,7 @@
                                     <div class="post-featured-thumb bg-cover" style="background-image: url({{asset('blog_images/'.$blog->image)}});">
                                         <div class="post">
                                             <h3>
-                                                16
-                                                <span>Dec</span>
+                                               {{$blog->created_at->format('d M')}}
                                             </h3>
                                          </div>
                                     </div>
@@ -241,14 +240,12 @@
                                             </li>
                                         </ul>
                                         <h3>
-                                            Get Best Advertiser in Your Side Pocket
+                                            {{ $blog->title }}
                                         </h3>
                                         <p class="mb-3">
-                                            Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore of magna aliqua. Ut enim ad minim veniam, made of owl the quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea dolor commodo consequat. Duis aute irure and dolor in reprehenderit.
+                                             {!! $blog->content!!}
                                         </p>
-                                        <p class="mb-3">
-                                            The is ipsum dolor sit amet consectetur adipiscing elit. Fusce eleifend porta arcu In hac habitasse the is platea augue thelorem turpoi dictumst. In lacus libero faucibus at malesuada sagittis placerat eros sed istincidunt augue ac ante rutrum sed the is sodales augue consequat.
-                                        </p>
+                                       
                                         <div class="row g-4">
                                             <div class="col-lg-6">
                                                 <div class="details-image">
