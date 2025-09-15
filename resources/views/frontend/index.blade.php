@@ -249,7 +249,7 @@
                 <div class="search-cell">
                     <form method="get">
                         <div class="search-field-holder">
-                            <input type="search" class="main-search-input" placeholder="Search...">
+                            <input id="search-input" type="search" class="main-search-input" placeholder="Search...">
                         </div>
                     </form>
                 </div>
@@ -1736,28 +1736,62 @@ $("#tform button").prop('disabled', true);
 
         </script>
 
-        {{-- swiper js --}}
-       {{-- <script>
-  const swiper = new Swiper(".mySwiper", {
-    slidesPerView: 4,
-    spaceBetween: 20,
-    loop: true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    breakpoints: {
-      480: { slidesPerView: 1 },
-      768: { slidesPerView: 2 },
-      1024: { slidesPerView: 4 }
-    }
-  });
-</script> --}}
 
+        {{-- search script --}}
+        <script>
+
+         // public/js/scripts.js
+$(document).ready(function() {
+    // Set up CSRF token for all AJAX requests
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+
+    $('#search-input').on('input', function() {
+        var query = $(this).val();
+
+        if (query.length < 3) {
+            $('#search-results').empty();
+            return;
+        }
+
+        $('#search-results').html(`
+           <li class="dropdown-item text-center" >
+            <div class="spinner-border" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+            </li>
+           
+          
+        `);
+
+        $.ajax({
+            url: '/searchfl',
+            method: 'POST',
+            data: { slug: query },
+            success: function(data) {
+                var resultsHtml = data.map(function(item) {
+                    return `
+                        <div class="result-item">
+                            <li onclick="$('#search-input').val('${item.name}')" class="dropdown-item" style="cursor:pointer;">${item.name}</li>
+                            
+                        </div>
+                    `;
+                }).join('');
+                
+                $('#search-results').html(resultsHtml);
+            },
+            error: function(xhr) {
+                console.error('Error fetching data:', xhr);
+            }
+        });
+    });
+});
+
+   
+    </script>
     </body>
 
 <!-- Mirrored from ex-coders.com/html/turmet/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 08 Apr 2025 11:50:32 GMT -->
