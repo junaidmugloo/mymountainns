@@ -1,191 +1,474 @@
 <!DOCTYPE html>
 <html lang="en">
+    <!--<< Header Area >>-->
+    
+<!-- Mirrored from ex-coders.com/html/turmet/destination.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 08 Apr 2025 11:51:28 GMT -->
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ladakh Packages</title>
-  <!-- Bootstrap CSS -->
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
- 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  
-  <style>
-    .card-custom {
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
+        <!-- ========== Meta Tags ========== -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="pixel-drop">
+        <meta name="description" content="Turmet - Travel & Tour Agency HTML Template">
+        <!-- ======== Page title ============ -->
+        <title>My Mountains</title>
+        <!--<< Favcion >>-->
+        <link rel="shortcut icon" href="{{ asset("/mymountains/assets/img/favicon.svg") }}">
+        <!--<< Bootstrap min.css >>-->
+        <link rel="stylesheet" href="{{ asset("/mymountains/assets/css/bootstrap.min.css") }}">
+        <!--<< All Min Css >>-->
+        <link rel="stylesheet" href="{{ asset("/mymountains/assets/css/all.min.css") }}">
+        <!--<< Animate.css >>-->
+        <link rel="stylesheet" href="{{ asset("/mymountains/assets/css/animate.css") }}">
+        <!--<< Magnific Popup.css >>-->
+        <link rel="stylesheet" href="{{ asset("/mymountains/assets/css/magnific-popup.css") }}">
+        <!--<< MeanMenu.css >>-->
+        <link rel="stylesheet" href="{{ asset("/mymountains/assets/css/meanmenu.css") }}">
+        <!--<< Swiper Bundle.css >>-->
+        <link rel="stylesheet" href="{{ asset("/mymountains/assets/css/swiper-bundle.min.css") }}">
+        <!--<< Datepickerboot.css >>-->
+        <link rel="stylesheet" href="{{ asset("/mymountains/assets/css/datepickerboot.css") }}">
+        <!--<< Nice Select.css >>-->
+        <link rel="stylesheet" href="{{ asset("/mymountains/assets/css/nice-select.css") }}">
+        <!--<< Color.css >>-->
+        <link rel="stylesheet" href="{{ asset("/mymountains/assets/css/color.css") }}">
+        <!--<< Main.css >>-->
+        <link rel="stylesheet" href="{{ asset("/mymountains/assets/css/main.css") }}">
+    </head>
+    <body>
 
-    .card-img-custom {
-      height: 200px;
-      object-fit: cover;
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
-    }
-
-    .skeleton {
-      background-color: #ddd;
-      animation: shimmer 1.5s infinite linear;
-      background: linear-gradient(90deg, #ddd 25%, #eee 50%, #ddd 75%);
-      background-size: 200% 100%;
-    }
-
-    .skeleton.text {
-      height: 20px;
-      margin-bottom: 10px;
-    }
-
-    .skeleton.small-text {
-      height: 15px;
-      margin-bottom: 5px;
-      width: 60%;
-    }
-
-    .skeleton-btn {
-      width: 100%;
-      height: 40px;
-      background-color: #ddd;
-      border-radius: 5px;
-      margin-top: 10px;
-    }
-
-    .btn-warning {
-      background: var(--primary-color, #f37002) !important;
-      color: #fff !important;
-    }
-
-    .btn-warning:hover {
-      background: var(--primary-color, #f36e02bb) !important;
-      color: #fff !important;
-    }
-
-    .btn-outline-warning:hover{
-      background: var(--primary-color, #f37002) !important;
-      color: #fff !important;
-    }
-
-    .btn-outline-warning{
-      border: solid var(--primary-color, #f37002)  2px  !important;
-      color: #000000 !important;
-    }
-
-    @keyframes shimmer {
-      0% {
-        background-position: -200px 0;
-      }
-      100% {
-        background-position: 200px 0;
-      }
-    }
-
-    @media (max-width: 768px) {
-           
-         
-           .fxs{
-               font-size: 0.8rem;
-           }
-       }
-   
-  </style>
-</head>
-<body>
-@include('nav')
-<div style="margin-top: 22vh;">
-  @include('pop')
-
-<div class="container my-5">
-  <h2 class="text-center mb-4">Ladakh Travel Packages</h2>
-  
-  <!-- Search Input -->
- 
-  <div class="row justify-content-start" id="packageCards">
-    @foreach ($packages1 as $p)
-    <div class="col-md-6 col-lg-4 mt-3 mb-3 package-card" data-title="{{ $p->title }}">
-      <div class="card card-custom" id="card-{{ $p->id }}">
-        <!-- Skeleton Loader -->
-        <div class="skeleton card-img-custom"></div>
-        <div class="card-body">
-          <div class="skeleton text"></div>
-          <div class="skeleton small-text"></div>
-          <div class="skeleton text"></div>
-          <div class="skeleton-btn"></div>
+        <!-- Preloader Start -->
+       <div id="preloader" class="preloader">
+            <div class="animation-preloader">
+                <div class="spinner">                
+                </div>
+                <div class="txt-loading">
+                    <span data-text-preloader="M" class="letters-loading">
+                        M
+                    </span>
+                    <span data-text-preloader="o" class="letters-loading">
+                        o
+                    </span>
+                    <span data-text-preloader="u" class="letters-loading">
+                        u
+                    </span>
+                    <span data-text-preloader="n" class="letters-loading">
+                        n
+                    </span>
+                    <span data-text-preloader="t" class="letters-loading">
+                        t
+                    </span>
+                    <span data-text-preloader="a" class="letters-loading">
+                        a
+                    </span>
+                    <span data-text-preloader="i" class="letters-loading">
+                        i
+                    </span>
+                    <span data-text-preloader="n" class="letters-loading">
+                        n
+                    </span>
+                    <span data-text-preloader="s" class="letters-loading">
+                        s
+                    </span>
+                </div>
+                <p class="text-center">Loading</p>
+            </div>
+            <div class="loader">
+                <div class="row">
+                    <div class="col-3 loader-section section-left">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-left">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-right">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-right">
+                        <div class="bg"></div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    @endforeach
-  </div>
-</div>
-</div>
+        
+         <!-- Back To Top Start -->
+         <button id="back-top" class="back-to-top">
+            <i class="fa-regular fa-arrow-up"></i>
+        </button>
 
-@include('footer')
-<!-- Bootstrap JS and dependencies -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <!--<< Mouse Cursor Start >>-->  
+        <div class="mouse-cursor cursor-outer"></div>
+        <div class="mouse-cursor cursor-inner"></div>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Simulate content loading with a 2s delay
-    setTimeout(function() {
-      @foreach ($packages1 as $p)
-      // Replacing Skeleton Loader with actual content
-      document.getElementById('card-{{ $p->id }}').innerHTML = `
-       <a href="/details/{{$p->id}}" style="text-decoration:none; color:black;">
-        <img src="package_images/{{ $p->image }}" alt="Trip Image" class="card-img-top card-img-custom">
-        <div class="card-body">
-          <h5 class="card-title">{{ $p->name }}</h5>
-          <div class="d-flex justify-content-between mb-2">
-            <span>({{ $p->day }} Days & {{$p->night}} Nights)</span>
-            <span class="text-success mr-2 text-end">★ 4.6</span>
-            
-          </div>
-
-            <p class="card-text p-0 mb-2 text-start rounded" style="font-size: 12px; background-color: #FFFBF0; ">
-                <span class="fw-bold">
-                  @php
-                  $string = $p->destination;
-                  $parts = explode(',', $string);
-                  $firstPart = $parts[0];
-                  $secondPart = $parts[1];
-                  $len=0;
-                  foreach ($parts as $part) {
-                    $len+=1; // Add the length of each part to the total
-                  }
-                  
-                 
-                    @endphp
-                              {{ $p->D1}}</span>  <b>|</b>
-                              <span class="fw-bold">{{ $p->D2}}</span>
-                              <b>|</b>
-                              <span class="fw-bold">{{ $p->D3}}</span>
-                             
-                              <span class="fw-bold text-danger" onclick="window.location.href='/details/{{$p->id}}'" style="cursor: pointer;">&nbsp;&nbsp;&nbsp;+{{ $len}}</span> 
-                           
-              </p>
-          <p class="text-warning h5 mb-1">INR {{ $p->discount }} <del class="text-muted h6">INR {{ $p->price }}</del></p>
-          <p class="text-success small">SAVE INR {{ $p->price - $p->discount }}</p>
-      </a>
-          <div class="d-flex justify-content-between">
-           <a href="tel:+91-9906786356" class="btn btn-outline-warning  text-uppercase font-weight-bold"><i class="bx bx-phone"></i></a>
-           &nbsp; &nbsp;
-           <a href="/details/{{$p->id}}" class="btn btn-warning  text-uppercase font-weight-bold" style="flex:auto;">View Details</a>
-          </div>
+        <!-- Offcanvas Area Start -->
+        <div class="fix-area">
+            <div class="offcanvas__info">
+                <div class="offcanvas__wrapper">
+                    <div class="offcanvas__content">
+                        <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
+                            <div class="offcanvas__logo">
+                                <a href="{{ url("index.html") }}">
+                                    <img src="{{ asset("/mymountains/assets/img/logo/black-logo.svg") }}" alt="logo-img">
+                                </a>
+                            </div>
+                            <div class="offcanvas__close">
+                                <button>
+                                <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <p class="text d-none d-xl-block">
+                            Nullam dignissim, ante scelerisque the  is euismod fermentum odio sem semper the is erat, a feugiat leo urna eget eros. Duis Aenean a imperdiet risus.
+                        </p>
+                        <div class="mobile-menu fix mb-3"></div>
+                        <div class="offcanvas__contact">
+                            <h4>Contact Info</h4>
+                            <ul>
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon">
+                                        <i class="fal fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-text">
+                                        <a target="_blank" href="{{ url("#") }}">Main Chowk, Nawab Bazaar, Srinagar</a>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon mr-15">
+                                        <i class="fal fa-envelope"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-text">
+                                        <a href="{{ url("mailto:info@mymountains.in") }}"><span class="mailto:info@mymountains.in">info@mymountains.in</span></a>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon mr-15">
+                                        <i class="fal fa-clock"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-text">
+                                        <a target="_blank" href="{{ url("#") }}">Mod-friday, 09am -05pm</a>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon mr-15">
+                                        <i class="far fa-phone"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-text">
+                                        <a href="{{ url("tel:+11002345909") }}">+91-9906786356</a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="header-button mt-4">
+                                <a href="{{ url("contact.html") }}" class="theme-btn"> Request A Quote <i class="fa-sharp fa-regular fa-arrow-right"></i></a>
+                            </div>
+                            <div class="social-icon d-flex align-items-center">
+                                <a href="{{ url("#") }}"><i class="fab fa-facebook-f"></i></a>
+                                <a href="{{ url("#") }}"><i class="fab fa-twitter"></i></a>
+                                <a href="{{ url("#") }}"><i class="fab fa-youtube"></i></a>
+                                <a href="{{ url("#") }}"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      `;
-      @endforeach
-    }, 2000); // Simulate a 2s delay for loading
-  });
+        <div class="offcanvas__overlay"></div>
 
-  // Search Functionality
-  $(document).ready(function() {
-    $('#searchInput').on('keyup', function() {
-      var value = $(this).val().toLowerCase();
-      $('.package-card').filter(function() {
-        $(this).toggle($(this).attr('data-title').toLowerCase().indexOf(value) > -1);
-      });
-    });
-  });
-</script>
+        <!-- Header Section Start -->
+       @include('nav')
+        <!-- Search Area Start -->
+        <div class="search-wrap">
+            <div class="search-inner">
+                <i class="fas fa-times search-close" id="search-close"></i>
+                <div class="search-cell">
+                    <form method="get">
+                        <div class="search-field-holder">
+                            <input type="search" class="main-search-input" placeholder="Search...">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <!-- breadcrumb-wrappe-Section Start -->
+        <section class="breadcrumb-wrapper fix bg-cover" style="background-image: url(/mymountains/assets/img/breadcrumb/breadcrumb.jpg);">
+            <div class="container">
+                <div class="row">
+                    <div class="page-heading">
+                        <h2>Destination</h2>
+                        <ul class="breadcrumb-list">
+                            <li>
+                                <a href="{{ url("index.html") }}">Home</a>
+                            </li>
+                            <li><i class="fa-solid fa-chevrons-right"></i></li>
+                            <li>Destination</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-</body>
+       <!-- Popular-destination Section Start -->
+       <section class="popular-destination-section section-padding">
+        <div class="container">
+            <div class="row g-4">
+               @foreach ($packages1 as $p)
+                <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp wow" data-wow-delay=".2s">
+                    <div class="destination-card-items mt-0">
+                        <div class="destination-image">
+                            <img src="package_images/{{ $p->image }}" alt="img">
+                            <div class="heart-icon">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="destination-content">
+                            <ul class="meta">
+                                <li>
+                                    <i class="fa-thin fa-location-dot"></i>
+                                    Indonesia
+                                </li>
+                                <li class="rating">
+                                    <div class="star">
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <p>4.7</p>
+                                </li>
+                            </ul>
+                            <h5>
+                                <a href="{{ url("destination-details.html") }}">
+                                    Brooklyn Beach Resort Tour
+                                </a>
+                            </h5>
+                            <ul class="info">
+                                <li>
+                                    <i class="fa-regular fa-clock"></i>
+                                     10 Days
+                                </li>
+                                <li>
+                                    <i class="fa-thin fa-users"></i>
+                                     50+
+                                </li>
+                            </ul>
+                            <div class="price">
+                                <h6>$59.00<span>/Per day</span></h6>
+                                <a href="{{ url("destination-details.html") }}" class="theme-btn style-2">Book Now<i class="fa-sharp fa-regular fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+               
+            </div>
+            <div class="page-nav-wrap text-center">
+                <ul>
+                    <li><a class="page-numbers" href="{{ url("#") }}"><i class="fal fa-long-arrow-left"></i></a></li>
+                    <li><a class="page-numbers" href="{{ url("#") }}">01</a></li>
+                    <li><a class="page-numbers" href="{{ url("#") }}">02</a></li>
+                    <li><a class="page-numbers" href="{{ url("#") }}">03</a></li>
+                    <li><a class="page-numbers" href="{{ url("#") }}"><i class="fal fa-long-arrow-right"></i></a></li>
+                </ul>
+            </div>
+        </div>
+       </section>
+       
+    <!-- watch-video-section Start -->
+    <section class="watch-video-section fix">
+        <div class="bg-shape">
+            <img src="{{ asset("/mymountains/assets/img/map-bg.png") }}" alt="img">
+        </div>
+        <div class="container">
+            <div class="section-title text-center">
+                <span class="sub-title wow fadeInUp">
+                    Watch Our Story
+                </span>
+                <h2 class="wow fadeInUp wow" data-wow-delay=".3s">
+                    Unforgettable Travel Experiences <br>
+                    Get Your Guide
+                </h2>
+            </div>
+            <div class="video-wrapper">
+                <div class="watch-button">
+                    <a href="{{ url("contact.html") }}" class="theme-btn wow fadeInUp wow" data-wow-delay=".5s">Contact Us<i class="fa-sharp fa-regular fa-arrow-right"></i></a>
+                    <a href="{{ url("tour-details.html") }}" class="theme-btn style-2 wow fadeInUp wow" data-wow-delay=".7s">Book Now<i class="fa-sharp fa-regular fa-arrow-right"></i></a>
+                </div>
+                <div class="video-image bg-cover" style="background-image: url(/mymountains/assets/img/video-bg.jpg);">
+                    <a href="https://www.youtube.com/watch?v=Cn4G2lZ_g2I" class="video-btn video-popup">
+                        <i class="fa-duotone fa-play"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Featured-tour-section Start -->
+     <section class="featured-tour-section section-padding section-bg">
+        <div class="left-shape">
+            <img src="{{ asset("/mymountains/assets/img/feature/plane-shape.png") }}" alt="img">
+        </div>
+        <div class="right-shape">
+            <img src="{{ asset("/mymountains/assets/img/feature/plane-shape.png") }}" alt="img">
+        </div>
+        <div class="array-button">
+            <button class="array-prev">
+                <i class="fa-regular fa-arrow-right-long"></i>
+            </button>
+            <button class="array-next">
+                <i class="fa-regular fa-arrow-left-long"></i>
+            </button>
+        </div>
+        <div class="container">
+            <div class="section-title">
+                <span class="sub-title wow fadeInUp">
+                    Featured Tour
+                </span>
+                <h2 class="wow fadeInUp wow" data-wow-delay=".5s">
+                    unforgettable Travel Discoveries
+                </h2>
+            </div>
+            <p class="wow fadeInUp wow" data-wow-delay=".7s">
+                There are many variations of passages of  available, but the majority have suffered alteration in some <br> form, by injected humour words which don't look even slightly believable 
+            </p>
+            <div class="swiper tour-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="feature-tour-items">
+                            <div class="feature-tour-image">
+                                <img src="{{ asset("/mymountains/assets/img/feature/01.jpg") }}" alt="img">
+                                <ul class="location">
+                                    <li>
+                                        <i class="fa-light fa-location-dot"></i>
+                                        Nederland
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="feature-tour-content">
+                                <h4>
+                                    <a href="{{ url("tour-details.html") }}">
+                                        Best Time Ever to Explore <br>
+                                        Molina's Nature
+                                    </a>
+                                </h4>
+                                <h5>
+                                    $49.00<span>/Per day</span>
+                                </h5>
+                                <a href="{{ url("tour-details.html") }}" class="icon">
+                                    <i class="fa-sharp fa-regular fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="feature-tour-items">
+                            <div class="feature-tour-image">
+                                <img src="{{ asset("/mymountains/assets/img/feature/02.jpg") }}" alt="img">
+                                <ul class="location">
+                                    <li>
+                                        <i class="fa-light fa-location-dot"></i>
+                                        Thailand
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="feature-tour-content">
+                                <h4>
+                                    <a href="{{ url("tour-details.html") }}">
+                                        Bathing and Kayaking at <br>
+                                        Nonrival Beach
+                                    </a>
+                                </h4>
+                                <h5>
+                                    $49.00<span>/Per day</span>
+                                </h5>
+                                <a href="{{ url("tour-details.html") }}" class="icon">
+                                    <i class="fa-sharp fa-regular fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="feature-tour-items">
+                            <div class="feature-tour-image">
+                                <img src="{{ asset("/mymountains/assets/img/feature/03.jpg") }}" alt="img">
+                                <ul class="location">
+                                    <li>
+                                        <i class="fa-light fa-location-dot"></i>
+                                        Austria
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="feature-tour-content">
+                                <h4>
+                                    <a href="{{ url("tour-details.html") }}">
+                                        5 Best Tips for an Amazing <br>
+                                        Molina Trip
+                                    </a>
+                                </h4>
+                                <h5>
+                                    $49.00<span>/Per day</span>
+                                </h5>
+                                <a href="{{ url("tour-details.html") }}" class="icon">
+                                    <i class="fa-sharp fa-regular fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="feature-tour-items">
+                            <div class="feature-tour-image">
+                                <img src="{{ asset("/mymountains/assets/img/feature/04.jpg") }}" alt="img">
+                                <ul class="location">
+                                    <li>
+                                        <i class="fa-light fa-location-dot"></i>
+                                        Slingerland
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="feature-tour-content">
+                                <h4>
+                                    <a href="{{ url("tour-details.html") }}">
+                                        Discover Beautiful Moliva: <br>
+                                        Nature's Paradise
+                                    </a>
+                                </h4>
+                                <h5>
+                                    $49.00<span>/Per day</span>
+                                </h5>
+                                <a href="{{ url("tour-details.html") }}" class="icon">
+                                    <i class="fa-sharp fa-regular fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+        <!-- Footer Section Start -->
+        @include('footer')
+
+        <!--<< All JS Plugins >>-->
+        <script src="{{ asset("/mymountains/assets/js/jquery-3.7.1.min.js") }}"></script>
+        <!--<< Viewport Js >>-->
+        <script src="{{ asset("/mymountains/assets/js/viewport.jquery.js") }}"></script>
+        <!--<< Bootstrap Js >>-->
+        <script src="{{ asset("/mymountains/assets/js/bootstrap.bundle.min.js") }}"></script>
+        <!--<< nice-selec Js >>-->
+        <script src="{{ asset("/mymountains/assets/js/jquery.nice-select.min.js") }}"></script>
+        <!--<< Waypoints Js >>-->
+        <script src="{{ asset("/mymountains/assets/js/jquery.waypoints.js") }}"></script>
+        <!--<< Counterup Js >>-->
+        <script src="{{ asset("/mymountains/assets/js/jquery.counterup.min.js") }}"></script>
+        <!--<< Swiper Slider Js >>-->
+        <script src="{{ asset("/mymountains/assets/js/swiper-bundle.min.js") }}"></script>
+        <!--<< MeanMenu Js >>-->
+        <script src="{{ asset("/mymountains/assets/js/jquery.meanmenu.min.js") }}"></script>
+         <!--<< Datepicker Js >>-->
+         <script src="{{ asset("/mymountains/assets/js/bootstrap-datepicker.js") }}"></script>
+        <!--<< Magnific Popup Js >>-->
+        <script src="{{ asset("/mymountains/assets/js/jquery.magnific-popup.min.js") }}"></script>
+        <!--<< Wow Animation Js >>-->
+        <script src="{{ asset("/mymountains/assets/js/wow.min.js") }}"></script>
+        <!--<< Main.js >>-->
+        <script src="{{ asset("/mymountains/assets/js/main.js") }}"></script>
+    </body>
+
+<!-- Mirrored from ex-coders.com/html/turmet/destination.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 08 Apr 2025 11:51:28 GMT -->
 </html>
