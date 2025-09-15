@@ -246,21 +246,7 @@
                                              {!! $blog->content!!}
                                         </p>
                                        
-                                        <div class="row g-4">
-                                            <div class="col-lg-6">
-                                                <div class="details-image">
-                                                    <img src="{{ asset("/mymountains/assets/img/news/post-5.jpg") }}" alt="img">
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6">
-                                                <div class="details-image">
-                                                    <img src="{{ asset("/mymountains/assets/img/news/post-6.jpg") }}" alt="img">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <p class="pt-4">
-                                            The is ipsum dolor sit amet consectetur adipiscing elit. Fusce eleifend porta arcu In hac habitasse the is platea augue thelorem turpoi dictumst. In lacus libero faucibus at malesuada sagittis placerat eros sed istincidunt augue ac ante rutrum sed the is sodales augue consequat.
-                                        </p>
+                                       
                                         <div class="hilight-text mt-4 mb-4">
                                             <p>
                                                 Pellentesque sollicitudin congue dolor non aliquam. Morbi volutpat, nisi vel ultricies <br> urnacondimentum, sapien neque lobortis tortor, quis efficitur mi ipsum eu metus. <br> Praesent eleifend orci sit amet est vehicula.
@@ -270,9 +256,7 @@
                                                 <path d="M28.2846 20.0711H21.0703V5.64258H35.4989V20.4531L30.547 30.3568H23.9507L28.7318 20.7947L29.0936 20.0711H28.2846Z" stroke="#63AB45"/>
                                               </svg>
                                         </div>
-                                        <p class="mt-4 mb-5">
-                                            Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore of magna aliqua. Ut enim ad minim veniam, made of owl the quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea dolor commodo consequat. Duis aute irure and dolor in reprehenderit.
-                                        </p>
+                                        
                                     </div>
                                 </div>
                                 <div class="row tag-share-wrap mt-4 mb-5">
