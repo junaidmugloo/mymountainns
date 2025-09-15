@@ -35,6 +35,70 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+        <style>
+.counter-area {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  padding: 60px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.counter-items {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.counter-text {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.counter-text:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+}
+
+.counter-text h2 {
+  font-size: 42px;
+  margin: 0;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.counter-text .fa-star {
+  color: gold;
+  font-size: 28px;
+}
+
+.counter-text p {
+  margin-top: 8px;
+  font-size: 16px;
+  opacity: 0.9;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .counter-items {
+    gap: 25px;
+  }
+  .counter-text {
+    padding: 20px 25px;
+  }
+  .counter-text h2 {
+    font-size: 32px;
+  }
+}
+</style>
+
     </head>
     <body>
 
@@ -338,6 +402,7 @@
                                                     </div>
                                                     </form>
                                                 </div>
+
                                                 <div class="counter-area">
                                                     <div class="counter-items">
                                                         <div class="counter-text">
