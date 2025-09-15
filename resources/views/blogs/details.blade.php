@@ -208,6 +208,7 @@
         </section> --}}
 
         <!-- News-details-Section Start -->
+        <hr>
         <section class="news-details fix pt-4">
             <div class="container">
                 <div class="news-details-area">
