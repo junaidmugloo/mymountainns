@@ -1,124 +1,723 @@
 <!DOCTYPE html>
 <html lang="en">
-
+    <!--<< Header Area >>-->
+    
+<!-- Mirrored from ex-coders.com/html/turmet/news.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 08 Apr 2025 11:51:35 GMT -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blogs - Joy Tour & Travels</title>
-    <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
-    <meta name="keywords" content="Kashmir Tour Packages, Joy Tour & Travels, Travel Blog">
-    <meta name="author" content="Joy Tour & Travels">
-    <meta name="description" content="Discover travel stories, tips, and updates on the Joy Tour & Travels blog page.">
-    
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.css">
+        <!-- ========== Meta Tags ========== -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="pixel-drop">
+        <meta name="description" content="Turmet - Travel & Tour Agency HTML Template">
+        <!-- ======== Page title ============ -->
+        <title>My Mountains</title>
+        <!--<< Favcion >>-->
+        <link rel="shortcut icon" href="{{ asset("/mymountains/assets/img/favicon.svg") }}">
+        <!--<< Bootstrap min.css >>-->
+        <link rel="stylesheet" href="{{ asset("/mymountains/assets/css/bootstrap.min.css") }}">
+        <!--<< All Min Css >>-->
+        <link rel="stylesheet" href="{{ asset("/mymountains/assets/css/all.min.css") }}">
+        <!--<< Animate.css >>-->
+        <link rel="stylesheet" href="{{ asset("/mymountains/assets/css/animate.css") }}">
+        <!--<< Magnific Popup.css >>-->
+        <link rel="stylesheet" href="{{ asset("/mymountains/assets/css/magnific-popup.css") }}">
+        <!--<< MeanMenu.css >>-->
+        <link rel="stylesheet" href="{{ asset("/mymountains/assets/css/meanmenu.css") }}">
+        <!--<< Swiper Bundle.css >>-->
+        <link rel="stylesheet" href="{{ asset("/mymountains/assets/css/swiper-bundle.min.css") }}">
+        <!--<< Datepickerboot.css >>-->
+        <link rel="stylesheet" href="{{ asset("/mymountains/assets/css/datepickerboot.css") }}">
+        <!--<< Nice Select.css >>-->
+        <link rel="stylesheet" href="{{ asset("/mymountains/assets/css/nice-select.css") }}">
+        <!--<< Color.css >>-->
+        <link rel="stylesheet" href="{{ asset("/mymountains/assets/css/color.css") }}">
+        <!--<< Main.css >>-->
+        <link rel="stylesheet" href="{{ asset("/mymountains/assets/css/main.css") }}">
+    </head>
+    <body>
 
-    <style>
-        body {
-            font-family: "Poppins", Helvetica, sans-serif;
-            background-color: #f8f9fa;
-        }
-
-        .blog-header {
-            background: linear-gradient(92deg, #f37022 1.79%, #fcaf17 97.06%);
-            color: white;
-            padding: 60px 0;
-            text-align: center;
-        }
-
-        .blog-header h1 {
-            font-size: 48px;
-            font-weight: 700;
-        }
-
-        .blog-post {
-            background: white;
-            margin: 30px 0;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            transition: 0.3s ease-in-out;
-        }
-
-        .blog-post:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .blog-post img {
-            width: 100%;
-            border-radius: 10px;
-        }
-
-        .blog-post h2 {
-            font-size: 24px;
-            font-weight: 600;
-            margin-top: 15px;
-        }
-
-        .blog-post p {
-            color: #515151;
-            font-size: 16px;
-            line-height: 28px;
-        }
-
-        .blog-post a {
-            text-decoration: none;
-            color: #f37022;
-            font-weight: bold;
-        }
-
-        .blog-post a:hover {
-            color: #fcaf17;
-        }
-
-        @media (max-width: 768px) {
-            .blog-header h1 {
-                font-size: 36px;
-            }
-        }
-    </style>
-</head>
-
-<body>
-    <div class="d-flex fixed-top p-2" style="background: linear-gradient(93deg, #ff7b26, #ec048c);">
-        <a href="tel://7889604545" class="text-light text-decoration-none me-3">
-            <i class="fa-solid fa-phone"></i> +91-7889-604545
-        </a>
-        <a href="mailto:joytravelkashmir@gmail.com" class="text-light text-decoration-none">
-            <i class="fa-solid fa-envelope"></i> joytravelkashmir@gmail.com
-        </a>
-    </div>
-    
-    @include('nav')
-    @include('pop')
-
-    <div class="blog-header position-relative" style="margin-top:20vh;">
-        <h1>Our Latest Blogs</h1>
-        <p>Explore the world with us through our travel stories and insights.</p>
-    </div>
-
-    <div class="container py-5">
-        <div class="row">
-            @foreach ($blogs as $b)
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="blog-post">
-                    <img src="{{ asset('blog_images/' . $b->image) }}" alt="{{ $b->title }}">
-                    <h2>{{ $b->title }}</h2>
-                    <p>{!! Str::limit(strip_tags($b->content), 100) !!}</p>
-                    <a href="https://joytourandtravels.com/blogs/{{ $b->slug }}">Read More</a>
+        <!-- Preloader Start -->
+       <div id="preloader" class="preloader">
+            <div class="animation-preloader">
+                <div class="spinner">                
+                </div>
+                <div class="txt-loading">
+                    <span data-text-preloader="M" class="letters-loading">
+                        M
+                    </span>
+                    <span data-text-preloader="o" class="letters-loading">
+                        o
+                    </span>
+                    <span data-text-preloader="u" class="letters-loading">
+                        u
+                    </span>
+                    <span data-text-preloader="n" class="letters-loading">
+                        n
+                    </span>
+                    <span data-text-preloader="t" class="letters-loading">
+                        t
+                    </span>
+                    <span data-text-preloader="a" class="letters-loading">
+                        a
+                    </span>
+                    <span data-text-preloader="i" class="letters-loading">
+                        i
+                    </span>
+                    <span data-text-preloader="n" class="letters-loading">
+                        n
+                    </span>
+                    <span data-text-preloader="s" class="letters-loading">
+                        s
+                    </span>
+                </div>
+                <p class="text-center">Loading</p>
+            </div>
+            <div class="loader">
+                <div class="row">
+                    <div class="col-3 loader-section section-left">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-left">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-right">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-right">
+                        <div class="bg"></div>
+                    </div>
                 </div>
             </div>
-            @endforeach
         </div>
-    </div>
+        
+        <!-- Back To Top Start -->
+        <button id="back-top" class="back-to-top">
+            <i class="fa-regular fa-arrow-up"></i>
+        </button>
 
-    @include('footer')
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-</body>
+        <!--<< Mouse Cursor Start >>-->  
+        <div class="mouse-cursor cursor-outer"></div>
+        <div class="mouse-cursor cursor-inner"></div>
 
+        <!-- Offcanvas Area Start -->
+        <div class="fix-area">
+            <div class="offcanvas__info">
+                <div class="offcanvas__wrapper">
+                    <div class="offcanvas__content">
+                        <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
+                            <div class="offcanvas__logo">
+                                <a href="{{ url("index.html") }}">
+                                    <img src="{{ asset("/mymountains/assets/img/logo/black-logo.svg") }}" alt="logo-img">
+                                </a>
+                            </div>
+                            <div class="offcanvas__close">
+                                <button>
+                                <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <p class="text d-none d-xl-block">
+                            Nullam dignissim, ante scelerisque the  is euismod fermentum odio sem semper the is erat, a feugiat leo urna eget eros. Duis Aenean a imperdiet risus.
+                        </p>
+                        <div class="mobile-menu fix mb-3"></div>
+                        <div class="offcanvas__contact">
+                            <h4>Contact Info</h4>
+                            <ul>
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon">
+                                        <i class="fal fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-text">
+            <a target="_blank" href="{{ url("#") }}">Main chowk, Nawab Bazaar, Srinagar</a>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon mr-15">
+                                        <i class="fal fa-envelope"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-text">
+                                        <a href="{{ url("mailto:info@example.com") }}"><span class="mailto:info@example.com">info@example.com</span></a>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon mr-15">
+                                        <i class="fal fa-clock"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-text">
+                                        <a target="_blank" href="{{ url("#") }}">Mod-friday, 09am -05pm</a>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <div class="offcanvas__contact-icon mr-15">
+                                        <i class="far fa-phone"></i>
+                                    </div>
+                                    <div class="offcanvas__contact-text">
+                                        <a href="{{ url("tel:+11002345909") }}">+91-9906786356</a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="header-button mt-4">
+                                <a href="{{ url("contact.html") }}" class="theme-btn"> Request A Quote <i class="fa-sharp fa-regular fa-arrow-right"></i></a>
+                            </div>
+                            <div class="social-icon d-flex align-items-center">
+                                <a href="{{ url("#") }}"><i class="fab fa-facebook-f"></i></a>
+                                <a href="{{ url("#") }}"><i class="fab fa-twitter"></i></a>
+                                <a href="{{ url("#") }}"><i class="fab fa-youtube"></i></a>
+                                <a href="{{ url("#") }}"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="offcanvas__overlay"></div>
+
+        <!-- Header Section Start -->
+        <header id="header-sticky" class="header-1 header-3">
+            <div class="container-fluid">
+                <div class="mega-menu-wrapper">
+                    <div class="header-main">
+                        <div class="logo">
+                            <a href="{{ url("index.html") }}" class="header-logo">
+                                <img src="{{ asset("/mymountains/assets/img/logo/black-logo.svg") }}" alt="logo-img">
+                            </a>
+                            <a href="{{ url("index.html") }}" class="header-logo-2">
+                                <img src="{{ asset("/mymountains/assets/img/logo/white-logo.svg") }}" alt="logo-img">
+                            </a>
+                        </div>
+                        <div class="mean__menu-wrapper">
+                            <div class="main-menu">
+                                <nav id="mobile-menu">
+                                    <ul>
+                                        <li class="has-dropdown active menu-thumb">
+                                            <a href="{{ url("index.html") }}">
+                                                Home 
+                                                <i class="fa-solid fa-chevron-down"></i>
+                                            </a>
+                                            <ul class="submenu has-homemenu">
+                                                <li>
+                                                    <div class="homemenu-items">
+                                                        <div class="homemenu">
+                                                            <div class="homemenu-thumb">
+                                                                <img src="{{ asset("/mymountains/assets/img/header/home-1.jpg") }}" alt="img">
+                                                                <div class="demo-button">
+                                                                    <a href="{{ url("index.html") }}" class="theme-btn">
+                                                                        Multi Page
+                                                                    </a>
+                                                                    <a href="{{ url("index-one-page.html") }}" class="theme-btn">
+                                                                        One Page
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="homemenu-content text-center">
+                                                                <h4 class="homemenu-title">
+                                                                    Tour Booking
+                                                                </h4>
+                                                            </div>
+                                                        </div>
+                                                        <div class="homemenu">
+                                                            <div class="homemenu-thumb mb-15">
+                                                                <img src="{{ asset("/mymountains/assets/img/header/home-2.jpg") }}" alt="img">
+                                                                <div class="demo-button">
+                                                                    <a href="{{ url("index-2.html") }}" class="theme-btn">
+                                                                        Multi Page
+                                                                    </a>
+                                                                    <a href="{{ url("index-two-page.html") }}" class="theme-btn">
+                                                                        One Page
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="homemenu-content text-center">
+                                                                <h4 class="homemenu-title">
+                                                                    Travel Booking
+                                                                </h4>
+                                                            </div>
+                                                        </div>
+                                                        <div class="homemenu">
+                                                            <div class="homemenu-thumb mb-15">
+                                                                <img src="{{ asset("/mymountains/assets/img/header/home-3.jpg") }}" alt="img">
+                                                                <div class="demo-button">
+                                                                    <a href="{{ url("index-3.html") }}" class="theme-btn">
+                                                                        Multi Page
+                                                                    </a>
+                                                                    <a href="{{ url("index-three-page.html") }}" class="theme-btn">
+                                                                        One Page
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="homemenu-content text-center">
+                                                                <h4 class="homemenu-title">
+                                                                    Flight Booking
+                                                                </h4>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-dropdown active d-xl-none">
+                                            <a href="{{ url("team.html") }}" class="border-none">
+                                            Home
+                                            </a>
+                                            <ul class="submenu">
+                                                <li><a href="{{ url("index.html") }}">Home 01</a></li>
+                                                <li><a href="{{ url("index-2.html") }}">Home 02</a></li>
+                                                <li><a href="{{ url("index-3.html") }}">Home 03</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="{{ url("about.html") }}">About Us</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ url("destination-details.html") }}">
+                                                Destinations
+                                                <i class="fa-solid fa-chevron-down"></i>
+                                            </a>
+                                            <ul class="submenu">
+                                                <li><a href="{{ url("destination.html") }}">our Destination</a></li>
+                                                <li><a href="{{ url("destination-details.html") }}">Destination Details</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="{{ url("tour-details.html") }}">
+                                                Tour
+                                                <i class="fa-solid fa-chevron-down"></i>
+                                            </a>
+                                            <ul class="submenu">
+                                                <li><a href="{{ url("tour.html") }}">Our Tour</a></li>
+                                                <li><a href="{{ url("tour-details.html") }}">Tour Details</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-dropdown">
+                                            <a href="{{ url("news.html") }}">
+                                                Pages
+                                                <i class="fa-solid fa-chevron-down"></i>
+                                            </a>
+                                            <ul class="submenu">
+                                                <li><a href="{{ url("activities.html") }}">Activities</a></li>
+                                                <li><a href="{{ url("activities-details.html") }}">Activities Details</a></li>
+                                                <li><a href="{{ url("team.html") }}">Our Team</a></li>
+                                                <li><a href="{{ url("team-details.html") }}">Team Details</a></li>
+                                                <li><a href="{{ url("faq.html") }}">Our Faq</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="{{ url("news-details.html") }}">
+                                                Blog
+                                                <i class="fa-solid fa-chevron-down"></i>
+                                            </a>
+                                            <ul class="submenu">
+                                                <li><a href="{{ url("news.html") }}">Blog Grid</a></li>
+                                                <li><a href="{{ url("news-classic.html") }}">Blog Classic</a></li>
+                                                <li><a href="{{ url("news-details.html") }}">Blog Details</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="{{ url("contact.html") }}">Contact Us</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="header-right d-flex justify-content-end align-items-center">
+                            <a href="{{ url("#0") }}" class="search-trigger search-icon"><i class="fa-regular fa-magnifying-glass"></i></a>
+                            <a href="{{ url("contact.html") }}" class="theme-btn"> Request A Quote <i class="fa-sharp fa-regular fa-arrow-right"></i></a>
+                            <div class="header__hamburger d-xl-none my-auto">
+                                <div class="sidebar__toggle">
+                                    <i class="fas fa-bars"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Search Area Start -->
+        <div class="search-wrap">
+            <div class="search-inner">
+                <i class="fas fa-times search-close" id="search-close"></i>
+                <div class="search-cell">
+                    <form method="get">
+                        <div class="search-field-holder">
+                            <input type="search" class="main-search-input" placeholder="Search...">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <!-- breadcrumb-wrappe-Section Start -->
+        <section class="breadcrumb-wrapper fix bg-cover" style="background-image: url(assets/img/breadcrumb/breadcrumb.jpg);">
+            <div class="container">
+                <div class="row">
+                    <div class="page-heading">
+                        <h2>Blog</h2>
+                        <ul class="breadcrumb-list">
+                            <li>
+                                <a href="{{ url("index.html") }}">Home</a>
+                            </li>
+                            <li><i class="fa-solid fa-chevrons-right"></i></li>
+                            <li>Blog</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- News-Section Start -->
+        <section class="news-section section-padding fix">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-xl-4 col-md-6 col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="news-card-items-3 mt-0">
+                            <div class="news-image">
+                                <img src="{{ asset("/mymountains/assets/img/news/08.jpg") }}" alt="img">
+                            </div>
+                            <div class="news-content">
+                                <ul class="post-meta">
+                                    <li class="post">26<span>Nov</span></li>
+                                    <li>
+                                        <i class="fa-regular fa-user"></i>
+                                        By Admin
+                                    </li>
+                                    <li>
+                                        <i class="fa-regular fa-tag"></i>
+                                        Travel
+                                    </li>
+                                </ul>
+                                <h4>
+                                    <a href="{{ url("news-details.html") }}">
+                                        The Surfing man Will Blow Your Mind
+                                    </a>
+                                </h4>
+                                <a href="{{ url("news-details.html") }}" class="link-btn">Read More <i class="fa-sharp fa-regular fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6 col-lg-6 wow fadeInUp" data-wow-delay=".5s">
+                        <div class="news-card-items-3 mt-0">
+                            <div class="news-image">
+                                <img src="{{ asset("/mymountains/assets/img/news/09.jpg") }}" alt="img">
+                            </div>
+                            <div class="news-content">
+                                <ul class="post-meta">
+                                    <li class="post">26<span>Nov</span></li>
+                                    <li>
+                                        <i class="fa-regular fa-user"></i>
+                                        By Admin
+                                    </li>
+                                    <li>
+                                        <i class="fa-regular fa-tag"></i>
+                                        Travel
+                                    </li>
+                                </ul>
+                                <h4>
+                                    <a href="{{ url("news-details.html") }}">
+                                        Supervisor Disapproved Of Latest Work
+                                    </a>
+                                </h4>
+                                <a href="{{ url("news-details.html") }}" class="link-btn">Read More <i class="fa-sharp fa-regular fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6 col-lg-6 wow fadeInUp" data-wow-delay=".7s">
+                        <div class="news-card-items-3 mt-0">
+                            <div class="news-image">
+                                <img src="{{ asset("/mymountains/assets/img/news/10.jpg") }}" alt="img">
+                            </div>
+                            <div class="news-content">
+                                <ul class="post-meta">
+                                    <li class="post">26<span>Nov</span></li>
+                                    <li>
+                                        <i class="fa-regular fa-user"></i>
+                                        By Admin
+                                    </li>
+                                    <li>
+                                        <i class="fa-regular fa-tag"></i>
+                                        Travel
+                                    </li>
+                                </ul>
+                                <h4>
+                                    <a href="{{ url("news-details.html") }}">
+                                        Get Best Advertiser In Your Side Pocket
+                                    </a>
+                                </h4>
+                                <a href="{{ url("news-details.html") }}" class="link-btn">Read More <i class="fa-sharp fa-regular fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6 col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="news-card-items-3 mt-0">
+                            <div class="news-image">
+                                <img src="{{ asset("/mymountains/assets/img/news/11.jpg") }}" alt="img">
+                            </div>
+                            <div class="news-content">
+                                <ul class="post-meta">
+                                    <li class="post">26<span>Nov</span></li>
+                                    <li>
+                                        <i class="fa-regular fa-user"></i>
+                                        By Admin
+                                    </li>
+                                    <li>
+                                        <i class="fa-regular fa-tag"></i>
+                                        Travel
+                                    </li>
+                                </ul>
+                                <h4>
+                                    <a href="{{ url("news-details.html") }}">
+                                        The Surfing man Will Blow Your Mind
+                                    </a>
+                                </h4>
+                                <a href="{{ url("news-details.html") }}" class="link-btn">Read More <i class="fa-sharp fa-regular fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6 col-lg-6 wow fadeInUp" data-wow-delay=".5s">
+                        <div class="news-card-items-3 mt-0">
+                            <div class="news-image">
+                                <img src="{{ asset("/mymountains/assets/img/news/12.jpg") }}" alt="img">
+                            </div>
+                            <div class="news-content">
+                                <ul class="post-meta">
+                                    <li class="post">26<span>Nov</span></li>
+                                    <li>
+                                        <i class="fa-regular fa-user"></i>
+                                        By Admin
+                                    </li>
+                                    <li>
+                                        <i class="fa-regular fa-tag"></i>
+                                        Travel
+                                    </li>
+                                </ul>
+                                <h4>
+                                    <a href="{{ url("news-details.html") }}">
+                                        Supervisor Disapproved Of Latest Work
+                                    </a>
+                                </h4>
+                                <a href="{{ url("news-details.html") }}" class="link-btn">Read More <i class="fa-sharp fa-regular fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6 col-lg-6 wow fadeInUp" data-wow-delay=".7s">
+                        <div class="news-card-items-3 mt-0">
+                            <div class="news-image">
+                                <img src="{{ asset("/mymountains/assets/img/news/13.jpg") }}" alt="img">
+                            </div>
+                            <div class="news-content">
+                                <ul class="post-meta">
+                                    <li class="post">26<span>Nov</span></li>
+                                    <li>
+                                        <i class="fa-regular fa-user"></i>
+                                        By Admin
+                                    </li>
+                                    <li>
+                                        <i class="fa-regular fa-tag"></i>
+                                        Travel
+                                    </li>
+                                </ul>
+                                <h4>
+                                    <a href="{{ url("news-details.html") }}">
+                                        Get Best Advertiser In Your Side Pocket
+                                    </a>
+                                </h4>
+                                <a href="{{ url("news-details.html") }}" class="link-btn">Read More <i class="fa-sharp fa-regular fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-nav-wrap text-center">
+                    <ul>
+                        <li><a class="page-numbers" href="{{ url("#") }}"><i class="fal fa-long-arrow-left"></i></a></li>
+                        <li><a class="page-numbers" href="{{ url("#") }}">01</a></li>
+                        <li><a class="page-numbers" href="{{ url("#") }}">02</a></li>
+                        <li><a class="page-numbers" href="{{ url("#") }}">03</a></li>
+                        <li><a class="page-numbers" href="{{ url("#") }}"><i class="fal fa-long-arrow-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Section Start -->
+        <footer class="footer-section fix bg-cover" style="background-image: url(assets/img/footer/footer-bg.jpg);">
+            <div class="container">
+                <div class="footer-widget-wrapper-new">
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-5 col-md-8 col-sm-6 wow fadeInUp wow" data-wow-delay=".2s">
+                            <div class="single-widget-items text-center">
+                                <div class="widget-head">
+                                    <a href="{{ url("index.html") }}">
+                                        <img src="{{ asset("/mymountains/assets/img/logo/white-log.svg") }}" alt="img">
+                                    </a>
+                                </div>
+                                <div class="footer-content">
+                                    <h3>Subscribe Newsletter</h3>
+                                    <p>Get Our Latest Deals and Update</p>
+                                    <div class="footer-input">
+                                        <input type="email" id="email2" placeholder="Your email address">
+                                        <button class="newsletter-btn theme-btn" type="submit">
+                                            Subscribe <i class="fa-sharp fa-regular fa-arrow-right"></i>
+                                        </button>
+                                    </div>
+                                    <div class="social-icon d-flex align-items-center justify-content-center">
+                                        <a href="{{ url("#") }}"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="{{ url("#") }}"><i class="fab fa-twitter"></i></a>
+                                        <a href="{{ url("#") }}"><i class="fab fa-linkedin-in"></i></a>
+                                        <a href="{{ url("#") }}"><i class="fab fa-instagram"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 ps-lg-5 wow fadeInUp wow" data-wow-delay=".4s">
+                            <div class="single-widget-items">
+                                <div class="widget-head">
+                                   <h4>Quick Links</h4>
+                                </div>
+                                <ul class="list-items">
+                                    <li>
+                                        <a href="{{ url("index.html") }}">
+                                            Home 
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ url("index.html") }}">
+                                            About Us  
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ url("news.html") }}">
+                                            Blog
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ url("tour-details.html") }}">
+                                            Services 
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ url("tour-details.html") }}">
+                                            Tour 
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 ps-lg-5 wow fadeInUp wow" data-wow-delay=".6s">
+                            <div class="single-widget-items">
+                                <div class="widget-head">
+                                   <h4>Services</h4>
+                                </div>
+                                <ul class="list-items">
+                                    <li>
+                                        <a href="{{ url("tour-details.html") }}">
+                                            Wanderlust Adventures  
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ url("tour-details.html") }}">
+                                            Globe Trotters Travel
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ url("tour-details.html") }}">
+                                            Odyssey Travel Services
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ url("tour-details.html") }}">
+                                            Jet Set Journeys
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ url("tour-details.html") }}">
+                                            Dream Destinations Travel
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 ps-xl-5 wow fadeInUp wow" data-wow-delay=".6s">
+                            <div class="single-widget-items">
+                                <div class="widget-head">
+                                   <h4>Contact Us</h4>
+                                </div>
+                                <div class="contact-info">
+                                    <div class="contact-items">
+                                        <div class="icon">
+                                            <i class="fa-regular fa-location-dot"></i>
+                                        </div>
+                                        <div class="content">
+                                            <h6>9550 Bolsa Ave #126, <br>
+                                                United States
+                                            </h6>
+                                        </div>
+                                    </div>
+                                    <div class="contact-items">
+                                        <div class="icon">
+                                         <i class="fa-regular fa-envelope"></i>
+                                        </div>
+                                        <div class="content">
+                                         <h6>
+                                             <a href="{{ url("mailto:info@touron.com") }}">info@touron.com</a> 
+                                         </h6>
+                                      </div>
+                                    </div>
+                                    <div class="contact-items">
+                                       <div class="icon">
+                                          <i class="fa-solid fa-phone"></i>
+                                       </div>
+                                       <div class="content">
+                                           <h6>
+                                               <a href="{{ url("tel:+256214203215") }}">+256 214 203 215</a> <br>
+                                               <a href="{{ url("tel:+10987654321") }}">+1 098 765 4321</a>
+                                           </h6>
+                                       </div>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                     </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="footer-wrapper">
+                        <p class="wow fadeInUp" data-wow-delay=".3s">
+                            Copyright © <span>Turmet,</span> All Rights Reserved.
+                        </p>
+                        <ul class="bottom-list wow fadeInUp" data-wow-delay=".5s">
+                            <li>Terms of use</li>
+                            <li>Privacy Environmental Policy</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!--<< All JS Plugins >>-->
+        <script src="{{ asset("/mymountains/assets/js/jquery-3.7.1.min.js") }}"></script>
+        <!--<< Viewport Js >>-->
+        <script src="{{ asset("/mymountains/assets/js/viewport.jquery.js") }}"></script>
+        <!--<< Bootstrap Js >>-->
+        <script src="{{ asset("/mymountains/assets/js/bootstrap.bundle.min.js") }}"></script>
+        <!--<< nice-selec Js >>-->
+        <script src="{{ asset("/mymountains/assets/js/jquery.nice-select.min.js") }}"></script>
+        <!--<< Waypoints Js >>-->
+        <script src="{{ asset("/mymountains/assets/js/jquery.waypoints.js") }}"></script>
+        <!--<< Counterup Js >>-->
+        <script src="{{ asset("/mymountains/assets/js/jquery.counterup.min.js") }}"></script>
+        <!--<< Swiper Slider Js >>-->
+        <script src="{{ asset("/mymountains/assets/js/swiper-bundle.min.js") }}"></script>
+        <!--<< MeanMenu Js >>-->
+        <script src="{{ asset("/mymountains/assets/js/jquery.meanmenu.min.js") }}"></script>
+         <!--<< Datepicker Js >>-->
+         <script src="{{ asset("/mymountains/assets/js/bootstrap-datepicker.js") }}"></script>
+        <!--<< Magnific Popup Js >>-->
+        <script src="{{ asset("/mymountains/assets/js/jquery.magnific-popup.min.js") }}"></script>
+        <!--<< Wow Animation Js >>-->
+        <script src="{{ asset("/mymountains/assets/js/wow.min.js") }}"></script>
+        <!--<< Main.js >>-->
+        <script src="{{ asset("/mymountains/assets/js/main.js") }}"></script>
+    </body>
+
+<!-- Mirrored from ex-coders.com/html/turmet/news.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 08 Apr 2025 11:51:37 GMT -->
 </html>
