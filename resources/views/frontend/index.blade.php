@@ -100,8 +100,8 @@
         </button>
 
         <!--<< Mouse Cursor Start >>-->  
-        <div class="mouse-cursor cursor-outer"></div>
-        <div class="mouse-cursor cursor-inner"></div>
+        {{-- <div class="mouse-cursor cursor-outer"></div>
+        <div class="mouse-cursor cursor-inner"></div> --}}
 
         <!-- Offcanvas Area Start -->
         <div class="fix-area">
