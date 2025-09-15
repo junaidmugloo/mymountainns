@@ -88,7 +88,7 @@ class landingpage extends Controller
         return Gallery::latest('id')->take(20)->get();
     });
 
-    return view('index', [
+    return view('frontend.index', [
         'packages'  => $packages,
         'packages1' => $packages1,
         'packages2' => $packages2,
