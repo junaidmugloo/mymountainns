@@ -231,11 +231,11 @@
                                     </li>
                                 </ul>
                                 <h4>
-                                    <a href="{{ url("news-details.html") }}">
+                                    <a href="https://mymountains.in/blogs/{{ $b->slug }}">
                                         {!! Str::limit(strip_tags($b->content), 100) !!}
                                     </a>
                                 </h4>
-                                <a href="{{ url("news-details.html") }}" class="link-btn">Read More <i class="fa-sharp fa-regular fa-arrow-right"></i></a>
+                                <a href="https://mymountains.in/blogs/{{ $b->slug }}" class="link-btn">Read More <i class="fa-sharp fa-regular fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
