@@ -374,7 +374,7 @@
                         <div class="col-12 col-lg-8">
                             <div class="blog-post-details">
                                 <div class="single-blog-post">
-                                    <div class="post-featured-thumb bg-cover" style="background-image: url('/mymountains/assets/img/news/post-4.jpg');">
+                                    <div class="post-featured-thumb bg-cover" style="background-image: url({{asset('blog_images/'.$blog->image)}});">
                                         <div class="post">
                                             <h3>
                                                 16
