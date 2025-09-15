@@ -215,7 +215,7 @@
                 <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp wow" data-wow-delay=".2s">
                     <div class="destination-card-items mt-0">
                         <div class="destination-image">
-                            <img src="{{ asset("/mymountains/assets/img/destination/01.jpg") }}" alt="img">
+                            <img src="package_images/{{ $p->image }}" alt="img">
                             <div class="heart-icon">
                                 <i class="fa-regular fa-heart"></i>
                             </div>
