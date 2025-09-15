@@ -247,11 +247,16 @@
             <div class="search-inner">
                 <i class="fas fa-times search-close" id="search-close"></i>
                 <div class="search-cell">
-                    <form method="get">
+                    <form method="post"  action="/search" role="search">
+                         <meta name="csrf-token" content="{{ csrf_token() }}">
+                 
                         <div class="search-field-holder">
                             <input id="search-input" type="search" class="main-search-input" placeholder="Search...">
                         </div>
                     </form>
+
+                    <ul id="search-results">
+                    </ul>
                 </div>
             </div>
         </div>
