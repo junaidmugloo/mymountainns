@@ -220,7 +220,7 @@
                             </div>
                             <div class="news-content">
                                 <ul class="post-meta">
-                                    <li class="post">26<span>Nov</span></li>
+                                    <li class="post">{{$b->created_at->format('d M')}}</li>
                                     <li>
                                         <i class="fa-regular fa-user"></i>
                                         By Admin
