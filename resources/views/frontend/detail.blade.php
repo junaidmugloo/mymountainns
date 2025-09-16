@@ -12,6 +12,31 @@
     <!-- Animate.css -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+            <link rel="shortcut icon" href="{{ asset("mymountains/assets/img/favicon.svg") }}">
+        <!--<< Bootstrap min.css >>-->
+        <link rel="stylesheet" href="{{ asset("mymountains/assets/css/bootstrap.min.css") }}">
+        <!--<< All Min Css >>-->
+        <link rel="stylesheet" href="{{ asset("mymountains/assets/css/all.min.css") }}">
+        <!--<< Animate.css >>-->
+        {{-- <link rel="stylesheet" href="{{ asset("mymountains/assets/css/animate.css") }}"> --}}
+        <!--<< Magnific Popup.css >>-->
+        <link rel="stylesheet" href="{{ asset("mymountains/assets/css/magnific-popup.css") }}">
+        <!--<< MeanMenu.css >>-->
+        <link rel="stylesheet" href="{{ asset("mymountains/assets/css/meanmenu.css") }}">
+        <!--<< Swiper Bundle.css >>-->
+        <link rel="stylesheet" href="{{ asset("mymountains/assets/css/swiper-bundle.min.css") }}">
+        <!--<< Datepickerboot.css >>-->
+        <link rel="stylesheet" href="{{ asset("mymountains/assets/css/datepickerboot.css") }}">
+        <!--<< Nice Select.css >>-->
+        <link rel="stylesheet" href="{{ asset("mymountains/assets/css/nice-select.css") }}">
+        <!--<< Color.css >>-->
+        <link rel="stylesheet" href="{{ asset("mymountains/assets/css/color.css") }}">
+        <!--<< Main.css >>-->
+        <link rel="stylesheet" href="{{ asset("mymountains/assets/css/main.css") }}">
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <style>
 
 /* card css */
@@ -1356,6 +1381,36 @@ h1, h2, h3, h4, h5, h6 {
             @include('footer')
          </footer>
     
+
+
+               <!--<< All JS Plugins >>-->
+       
+        <script src="{{ asset("mymountains/assets/js/jquery-3.7.1.min.js") }}"></script>
+        <!--<< Viewport Js >>-->
+        <script src="{{ asset("mymountains/assets/js/viewport.jquery.js") }}"></script>
+        <!--<< Bootstrap Js >>-->
+        <script src="{{ asset("mymountains/assets/js/bootstrap.bundle.min.js") }}"></script>
+        <!--<< nice-selec Js >>-->
+        <script src="{{ asset("mymountains/assets/js/jquery.nice-select.min.js") }}"></script>
+        <!--<< Waypoints Js >>-->
+        <script src="{{ asset("mymountains/assets/js/jquery.waypoints.js") }}"></script>
+        <!--<< Counterup Js >>-->
+        <script src="{{ asset("mymountains/assets/js/jquery.counterup.min.js") }}"></script>
+         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <!--<< Swiper Slider Js >>-->
+        {{-- <script src="{{ asset("mymountains/assets/js/swiper-bundle.min.js") }}"></script> --}}
+        <!--<< MeanMenu Js >>-->
+        <script src="{{ asset("mymountains/assets/js/jquery.meanmenu.min.js") }}"></script>
+         <!--<< Datepicker Js >>-->
+         <script src="{{ asset("mymountains/assets/js/bootstrap-datepicker.js") }}"></script>
+        <!--<< Magnific Popup Js >>-->
+        <script src="{{ asset("mymountains/assets/js/jquery.magnific-popup.min.js") }}"></script>
+        <!--<< Wow Animation Js >>-->
+        <script src="{{ asset("mymountains/assets/js/wow.min.js") }}"></script>
+        <!--<< Main.js >>-->
+        <script src="{{ asset("mymountains/assets/js/main.js") }}"></script>
+        {{-- sweet alert --}}
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!-- Bootstrap JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
