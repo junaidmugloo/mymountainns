@@ -357,6 +357,7 @@
 {{-- jquery cdn --}}
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+{{-- login --}}
 <script>
   $(document).ready(function() {
       $('#user_login').on('submit', function(e) {
@@ -414,3 +415,65 @@
       });
   });
 </script>
+
+
+{{-- signup --}}
+<script>
+        $(document).ready(function() {
+            $('#user_signup').on('submit', function(e) {
+                e.preventDefault(); // Prevent the default form submission
+                let submitButton = $('#loginn');  // Get the submit button
+
+// Disable the button to prevent multiple submissions
+            submitButton.prop('disabled', true);
+            submitButton.text('Processing...');
+                $.ajax({
+                    type: 'POST',
+                    url: '{{ route("user-signup") }}', // Replace with your signup route
+                    data: $(this).serialize(), // Serialize form data
+                    success: function(response) {
+                      // console.log(response);
+                        $('#name-err').html("");
+                        $('#email-err').html("");
+                        $('#password-err').html("");
+                        $('#password2-err').html("");
+                        $('#responseMessage').html('<p class="text-success">' + response.message + '</p>');
+                        $('#user_signup')[0].reset(); // Reset the form
+                        submitButton.prop('disabled', false);
+                        submitButton.text('SIGNUP');
+                    },
+                    error: function(xhr) {
+                      // console.log(xhr);
+                      
+                        // Handle validation errors
+                        let errors = xhr.responseJSON.errors;
+                        // let errorMessage = '<ul>';
+                        // $.each(errors, function(key, value) {
+                        //     errorMessage += '<li>' + value[0] + '</li>'; // Get the first error message for each field
+                        // });
+                        // errorMessage += '</ul>';
+                        if(errors.name)
+                        $('#name-err').html(errors.name);
+                        else
+                        $('#name-err').html("");
+                        if(errors.email)
+                        $('#email-err').html(errors.email);
+                        else
+                        $('#email-err').html("");
+                        if(errors.password)
+                        $('#password-err').html(errors.password);
+                        else
+                        $('#password-err').html("");
+                        if(errors.confirm_password)
+                        $('#password2-err').html(errors.confirm_password);
+                        else
+                        $('#password2-err').html("");
+
+                        submitButton.prop('disabled', false);
+                        submitButton.text('SIGNUP');
+                       
+                    }
+                });
+            });
+        });
+    </script>
