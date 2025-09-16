@@ -653,6 +653,36 @@
             <div class="mobile-shape">
                 <img src="{{ asset("mymountains/assets/img/mobile.png") }}" alt="img">
             </div>
+
+
+@foreach ($offer as $index => $o)
+
+
+
+    <div class="carousel-item {{ $index == 0 ? 'active' : '' }}"">
+      <div class="container">
+        <div class="card text-left p-4 " style="background: url(offer_images/{{$o->image}});background-size:cover;">
+    
+          <div class="card-body">
+            <h5 class="card-title fw-bolder textt">{{$o->heading}}</h5>
+            <p class="card-text textt2">{{$o->description}}</p>
+            <button type="button" class=" text-capitalize btnn btn btn-white bg-white  border-0 rounded"
+              style="color: #F37205;border-color: #F37205;" data-bs-toggle="modal"
+              data-bs-target="#exampleModal">Get&nbsp;a&nbsp;Callback</button>
+    
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  
+
+ 
+      
+@endforeach
+
+
+
             <div class="container">
                 <div class="row g-4">
                     <div class="col-lg-6 col-md-6 wow fadeInUp wow" data-wow-delay=".3s">
