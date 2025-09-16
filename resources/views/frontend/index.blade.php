@@ -1626,7 +1626,7 @@
                 </div>
                 <div class="row">
                     @foreach ($blogs as $b)
-                    <div class="col-xl-4 col-md-6 col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="col-xl-4 col-md-6 col-lg-6 wow fadeInUp mb-3" data-wow-delay=".3s">
                         <div class="news-card-items-3 mt-0">
                             <div class="news-image">
                                 <img src="{{ asset('blog_images/' . $b->image) }}" alt="img">
