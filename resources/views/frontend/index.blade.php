@@ -668,7 +668,7 @@
                         <div class="cta-items">
                             <div class="cta-text">
                                 <h2>{{$o->heading}}</h2>
-                                <p>
+                                <p style="width: 30vw;">
                                    {{$o->description}}
                                 </p>
                             </div>
