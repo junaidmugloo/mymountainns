@@ -9,7 +9,7 @@ class MySEO extends Model
 {
     use HasFactory;
 
-    protected $table = 'my_seo';
+    protected $table = 'myseo';
 
     protected $fillable = [
         'meta_title',
