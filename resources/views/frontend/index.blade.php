@@ -493,10 +493,10 @@
                         <div class="swiper-slide">
                             <div class="destination-category-item">
                                 <div class="category-image">
-                                    <img src="{{ asset('/category_images/'.$c->image) }}" alt="img">
+                                    <img src="{{ asset('/category_images/'.$c->image) }}" alt="img" style="object-fit: cover;">
                                     <div class="category-content">
                                         <h5>
-                                            <a href="{{ url("destination-details.html") }}">{{$c->name}}</a>
+                                            <a href="{{ url("/kashmir") }}">{{$c->name}}</a>
                                         </h5>
                                         <p>View Tour</p>
                                     </div>
