@@ -818,24 +818,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
                 </div>
             </div>
          </section>
-<script>
-  new Swiper("#mySwiperx", {
-    slidesPerView: 1, 
-    spaceBetween: 20,
-    loop: true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    breakpoints: {
-      768: { slidesPerView: 2 },   // Tablet
-      1024: { slidesPerView: 3 }   // Large screens
-    }
-  });
+
 </script>
 
 
@@ -1911,6 +1894,26 @@ $(document).ready(function() {
 
    
     </script>
+
+
+    <script>
+  new Swiper("#mySwiperx", {
+    slidesPerView: 1, 
+    spaceBetween: 20,
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      768: { slidesPerView: 2 },   // Tablet
+      1024: { slidesPerView: 3 }   // Large screens
+    }
+  });
     </body>
 
 <!-- Mirrored from ex-coders.com/html/turmet/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 08 Apr 2025 11:50:32 GMT -->
