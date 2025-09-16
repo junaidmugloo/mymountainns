@@ -354,7 +354,8 @@
 {{-- <!-- Elfsight AI Chatbot | Untitled AI Chatbot -->
 <script src="https://elfsightcdn.com/platform.js" async></script>
 <div class="elfsight-app-375522b0-6cce-498b-a0a9-b2c0b0a8efaf" data-elfsight-app-lazy></div> --}}
-
+{{-- jquery cdn --}}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <script>
   $(document).ready(function() {
