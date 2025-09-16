@@ -32,6 +32,7 @@
         <!--<< Main.css >>-->
         <link rel="stylesheet" href="{{ asset("mymountains/assets/css/main.css") }}">
         
+         <meta name="google-site-verification" content="M78KtXPwNrhbLcZxkAiljAAuGGow6Sq7u9xt5eIuDug" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <style>
