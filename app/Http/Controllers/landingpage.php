@@ -91,6 +91,9 @@ class landingpage extends Controller
     $blogs = Cache::remember('blogs', 300, function () {
         return Blogs::latest('id')->take(6)->get();
     });
+    $category = Cache::remember('category', 300, function () {
+        return CategoryModel::where('name', '!=', 'tagline')->get();
+    });
 
     return view('frontend.index', [
         'packages'  => $packages,
@@ -104,6 +107,7 @@ class landingpage extends Controller
         'honeymoon' => $honeymoon,
         'images'    => $images,
         'blogs'     => $blogs,
+        'category'  => $category,
     ]);
 }
     public function generatePDF($id)
