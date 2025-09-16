@@ -819,7 +819,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
             </div>
          </section>
 
-</script>
+
 
 
         <!-- Popular-destination Section Start 1-->
@@ -1914,6 +1914,8 @@ $(document).ready(function() {
       1024: { slidesPerView: 3 }   // Large screens
     }
   });
+
+  </script>
     </body>
 
 <!-- Mirrored from ex-coders.com/html/turmet/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 08 Apr 2025 11:50:32 GMT -->
