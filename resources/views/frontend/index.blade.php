@@ -685,6 +685,7 @@
 
             <div class="container">
                 <div class="row g-4">
+                    @foreach ($offer as $index => $o)
                     <div class="col-lg-6 col-md-6 wow fadeInUp wow" data-wow-delay=".3s">
                         <div class="cta-items">
                             <div class="cta-text">
@@ -696,25 +697,12 @@
                             </div>
                             <a href="{{ url("tour-details.html") }}" class="theme-btn">BOOK NOW <i class="fa-sharp fa-regular fa-arrow-right"></i></a>
                             <div class="cta-image">
-                                <img src="{{ asset("mymountains/assets/img/bag-shape.png") }}" alt="img">
+                                <img src="{{ asset("offer_images/{{$o->image}}") }}" alt="img">
+                                
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6 wow fadeInUp wow" data-wow-delay=".5s">
-                        <div class="cta-items style-2">
-                            <div class="cta-text">
-                                <h2>35% OFF</h2>
-                                <p>
-                                    On Flight Ticket Grab <br>
-                                    This Now.
-                                </p>
-                            </div>
-                            <a href="{{ url("tour-details.html") }}" class="theme-btn">BOOK NOW <i class="fa-sharp fa-regular fa-arrow-right"></i></a>
-                            <div class="cta-image">
-                                <img src="{{ asset("mymountains/assets/img/plane-shape.png") }}" alt="img">
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </section>
