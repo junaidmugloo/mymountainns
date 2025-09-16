@@ -489,7 +489,7 @@
                         <div class="swiper-slide">
                             <div class="destination-category-item">
                                 <div class="category-image">
-                                    <img src="{{ asset("mymountains/assets/img/destination/category1.jpg") }}" alt="img">
+                                    <img src="{{ asset('/category_images/'.$c->image) }}" alt="img">
                                     <div class="category-content">
                                         <h5>
                                             <a href="{{ url("destination-details.html") }}">{{$c->name}}</a>
