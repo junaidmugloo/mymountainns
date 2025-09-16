@@ -43,7 +43,7 @@
 
 a{
     text-decoration: none !important;
-    color: black !important;
+   
 }
 
 .tour-image {
@@ -646,7 +646,7 @@ h1, h2, h3, h4, h5, h6 {
         }
     </style>
 </head>
-<body style="background-image: url(assets/img/about/about-bg.jpg);">
+<body >
        <!-- Preloader Start -->
        <div id="preloader" class="preloader">
             <div class="animation-preloader">
@@ -804,7 +804,7 @@ h1, h2, h3, h4, h5, h6 {
 
     <!-- Main Content -->
 <hr>
-    <main class="py-4">
+    <main class="py-4" style="background-image: url(assets/img/about/about-bg.jpg);">
         <div class="container">
             <!-- Tour Card -->
             <div class="card shadow-sm mb-4 fade-in">
