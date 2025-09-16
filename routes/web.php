@@ -196,6 +196,7 @@ Route::middleware(['admin_guard'])->group(function () {
 // myseo
 
 Route::match(['get', 'post'], '/addseo',[MySEOController::class,'index']);
+Route::get('/viewseo',[MySEOController::class,'viewseo']);
  
 Route::get('/logout',[Users::class,'logout']);
     

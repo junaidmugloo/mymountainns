@@ -139,8 +139,8 @@
                         success:function(response)
                         {
                             Swal.fire({
-  title: "Banner",
-  text: "Banner Added Successfully",
+  title: "SEO",
+  text: "SEO Details Added Successfully",
   icon: "success"
 });
                           

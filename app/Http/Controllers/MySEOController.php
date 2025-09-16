@@ -41,4 +41,10 @@ class MySEOController extends Controller
 
         return view('myseo.index');
     }
+
+    public function viewseo()
+    {
+        $seo = MySEO::all();
+        return view('myseo.view', compact('seo'));
+    }
 }
