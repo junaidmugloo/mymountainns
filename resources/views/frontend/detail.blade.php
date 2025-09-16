@@ -43,6 +43,7 @@
 
 a{
     text-decoration: none !important;
+    color: black !important;
 }
 
 .tour-image {

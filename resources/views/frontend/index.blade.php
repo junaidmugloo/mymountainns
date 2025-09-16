@@ -819,7 +819,7 @@
                             </li>
                         </ul>
                         <h5>
-                            <a href="{{ url('tour-details.html') }}">
+                            <a href="{{ url('/details/'.$p->id) }}">
                                 {{$p->name}}
                             </a>
                         </h5>
@@ -911,7 +911,7 @@
                             </li>
                         </ul>
                         <h5>
-                            <a href="{{ url('tour-details.html') }}">
+                            <a href="{{ url('/details/'.$p->id) }}">
                                 {{$p->name}}
                             </a>
                         </h5>
@@ -963,7 +963,7 @@
                             @endforeach
                         </h2>
                     </div>
-                    <a href="{{ url("tour-details.html") }}" class="theme-btn wow fadeInUp wow" data-wow-delay=".5s">View All Tour<i class="fa-sharp fa-regular fa-arrow-right"></i></a>
+                    <a href="{{ url("/kashmir") }}" class="theme-btn wow fadeInUp wow" data-wow-delay=".5s">View All Tour<i class="fa-sharp fa-regular fa-arrow-right"></i></a>
                 </div> 
                 <!-- Swiper Container -->
 
@@ -1003,7 +1003,7 @@
                             </li>
                         </ul>
                         <h5>
-                            <a href="{{ url('tour-details.html') }}">
+                            <a href="{{ url('/details/'.$p->id) }}">
                                 {{$p->name}}
                             </a>
                         </h5>
