@@ -136,7 +136,7 @@
                             </div>
                         </div>
                         <a href="{{ url("#0") }}" class="search-trigger search-icon"><i class="fa-regular fa-magnifying-glass"></i></a>
-                        <a href="javascript:void(0)" class="theme-btn"> Login <i class="fa-sharp fa-regular fa-arrow-right"></i></a>
+                        <a href="javascript:void(0)" class="theme-btn"  data-bs-toggle="modal" data-bs-target="#exampleModal5"> Login <i class="fa-sharp fa-regular fa-arrow-right"></i></a>
                         <div class="header__hamburger d-xl-none my-auto">
                             <div class="sidebar__toggle">
                                 <i class="fas fa-bars"></i>

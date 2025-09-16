@@ -344,7 +344,7 @@ function googleTranslateElementInit() {
         </div>
       </div>
     </div>
-  </div>
+</div>
 <!-- model5 end -->
 
   <!-- Modal -->

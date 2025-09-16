@@ -80,6 +80,145 @@
     </head>
     <body>
 
+        <!-- model 5 -->
+
+<div class="modal" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header"  ">
+             
+        
+        <div class="HeaderSaleLine_saleIcon__pwEFh"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M24 0H14.5L5 38H14.5L24 0Z" fill="white" fill-opacity="0.5"></path><path d="M12 0H9.95238L0 38H2.04762L12 0Z" fill="white" fill-opacity="0.5"></path></svg></div>
+        <p id="mdh" class="m-0 p-0"></p>
+          <button type="button" class="btn-close" onclick="clear_head()" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true" style="color: var(--primary-color, #f37002) !important; font-size:1rem;">Login</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button  class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false" style="color: var(--primary-color, #f37002) !important; font-size:1rem;">Signup</button>
+    </li>
+   
+  </ul>
+
+  <!-- Tabs content -->
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+    <form novalidate action="" id="user_login" style=" justify-content: center;
+            display: flex !important;">
+            @csrf
+            <div class="row w-100 h-100">
+            <h5 class="mt-2 mb-2 pt-3 pb-3" style="font-weight:600;">Log into Your Account</h5>
+             
+              <div class="col-12">
+                <div class="form-group mb-3">
+                  <input type="email" name="email" required class="form-control" placeholder="Enter Email">
+                  <small id="email-err1" class="text-danger"></small>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-group mb-3">
+                  <input type="password" name="password" required class="form-control" placeholder="Your Password">
+                  <small id="password-err1" class="text-danger"></small>
+                </div>
+              </div>
+              
+              
+                    <b style="color: var(--primary-color, #f37002) !important; text-align:end;" class="pb-2">Forgot Password?</b>
+            
+              <div class="col-12">
+                <div class="form-group mb-3">
+                  <button id="loginnn" type="submit"  style="background:#e34506;" class="btn text-light d-block w-100">
+                    Login & Continue</button>
+                </div>
+              </div>
+            </div>
+          </form>
+          <div class="text-center" id="responseMessage1"></div>
+          <hr>
+          {{-- <b style="visibility:hidden;">Book With Confidence</b> --}}
+          {{-- <a  class="btn btn-primary">Login with Google</a> --}}
+         <div class="d-flex" style="justify-content:center">
+          <a href="{{ url('auth/google') }}" style="text-decoration: none;" class="login-with-google-btn mb-2" >
+            Sign in with Google
+          </a>
+        </div>
+    </div>
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+    <form  novalidate id="user_signup" style=" justify-content: center;
+            display: flex !important;">
+            @csrf
+            <div class="row w-100 h-100">
+            <h5 class="mt-2 mb-2 pt-3 pb-3" style="font-weight:600;">Create Your Account</h5>
+            <div class="col-12">
+                <div class="form-group mb-3">
+                  <input type="text" name="name" required class="form-control" placeholder="Your Name">
+                  <small id="name-err" class="text-danger"></small>
+                </div>
+               
+            </div>
+              <div class="col-12">
+                <div class="form-group mb-3">
+                  <input type="email" name="email" required class="form-control" placeholder="Enter Email">
+                  <small id="email-err" class="text-danger"></small>
+                </div>
+              </div>
+              {{-- <div class="col-12">
+                <div class="form-group mb-3">
+                  <input type="number" name="number" required class="form-control" placeholder="Your Contact">
+                </div>
+              </div> --}}
+              <div class="col-12">
+                <div class="form-group mb-3">
+                  <input type="password" name="password" required class="form-control" placeholder="Your Password">
+                  <small id="password-err" class="text-danger"></small>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-group mb-3">
+                  <input type="password" name="confirm_password" required class="form-control" placeholder="Confirm Password">
+                  <small id="password2-err" class="text-danger"></small>
+                </div>
+              </div>
+              
+            
+
+            
+              <div class="col-12">
+                <div class="form-group mb-3">
+                  <button id="loginn"  type="submit" style="background:#e34506;" class="btn text-light d-block w-100">
+                    Signup</button>
+                </div>
+              </div>
+            </div>
+          </form>
+          <div class="text-center" id="responseMessage"></div>
+          <hr>
+          
+          <p class="text-muted text-center">By joining, you agree to the Terms and Privacy Policy.</p>
+          
+    </div>
+    
+  </div>
+          
+        </div>
+      </div>
+    </div>
+</div>
+<!-- model5 end -->
         <!-- Preloader Start -->
        <div id="preloader" class="preloader">
             <div class="animation-preloader">
