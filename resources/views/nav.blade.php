@@ -203,10 +203,10 @@
         <div class="modal-body">
         <ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item" role="presentation">
-      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true" style="color: var(--primary-color, #f37002) !important; font-size:1rem;">Login</button>
+      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true" style="color: var(--primary-color, #46bfaf) !important; font-size:1rem;">Login</button>
     </li>
     <li class="nav-item" role="presentation">
-      <button  class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false" style="color: var(--primary-color, #f37002) !important; font-size:1rem;">Signup</button>
+      <button  class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false" style="color: var(--primary-color, #46bfaf) !important; font-size:1rem;">Signup</button>
     </li>
    
   </ul>
@@ -354,3 +354,62 @@
 {{-- <!-- Elfsight AI Chatbot | Untitled AI Chatbot -->
 <script src="https://elfsightcdn.com/platform.js" async></script>
 <div class="elfsight-app-375522b0-6cce-498b-a0a9-b2c0b0a8efaf" data-elfsight-app-lazy></div> --}}
+
+
+<script>
+  $(document).ready(function() {
+      $('#user_login').on('submit', function(e) {
+          e.preventDefault(); // Prevent the default form submission
+          let submitButton2 = $('#loginnn');  // Get the submit button
+
+// Disable the button to prevent multiple submissions
+      submitButton2.prop('disabled', true);
+      submitButton2.text('Processing...');
+          $.ajax({
+              type: 'POST',
+              url: '{{ route("user-login") }}', // Replace with your signup route
+              data: $(this).serialize(), // Serialize form data
+              success: function(response) {
+                 console.log(response);
+                 
+                  $('#email-err1').html("");
+                  $('#password-err1').html("");
+                  // $('#responseMessage1').html('<p class="text-success">' + response.message + '</p>');
+                 if(response.message=="Login successful")
+                    window.location.reload();
+                 
+                  $('#user_login')[0].reset(); // Reset the form
+                  submitButton2.prop('disabled', false);
+                  submitButton2.text('Login & Continue');
+              },
+              error: function(xhr2) {
+                 console.log(xhr2);
+                
+                  submitButton2.prop('disabled', false);
+                  submitButton2.text('Login & Continue');
+
+                  let errors2 = xhr2.responseJSON.errors;
+                  let error = xhr2.responseJSON.error;
+                 if(error){
+                  $('#responseMessage1').html('<p class="text-danger">' + error + '</p>');
+                  $('#email-err1').html("");
+                  $('#password-err1').html(""); 
+                }
+                 
+
+                  if(errors2.email)
+                  $('#email-err1').html(errors2.email);
+                  else
+                  $('#email-err1').html("");
+                  if(errors2.password)
+                  $('#password-err1').html(errors2.password);
+                  else
+                  $('#password-err1').html("");
+                 
+                 
+                 
+              }
+          });
+      });
+  });
+</script>
