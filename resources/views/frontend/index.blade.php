@@ -35,6 +35,21 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <style>
+
+
+.destination-card-items .destination-image img {
+    object-fit: cover;
+    height: 28vh;
+    }
+
+
+.feature-tour-items .feature-tour-image img {
+    height: 28vh;
+    object-fit: cover;
+   
+}
+
+
    /* for small and medium screen */
     @media (max-width: 450px) {
     .destination-category-section .plane-shape {
