@@ -655,6 +655,11 @@
             </div>
 
 
+
+
+
+            <div class="container">
+                
 @foreach ($offer as $index => $o)
 
 
@@ -680,31 +685,6 @@
  
       
 @endforeach
-
-
-
-            <div class="container">
-                <div class="row g-4">
-                    {{-- limit 2 --}}
-
-                   @foreach ($offer->take(2) as $o)
-                    <div class="col-lg-6 col-md-6 wow fadeInUp wow" data-wow-delay=".3s">
-                        <div class="cta-items">
-                            <div class="cta-text">
-                                <h2>{{$o->heading}}</h2>
-                                <p>
-                                   {{$o->description}}
-                                </p>
-                            </div>
-                            <a href="javascript:void(0)" data-bs-toggle="modal"
-              data-bs-target="#exampleModal" class="theme-btn">BOOK NOW <i class="fa-sharp fa-regular fa-arrow-right"></i></a>
-                            {{-- <div class="cta-image">
-                                <img src="{{ asset("/offer_images/".$o->image) }}" alt="img">
-                            </div> --}}
-                        </div>
-                    </div>
-                    @endforeach
-                </div>
             </div>
         </section>
 
