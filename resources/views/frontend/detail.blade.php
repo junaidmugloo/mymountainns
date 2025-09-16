@@ -1418,7 +1418,7 @@ h1, h2, h3, h4, h5, h6 {
         {{-- sweet alert --}}
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!-- Bootstrap JS Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> --}}
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Back to Top Button
