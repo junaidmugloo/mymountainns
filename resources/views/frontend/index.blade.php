@@ -740,7 +740,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
                 <p class="wow fadeInUp wow" data-wow-delay=".7s">
                     There are many variations of passages of  available, but the majority have suffered alteration in some <br> form, by injected humour words which don't look even slightly believable 
                 </p>
-                <div class="swiper tour-slider">
+                <div class="swiper tour-slider" id="mySwiperx">
                     <div class="swiper-wrapper">
                         @foreach ($premium as $p)
                        
@@ -818,7 +818,25 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
                 </div>
             </div>
          </section>
-
+<script>
+  new Swiper("#mySwiperx", {
+    slidesPerView: 1, 
+    spaceBetween: 20,
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      768: { slidesPerView: 2 },   // Tablet
+      1024: { slidesPerView: 3 }   // Large screens
+    }
+  });
+</script>
 
 
         <!-- Popular-destination Section Start 1-->
