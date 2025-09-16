@@ -702,9 +702,9 @@ h1, h2, h3, h4, h5, h6 {
         </div>
 
         <!-- Back To Top Start -->
-        <button id="back-top" class="back-to-top">
+        {{-- <button id="back-top" class="back-to-top">
             <i class="fa-regular fa-arrow-up"></i>
-        </button>
+        </button> --}}
 
         <!--<< Mouse Cursor Start >>-->  
         {{-- <div class="mouse-cursor cursor-outer"></div>
@@ -804,7 +804,7 @@ h1, h2, h3, h4, h5, h6 {
 
     <!-- Main Content -->
 <hr>
-    <main class="py-4" style="background-image: url(assets/img/about/about-bg.jpg);">
+    <main class="py-4" style="background-image: url(/mymountains/assets/img/about/about-bg.jpg);">
         <div class="container">
             <!-- Tour Card -->
             <div class="card shadow-sm mb-4 fade-in">
