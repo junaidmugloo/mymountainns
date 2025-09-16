@@ -835,7 +835,8 @@
                         </ul>
                         <div class="price">
                             <h6>₹{{$p->discount}}<span>/Per person</span></h6>
-                            <a href="{{ url('tour-details.html') }}" class="theme-btn style-2">
+                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal" class="theme-btn style-2">
                                 Book Now<i class="fa-sharp fa-regular fa-arrow-right"></i>
                             </a>
                         </div>
@@ -926,7 +927,8 @@
                         </ul>
                         <div class="price">
                             <h6>₹{{$p->discount}}<span>/Per person</span></h6>
-                            <a href="{{ url('tour-details.html') }}" class="theme-btn style-2">
+                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal" class="theme-btn style-2">
                                 Book Now<i class="fa-sharp fa-regular fa-arrow-right"></i>
                             </a>
                         </div>
@@ -1017,7 +1019,8 @@
                         </ul>
                         <div class="price">
                             <h6>₹{{$p->discount}}<span>/Per person</span></h6>
-                            <a href="{{ url('tour-details.html') }}" class="theme-btn style-2">
+                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal" class="theme-btn style-2">
                                 Book Now<i class="fa-sharp fa-regular fa-arrow-right"></i>
                             </a>
                         </div>
