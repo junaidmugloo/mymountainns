@@ -72,8 +72,8 @@ a{
         
         .tag-orange {
             background-color: #fff;
-            color: #FF8C00;
-            border: 1px solid #FF8C00;
+            color: #46bfaf;
+            border: 1px solid #46bfaf;
         }
         
         .tag-red {
@@ -239,7 +239,7 @@ a{
             --secondary-color: #46bfaf30;
             --bs-primary-rgb: 239, 68, 68;
             --bs-secondary-rgb: 249, 115, 22;
-            --theme-gradient: linear-gradient(90deg, #46bfaf 0%, #46bfaf30 100%);
+            --theme-gradient: linear-gradient(90deg, #46bfaf 0%, #46bfa3 100%);
             --font-primary: 'Poppins', sans-serif;
             --font-size-xs: 0.75rem;
             --font-size-sm: 0.875rem;
@@ -259,7 +259,7 @@ a{
 
         .btn-warning:hover {
 
-                background: linear-gradient(90deg, #46bfaf 0%, #46bfaf30 100%); !important;
+                background: linear-gradient(90deg, #46bfaf 0%, #46bfa3 100%) !important;
 
             transform: translateY(-2px);
             box-shadow: 0 4px 15px rgba(239, 68, 68, 0.2);
