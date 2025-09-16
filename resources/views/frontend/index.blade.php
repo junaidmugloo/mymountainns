@@ -691,13 +691,13 @@
                     <div class="col-lg-6 col-md-6 wow fadeInUp wow" data-wow-delay=".3s">
                         <div class="cta-items">
                             <div class="cta-text">
-                                <h2>35% OFF</h2>
+                                <h2>{{$o->heading}}</h2>
                                 <p>
-                                    Explore The World tour <br>
-                                    Hotel Booking.
+                                   {{$o->description}}
                                 </p>
                             </div>
-                            <a href="{{ url("tour-details.html") }}" class="theme-btn">BOOK NOW <i class="fa-sharp fa-regular fa-arrow-right"></i></a>
+                            <a href="javascript:void(0)" data-bs-toggle="modal"
+              data-bs-target="#exampleModal" class="theme-btn">BOOK NOW <i class="fa-sharp fa-regular fa-arrow-right"></i></a>
                             <div class="cta-image">
                                 <img src="{{ asset("mymountains/assets/img/bag-shape.png") }}" alt="img">
                             </div>
