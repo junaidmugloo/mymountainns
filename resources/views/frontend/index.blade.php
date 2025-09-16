@@ -691,21 +691,22 @@
                     {{-- limit 2 --}}
 
                    @foreach ($offer->take(2) as $o)
-                    <div class="col-lg-6 col-md-6 wow fadeInUp wow" data-wow-delay=".3s">
-                        <div class="cta-items">
-                            <div class="cta-text">
-                                <h2>{{$o->heading}}</h2>
-                                <p>
-                                   {{$o->description}}
-                                </p>
-                            </div>
-                            <a href="javascript:void(0)" data-bs-toggle="modal"
-              data-bs-target="#exampleModal" class="theme-btn">BOOK NOW <i class="fa-sharp fa-regular fa-arrow-right"></i></a>
-                            {{-- <div class="cta-image">
-                                <img src="{{ asset("/offer_images/".$o->image) }}" alt="img">
-                            </div> --}}
-                        </div>
-                    </div>
+                    <div class="carousel-item {{ $index == 0 ? 'active' : '' }}"">
+      <div class="container">
+        <div class="card text-left p-4 " style="background: url(offer_images/{{$o->image}});background-size:cover;">
+    
+          <div class="card-body">
+            <h5 class="card-title fw-bolder textt">{{$o->heading}}</h5>
+            <p class="card-text textt2">{{$o->description}}</p>
+            <button type="button" class=" text-capitalize btnn btn btn-white bg-white  border-0 rounded"
+              style="color: #F37205;border-color: #F37205;" data-bs-toggle="modal"
+              data-bs-target="#exampleModal">Get&nbsp;a&nbsp;Callback</button>
+    
+          </div>
+        </div>
+      </div>
+    </div>
+    
                     @endforeach
                 </div>
             </div>
