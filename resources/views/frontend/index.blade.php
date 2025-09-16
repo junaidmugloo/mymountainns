@@ -1615,103 +1615,41 @@
             <div class="container">
                 <div class="section-title text-center">
                     <span class="sub-title wow fadeInUp">
-                        News & Updates
+                        Blogs & Updates
                     </span>
                     <h2 class="wow fadeInUp wow" data-wow-delay=".2s">
-                        Our Latest News & Articles
+                        Our Latest Blogs
                     </h2>
                 </div>
                 <div class="row">
-                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp wow" data-wow-delay=".3s">
-                        <div class="news-card-items">
+                    @foreach ($blogs as $b)
+                    <div class="col-xl-4 col-md-6 col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="news-card-items-3 mt-0">
                             <div class="news-image">
-                                <img src="{{ asset("mymountains/assets/img/news/01.jpg") }}" alt="img">
+                                <img src="{{ asset('blog_images/' . $b->image) }}" alt="img">
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp wow" data-wow-delay=".5s">
-                        <div class="news-card-items">
                             <div class="news-content">
                                 <ul class="post-meta">
+                                    <li class="post">{{$b->created_at->format('d M')}}</li>
                                     <li>
-                                        <i class="fa-regular fa-calendar-days"></i>
-                                        December 02, 2024
+                                        <i class="fa-regular fa-user"></i>
+                                        By Admin
                                     </li>
                                     <li>
-                                        <i class="fa-solid fa-tag"></i>
-                                        New york City
-                                    </li>
-                                </ul>
-                                <h3>
-                                    <a href="{{ url("news-details.html") }}">
-                                        Including Animation In Your
-                                        Design System
-                                    </a>
-                                </h3>
-                                <a href="{{ url("news-details.html") }}" class="link-btn">Read More <i class="fa-sharp fa-regular fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp wow" data-wow-delay=".7s">
-                        <div class="news-card-items">
-                            <div class="news-image">
-                                <img src="{{ asset("mymountains/assets/img/news/02.jpg") }}" alt="img">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp wow" data-wow-delay=".3s">
-                        <div class="news-card-items">
-                            <div class="news-content">
-                                <ul class="post-meta">
-                                    <li>
-                                        <i class="fa-regular fa-calendar-days"></i>
-                                        December 02, 2024
-                                    </li>
-                                    <li>
-                                        <i class="fa-solid fa-tag"></i>
-                                        New york City
+                                        <i class="fa-regular fa-tag"></i>
+                                        Travel
                                     </li>
                                 </ul>
-                                <h3>
-                                    <a href="{{ url("news-details.html") }}">
-                                        Including Animation In Your
-                                        Design System
+                                <h4>
+                                    <a href="https://mymountains.in/blogs/{{ $b->slug }}">
+                                        {!! Str::limit(strip_tags($b->content), 100) !!}
                                     </a>
-                                </h3>
-                                <a href="{{ url("news-details.html") }}" class="link-btn">Read More <i class="fa-sharp fa-regular fa-arrow-right"></i></a>
+                                </h4>
+                                <a href="https://mymountains.in/blogs/{{ $b->slug }}" class="link-btn">Read More <i class="fa-sharp fa-regular fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp wow" data-wow-delay=".5s">
-                        <div class="news-card-items">
-                            <div class="news-image">
-                                <img src="{{ asset("mymountains/assets/img/news/02.jpg") }}" alt="img">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp wow" data-wow-delay=".7s">
-                        <div class="news-card-items">
-                            <div class="news-content">
-                                <ul class="post-meta">
-                                    <li>
-                                        <i class="fa-regular fa-calendar-days"></i>
-                                        December 02, 2024
-                                    </li>
-                                    <li>
-                                        <i class="fa-solid fa-tag"></i>
-                                        New york City
-                                    </li>
-                                </ul>
-                                <h3>
-                                    <a href="{{ url("news-details.html") }}">
-                                        Including Animation In Your
-                                        Design System
-                                    </a>
-                                </h3>
-                                <a href="{{ url("news-details.html") }}" class="link-btn">Read More <i class="fa-sharp fa-regular fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </section>

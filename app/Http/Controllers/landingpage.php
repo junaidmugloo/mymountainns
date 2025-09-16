@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blogs;
 use App\Models\CategoryModel;
 use App\Models\Gallery;
 use App\Models\TopSlider;
@@ -87,6 +88,9 @@ class landingpage extends Controller
     $images = Cache::remember('images', 300, function () {
         return Gallery::latest('id')->take(20)->get();
     });
+    $blogs = Cache::remember('blogs', 300, function () {
+        return Blogs::latest('id')->take(6)->get();
+    });
 
     return view('frontend.index', [
         'packages'  => $packages,
@@ -99,6 +103,7 @@ class landingpage extends Controller
         'tagline'   => $tagline,
         'honeymoon' => $honeymoon,
         'images'    => $images,
+        'blogs'     => $blogs,
     ]);
 }
     public function generatePDF($id)
