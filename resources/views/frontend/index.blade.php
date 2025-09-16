@@ -712,18 +712,32 @@
                 </button>
             </div>
 
-<div class="container rounded  text-start  py-4 d-flex flex-column flex-grow" style="color: #FCAF17;font-size:25px;">
-    <p class="fs-3 mx-2 p-0 mb-1">Staff <span class="fw-semibold" style="color: #FCAF17;font-weight:600">
-        Handpicked</span></p>
-    <small class=" text-muted mb-1 mx-2" style="font-size: 15px; ">Curated with expertise</small>
-    <div class="container swiper mySwiper2 p-0 m-0" id="swiper1">
-      <div class="swiper-wrapper ">
-        
-         @foreach ($premium as $p)
-             
-         
-      
-        <div class="swiper-slide swiper22"  id="swiperx" style="background-image: url(package_images/{{$p->image}}); background-size: cover;border-radius: 10px; background-repeat: no-repeat;cursor:pointer;">
+
+
+
+
+
+            
+            <div class="container">
+                <div class="section-title">
+                    <span class="sub-title wow fadeInUp">
+                        @foreach ($premium as $p)
+                        {{$p->category}}
+                        @break
+                        @endforeach
+                    </span>
+                    <h2 class="wow fadeInUp wow" data-wow-delay=".5s">
+                        unforgettable Travel Discoveries
+                    </h2>
+                </div>
+                <p class="wow fadeInUp wow" data-wow-delay=".7s">
+                    There are many variations of passages of  available, but the majority have suffered alteration in some <br> form, by injected humour words which don't look even slightly believable 
+                </p>
+                <div class="swiper tour-slider">
+                    <div class="swiper-wrapper">
+                        @foreach ($premium as $p)
+                        <div class="swiper-slide">
+                            <div class="swiper-slide swiper22"  id="swiperx" style="background-image: url(package_images/{{$p->image}}); background-size: cover;border-radius: 10px; background-repeat: no-repeat;cursor:pointer;">
           <div class="d-flex card_box flex-column justify-content-end rounded-3 " data-aos="flip-right"
             data-aos-duration="4000" style="width: 100%;">
             <spann id="pm{{ $p->id }}" data-before="{{ $p->tag_line }}" style="font-size: 10px !important"></spann>
@@ -791,59 +805,6 @@
             <img src="landing/clone26.avif" class="d-block  rounded-3 lazy" style="height: 80vh; visibility: hidden;" alt="Camera" />
           </div>
         </div>
-        @endforeach
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </div>
-
-
-
-
-
-            <div class="container">
-                <div class="section-title">
-                    <span class="sub-title wow fadeInUp">
-                        @foreach ($premium as $p)
-                        {{$p->category}}
-                        @break
-                        @endforeach
-                    </span>
-                    <h2 class="wow fadeInUp wow" data-wow-delay=".5s">
-                        unforgettable Travel Discoveries
-                    </h2>
-                </div>
-                <p class="wow fadeInUp wow" data-wow-delay=".7s">
-                    There are many variations of passages of  available, but the majority have suffered alteration in some <br> form, by injected humour words which don't look even slightly believable 
-                </p>
-                <div class="swiper tour-slider">
-                    <div class="swiper-wrapper">
-                        @foreach ($premium as $p)
-                        <div class="swiper-slide">
-                            <div class="feature-tour-items">
-                                <div class="feature-tour-image">
-                                    <img src="{{ asset('package_images/'.$p->image) }}" alt="img">
-                                    <ul class="location">
-                                        <li>
-                                            <i class="fa-light fa-location-dot"></i>
-                                            Premium
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="feature-tour-content">
-                                    <h4>
-                                        <a href="{{ url("tour-details.html") }}">
-                                            {{$p->name}}
-                                        </a>
-                                    </h4>
-                                    <h5>
-                                        $49.00<span>/Per day</span>
-                                    </h5>
-                                    <a href="{{ url("tour-details.html") }}" class="icon">
-                                        <i class="fa-sharp fa-regular fa-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </div>
                         </div>
                         @endforeach
                     </div>
