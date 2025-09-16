@@ -19,6 +19,8 @@ use App\Http\Controllers\Users;
 use App\Http\Controllers\vehicle_Controller;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\MySEOController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -189,6 +191,11 @@ Route::middleware(['staff_guard'])->group(function () {
 });
 
 Route::middleware(['admin_guard'])->group(function () {
+
+
+// myseo
+
+Route::get('/addseo',[MySEOController::class,'index']);
  
 Route::get('/logout',[Users::class,'logout']);
     
