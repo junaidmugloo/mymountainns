@@ -65,10 +65,10 @@
             <div class="header-top-wrapper-new">
                 <div class="social-icon d-flex align-items-center">
                     <span>Follow Us</span>
-                    <a href="{{ url("#") }}"><i class="fab fa-facebook-f"></i></a>
+                    <a href="{{ url("https://www.facebook.com/mymountains") }}"><i class="fab fa-facebook-f"></i></a>
                     <a href="{{ url("#") }}"><i class="fab fa-twitter"></i></a>
                     <a href="{{ url("#") }}"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="{{ url("#") }}"><i class="fab fa-instagram"></i></a>
+                    <a href="{{ url("https://www.instagram.com/mymountainstourandtravel/") }}"><i class="fab fa-instagram"></i></a>
                 </div>
                 <ul class="top-right">
                     <li>
