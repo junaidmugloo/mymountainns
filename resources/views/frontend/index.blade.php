@@ -1580,6 +1580,206 @@
                 </div>
             </div>
          </section> --}}
+<!-- Modal for Gallery -->
+<div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-fullscreen-md-down">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title">Kashmir Tour Gallery</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <div class="row g-3" id="modalGallery">
+                  @foreach($images as $index => $image)
+                      <div class="col-6 col-md-4 col-lg-3">
+                          <div class="gallery-item" data-index="{{ $index }}">
+                              <img src="{{ asset("gallery_images/".$image['image']) }}" 
+                                   alt="{{ $image['title'] ?? 'Gallery Image '.$index }}" 
+                                   class="img-fluid">
+                          </div>
+                      </div>
+                  @endforeach
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Modal for Single Image View -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content bg-dark">
+          <div class="modal-header border-0">
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center p-0">
+              <img src="/placeholder.svg" id="modalImage" class="img-fluid" alt="Full size image">
+          </div>
+          <div class="modal-footer border-0 justify-content-center">
+              <button type="button" class="btn btn-outline-light me-2" id="prevImageBtn">
+                  <i class="fas fa-chevron-left"></i> Previous
+              </button>
+              <button type="button" class="btn btn-outline-light" id="nextImageBtn">
+                  Next <i class="fas fa-chevron-right"></i>
+              </button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Initialize Bootstrap components
+    const galleryModal = new bootstrap.Modal(document.getElementById('galleryModal'));
+    const imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
+    
+    // DOM elements
+    const modalImage = document.getElementById('modalImage');
+    const prevImageBtn = document.getElementById('prevImageBtn');
+    const nextImageBtn = document.getElementById('nextImageBtn');
+    const readMoreBtn = document.getElementById('readMoreBtn');
+    const reviewText = document.getElementById('reviewText');
+    
+    // Gallery state
+    let currentImageIndex = 0;
+    let galleryImages = [];
+    
+    // Get image data from PHP
+    function initializeGalleryData() {
+        // This will be populated with data from the Blade template
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        
+        // Create an array to store image data
+        galleryImages = Array.from(galleryItems).map(item => {
+            const index = parseInt(item.getAttribute('data-index'));
+            const img = item.querySelector('img');
+            return {
+                index: index,
+                url: img.src,
+                title: img.alt
+            };
+        });
+        
+        // Sort by index to ensure correct order
+        galleryImages.sort((a, b) => a.index - b.index);
+    }
+    
+    // Open image modal with specific image
+    function openImageModal(index) {
+        if (index >= 0 && index < galleryImages.length) {
+            currentImageIndex = index;
+            modalImage.src = galleryImages[index].url;
+            modalImage.alt = galleryImages[index].title;
+            
+            // If gallery modal is open, close it
+            if (document.querySelector('#galleryModal.show')) {
+                galleryModal.hide();
+                setTimeout(() => {
+                    imageModal.show();
+                }, 500);
+            } else {
+                imageModal.show();
+            }
+        }
+    }
+    
+    // Navigate to previous image
+    function showPreviousImage() {
+        currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+        modalImage.src = galleryImages[currentImageIndex].url;
+        modalImage.alt = galleryImages[currentImageIndex].title;
+    }
+    
+    // Navigate to next image
+    function showNextImage() {
+        currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+        modalImage.src = galleryImages[currentImageIndex].url;
+        modalImage.alt = galleryImages[currentImageIndex].title;
+    }
+    
+    // Event listener for "View All" button
+    document.getElementById('viewAllBtn').addEventListener('click', function(e) {
+        e.preventDefault();
+        galleryModal.show();
+    });
+    
+    // Event listener for the "More" overlay in review section
+    const moreOverlay = document.querySelector('.more-overlay');
+    if (moreOverlay) {
+        moreOverlay.addEventListener('click', function() {
+            galleryModal.show();
+        });
+    }
+    
+    // Make all gallery items clickable
+    document.querySelectorAll('.gallery-item').forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            const index = parseInt(this.getAttribute('data-index'));
+            
+            // If it has the more-overlay, open the gallery modal
+            if (this.querySelector('.more-overlay')) {
+                galleryModal.show();
+            } else {
+                // Otherwise open the image modal
+                openImageModal(index);
+            }
+        });
+    });
+    
+    // Make modal gallery items clickable
+    document.querySelectorAll('#modalGallery .gallery-item').forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            const index = parseInt(this.getAttribute('data-index'));
+            openImageModal(index);
+        });
+    });
+    
+    // Navigation button event listeners
+    prevImageBtn.addEventListener('click', showPreviousImage);
+    nextImageBtn.addEventListener('click', showNextImage);
+    
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+        if (document.querySelector('#imageModal.show')) {
+            if (e.key === 'ArrowLeft') {
+                showPreviousImage();
+            } else if (e.key === 'ArrowRight') {
+                showNextImage();
+            } else if (e.key === 'Escape') {
+                imageModal.hide();
+            }
+        }
+    });
+    
+    // Read more button functionality
+    if (readMoreBtn && reviewText) {
+        // Set initial state
+        const fullText = reviewText.textContent;
+        const shortText = fullText.substring(0, 200) + '...';
+        let isExpanded = false;
+        
+        // Initial state - collapsed
+        reviewText.textContent = shortText;
+        
+        readMoreBtn.addEventListener('click', function() {
+            if (isExpanded) {
+                reviewText.textContent = shortText;
+                readMoreBtn.textContent = 'Read More';
+            } else {
+                reviewText.textContent = fullText;
+                readMoreBtn.textContent = 'Read Less';
+            }
+            isExpanded = !isExpanded;
+        });
+    }
+    
+    // Initialize gallery data
+    initializeGalleryData();
+});
+</script>
+{{-- gallery end --}}
 
         <!-- Cta-bg-Section Start -->
         <section class="cta-bg-section fix bg-cover" style="background-image: url(mymountains/assets/img/cta-bg.jpg);">
