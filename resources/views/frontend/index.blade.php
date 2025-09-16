@@ -675,7 +675,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 
                        
 
-                        <div class="cta-items  {{ $loop->iteration  == 2 ? 'style-2' : '' }}">
+                        <div class="cta-items  {{ $loop->iteration == 2 ? 'style-2' : '' }}">
                             <div class="cta-text">
                                 <h2>{{$o->heading}}</h2>
                                 <p style="width: 25vw;">
@@ -740,79 +740,84 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
                 <p class="wow fadeInUp wow" data-wow-delay=".7s">
                     There are many variations of passages of  available, but the majority have suffered alteration in some <br> form, by injected humour words which don't look even slightly believable 
                 </p>
-                <div class="swiper tour-slider mySwiper1" >
+                <div class="swiper tour-slider mySwiper1">
                     <div class="swiper-wrapper">
                         @foreach ($premium as $p)
-                       
-                            <div class="swiper-slide swiper22"  id="swiperx" style="background-image: url(package_images/{{$p->image}}); background-size: cover;border-radius: 10px; background-repeat: no-repeat;cursor:pointer;">
-          <div class="d-flex card_box flex-column justify-content-end rounded-3 " data-aos="flip-right"
-            data-aos-duration="4000" style="width: 100%;">
-            <spann id="pm{{ $p->id }}" data-before="{{ $p->tag_line }}" style="font-size: 10px !important"></spann>
 
-            <style>
-                #pm{{ $p->id }}::before {
-                    content: attr(data-before) !important;
-                    
-                }
-            </style>
-            
-            <script>
-                document.addEventListener('DOMContentLoaded', function () {
-                    document.getElementById('pm{{ $p->id }}').setAttribute('data-before', '{{ $p->tag_line}}');
-                });
-            </script>
-            
-            
-            <div class="rounded-3 row position-absolute text-white py-3 mx-auto" style="
-               width: fit-content;" id="sss" >
-              <small class="d-flex justify-content-between" style="font-size: 13px;">{{$p->day}} Days & {{$p->night}} Nights 
-                {{-- <span style="font-size: 13px;">
-                  <i
-                    class="rounded-pill text-warning px-2 py-0 pb-2 fs-5 fa-solid fa-circle-info" onclick="window.location.href='/details/{{$p->id}}'"></i>
-                  </span> --}}
-                    <i class="rounded-pill px-2 py-2  fa-solid fa-star text-warning">{{4.9}} <span
-                      class="text-light">({{261+$p->id}}) &nbsp;
-                    <span style="font-size: 13px;">
-                  <i
-                    class="rounded-pill text-warning px-2 py-0 pb-0 fs-6 fa-solid fa-circle-info" onclick="window.location.href='/details/{{$p->id}}'"></i>
-                  </span>
-                    </span></i>
-              </small>
-              
-              <p class="text-start d-flex justify-content-between" style="font-size: 14px;">{{$p->name}}
-      
-              </p>
-             
-              <small class="text-start" style="font-size: 12px;"><span class="fw-bold">
-                @php
-                $des=explode(',',$p->destination);
-                foreach($des as $dd)
-                echo "<i class='bx bx-current-location'></i> ".$dd.'&nbsp;&nbsp;';
-                @endphp
-                </span> 
-              </small>
-                <hr class="mt-2 mb-2">
-              <h6 class="text-start">INR {{$p->discount}} : P.P&nbsp;<small>
-                <s style="font-size: 14px;">INR
-                {{$p->price}}</s></small>
-                  <button class="px-2 py-1 text-white border-0 rounded"
-                    style="font-size: 12px;background-color: #AA8D63;">save INR {{$p->price-$p->discount}}</button>
-                  
-              </h6>
-              
-              
-              
-                    <div class="d-flex justify-content-between flex-wrap">
-              <button class="btn btn-light-outlined" style="border: solid white 1px;">
-                <i class="fa-solid fa-phone text-white" role="button"></i>
-              </button>
-              <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-light d-block p-2" style="width: 85%;">Request&nbsp;Callback</button>
-              </div>
-            </div>
-            <img src="landing/clone26.avif" class="d-block  rounded-3 lazy" style="height: 80vh; visibility: hidden;" alt="Camera" />
-          </div>
-        </div>
-                        
+                            <div class="swiper-slide swiper22" id="swiperx"
+                                style="background-image: url(package_images/{{$p->image}}); background-size: cover;border-radius: 10px; background-repeat: no-repeat;cursor:pointer;">
+                                <div class="d-flex card_box flex-column justify-content-end rounded-3 " data-aos="flip-right"
+                                    data-aos-duration="4000" style="width: 100%;">
+                                    <spann id="pm{{ $p->id }}" data-before="{{ $p->tag_line }}" style="font-size: 10px !important"></spann>
+
+                                    <style>
+                                        #pm{{ $p->id }}::before {
+                                            content: attr(data-before) !important;
+
+                                        }
+                                    </style>
+
+                                    <script>
+                                        document.addEventListener('DOMContentLoaded', function () {
+                                            document.getElementById('pm{{ $p->id }}').setAttribute('data-before', '{{ $p->tag_line}}');
+                                        });
+                                    </script>
+
+
+                                    <div class="rounded-3 row position-absolute text-white py-3 mx-auto" style="
+                                   width: fit-content;" id="sss">
+                                        <small class="d-flex justify-content-between" style="font-size: 13px;">{{$p->day}} Days &
+                                            {{$p->night}} Nights
+                                            {{-- <span style="font-size: 13px;">
+                                                <i class="rounded-pill text-warning px-2 py-0 pb-2 fs-5 fa-solid fa-circle-info"
+                                                    onclick="window.location.href='/details/{{$p->id}}'"></i>
+                                            </span> --}}
+                                            <i class="rounded-pill px-2 py-2  fa-solid fa-star text-warning">{{4.9}} <span
+                                                    class="text-light">({{261 + $p->id}}) &nbsp;
+                                                    <span style="font-size: 13px;">
+                                                        <i class="rounded-pill text-warning px-2 py-0 pb-0 fs-6 fa-solid fa-circle-info"
+                                                            onclick="window.location.href='/details/{{$p->id}}'"></i>
+                                                    </span>
+                                                </span></i>
+                                        </small>
+
+                                        <p class="text-start d-flex justify-content-between" style="font-size: 14px;">{{$p->name}}
+
+                                        </p>
+
+                                        <small class="text-start" style="font-size: 12px;"><span class="fw-bold">
+                                                @php
+                                                    $des = explode(',', $p->destination);
+                                                    foreach ($des as $dd)
+                                                        echo "<i class='bx bx-current-location'></i> " . $dd . '&nbsp;&nbsp;';
+                                                @endphp
+                                            </span>
+                                        </small>
+                                        <hr class="mt-2 mb-2">
+                                        <h6 class="text-start">INR {{$p->discount}} : P.P&nbsp;<small>
+                                                <s style="font-size: 14px;">INR
+                                                    {{$p->price}}</s></small>
+                                            <button class="px-2 py-1 text-white border-0 rounded"
+                                                style="font-size: 12px;background-color: #AA8D63;">save INR
+                                                {{$p->price - $p->discount}}</button>
+
+                                        </h6>
+
+
+
+                                        <div class="d-flex justify-content-between flex-wrap">
+                                            <button class="btn btn-light-outlined" style="border: solid white 1px;">
+                                                <i class="fa-solid fa-phone text-white" role="button"></i>
+                                            </button>
+                                            <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-light d-block p-2"
+                                                style="width: 85%;">Request&nbsp;Callback</button>
+                                        </div>
+                                    </div>
+                                    <img src="landing/clone26.avif" class="d-block  rounded-3 lazy"
+                                        style="height: 80vh; visibility: hidden;" alt="Camera" />
+                                </div>
+                            </div>
+
                         @endforeach
                     </div>
                 </div>
@@ -852,7 +857,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
             <div class="destination-card-items d-flex flex-column w-100" style="height: 100%;">
         
                     <div class="destination-image">
-                        <img src="{{ asset('package_images/'.$p->image) }}" alt="img">
+                        <img src="{{ asset('package_images/' . $p->image) }}" alt="img">
                         <div class="heart-icon">
                             <i class="fa-regular fa-heart"></i>
                         </div>
@@ -878,7 +883,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
                             </li>
                         </ul>
                         <h5>
-                            <a href="{{ url('/details/'.$p->id) }}">
+                            <a href="{{ url('/details/' . $p->id) }}">
                                 {{$p->name}}
                             </a>
                         </h5>
@@ -944,7 +949,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
             <div class="destination-card-items d-flex flex-column w-100" style="height: 100%;">
         
                     <div class="destination-image">
-                         <img src="{{ asset('package_images/'.$p->image) }}" alt="img">
+                         <img src="{{ asset('package_images/' . $p->image) }}" alt="img">
                         <div class="heart-icon">
                             <i class="fa-regular fa-heart"></i>
                         </div>
@@ -970,7 +975,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
                             </li>
                         </ul>
                         <h5>
-                            <a href="{{ url('/details/'.$p->id) }}">
+                            <a href="{{ url('/details/' . $p->id) }}">
                                 {{$p->name}}
                             </a>
                         </h5>
@@ -1036,7 +1041,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
             <div class="destination-card-items d-flex flex-column w-100" style="height: 100%;">
         
                     <div class="destination-image">
-                         <img src="{{ asset('package_images/'.$p->image) }}" alt="img">
+                         <img src="{{ asset('package_images/' . $p->image) }}" alt="img">
                         <div class="heart-icon">
                             <i class="fa-regular fa-heart"></i>
                         </div>
@@ -1062,7 +1067,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
                             </li>
                         </ul>
                         <h5>
-                            <a href="{{ url('/details/'.$p->id) }}">
+                            <a href="{{ url('/details/' . $p->id) }}">
                                 {{$p->name}}
                             </a>
                         </h5>
@@ -1895,27 +1900,42 @@ $(document).ready(function() {
    
     </script>
 
-
-    <script>
-  new Swiper(".mySwiper1", {
-    slidesPerView: 1, 
-    spaceBetween: 20,
-    loop: true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    breakpoints: {
-      768: { slidesPerView: 2 },   // Tablet
-      1024: { slidesPerView: 3 }   // Large screens
-    }
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var swiper1 = new Swiper(".mySwiper1", {
+      slidesPerView: 1, // default (mobile)
+      spaceBetween: 15,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        576: { // ≥ small devices
+          slidesPerView: 1,
+          spaceBetween: 15,
+        },
+        768: { // ≥ medium tablets
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        1024: { // ≥ laptops
+          slidesPerView: 3,
+          spaceBetween: 25,
+        },
+        1400: { // ≥ large screens
+          slidesPerView: 4,
+          spaceBetween: 30,
+        },
+      },
+    });
   });
+</script>
 
-  </script>
     </body>
 
 <!-- Mirrored from ex-coders.com/html/turmet/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 08 Apr 2025 11:50:32 GMT -->
