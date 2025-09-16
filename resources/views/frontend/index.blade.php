@@ -685,7 +685,9 @@
 
             <div class="container">
                 <div class="row g-4">
-                    @foreach ($offer as $index => $o)
+                    {{-- limit 2 --}}
+
+                   @foreach ($offer->take(2) as $o)
                     <div class="col-lg-6 col-md-6 wow fadeInUp wow" data-wow-delay=".3s">
                         <div class="cta-items">
                             <div class="cta-text">
