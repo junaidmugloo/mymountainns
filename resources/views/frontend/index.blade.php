@@ -39,6 +39,10 @@
     height: 25vh;
       position: relative;
 }
+.destination-category-item .category-image {
+    
+    height: 28vh;
+}
 
 .destination-card-items .destination-image img {
     object-fit: cover;
