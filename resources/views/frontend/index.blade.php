@@ -697,8 +697,8 @@
                             </div>
                             <a href="{{ url("tour-details.html") }}" class="theme-btn">BOOK NOW <i class="fa-sharp fa-regular fa-arrow-right"></i></a>
                             <div class="cta-image">
-                                <img src="{{ asset("offer_images/{{$o->image}}") }}" alt="img">
-                                
+                                <img src="{{ asset("offer_images/".$o->image) }}" alt="img">
+
                             </div>
                         </div>
                     </div>
