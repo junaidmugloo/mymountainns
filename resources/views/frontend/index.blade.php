@@ -666,7 +666,9 @@
                    @foreach ($offer->take(2) as $o)
                     <div class="col-lg-6 col-md-6 wow fadeInUp wow" data-wow-delay=".3s">
 
-                        <div class="cta-items  {{ $index == 1 ? 'style-2' : '' }}">
+                       
+
+                        <div class="cta-items  {{ $loop->iteration  == 2 ? 'style-2' : '' }}">
                             <div class="cta-text">
                                 <h2>{{$o->heading}}</h2>
                                 <p style="width: 25vw;">
