@@ -1485,7 +1485,7 @@
         </section>
 
         <!-- Team Section Start -->
-        <section class="team-section fix section-padding">
+        {{-- <section class="team-section fix section-padding">
             <div class="jip-shape float-bob-x">
                 <img src="{{ asset("mymountains/assets/img/team/jip.png") }}" alt="img">
             </div>
@@ -1579,7 +1579,7 @@
                     </div>
                 </div>
             </div>
-         </section>
+         </section> --}}
 
         <!-- Cta-bg-Section Start -->
         <section class="cta-bg-section fix bg-cover" style="background-image: url(mymountains/assets/img/cta-bg.jpg);">
