@@ -19,10 +19,10 @@
                                 </button>
                             </div>
                             <div class="social-icon d-flex align-items-center justify-content-center">
-                                <a href="{{ url("#") }}"><i class="fab fa-facebook-f"></i></a>
+                                <a href="{{ url("https://www.facebook.com/mymountains") }}"><i class="fab fa-facebook-f"></i></a>
                                 <a href="{{ url("#") }}"><i class="fab fa-twitter"></i></a>
                                 <a href="{{ url("#") }}"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="{{ url("#") }}"><i class="fab fa-instagram"></i></a>
+                                <a href="{{ url("https://www.instagram.com/mymountainstourandtravel/") }}"><i class="fab fa-instagram"></i></a>
                             </div>
                         </div>
                     </div>
@@ -34,28 +34,28 @@
                         </div>
                         <ul class="list-items">
                             <li>
-                                <a href="{{ url("index.html") }}">
+                                <a href="{{ url("/") }}">
                                     Home 
                                 </a>
                             </li>
                             <li>
-                                <a href="{{ url("index.html") }}">
+                                <a href="{{ url("about") }}">
                                     About Us  
                                 </a>
                             </li>
                             <li>
-                                <a href="{{ url("news.html") }}">
+                                <a href="{{ url("blog") }}">
                                     Blog
                                 </a>
                             </li>
                             <li>
-                                <a href="{{ url("tour-details.html") }}">
-                                    Services 
+                                <a href="{{ url("kashmir") }}">
+                                    Kashmir 
                                 </a>
                             </li>
                             <li>
-                                <a href="{{ url("tour-details.html") }}">
-                                    Tour 
+                                <a href="{{ url("ladakh") }}">
+                                    Ladakh 
                                 </a>
                             </li>
                         </ul>
