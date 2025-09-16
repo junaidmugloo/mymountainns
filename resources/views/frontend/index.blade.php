@@ -737,84 +737,77 @@
                     <div class="swiper-wrapper">
                         @foreach ($premium as $p)
                         <div class="swiper-slide">
-                            <div class="swiper-slide swiper22" id="swiperx"
-    style="background-image: url('{{ asset('package_images/'.$p->image) }}'); background-size: cover; border-radius: 10px; background-repeat: no-repeat; cursor: pointer;">
-    
-    <div class="d-flex card_box flex-column justify-content-end rounded-3" data-aos="flip-right"
-        data-aos-duration="4000" style="width: 100%;">
-        
-        <span id="pm{{ $p->id }}" data-before="{{ $p->tag_line }}" style="font-size: 10px !important"></span>
+                            <div class="swiper-slide swiper22" id="swiperx">
+    <div class="feature-tour-items">
 
-        <style>
-            #pm{{ $p->id }}::before {
-                content: attr(data-before) !important;
-            }
-        </style>
+        <!-- Image + Premium Tag -->
+        <div class="feature-tour-image">
+            <img src="{{ asset('package_images/'.$p->image) }}" alt="{{$p->name}}">
+            <ul class="location">
+                <li>
+                    <i class="fa-light fa-location-dot"></i>
+                    Premium
+                </li>
+            </ul>
+        </div>
 
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                document.getElementById('pm{{ $p->id }}').setAttribute('data-before', '{{ $p->tag_line }}');
-            });
-        </script>
+        <!-- Tour Details -->
+        <div class="feature-tour-content">
 
-        <!-- Top Info -->
-        <div class="rounded-3 row position-absolute text-white py-3 mx-auto" style="width: fit-content;" id="sss">
-            
-            <small class="d-flex justify-content-between" style="font-size: 13px;">
-                {{$p->day}} Days & {{$p->night}} Nights
-                <i class="rounded-pill px-2 py-2 fa-solid fa-star text-warning">
-                    4.9 <span class="text-light">({{ 261+$p->id }})</span>
-                    <span style="font-size: 13px;">
-                        <i class="rounded-pill text-warning px-2 py-0 pb-0 fs-6 fa-solid fa-circle-info"
-                           onclick="window.location.href='/details/{{$p->id}}'"></i>
-                    </span>
-                </i>
+            <!-- Title -->
+            <h4>
+                <a href="{{ url('/details/'.$p->id) }}">
+                    {{$p->name}}
+                </a>
+            </h4>
+
+            <!-- Duration + Rating -->
+            <small style="font-size: 13px; display: block; margin-bottom: 5px;">
+                {{$p->day}} Days & {{$p->night}} Nights &nbsp;|&nbsp;
+                <i class="fa-solid fa-star text-warning"></i> 4.9 
+                <span class="text-muted">({{ 261+$p->id }})</span>
             </small>
 
-            <!-- Tour Name -->
-            <p class="text-start d-flex justify-content-between" style="font-size: 14px;">
-                {{$p->name}}
-            </p>
-
-            <!-- Destination -->
-            <small class="text-start" style="font-size: 12px;">
-                <span class="fw-bold">
-                    @php
-                        $des = explode(',', $p->destination);
-                        foreach($des as $dd) {
-                            echo "<i class='bx bx-current-location'></i> ".$dd.'&nbsp;&nbsp;';
-                        }
-                    @endphp
-                </span>
+            <!-- Destination List -->
+            <small style="font-size: 12px; display: block; margin-bottom: 5px;">
+                @php
+                    $des = explode(',', $p->destination);
+                    foreach($des as $dd) {
+                        echo "<i class='bx bx-current-location'></i> ".$dd.'&nbsp;&nbsp;';
+                    }
+                @endphp
             </small>
 
             <hr class="mt-2 mb-2">
 
-            <!-- Price -->
-            <h6 class="text-start">
-                INR {{$p->discount}} : P.P&nbsp;
-                <small><s style="font-size: 14px;">INR {{$p->price}}</s></small>
-                <button class="px-2 py-1 text-white border-0 rounded"
-                    style="font-size: 12px; background-color: #AA8D63;">
-                    save INR {{$p->price - $p->discount}}
-                </button>
-            </h6>
+            <!-- Pricing -->
+            <h5>
+                INR {{$p->discount}} <span>/ P.P</span>
+                <small>
+                    <s style="font-size: 14px;">INR {{$p->price}}</s>
+                </small>
+            </h5>
+            <button class="px-2 py-1 text-white border-0 rounded"
+                style="font-size: 12px; background-color: #AA8D63;">
+                Save INR {{$p->price - $p->discount}}
+            </button>
 
-            <!-- Buttons -->
-            <div class="d-flex justify-content-between flex-wrap">
-                <button class="btn btn-light-outlined" style="border: solid white 1px;">
-                    <i class="fa-solid fa-phone text-white" role="button"></i>
+            <!-- Actions -->
+            <div class="d-flex justify-content-between flex-wrap mt-3">
+                <button class="btn btn-light-outlined" style="border: solid #ccc 1px;">
+                    <i class="fa-solid fa-phone"></i>
                 </button>
                 <button data-bs-toggle="modal" data-bs-target="#exampleModal" 
-                    class="btn btn-light d-block p-2" style="width: 85%;">
-                    Request&nbsp;Callback
+                    class="btn btn-primary d-block p-2" style="width: 75%;">
+                    Request Callback
                 </button>
             </div>
-        </div>
 
-        <!-- Hidden Image -->
-        <img src="landing/clone26.avif" class="d-block rounded-3 lazy"
-             style="height: 80vh; visibility: hidden;" alt="Camera" />
+            <!-- Arrow Link -->
+            <a href="{{ url('/details/'.$p->id) }}" class="icon mt-2">
+                <i class="fa-sharp fa-regular fa-arrow-right"></i>
+            </a>
+        </div>
     </div>
 </div>
 
