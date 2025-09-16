@@ -752,7 +752,7 @@
             <ul class="location" style="position: absolute; top: 10px; left: 10px;">
                 <li>
                     <i class="fa-light fa-location-dot"></i>
-                    Premium
+                    {{$p->price - $p->discount}}
                 </li>
             </ul>
         </div>
@@ -795,10 +795,10 @@
                     INR {{$p->discount}} <span>/ P.P</span>
                     <small><s style="font-size: 14px;">INR {{$p->price}}</s></small>
                 </h5>
-                <button class="px-2 py-1 text-white border-0 rounded mb-3"
+                {{-- <button class="px-2 py-1 text-white border-0 rounded mb-3"
                     style="font-size: 12px; background-color: #AA8D63;">
                     Save INR {{$p->price - $p->discount}}
-                </button>
+                </button> --}}
             </div>
 
             <!-- Actions -->
