@@ -738,12 +738,14 @@
                         @foreach ($premium as $p)
                         <div class="swiper-slide">
                             <div class="swiper-slide swiper22" id="swiperx">
-    <div class="feature-tour-items">
+    <div class="feature-tour-items h-100 shadow-sm rounded-3" 
+         style="box-shadow: 0 4px 12px rgba(0,0,0,0.15); display: flex; flex-direction: column; height: 100%;">
 
         <!-- Image + Premium Tag -->
-        <div class="feature-tour-image">
-            <img src="{{ asset('package_images/'.$p->image) }}" alt="{{$p->name}}">
-            <ul class="location">
+        <div class="feature-tour-image" style="position: relative;">
+            <img src="{{ asset('package_images/'.$p->image) }}" alt="{{$p->name}}" 
+                 style="object-fit: cover; width: 100%; height: 220px; border-radius: 8px 8px 0 0;">
+            <ul class="location" style="position: absolute; top: 10px; left: 10px;">
                 <li>
                     <i class="fa-light fa-location-dot"></i>
                     Premium
@@ -752,48 +754,51 @@
         </div>
 
         <!-- Tour Details -->
-        <div class="feature-tour-content">
+        <div class="feature-tour-content d-flex flex-column justify-content-between p-3" style="flex: 1;">
 
-            <!-- Title -->
-            <h4>
-                <a href="{{ url('/details/'.$p->id) }}">
-                    {{$p->name}}
-                </a>
-            </h4>
+            <div>
+                <!-- Title -->
+                <h4 class="mb-2" style="min-height: 45px;">
+                    <a href="{{ url('/details/'.$p->id) }}">
+                        {{$p->name}}
+                    </a>
+                </h4>
 
-            <!-- Duration + Rating -->
-            <small style="font-size: 13px; display: block; margin-bottom: 5px;">
-                {{$p->day}} Days & {{$p->night}} Nights &nbsp;|&nbsp;
-                <i class="fa-solid fa-star text-warning"></i> 4.9 
-                <span class="text-muted">({{ 261+$p->id }})</span>
-            </small>
+                <!-- Duration + Rating -->
+                <small class="d-block mb-1" style="font-size: 13px;">
+                    {{$p->day}} Days & {{$p->night}} Nights &nbsp;|&nbsp;
+                    <i class="fa-solid fa-star text-warning"></i> 4.9 
+                    <span class="text-muted">({{ 261+$p->id }})</span>
+                </small>
 
-            <!-- Destination List -->
-            <small style="font-size: 12px; display: block; margin-bottom: 5px;">
-                @php
-                    $des = explode(',', $p->destination);
-                    foreach($des as $dd) {
-                        echo "<i class='bx bx-current-location'></i> ".$dd.'&nbsp;&nbsp;';
-                    }
-                @endphp
-            </small>
+                <!-- Destination List -->
+                <small class="d-block mb-2" style="font-size: 12px; min-height: 35px;">
+                    @php
+                        $des = explode(',', $p->destination);
+                        foreach($des as $dd) {
+                            echo "<i class='bx bx-current-location'></i> ".$dd.'&nbsp;&nbsp;';
+                        }
+                    @endphp
+                </small>
+            </div>
 
+            <!-- Divider -->
             <hr class="mt-2 mb-2">
 
             <!-- Pricing -->
-            <h5>
-                INR {{$p->discount}} <span>/ P.P</span>
-                <small>
-                    <s style="font-size: 14px;">INR {{$p->price}}</s>
-                </small>
-            </h5>
-            <button class="px-2 py-1 text-white border-0 rounded"
-                style="font-size: 12px; background-color: #AA8D63;">
-                Save INR {{$p->price - $p->discount}}
-            </button>
+            <div>
+                <h5 class="mb-2">
+                    INR {{$p->discount}} <span>/ P.P</span>
+                    <small><s style="font-size: 14px;">INR {{$p->price}}</s></small>
+                </h5>
+                <button class="px-2 py-1 text-white border-0 rounded mb-3"
+                    style="font-size: 12px; background-color: #AA8D63;">
+                    Save INR {{$p->price - $p->discount}}
+                </button>
+            </div>
 
             <!-- Actions -->
-            <div class="d-flex justify-content-between flex-wrap mt-3">
+            <div class="d-flex justify-content-between align-items-center mt-auto">
                 <button class="btn btn-light-outlined" style="border: solid #ccc 1px;">
                     <i class="fa-solid fa-phone"></i>
                 </button>
@@ -804,9 +809,11 @@
             </div>
 
             <!-- Arrow Link -->
-            <a href="{{ url('/details/'.$p->id) }}" class="icon mt-2">
-                <i class="fa-sharp fa-regular fa-arrow-right"></i>
-            </a>
+            <div class="text-end mt-2">
+                <a href="{{ url('/details/'.$p->id) }}" class="icon">
+                    <i class="fa-sharp fa-regular fa-arrow-right"></i>
+                </a>
+            </div>
         </div>
     </div>
 </div>
