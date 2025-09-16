@@ -676,6 +676,10 @@
                             data-bs-target="#exampleModal" class="theme-btn">BOOK NOW <i class="fa-sharp fa-regular fa-arrow-right"></i></a>
                             <div class="cta-image">
                                 <img src="{{ asset("mymountains/assets/img/bag-shape.png") }}" alt="img">
+                                {{-- i want this image on 2nd iteration of loop --}}
+                                @if ($loop->iteration === 2)
+                                    <img src="{{ asset("mymountains/assets/img/plane-shape.png") }}" alt="img">
+                                @endif
                             </div>
                         </div>
                     </div>
