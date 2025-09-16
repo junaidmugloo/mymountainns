@@ -49,7 +49,11 @@
    
 }
 
-
+.btn-custom{
+    background: linear-gradient(93deg,#20c997,#0dcaf0);
+    color: white;
+    border: none;
+}
    /* for small and medium screen */
     @media (max-width: 450px) {
     .destination-category-section .plane-shape {
@@ -803,17 +807,17 @@
                     <i class="fa-solid fa-phone"></i>
                 </button>
                 <button data-bs-toggle="modal" data-bs-target="#exampleModal" 
-                    class="btn btn-primary d-block p-2" style="width: 75%;">
+                    class="btn btn-custom d-block p-2" style="width: 75%;">
                     Request Callback
                 </button>
             </div>
 
             <!-- Arrow Link -->
-            <div class="text-end mt-2">
+            {{-- <div class="text-end mt-2">
                 <a href="{{ url('/details/'.$p->id) }}" class="icon">
                     <i class="fa-sharp fa-regular fa-arrow-right"></i>
                 </a>
-            </div>
+            </div> --}}
         </div>
     </div>
 </div>
