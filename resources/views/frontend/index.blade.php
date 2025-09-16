@@ -736,7 +736,7 @@
                 <div class="swiper tour-slider">
                     <div class="swiper-wrapper">
                         @foreach ($premium as $p)
-                        <div class="swiper-slide">
+                       
                             <div class="swiper-slide swiper22"  id="swiperx" style="background-image: url(package_images/{{$p->image}}); background-size: cover;border-radius: 10px; background-repeat: no-repeat;cursor:pointer;">
           <div class="d-flex card_box flex-column justify-content-end rounded-3 " data-aos="flip-right"
             data-aos-duration="4000" style="width: 100%;">
@@ -805,7 +805,7 @@
             <img src="landing/clone26.avif" class="d-block  rounded-3 lazy" style="height: 80vh; visibility: hidden;" alt="Camera" />
           </div>
         </div>
-                        </div>
+                        
                         @endforeach
                     </div>
                 </div>
