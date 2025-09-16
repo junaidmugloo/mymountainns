@@ -41,6 +41,10 @@
 
 /* card css */
 
+a{
+    text-decoration: none !important;
+}
+
 .tour-image {
             height: 240px;
             object-fit: cover;
