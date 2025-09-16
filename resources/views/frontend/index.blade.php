@@ -485,71 +485,21 @@
                
                 <div class="swiper category-slider">
                     <div class="swiper-wrapper">
+                        @foreach ($category as $c)
                         <div class="swiper-slide">
                             <div class="destination-category-item">
                                 <div class="category-image">
                                     <img src="{{ asset("mymountains/assets/img/destination/category1.jpg") }}" alt="img">
                                     <div class="category-content">
                                         <h5>
-                                            <a href="{{ url("destination-details.html") }}">Adventure</a>
+                                            <a href="{{ url("destination-details.html") }}">{{$c->name}}</a>
                                         </h5>
-                                        <p>6 Tour</p>
+                                        <p>View Tour</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide">
-                            <div class="destination-category-item">
-                                <div class="category-image">
-                                    <img src="{{ asset("mymountains/assets/img/destination/category2.jpg") }}" alt="img">
-                                    <div class="category-content">
-                                        <h5>
-                                            <a href="{{ url("destination-details.html") }}">Adventure</a>
-                                        </h5>
-                                        <p>6 Tour</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="destination-category-item">
-                                <div class="category-image">
-                                    <img src="{{ asset("mymountains/assets/img/destination/category3.jpg") }}" alt="img">
-                                    <div class="category-content">
-                                        <h5>
-                                            <a href="{{ url("destination-details.html") }}">Adventure</a>
-                                        </h5>
-                                        <p>6 Tour</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="destination-category-item">
-                                <div class="category-image">
-                                    <img src="{{ asset("mymountains/assets/img/destination/category4.jpg") }}" alt="img">
-                                    <div class="category-content">
-                                        <h5>
-                                            <a href="{{ url("destination-details.html") }}">Adventure</a>
-                                        </h5>
-                                        <p>6 Tour</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="destination-category-item">
-                                <div class="category-image">
-                                    <img src="{{ asset("mymountains/assets/img/destination/category5.jpg") }}" alt="img">
-                                    <div class="category-content">
-                                        <h5>
-                                            <a href="{{ url("destination-details.html") }}">Adventure</a>
-                                        </h5>
-                                        <p>6 Tour</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
                 <div class="swiper-dot4 mt-5">
