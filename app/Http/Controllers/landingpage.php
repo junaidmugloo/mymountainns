@@ -8,6 +8,7 @@ use App\Models\Gallery;
 use App\Models\TopSlider;
 use App\Models\FAQ;
 use App\Models\Hotel;
+use App\Models\MySEO;
 use App\Models\Offer;
 use App\Models\PackageDays;
 use App\Models\PackageOptions;
@@ -95,6 +96,8 @@ class landingpage extends Controller
         return CategoryModel::where('name', '!=', 'tagline')->get();
     });
 
+    $seo=MySEO::where('page','home')->first();
+    
     return view('frontend.index', [
         'packages'  => $packages,
         'packages1' => $packages1,
@@ -108,7 +111,8 @@ class landingpage extends Controller
         'images'    => $images,
         'blogs'     => $blogs,
         'category'  => $category,
-    ]);
+        'seo'       => $seo,
+        ]);
 }
     public function generatePDF($id)
 {

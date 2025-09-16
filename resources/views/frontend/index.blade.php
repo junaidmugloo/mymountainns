@@ -6,9 +6,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="pixel-drop">
-        <meta name="description" content="My Mountains">
+        <meta name="description" content="{{ $seo->meta_description }}">
+        <meta name="keywords" content="{{ $seo->meta_keywords }}">
+        
         <!-- ======== Page title ============ -->
-        <title>My Mountains</title>
+        <title></title>
         <!--<< Favcion >>-->
         <link rel="shortcut icon" href="{{ asset("mymountains/assets/img/favicon.svg") }}">
         <!--<< Bootstrap min.css >>-->
