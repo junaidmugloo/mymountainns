@@ -310,7 +310,7 @@ a{
             display: block !important;
             padding: 0!important;
             font-family: var(--font-primary);
-            background-color: #f8f9fa;
+            /* background-color: #f8f9fa; */
             color: #333;
         }
         
@@ -646,7 +646,7 @@ h1, h2, h3, h4, h5, h6 {
         }
     </style>
 </head>
-<body>
+<body style="background-image: url(assets/img/about/about-bg.jpg);">
        <!-- Preloader Start -->
        <div id="preloader" class="preloader">
             <div class="animation-preloader">
@@ -803,7 +803,7 @@ h1, h2, h3, h4, h5, h6 {
         </div>
 
     <!-- Main Content -->
-
+<hr>
     <main class="py-4">
         <div class="container">
             <!-- Tour Card -->
