@@ -7,7 +7,7 @@
 <meta name="keywords" content="admin, estimates, bootstrap, business, corporate, creative, invoice, html5, responsive, Projects">
 <meta name="author" content="Dreamguys - Bootstrap Admin Template">
 <meta name="robots" content="noindex, nofollow">
-<title>Joy Tour & Travels</title>
+<title>My SEO</title>
 
 <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.jpg">
 
@@ -42,8 +42,8 @@
 <div class="content">
 <div class="page-header">
 <div class="page-title">
-<h4>Banner Add</h4>
-<h6>Create Top Banner</h6>
+<h4>My SEO</h4>
+<h6>Create Meta Content</h6>
 </div>
 </div>
 
@@ -51,47 +51,29 @@
 <div class="card-body">
    
 <div class="row">
-<div class="col-lg-6 col-sm-6 col-12">
-<div class="form-group">
-<label>Main Heading</label>
-<input type="text" name="heading" required id="validationTooltip04">
-</div>
-</div>
 
-
-
+<input type="hidden" name="og_image" >
 
 <div class="col-lg-6 col-sm-6 col-12">
 <div class="form-group">
-<label>Offer Line</label>
-<input type="text" name="offer_line" required>
+<label>Meta Title</label>
+<input type="text" name="meta_title" required id="validationTooltip04">
 </div>
 </div>
+
 
 <div class="col-lg-6 col-sm-6 col-12">
-  <div class="form-group">
-  <label>Tag Line</label>
-  <input type="text" name="tag_line" required>
-  </div>
-  </div>
+<div class="form-group">
+<label>Meta Keywords</label>
+<input type="text" name="meta_keywords" required>
+</div>
+</div>
 
 
-<div class="col-lg-3 col-sm-6 col-12">
-<div class="form-group">
-<label>Price</label>
-<input type="text" name="price" required>
-</div>
-</div>
-<div class="col-lg-3 col-sm-6 col-12">
-<div class="form-group">
-<label>Discount Price</label>
-<input type="text"  name="discount_price">
-</div>
-</div>
 <div class="col-lg-12">
 <div class="form-group">
-<label>Description</label>
-<textarea class="form-control" name="description"></textarea>
+<label>Meta Description</label>
+<textarea class="form-control" name="meta_description"></textarea>
 </div>
 </div>
 
@@ -99,18 +81,7 @@
 
 
 </div>
-<div class="col-lg-12">
-<div class="form-group">
-<label> Product Image</label>
-<div class="image-upload">
-<input type="file" name="banner_image">
-<div class="image-uploads">
-<img src="assets/img/icons/upload.svg" alt="img">
-<h4>Drag and drop a file to upload</h4>
-</div>
-</div>
-</div>
-</div>
+
 
 
 
@@ -155,7 +126,7 @@
               $('#form').on('submit', function(event){
                     event.preventDefault();
 
-                    var url = "/addbanner"
+                    var url = "/addseo"
                     
                     $.ajax({
                         url: url,
