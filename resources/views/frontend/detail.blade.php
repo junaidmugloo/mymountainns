@@ -1414,7 +1414,7 @@ h1, h2, h3, h4, h5, h6 {
         <!--<< Wow Animation Js >>-->
         <script src="{{ asset("mymountains/assets/js/wow.min.js") }}"></script>
         <!--<< Main.js >>-->
-        <script src="{{ asset("mymountains/assets/js/main.js") }}"></script>
+        {{-- <script src="{{ asset("mymountains/assets/js/main.js") }}"></script> --}}
         {{-- sweet alert --}}
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!-- Bootstrap JS Bundle with Popper -->
