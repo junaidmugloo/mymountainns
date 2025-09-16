@@ -711,6 +711,96 @@
                     <i class="fa-regular fa-arrow-left-long"></i>
                 </button>
             </div>
+
+<div class="container rounded  text-start  py-4 d-flex flex-column flex-grow" style="color: #FCAF17;font-size:25px;">
+    <p class="fs-3 mx-2 p-0 mb-1">Staff <span class="fw-semibold" style="color: #FCAF17;font-weight:600">
+        Handpicked</span></p>
+    <small class=" text-muted mb-1 mx-2" style="font-size: 15px; ">Curated with expertise</small>
+    <div class="container swiper mySwiper2 p-0 m-0" id="swiper1">
+      <div class="swiper-wrapper ">
+        
+         @foreach ($premium as $p)
+             
+         
+      
+        <div class="swiper-slide swiper22"  id="swiperx" style="background-image: url(package_images/{{$p->image}}); background-size: cover;border-radius: 10px; background-repeat: no-repeat;cursor:pointer;">
+          <div class="d-flex card_box flex-column justify-content-end rounded-3 " data-aos="flip-right"
+            data-aos-duration="4000" style="width: 100%;">
+            <spann id="pm{{ $p->id }}" data-before="{{ $p->tag_line }}" style="font-size: 10px !important"></spann>
+
+            <style>
+                #pm{{ $p->id }}::before {
+                    content: attr(data-before) !important;
+                    
+                }
+            </style>
+            
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    document.getElementById('pm{{ $p->id }}').setAttribute('data-before', '{{ $p->tag_line}}');
+                });
+            </script>
+            
+            
+            <div class="rounded-3 row position-absolute text-white py-3 mx-auto" style="
+               width: fit-content;" id="sss" >
+              <small class="d-flex justify-content-between" style="font-size: 13px;">{{$p->day}} Days & {{$p->night}} Nights 
+                {{-- <span style="font-size: 13px;">
+                  <i
+                    class="rounded-pill text-warning px-2 py-0 pb-2 fs-5 fa-solid fa-circle-info" onclick="window.location.href='/details/{{$p->id}}'"></i>
+                  </span> --}}
+                    <i class="rounded-pill px-2 py-2  fa-solid fa-star text-warning">{{4.9}} <span
+                      class="text-light">({{261+$p->id}}) &nbsp;
+                    <span style="font-size: 13px;">
+                  <i
+                    class="rounded-pill text-warning px-2 py-0 pb-0 fs-6 fa-solid fa-circle-info" onclick="window.location.href='/details/{{$p->id}}'"></i>
+                  </span>
+                    </span></i>
+              </small>
+              
+              <p class="text-start d-flex justify-content-between" style="font-size: 14px;">{{$p->name}}
+      
+              </p>
+             
+              <small class="text-start" style="font-size: 12px;"><span class="fw-bold">
+                @php
+                $des=explode(',',$p->destination);
+                foreach($des as $dd)
+                echo "<i class='bx bx-current-location'></i> ".$dd.'&nbsp;&nbsp;';
+                @endphp
+                </span> 
+              </small>
+                <hr class="mt-2 mb-2">
+              <h6 class="text-start">INR {{$p->discount}} : P.P&nbsp;<small>
+                <s style="font-size: 14px;">INR
+                {{$p->price}}</s></small>
+                  <button class="px-2 py-1 text-white border-0 rounded"
+                    style="font-size: 12px;background-color: #AA8D63;">save INR {{$p->price-$p->discount}}</button>
+                  
+              </h6>
+              
+              
+              
+                    <div class="d-flex justify-content-between flex-wrap">
+              <button class="btn btn-light-outlined" style="border: solid white 1px;">
+                <i class="fa-solid fa-phone text-white" role="button"></i>
+              </button>
+              <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-light d-block p-2" style="width: 85%;">Request&nbsp;Callback</button>
+              </div>
+            </div>
+            <img src="landing/clone26.avif" class="d-block  rounded-3 lazy" style="height: 80vh; visibility: hidden;" alt="Camera" />
+          </div>
+        </div>
+        @endforeach
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+
+
+
+
+
             <div class="container">
                 <div class="section-title">
                     <span class="sub-title wow fadeInUp">
