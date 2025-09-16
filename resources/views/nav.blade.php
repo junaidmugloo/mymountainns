@@ -38,12 +38,12 @@
                 <ul class="top-right">
                     <li>
                         <i class="fa-regular fa-envelope"></i>
-                        <a href="{{ url("mailto:info@touron.com") }}">info@mymountains.in</a>
+                        <a href="{{ url("mailto:info@mymountains.in") }}">info@mymountains.in</a>
                     </li>
                     
                     <li>
                         <i class="fa-solid fa-phone"></i>
-                        <a href="{{ url("tel:+256214203215") }}">+91-9906786356</a>
+                        <a href="{{ url("tel:+91-70518 93547") }}">+91-70518 93547</a>
                     </li>
                 </ul>
             </div>

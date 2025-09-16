@@ -1,956 +1,519 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{$package->name ?? 'Tour Details'}}</title>
-    
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Boxicons -->
+    <title>Package Details</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <!-- Animate.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <!-- Original CSS assets -->
-    <link rel="shortcut icon" href="{{ asset("/mymountains/assets/img/favicon.svg") }}">
-    <link rel="stylesheet" href="{{ asset("/mymountains/assets/css/bootstrap.min.css") }}">
-    <link rel="stylesheet" href="{{ asset("/mymountains/assets/css/all.min.css") }}">
-    <link rel="stylesheet" href="{{ asset("/mymountains/assets/css/animate.css") }}">
-    <link rel="stylesheet" href="{{ asset("/mymountains/assets/css/magnific-popup.css") }}">
-    <link rel="stylesheet" href="{{ asset("/mymountains/assets/css/meanmenu.css") }}">
-    <link rel="stylesheet" href="{{ asset("/mymountains/assets/css/swiper-bundle.min.css") }}">
-    <link rel="stylesheet" href="{{ asset("/mymountains/assets/css/datepickerboot.css") }}">
-    <link rel="stylesheet" href="{{ asset("/mymountains/assets/css/nice-select.css") }}">
-    <link rel="stylesheet" href="{{ asset("/mymountains/assets/css/color.css") }}">
-    <link rel="stylesheet" href="{{ asset("/mymountains/assets/css/main.css") }}">
-    <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-    :root {
-        --primary-color: #ef4444;
-        --secondary-color: #f97316;
-        --bs-primary-rgb: 239, 68, 68;
-        --bs-secondary-rgb: 249, 115, 22;
-        --theme-gradient: linear-gradient(90deg, #ef4444 0%, #f97316 100%);
-        --font-primary: 'Poppins', sans-serif;
-        --font-size-xs: 0.75rem;
-        --font-size-sm: 0.875rem;
-        --font-size-base: 1rem;
-        --font-size-lg: 1.125rem;
-        --font-size-xl: 1.25rem;
-        --font-size-2xl: 1.5rem;
+ 
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="Kashmir Tour Packages,Joy Tour & Travels">
+    <meta name="author" content="Joy Tour & Travels">
+    <meta name="description" content="Kashmir Tour Packages - Book Kashmir Packages at Best Price with joy tour & travels. Get Best Offers on Kashmir Holiday Packages with Airfare, Hotel and Sightseeing.">
+  
+    <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <!-- tabler icon -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/1.35.0/iconfont/tabler-icons.min.css"
+        integrity="sha512-tpsEzNMLQS7w9imFSjbEOHdZav3/aObSESAL1y5jyJDoICFF2YwEdAHOPdOr1t+h8hTzar0flphxR76pd0V1zQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    body {
+        background-color: #F5F7FA;
     }
 
-    /* Button styles */
-    .btn-warning {
-        background: var(--theme-gradient) !important;
-        color: #fff !important;
-        border: none !important;
-        transition: all 0.3s ease;
+    .box1 {
+        background-color: #FFFFFF;
+        height: fit-content !important;
+        padding: 20px 10px;
     }
 
-    .btn-warning:hover {
-        background: linear-gradient(90deg, #f97316 0%, #ef4444 100%) !important;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 15px rgba(239, 68, 68, 0.2);
+    .form {
+        background-color: #FFFFFF;
+        height: fit-content !important;
+        padding: 20px 10px;
+
     }
 
-    /* Tour Card Styles */
-    .tour-image {
-        position: relative;
-        overflow: hidden;
+    .grp {
+        color: #F47C35;
     }
-    
-    .tour-image img {
-        transition: transform 0.5s;
-        object-fit: cover;
-        height: 300px;
-    }
-    
-    .tour-image:hover img {
-        transform: scale(1.05);
-    }
-    
-    .tag {
-        font-size: 10px;
-        font-weight: bold;
-        padding: 3px 8px;
-        border-radius: 3px;
-        margin-right: 4px;
-    }
-    
-    .tag-orange {
-        background-color: #fff;
-        color: #FF8C00;
-        border: 1px solid #FF8C00;
-    }
-    
-    .tag-red {
-        background-color: #fff;
-        color: #FF4500;
-        border: 1px solid #FF4500;
-    }
-    
-    .tag-purple {
-        background-color: #fff;
-        color: #8A2BE2;
-        border: 1px solid #8A2BE2;
-    }
-    
-    .tour-title {
-        font-size: 18px;
-        font-weight: bold;
-        color: #333;
-        margin-top: 8px;
-    }
-    
-    .all-inclusive {
-        color: #0066cc;
-        font-weight: 500;
-        font-size: 12px;
-        display: flex;
-        align-items: center;
-        margin-top: 4px;
-    }
-    
-    .details-section {
-        border-bottom: 1px solid #eee;
-        padding-bottom: 12px;
-        margin-top: 12px;
-    }
-    
-    .detail-label {
-        color: #777;
-        font-size: 12px;
-    }
-    
-    .detail-value {
-        font-weight: bold;
-        font-size: 14px;
-        color: #333;
-    }
-    
-    .highlight-text {
-        color: #0066cc;
-    }
-    </style>
-    <body>
 
-        <!-- Preloader Start -->
-       <div id="preloader" class="preloader">
-            <div class="animation-preloader">
-                <div class="spinner">                
-                </div>
-                <div class="txt-loading">
-                    <span data-text-preloader="M" class="letters-loading">
-                        M
-                    </span>
-                    <span data-text-preloader="o" class="letters-loading">
-                        o
-                    </span>
-                    <span data-text-preloader="u" class="letters-loading">
-                        u
-                    </span>
-                    <span data-text-preloader="n" class="letters-loading">
-                        n
-                    </span>
-                    <span data-text-preloader="t" class="letters-loading">
-                        t
-                    </span>
-                    <span data-text-preloader="a" class="letters-loading">
-                        a
-                    </span>
-                    <span data-text-preloader="i" class="letters-loading">
-                        i
-                    </span>
-                    <span data-text-preloader="n" class="letters-loading">
-                        n
-                    </span>
-                    <span data-text-preloader="s" class="letters-loading">
-                        s
-                    </span>
-                </div>
-                <p class="text-center">Loading</p>
-            </div>
-            <div class="loader">
-                <div class="row">
-                    <div class="col-3 loader-section section-left">
-                        <div class="bg"></div>
-                    </div>
-                    <div class="col-3 loader-section section-left">
-                        <div class="bg"></div>
-                    </div>
-                    <div class="col-3 loader-section section-right">
-                        <div class="bg"></div>
-                    </div>
-                    <div class="col-3 loader-section section-right">
-                        <div class="bg"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    .grpp {
+        height: fit-content !important;
+    }
+
+    .img {
+        padding: 15px 10px;
+        background-color: #FFFFFF;
+        box-shadow: 0px 0px 3px 1px #F37221;
+    }
+    .imgg {
+        padding: 15px 10px;
+        background-color: #FFFFFF;
+        box-shadow: 0px 0px 13px 2px #e2e5e8;
+    }
+
+    .bttn {
+        background-image: linear-gradient(90deg, #FDAD0F, #F37221);
+    }
+    .but {
+        background-image: linear-gradient(50deg, #FE732E, #ED0B85);
+        font-size: 12px !important;
+    }
+    .rounded-circle{
+        border: 1px double #FF5F02;
         
-         <!-- Back To Top Start -->
-         <button id="back-top" class="back-to-top">
-            <i class="fa-regular fa-arrow-up"></i>
-        </button>
+    }
+    .span{
+        background-color: #FFF5DB;
+    }
+</style>
 
-        <!--<< Mouse Cursor Start >>-->  
-        <div class="mouse-cursor cursor-outer"></div>
-        <div class="mouse-cursor cursor-inner"></div>
 
-        <!-- Offcanvas Area Start -->
-        <div class="fix-area">
-            <div class="offcanvas__info">
-                <div class="offcanvas__wrapper">
-                    <div class="offcanvas__content">
-                        <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
-                            <div class="offcanvas__logo">
-                                <a href="{{ url("index.html") }}">
-                                    <img src="{{ asset("/mymountains/assets/img/logo/black-logo.svg") }}" alt="logo-img">
-                                </a>
-                            </div>
-                            <div class="offcanvas__close">
-                                <button>
-                                <i class="fas fa-times"></i>
-                                </button>
-                            </div>
+<body>
+    @include('nav')
+    @include('pop')
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <div class="container-fluid mx-auto ">
+        
+        <div class="row  justify-content-center">
+            <div class="col-md-6 col-12  my-3">
+                <div class="box1 ">
+                    <h3>{{$packages->name}}</h3>
+                    <div class="d-flex justify-content-start align-items-center">
+                        <div class="bg-success text-white rounded-2 mx-2 p-2">
+                            4.4&nbsp;/&nbsp;5
                         </div>
-                        <p class="text d-none d-xl-block">
-                            Nullam dignissim, ante scelerisque the  is euismod fermentum odio sem semper the is erat, a feugiat leo urna eget eros. Duis Aenean a imperdiet risus.
-                        </p>
-                        <div class="mobile-menu fix mb-3"></div>
-                        <div class="offcanvas__contact">
-                            <h4>Contact Info</h4>
-                            <ul>
-                                <li class="d-flex align-items-center">
-                                    <div class="offcanvas__contact-icon">
-                                        <i class="fal fa-map-marker-alt"></i>
-                                    </div>
-                                    <div class="offcanvas__contact-text">
-                                        <a target="_blank" href="{{ url("#") }}">Main Chowk, Nawab Bazaar, Srinagar</a>
-                                    </div>
-                                </li>
-                                <li class="d-flex align-items-center">
-                                    <div class="offcanvas__contact-icon mr-15">
-                                        <i class="fal fa-envelope"></i>
-                                    </div>
-                                    <div class="offcanvas__contact-text">
-                                        <a href="{{ url("mailto:info@mymountains.in") }}"><span class="mailto:info@mymountains.in">info@mymountains.in</span></a>
-                                    </div>
-                                </li>
-                                <li class="d-flex align-items-center">
-                                    <div class="offcanvas__contact-icon mr-15">
-                                        <i class="fal fa-clock"></i>
-                                    </div>
-                                    <div class="offcanvas__contact-text">
-                                        <a target="_blank" href="{{ url("#") }}">Mod-friday, 09am -05pm</a>
-                                    </div>
-                                </li>
-                                <li class="d-flex align-items-center">
-                                    <div class="offcanvas__contact-icon mr-15">
-                                        <i class="far fa-phone"></i>
-                                    </div>
-                                    <div class="offcanvas__contact-text">
-                                        <a href="{{ url("tel:+11002345909") }}">+91-9906786356</a>
-                                    </div>
-                                </li>
-                            </ul>
-                            <div class="header-button mt-4">
-                                <a href="{{ url("contact.html") }}" class="theme-btn"> Request A Quote <i class="fa-sharp fa-regular fa-arrow-right"></i></a>
-                            </div>
-                            <div class="social-icon d-flex align-items-center">
-                                <a href="{{ url("#") }}"><i class="fab fa-facebook-f"></i></a>
-                                <a href="{{ url("#") }}"><i class="fab fa-twitter"></i></a>
-                                <a href="{{ url("#") }}"><i class="fab fa-youtube"></i></a>
-                                <a href="{{ url("#") }}"><i class="fab fa-linkedin-in"></i></a>
-                            </div>
+                        <div class="mx-2">
+                            (1271 Reviews)
+                        </div>
+                        <div class="mx-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock-hour-9"
+                                width="19" height="19" viewBox="0 0 24 24" stroke-width="1.5" stroke="#9e9e9e"
+                                fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                                <path d="M12 12h-3.5" />
+                                <path d="M12 7v5" />
+                            </svg>{{$packages->day}}D/{{$packages->night}}N
+                        </div>
+                        <div class="mx-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin"
+                                width="19" height="19" viewBox="0 0 24 24" stroke-width="1.5" stroke="#9e9e9e"
+                                fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+                                <path
+                                    d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
+                            </svg>Kashmir
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="offcanvas__overlay"></div>
-
-        <!-- Header Section Start -->
-        @include('nav')
-        <!-- Search Area Start -->
-        <div class="search-wrap">
-            <div class="search-inner">
-                <i class="fas fa-times search-close" id="search-close"></i>
-                <div class="search-cell">
-                    <form method="get">
-                        <div class="search-field-holder">
-                            <input type="search" class="main-search-input" placeholder="Search...">
+                <div class="box1 my-5">
+                   
+                    <div class="d-flex justify-content-around align-items-center">
+                        <div >
+                            <img width="50" height="50" src="https://img.icons8.com/?size=100&id=16553&format=png&color=FF5F02" alt="sedan" />
                         </div>
+                        <div class="rounded-circle p-1">
+                            <img width="35" height="35" src="https://img.icons8.com/?size=100&id=20rgyUMn9R07&format=png&color=FF5F02" class="rounded-circle" />
+                        </div>
+                        <div class=" rounded-circle p-1">
+                            <img width="35" height="35" src="https://img.icons8.com/?size=100&id=26&format=png&color=FF5F02" class="rounded-circle" />
+                        </div>
+                        <div class="rounded-circle p-1">
+                            <img width="35" height="35" src="https://img.icons8.com/?size=100&id=3602&format=png&color=FF5F02" />
+                        </div>
+                    </div>
+                </div>
+                <div class="box1 my-5">
+                    <h5 class="fw-bold mx-2">Best of Kashmir | {{$packages->name}}</h5>
+                    <div class="d-flex justify-content-center my-1 p-1">
+                        <span class="">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-focus-2"
+                                width="25" height="25" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FF5E00"
+                                fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <circle cx="12" cy="12" r=".5" fill="currentColor" />
+                                <path d="M12 12m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                                <path d="M12 3l0 2" />
+                                <path d="M3 12l2 0" />
+                                <path d="M12 19l0 2" />
+                                <path d="M19 12l2 0" />
+                            </svg>
+                        </span>
+                        <span class="mx-2 text-secondary">Set out to discover the paradise on earth,
+                            Kashmir, where adventure awaits at every corner and will give you a much-needed break from
+                            the
+                            busy city life.
+                        </span>
+                    </div>
+                    <div class="d-flex justify-content-center my-1 p-1">
+                        <span class=" ">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-focus-2"
+                                width="25" height="25" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FF5E00"
+                                fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <circle cx="12" cy="12" r=".5" fill="currentColor" />
+                                <path d="M12 12m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                                <path d="M12 3l0 2" />
+                                <path d="M3 12l2 0" />
+                                <path d="M12 19l0 2" />
+                                <path d="M19 12l2 0" />
+                            </svg>
+                        </span>
+                        <span class="mx-2 text-secondary">Gear up for a horse ride through the golden
+                            meadows and captivating landscapes in Sonamarg
+                        </span>
+                    </div>
+                    <div class="d-flex justify-content-center my-1 p-1">
+                        <span class=" ">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-focus-2"
+                                width="25" height="25" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FF5E00"
+                                fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <circle cx="12" cy="12" r=".5" fill="currentColor" />
+                                <path d="M12 12m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                                <path d="M12 3l0 2" />
+                                <path d="M3 12l2 0" />
+                                <path d="M12 19l0 2" />
+                                <path d="M19 12l2 0" />
+                            </svg>
+                        </span>
+                        <span class=" mx-2 text-secondary">Journey to the clouds on gondola, Asia’s
+                            highest
+                            cable car ride, as you discover the breathtaking beauty of Gulmarg from above
+                        </span>
+                    </div>
+                    <div class="d-flex justify-content-center my-1 p-1">
+                        <span class=" ">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-focus-2"
+                                width="25" height="25" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FF5E00"
+                                fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <circle cx="12" cy="12" r=".5" fill="currentColor" />
+                                <path d="M12 12m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                                <path d="M12 3l0 2" />
+                                <path d="M3 12l2 0" />
+                                <path d="M12 19l0 2" />
+                                <path d="M19 12l2 0" />
+                            </svg>
+                        </span>
+                        <span class="mx-2 text-secondary">Ride in a Shikara boat across the serene
+                            waters of
+                            the Dal Lake, reflecting the pristine Himalayan snowscapes
+                        </span>
+                    </div>
+                    <div class="d-flex justify-content-center my-1 p-1">
+                        <span class="">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-focus-2"
+                                width="25" height="25" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FF5E00"
+                                fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <circle cx="12" cy="12" r=".5" fill="currentColor" />
+                                <path d="M12 12m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                                <path d="M12 3l0 2" />
+                                <path d="M3 12l2 0" />
+                                <path d="M12 19l0 2" />
+                                <path d="M19 12l2 0" />
+                            </svg>
+                        </span>
+                        <span class=" mx-2 text-secondary">Join this group tour to the crown jewel of
+                            Himalayas as you create new bonds and everlasting memories with the fellow travelers
+                        </span>
+                    </div>
+                </div>
+                <div class="my-5 box1 ">
+                    <h5 class="fw-bold mx-2">Best of Kashmir | {{$packages->name}}</h5>
+                    <p class="fw-bold mx-2">About the Tour:</p>
+                    <p class="mx-2">
+                        {!!$packages->description!!}
+                        {{-- https://coolsymbol.com/ --}}
+                    </p>
+                    <p class="fw-bold mx-2">Quick Info:</p>
+                    <ul class="">
+                        <li>
+                            <span class="fw-bold">Route:</span><br>
+                            <span id="rouu"> 
+                                
+                            </span>
+                        </li>
+                        <li>
+                            <span class="fw-bold">Duration: </span><span>  {{$packages->day}} Days and  {{$packages->night}} Nights</span>
+                        </li>
+                       
+                        <li>
+                            <span class="fw-bold">Start Point:</span><span> {{$packages->start}}</span>
+                        </li>
+                        <li>
+                            <span class="fw-bold">End Point:</span><span> {{$packages->end}}</span>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+            <div class=" col-md-4 col-12  my-3">
+                <div class="imgg p-3   rounded-4 ">
+                    <p class="p-0 m-0 text-muted">Starting from <small><s class="fw-lighter">INR {{$packages->price}}</s></small></p>
+                    <div>
+                        <span class="fs-2 fw-bold">INR {{$packages->discount}}
+                        </span>
+                        <span class="text-muted"></span>
+                    </div>
+                    <div class="my-2">
+
+                        <span class="border-0 rounded-2 span text-warning p-2 fw-bold">
+                           @php echo round((($packages->price-$packages->discount)*100)/$packages->price) @endphp % Off</span>
+                        <a href="#" role="button" class="  mx-2 px-3 py-1 text-decoration-none border-0 rounded-pill but text-white fw-bold" >
+                            {{$packages->tag_line}}</a>
+                    </div>
+                </div>
+                <div class="form my-5">
+                    <form action="" method="post" id="tformbooking">
+                        <h6 class="fw-bold mb-2">Best&nbsp;of&nbsp;Kashmir&nbsp;|&nbsp;{{$packages->name}}
+                            @php echo round((($packages->price-$packages->discount)*100)/$packages->price) @endphp% off!
+                        </h6>
+                        <input type="hidden" readonly name="package" value="{{$packages->name}}">
+                        <input type="text" name="name" placeholder="Your name" class=" form-control my-2" required>
+                        <input type="email" name="email" placeholder="Your email" class=" form-control my-2" required>
+                        <div class="row my-2">
+                            <div class="col-md-3 col-5">
+                                <select id="country-code" name="country-code" class="form-control">
+                                    <option value="Country code">code</option>
+                                    <option value="+1">+1</option>
+                                    <option value="+44">+44</option>
+                                    <option value="+91" selected>+91</option>
+                                    <option value="+81">+81</option>
+                                    <option value="+61">+61</option>
+
+                                </select>
+                            </div>
+                            <div class="col-md-9 col-7">
+                                <input type="tel" name="phone" placeholder="Phone" class="form-control" required>
+                            </div>
+                        </div>
+                        <input type="date" name="date" placeholder="Choose" class="form-control my-2" required />
+                        <input type="number" name="count" placeholder="Traveller Count" class="form-control my-2"
+                            required />
+                        <textarea name="message" class="form-control my-2" rows="3" placeholder="Message" minlength="3"
+                            maxlength="500"></textarea>
+                        <div class="d-flex justify-content-start my-1 p-1 ">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check"
+                                    width="25" height="25" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00b341"
+                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M5 12l5 5l10 -10" />
+                                </svg>
+                            </div>
+                            <div class="mx-2 text-secondary">
+                                <p>We assure the privacy of your contact data.
+
+                                </p>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-start my-1 p-1">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check"
+                                    width="25" height="25" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00b341"
+                                    fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M5 12l5 5l10 -10" />
+                                </svg>
+                            </div>
+                            <div class="mx-2 text-muted">
+                                <p>This data will only be used by our team to contact you and no other purposes.
+                                </p>
+                            </div>
+                        </div>
+                        <input type="submit" value="Send Enquiry" class="btn w-100 text-white fw-bold "
+                            style=" background-image: linear-gradient(90deg,#ff9e61 ,#FF5E00);">
                     </form>
                 </div>
+                <div class=" form my-5">
+                    <h6 class="">Got a Question?</h6>
+                    <hr>
+                    <p>Our Destination expert will be happy to help you resolve your queries for this tour.</p>
+                    <a href="tel:/+91-9906786356" class="text-decoration-none text-dark">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-phone-call"
+                            width="25" height="25" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FF5E00" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path
+                                d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                            <path d="M15 7a2 2 0 0 1 2 2" />
+                            <path d="M15 3a6 6 0 0 1 6 6" />
+                        </svg>
+                        <span class="mx-2">+91-9906786356</span>
+                    </a><br>
+                    <small class="text-muted">10:30 AM - 8:00 PM (Mon to Sat)</small>
+                </div>
+                <div class=" px-2 my-3 img mx-auto text-center rounded-4">
+                    <div class="d-flex justify-content-center my-2">
+                        <img src="{{asset('./images/group_tour_enqiry.avif')}}" alt="camera" class="grpp">
+                        <div class="mx-2 grpp text-start">
+                            <small class="grp fw-bold">Bigger Group? Get special offers upto 50% off!</small><br>
+                            <small class="text-muted">We create unforgettable adventures, customised for your
+                                group.</small>
+                        </div>
+                    </div>
+                    <!-- Button trigger modal -->
+
+                    <button type="button" class="btn bttn text-white w-100" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop">
+                        Get a Callback
+                    </button>
+                </div>
             </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header border-0">
+                            <h2 class="modal-title fs-5 fw-medium" id="staticBackdropLabel">Connect with a group tour
+                                expert</h2>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body border-0">
+                            <form action="" method="post">
+                                <input type="text" name="name" placeholder="Full name" class=" form-control my-2"
+                                    required>
+                                <input type="email" name="email" placeholder="Your email" class=" form-control my-2"
+                                    required>
+                                <div class="row my-2">
+                                    <div class="col-md-2 col-5">
+                                        <select id="country-code" name="country-code" class="form-control">
+                                            <option value="Country code">code</option>
+                                            <option value="+1">+1</option>
+                                            <option value="+44">+44</option>
+                                            <option value="+91" selected>+91</option>
+                                            <option value="+81">+81</option>
+                                            <option value="+61">+61</option>
+
+                                        </select>
+                                    </div>
+                                    <div class="col-md-10 col-7">
+                                        <input type="tel" name="phone" placeholder="Phone" class="form-control"
+                                            required>
+                                    </div>
+                                    <div class="col-md-6 col-6">
+                                        <input type="date" name="date" placeholder="Choose" class="form-control my-2"
+                                            required />
+                                    </div>
+                                    <div class="col-md-6 col-6">
+                                        <input type="number" name="count" placeholder="Traveller Count"
+                                            class="form-control my-2 col-md-6" required />
+                                    </div>
+                                </div>
+                                <textarea name="message" class="form-control my-2" rows="3" placeholder="Message"
+                                    minlength="3" maxlength="500"></textarea>
+                                <button type="submit" class="p-2 btn w-100 text-white fw-bold " name="callback"
+                                    style=" background-image: linear-gradient(90deg,#ff9e61 ,#FF5E00);">
+                                    Get a Callback ⏵
+                                    <!-- <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="icon icon-tabler icon-tabler-arrow-narrow-right" width="36" height="36"
+                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M5 12l14 0" />
+                                        <path d="M15 16l4 -4" />
+                                        <path d="M15 8l4 4" />
+                                    </svg> -->
+
+                                </button>
+
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
         </div>
-        
-        <!-- Breadcrumb-wrappe-Section Start -->
-        {{-- <section class="breadcrumb-wrapper fix bg-cover" style="background-image: url(/package_images/{{$package->image}});">
-            <div class="container">
-                <div class="row">
-                    <div class="page-heading">
-                        <h2>Tour Details</h2>
-                        <ul class="breadcrumb-list">
-                            <li>
-                                <a href="{{ url("index.html") }}">Home</a>
-                            </li>
-                            <li><i class="fa-solid fa-chevrons-right"></i></li>
-                            <li>Tour Details</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section> --}}
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
 
-<hr>
-        <!-- Activities Section Start -->
-        {{-- section-padding --}}
-        <section class="activities-details-section fix ">
-            <div class="container">
-                <div class="activities-details-wrapper">
-                    <div class="row g-4 justify-content-center">
-                        <div class="col-12 col-lg-8">
-                            <div class="details-thumb">
-                              <img src="{{ asset('package_images/'.$package->image) }}" alt="img">
-                                {{-- <ul class="image-list">
-                                    <li>
-                                        <img src="{{ asset("/mymountains/assets/img/destails/tour-details-2.jpg") }}" alt="img">
-                                    </li>
-                                    <li>
-                                        <img src="{{ asset("/mymountains/assets/img/destails/tour-details-3.jpg") }}" alt="img">
-                                    </li>
-                                    <li>
-                                        <img src="{{ asset("/mymountains/assets/img/destails/tour-details-4.jpg") }}" alt="img">
-                                    </li>
-                                </ul> --}}
-                            </div>
-                            <div class="activities-details-content">
-                                <h2 class="mb-3">{{$package->name}}</h2>
-                                <p>
-                                    {!!$package->description!!}
-                                </p> 
-                                <div class="activities-list-item">
-                                    <h3>Experience the Difference</h3>
-                                    <div class="activities-item">
-                                        <ul class="activities-list">
-                                            <li>
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.6916 5.22013L12.1877 4.5967C12.0188 4.38782 11.7004 4.38782 11.5315 4.5967L11.0275 5.22013C10.7366 5.5801 10.3473 5.84785 9.90712 5.99089C9.46691 6.13393 8.99465 6.14609 8.54766 6.02591L7.77347 5.81779C7.51411 5.74804 7.25644 5.93521 7.24261 6.20348L7.20136 7.00406C7.17753 7.46631 7.02002 7.91171 6.74795 8.28617C6.47588 8.66064 6.10096 8.94807 5.66869 9.11357L4.92005 9.40021C4.66922 9.49626 4.57083 9.79917 4.71727 10.0243L5.15447 10.6963C5.40689 11.0842 5.54126 11.5371 5.54126 12C5.54126 12.4629 5.40689 12.9158 5.15447 13.3037L4.71727 13.9757C4.57078 14.2008 4.66922 14.5037 4.92005 14.5998L5.66869 14.8864C6.10096 15.0519 6.47588 15.3393 6.74795 15.7138C7.02002 16.0883 7.17753 16.5337 7.20136 16.9959L7.24261 17.7965C7.25644 18.0648 7.51411 18.2519 7.77347 18.1822L8.54766 17.9741C8.99464 17.8539 9.46691 17.866 9.90712 18.0091C10.3473 18.1521 10.7365 18.4198 11.0275 18.7798L11.5315 19.4033C11.7004 19.6122 12.0188 19.6122 12.1877 19.4033L12.6916 18.7798C12.9826 18.4198 13.3718 18.1521 13.8121 18.0091C14.2523 17.866 14.7245 17.8539 15.1715 17.9741L15.9457 18.1822C16.2051 18.2519 16.4627 18.0648 16.4766 17.7965L16.5178 16.9959C16.5416 16.5337 16.6992 16.0883 16.9712 15.7138C17.2433 15.3393 17.6182 15.0519 18.0505 14.8864L18.7991 14.5998C19.05 14.5037 19.1484 14.2008 19.0019 13.9757L18.5647 13.3037C18.3123 12.9158 18.1779 12.4629 18.1779 12C18.1779 11.5371 18.3123 11.0842 18.5647 10.6963L19.0019 10.0243C19.1484 9.79917 19.05 9.49626 18.7991 9.40021L18.0505 9.11357C17.6182 8.94807 17.2433 8.66064 16.9712 8.28617C16.6992 7.91171 16.5416 7.46631 16.5178 7.00406L16.4766 6.20348C16.4627 5.93521 16.2051 5.74804 15.9457 5.81779L15.1715 6.02591C14.7245 6.14609 14.2523 6.13393 13.812 5.99089C13.3718 5.84785 12.9826 5.5801 12.6916 5.22013ZM12.9532 3.9779C12.3904 3.28162 11.3288 3.28162 10.766 3.9779L10.262 4.60134C10.0908 4.81308 9.86188 4.97058 9.60293 5.05472C9.34397 5.13885 9.06616 5.146 8.80322 5.07529L8.02908 4.86717C7.16447 4.63467 6.30563 5.25866 6.25955 6.15281L6.2183 6.95338C6.20428 7.2253 6.11163 7.4873 5.95158 7.70757C5.79154 7.92784 5.57098 8.09692 5.3167 8.19426L4.56806 8.48095C3.73191 8.80106 3.40388 9.81065 3.89213 10.5611L4.32938 11.2331C4.47787 11.4613 4.55691 11.7277 4.55691 12C4.55691 12.2723 4.47787 12.5387 4.32938 12.7669L3.89217 13.4389C3.40388 14.1893 3.73191 15.1989 4.56806 15.519L5.3167 15.8057C5.57098 15.903 5.79153 16.0721 5.95157 16.2924C6.11162 16.5127 6.20427 16.7747 6.2183 17.0466L6.25955 17.8472C6.30563 18.7413 7.16447 19.3653 8.02908 19.1328L8.80322 18.9247C9.06616 18.854 9.34397 18.8611 9.60293 18.9453C9.86188 19.0294 10.0908 19.1869 10.262 19.3987L10.766 20.0221C11.3288 20.7184 12.3904 20.7184 12.9532 20.0221L13.4572 19.3987C13.6283 19.1869 13.8573 19.0294 14.1162 18.9453C14.3752 18.8611 14.653 18.854 14.916 18.9247L15.6901 19.1328C16.5547 19.3653 17.4135 18.7413 17.4596 17.8472L17.5009 17.0466C17.5149 16.7747 17.6076 16.5127 17.7676 16.2924C17.9276 16.0721 18.1482 15.903 18.4025 15.8057L19.1511 15.519C19.9873 15.1989 20.3153 14.1893 19.827 13.4389L19.3898 12.7669C19.2413 12.5387 19.1623 12.2723 19.1623 12C19.1623 11.7277 19.2413 11.4613 19.3898 11.2331L19.827 10.5611C20.3153 9.81065 19.9873 8.80106 19.1511 8.48095L18.4025 8.19426C18.1482 8.09692 17.9276 7.92784 17.7676 7.70757C17.6075 7.4873 17.5149 7.2253 17.5009 6.95338L17.4596 6.15281C17.4135 5.25866 16.5547 4.63467 15.6901 4.86717L14.916 5.07529C14.653 5.146 14.3752 5.13885 14.1162 5.05472C13.8573 4.97058 13.6283 4.81308 13.4572 4.60134L12.9532 3.9779Z" fill="#63AB45"/>
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.4446 9.45177C15.6353 9.64555 15.6327 9.95717 15.4388 10.1478L11.6863 13.8382C11.1163 14.3987 10.1975 14.383 9.64705 13.8033L8.31496 12.4004C8.12779 12.2033 8.13585 11.8918 8.33296 11.7045C8.53007 11.5174 8.8416 11.5254 9.02877 11.7226L10.3609 13.1255C10.5324 13.306 10.8186 13.3109 10.9961 13.1363L14.7486 9.44596C14.9424 9.25536 15.2541 9.25794 15.4446 9.45177Z" fill="#63AB45"/>
-                                                  </svg>
-                                                  Trusted, Local Travel Experts
-                                            </li>
-                                            <li>
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.6916 5.22013L12.1877 4.5967C12.0188 4.38782 11.7004 4.38782 11.5315 4.5967L11.0275 5.22013C10.7366 5.5801 10.3473 5.84785 9.90712 5.99089C9.46691 6.13393 8.99465 6.14609 8.54766 6.02591L7.77347 5.81779C7.51411 5.74804 7.25644 5.93521 7.24261 6.20348L7.20136 7.00406C7.17753 7.46631 7.02002 7.91171 6.74795 8.28617C6.47588 8.66064 6.10096 8.94807 5.66869 9.11357L4.92005 9.40021C4.66922 9.49626 4.57083 9.79917 4.71727 10.0243L5.15447 10.6963C5.40689 11.0842 5.54126 11.5371 5.54126 12C5.54126 12.4629 5.40689 12.9158 5.15447 13.3037L4.71727 13.9757C4.57078 14.2008 4.66922 14.5037 4.92005 14.5998L5.66869 14.8864C6.10096 15.0519 6.47588 15.3393 6.74795 15.7138C7.02002 16.0883 7.17753 16.5337 7.20136 16.9959L7.24261 17.7965C7.25644 18.0648 7.51411 18.2519 7.77347 18.1822L8.54766 17.9741C8.99464 17.8539 9.46691 17.866 9.90712 18.0091C10.3473 18.1521 10.7365 18.4198 11.0275 18.7798L11.5315 19.4033C11.7004 19.6122 12.0188 19.6122 12.1877 19.4033L12.6916 18.7798C12.9826 18.4198 13.3718 18.1521 13.8121 18.0091C14.2523 17.866 14.7245 17.8539 15.1715 17.9741L15.9457 18.1822C16.2051 18.2519 16.4627 18.0648 16.4766 17.7965L16.5178 16.9959C16.5416 16.5337 16.6992 16.0883 16.9712 15.7138C17.2433 15.3393 17.6182 15.0519 18.0505 14.8864L18.7991 14.5998C19.05 14.5037 19.1484 14.2008 19.0019 13.9757L18.5647 13.3037C18.3123 12.9158 18.1779 12.4629 18.1779 12C18.1779 11.5371 18.3123 11.0842 18.5647 10.6963L19.0019 10.0243C19.1484 9.79917 19.05 9.49626 18.7991 9.40021L18.0505 9.11357C17.6182 8.94807 17.2433 8.66064 16.9712 8.28617C16.6992 7.91171 16.5416 7.46631 16.5178 7.00406L16.4766 6.20348C16.4627 5.93521 16.2051 5.74804 15.9457 5.81779L15.1715 6.02591C14.7245 6.14609 14.2523 6.13393 13.812 5.99089C13.3718 5.84785 12.9826 5.5801 12.6916 5.22013ZM12.9532 3.9779C12.3904 3.28162 11.3288 3.28162 10.766 3.9779L10.262 4.60134C10.0908 4.81308 9.86188 4.97058 9.60293 5.05472C9.34397 5.13885 9.06616 5.146 8.80322 5.07529L8.02908 4.86717C7.16447 4.63467 6.30563 5.25866 6.25955 6.15281L6.2183 6.95338C6.20428 7.2253 6.11163 7.4873 5.95158 7.70757C5.79154 7.92784 5.57098 8.09692 5.3167 8.19426L4.56806 8.48095C3.73191 8.80106 3.40388 9.81065 3.89213 10.5611L4.32938 11.2331C4.47787 11.4613 4.55691 11.7277 4.55691 12C4.55691 12.2723 4.47787 12.5387 4.32938 12.7669L3.89217 13.4389C3.40388 14.1893 3.73191 15.1989 4.56806 15.519L5.3167 15.8057C5.57098 15.903 5.79153 16.0721 5.95157 16.2924C6.11162 16.5127 6.20427 16.7747 6.2183 17.0466L6.25955 17.8472C6.30563 18.7413 7.16447 19.3653 8.02908 19.1328L8.80322 18.9247C9.06616 18.854 9.34397 18.8611 9.60293 18.9453C9.86188 19.0294 10.0908 19.1869 10.262 19.3987L10.766 20.0221C11.3288 20.7184 12.3904 20.7184 12.9532 20.0221L13.4572 19.3987C13.6283 19.1869 13.8573 19.0294 14.1162 18.9453C14.3752 18.8611 14.653 18.854 14.916 18.9247L15.6901 19.1328C16.5547 19.3653 17.4135 18.7413 17.4596 17.8472L17.5009 17.0466C17.5149 16.7747 17.6076 16.5127 17.7676 16.2924C17.9276 16.0721 18.1482 15.903 18.4025 15.8057L19.1511 15.519C19.9873 15.1989 20.3153 14.1893 19.827 13.4389L19.3898 12.7669C19.2413 12.5387 19.1623 12.2723 19.1623 12C19.1623 11.7277 19.2413 11.4613 19.3898 11.2331L19.827 10.5611C20.3153 9.81065 19.9873 8.80106 19.1511 8.48095L18.4025 8.19426C18.1482 8.09692 17.9276 7.92784 17.7676 7.70757C17.6075 7.4873 17.5149 7.2253 17.5009 6.95338L17.4596 6.15281C17.4135 5.25866 16.5547 4.63467 15.6901 4.86717L14.916 5.07529C14.653 5.146 14.3752 5.13885 14.1162 5.05472C13.8573 4.97058 13.6283 4.81308 13.4572 4.60134L12.9532 3.9779Z" fill="#63AB45"/>
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.4446 9.45177C15.6353 9.64555 15.6327 9.95717 15.4388 10.1478L11.6863 13.8382C11.1163 14.3987 10.1975 14.383 9.64705 13.8033L8.31496 12.4004C8.12779 12.2033 8.13585 11.8918 8.33296 11.7045C8.53007 11.5174 8.8416 11.5254 9.02877 11.7226L10.3609 13.1255C10.5324 13.306 10.8186 13.3109 10.9961 13.1363L14.7486 9.44596C14.9424 9.25536 15.2541 9.25794 15.4446 9.45177Z" fill="#63AB45"/>
-                                                  </svg>
-                                                  Flexible, Hassle-Free Bookings
-                                            </li>
-                                            <li>
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.6916 5.22013L12.1877 4.5967C12.0188 4.38782 11.7004 4.38782 11.5315 4.5967L11.0275 5.22013C10.7366 5.5801 10.3473 5.84785 9.90712 5.99089C9.46691 6.13393 8.99465 6.14609 8.54766 6.02591L7.77347 5.81779C7.51411 5.74804 7.25644 5.93521 7.24261 6.20348L7.20136 7.00406C7.17753 7.46631 7.02002 7.91171 6.74795 8.28617C6.47588 8.66064 6.10096 8.94807 5.66869 9.11357L4.92005 9.40021C4.66922 9.49626 4.57083 9.79917 4.71727 10.0243L5.15447 10.6963C5.40689 11.0842 5.54126 11.5371 5.54126 12C5.54126 12.4629 5.40689 12.9158 5.15447 13.3037L4.71727 13.9757C4.57078 14.2008 4.66922 14.5037 4.92005 14.5998L5.66869 14.8864C6.10096 15.0519 6.47588 15.3393 6.74795 15.7138C7.02002 16.0883 7.17753 16.5337 7.20136 16.9959L7.24261 17.7965C7.25644 18.0648 7.51411 18.2519 7.77347 18.1822L8.54766 17.9741C8.99464 17.8539 9.46691 17.866 9.90712 18.0091C10.3473 18.1521 10.7365 18.4198 11.0275 18.7798L11.5315 19.4033C11.7004 19.6122 12.0188 19.6122 12.1877 19.4033L12.6916 18.7798C12.9826 18.4198 13.3718 18.1521 13.8121 18.0091C14.2523 17.866 14.7245 17.8539 15.1715 17.9741L15.9457 18.1822C16.2051 18.2519 16.4627 18.0648 16.4766 17.7965L16.5178 16.9959C16.5416 16.5337 16.6992 16.0883 16.9712 15.7138C17.2433 15.3393 17.6182 15.0519 18.0505 14.8864L18.7991 14.5998C19.05 14.5037 19.1484 14.2008 19.0019 13.9757L18.5647 13.3037C18.3123 12.9158 18.1779 12.4629 18.1779 12C18.1779 11.5371 18.3123 11.0842 18.5647 10.6963L19.0019 10.0243C19.1484 9.79917 19.05 9.49626 18.7991 9.40021L18.0505 9.11357C17.6182 8.94807 17.2433 8.66064 16.9712 8.28617C16.6992 7.91171 16.5416 7.46631 16.5178 7.00406L16.4766 6.20348C16.4627 5.93521 16.2051 5.74804 15.9457 5.81779L15.1715 6.02591C14.7245 6.14609 14.2523 6.13393 13.812 5.99089C13.3718 5.84785 12.9826 5.5801 12.6916 5.22013ZM12.9532 3.9779C12.3904 3.28162 11.3288 3.28162 10.766 3.9779L10.262 4.60134C10.0908 4.81308 9.86188 4.97058 9.60293 5.05472C9.34397 5.13885 9.06616 5.146 8.80322 5.07529L8.02908 4.86717C7.16447 4.63467 6.30563 5.25866 6.25955 6.15281L6.2183 6.95338C6.20428 7.2253 6.11163 7.4873 5.95158 7.70757C5.79154 7.92784 5.57098 8.09692 5.3167 8.19426L4.56806 8.48095C3.73191 8.80106 3.40388 9.81065 3.89213 10.5611L4.32938 11.2331C4.47787 11.4613 4.55691 11.7277 4.55691 12C4.55691 12.2723 4.47787 12.5387 4.32938 12.7669L3.89217 13.4389C3.40388 14.1893 3.73191 15.1989 4.56806 15.519L5.3167 15.8057C5.57098 15.903 5.79153 16.0721 5.95157 16.2924C6.11162 16.5127 6.20427 16.7747 6.2183 17.0466L6.25955 17.8472C6.30563 18.7413 7.16447 19.3653 8.02908 19.1328L8.80322 18.9247C9.06616 18.854 9.34397 18.8611 9.60293 18.9453C9.86188 19.0294 10.0908 19.1869 10.262 19.3987L10.766 20.0221C11.3288 20.7184 12.3904 20.7184 12.9532 20.0221L13.4572 19.3987C13.6283 19.1869 13.8573 19.0294 14.1162 18.9453C14.3752 18.8611 14.653 18.854 14.916 18.9247L15.6901 19.1328C16.5547 19.3653 17.4135 18.7413 17.4596 17.8472L17.5009 17.0466C17.5149 16.7747 17.6076 16.5127 17.7676 16.2924C17.9276 16.0721 18.1482 15.903 18.4025 15.8057L19.1511 15.519C19.9873 15.1989 20.3153 14.1893 19.827 13.4389L19.3898 12.7669C19.2413 12.5387 19.1623 12.2723 19.1623 12C19.1623 11.7277 19.2413 11.4613 19.3898 11.2331L19.827 10.5611C20.3153 9.81065 19.9873 8.80106 19.1511 8.48095L18.4025 8.19426C18.1482 8.09692 17.9276 7.92784 17.7676 7.70757C17.6075 7.4873 17.5149 7.2253 17.5009 6.95338L17.4596 6.15281C17.4135 5.25866 16.5547 4.63467 15.6901 4.86717L14.916 5.07529C14.653 5.146 14.3752 5.13885 14.1162 5.05472C13.8573 4.97058 13.6283 4.81308 13.4572 4.60134L12.9532 3.9779Z" fill="#63AB45"/>
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.4446 9.45177C15.6353 9.64555 15.6327 9.95717 15.4388 10.1478L11.6863 13.8382C11.1163 14.3987 10.1975 14.383 9.64705 13.8033L8.31496 12.4004C8.12779 12.2033 8.13585 11.8918 8.33296 11.7045C8.53007 11.5174 8.8416 11.5254 9.02877 11.7226L10.3609 13.1255C10.5324 13.306 10.8186 13.3109 10.9961 13.1363L14.7486 9.44596C14.9424 9.25536 15.2541 9.25794 15.4446 9.45177Z" fill="#63AB45"/>
-                                                  </svg>
-                                                  Real-Time Itinerary Updates
-                                            </li>
-                                        </ul>
-                                        <ul class="activities-list">
-                                            <li>
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.6916 5.22013L12.1877 4.5967C12.0188 4.38782 11.7004 4.38782 11.5315 4.5967L11.0275 5.22013C10.7366 5.5801 10.3473 5.84785 9.90712 5.99089C9.46691 6.13393 8.99465 6.14609 8.54766 6.02591L7.77347 5.81779C7.51411 5.74804 7.25644 5.93521 7.24261 6.20348L7.20136 7.00406C7.17753 7.46631 7.02002 7.91171 6.74795 8.28617C6.47588 8.66064 6.10096 8.94807 5.66869 9.11357L4.92005 9.40021C4.66922 9.49626 4.57083 9.79917 4.71727 10.0243L5.15447 10.6963C5.40689 11.0842 5.54126 11.5371 5.54126 12C5.54126 12.4629 5.40689 12.9158 5.15447 13.3037L4.71727 13.9757C4.57078 14.2008 4.66922 14.5037 4.92005 14.5998L5.66869 14.8864C6.10096 15.0519 6.47588 15.3393 6.74795 15.7138C7.02002 16.0883 7.17753 16.5337 7.20136 16.9959L7.24261 17.7965C7.25644 18.0648 7.51411 18.2519 7.77347 18.1822L8.54766 17.9741C8.99464 17.8539 9.46691 17.866 9.90712 18.0091C10.3473 18.1521 10.7365 18.4198 11.0275 18.7798L11.5315 19.4033C11.7004 19.6122 12.0188 19.6122 12.1877 19.4033L12.6916 18.7798C12.9826 18.4198 13.3718 18.1521 13.8121 18.0091C14.2523 17.866 14.7245 17.8539 15.1715 17.9741L15.9457 18.1822C16.2051 18.2519 16.4627 18.0648 16.4766 17.7965L16.5178 16.9959C16.5416 16.5337 16.6992 16.0883 16.9712 15.7138C17.2433 15.3393 17.6182 15.0519 18.0505 14.8864L18.7991 14.5998C19.05 14.5037 19.1484 14.2008 19.0019 13.9757L18.5647 13.3037C18.3123 12.9158 18.1779 12.4629 18.1779 12C18.1779 11.5371 18.3123 11.0842 18.5647 10.6963L19.0019 10.0243C19.1484 9.79917 19.05 9.49626 18.7991 9.40021L18.0505 9.11357C17.6182 8.94807 17.2433 8.66064 16.9712 8.28617C16.6992 7.91171 16.5416 7.46631 16.5178 7.00406L16.4766 6.20348C16.4627 5.93521 16.2051 5.74804 15.9457 5.81779L15.1715 6.02591C14.7245 6.14609 14.2523 6.13393 13.812 5.99089C13.3718 5.84785 12.9826 5.5801 12.6916 5.22013ZM12.9532 3.9779C12.3904 3.28162 11.3288 3.28162 10.766 3.9779L10.262 4.60134C10.0908 4.81308 9.86188 4.97058 9.60293 5.05472C9.34397 5.13885 9.06616 5.146 8.80322 5.07529L8.02908 4.86717C7.16447 4.63467 6.30563 5.25866 6.25955 6.15281L6.2183 6.95338C6.20428 7.2253 6.11163 7.4873 5.95158 7.70757C5.79154 7.92784 5.57098 8.09692 5.3167 8.19426L4.56806 8.48095C3.73191 8.80106 3.40388 9.81065 3.89213 10.5611L4.32938 11.2331C4.47787 11.4613 4.55691 11.7277 4.55691 12C4.55691 12.2723 4.47787 12.5387 4.32938 12.7669L3.89217 13.4389C3.40388 14.1893 3.73191 15.1989 4.56806 15.519L5.3167 15.8057C5.57098 15.903 5.79153 16.0721 5.95157 16.2924C6.11162 16.5127 6.20427 16.7747 6.2183 17.0466L6.25955 17.8472C6.30563 18.7413 7.16447 19.3653 8.02908 19.1328L8.80322 18.9247C9.06616 18.854 9.34397 18.8611 9.60293 18.9453C9.86188 19.0294 10.0908 19.1869 10.262 19.3987L10.766 20.0221C11.3288 20.7184 12.3904 20.7184 12.9532 20.0221L13.4572 19.3987C13.6283 19.1869 13.8573 19.0294 14.1162 18.9453C14.3752 18.8611 14.653 18.854 14.916 18.9247L15.6901 19.1328C16.5547 19.3653 17.4135 18.7413 17.4596 17.8472L17.5009 17.0466C17.5149 16.7747 17.6076 16.5127 17.7676 16.2924C17.9276 16.0721 18.1482 15.903 18.4025 15.8057L19.1511 15.519C19.9873 15.1989 20.3153 14.1893 19.827 13.4389L19.3898 12.7669C19.2413 12.5387 19.1623 12.2723 19.1623 12C19.1623 11.7277 19.2413 11.4613 19.3898 11.2331L19.827 10.5611C20.3153 9.81065 19.9873 8.80106 19.1511 8.48095L18.4025 8.19426C18.1482 8.09692 17.9276 7.92784 17.7676 7.70757C17.6075 7.4873 17.5149 7.2253 17.5009 6.95338L17.4596 6.15281C17.4135 5.25866 16.5547 4.63467 15.6901 4.86717L14.916 5.07529C14.653 5.146 14.3752 5.13885 14.1162 5.05472C13.8573 4.97058 13.6283 4.81308 13.4572 4.60134L12.9532 3.9779Z" fill="#63AB45"/>
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.4446 9.45177C15.6353 9.64555 15.6327 9.95717 15.4388 10.1478L11.6863 13.8382C11.1163 14.3987 10.1975 14.383 9.64705 13.8033L8.31496 12.4004C8.12779 12.2033 8.13585 11.8918 8.33296 11.7045C8.53007 11.5174 8.8416 11.5254 9.02877 11.7226L10.3609 13.1255C10.5324 13.306 10.8186 13.3109 10.9961 13.1363L14.7486 9.44596C14.9424 9.25536 15.2541 9.25794 15.4446 9.45177Z" fill="#63AB45"/>
-                                                  </svg>
-                                                  Flexible Cancellation Policies
-                                            </li>
-                                            <li>
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.6916 5.22013L12.1877 4.5967C12.0188 4.38782 11.7004 4.38782 11.5315 4.5967L11.0275 5.22013C10.7366 5.5801 10.3473 5.84785 9.90712 5.99089C9.46691 6.13393 8.99465 6.14609 8.54766 6.02591L7.77347 5.81779C7.51411 5.74804 7.25644 5.93521 7.24261 6.20348L7.20136 7.00406C7.17753 7.46631 7.02002 7.91171 6.74795 8.28617C6.47588 8.66064 6.10096 8.94807 5.66869 9.11357L4.92005 9.40021C4.66922 9.49626 4.57083 9.79917 4.71727 10.0243L5.15447 10.6963C5.40689 11.0842 5.54126 11.5371 5.54126 12C5.54126 12.4629 5.40689 12.9158 5.15447 13.3037L4.71727 13.9757C4.57078 14.2008 4.66922 14.5037 4.92005 14.5998L5.66869 14.8864C6.10096 15.0519 6.47588 15.3393 6.74795 15.7138C7.02002 16.0883 7.17753 16.5337 7.20136 16.9959L7.24261 17.7965C7.25644 18.0648 7.51411 18.2519 7.77347 18.1822L8.54766 17.9741C8.99464 17.8539 9.46691 17.866 9.90712 18.0091C10.3473 18.1521 10.7365 18.4198 11.0275 18.7798L11.5315 19.4033C11.7004 19.6122 12.0188 19.6122 12.1877 19.4033L12.6916 18.7798C12.9826 18.4198 13.3718 18.1521 13.8121 18.0091C14.2523 17.866 14.7245 17.8539 15.1715 17.9741L15.9457 18.1822C16.2051 18.2519 16.4627 18.0648 16.4766 17.7965L16.5178 16.9959C16.5416 16.5337 16.6992 16.0883 16.9712 15.7138C17.2433 15.3393 17.6182 15.0519 18.0505 14.8864L18.7991 14.5998C19.05 14.5037 19.1484 14.2008 19.0019 13.9757L18.5647 13.3037C18.3123 12.9158 18.1779 12.4629 18.1779 12C18.1779 11.5371 18.3123 11.0842 18.5647 10.6963L19.0019 10.0243C19.1484 9.79917 19.05 9.49626 18.7991 9.40021L18.0505 9.11357C17.6182 8.94807 17.2433 8.66064 16.9712 8.28617C16.6992 7.91171 16.5416 7.46631 16.5178 7.00406L16.4766 6.20348C16.4627 5.93521 16.2051 5.74804 15.9457 5.81779L15.1715 6.02591C14.7245 6.14609 14.2523 6.13393 13.812 5.99089C13.3718 5.84785 12.9826 5.5801 12.6916 5.22013ZM12.9532 3.9779C12.3904 3.28162 11.3288 3.28162 10.766 3.9779L10.262 4.60134C10.0908 4.81308 9.86188 4.97058 9.60293 5.05472C9.34397 5.13885 9.06616 5.146 8.80322 5.07529L8.02908 4.86717C7.16447 4.63467 6.30563 5.25866 6.25955 6.15281L6.2183 6.95338C6.20428 7.2253 6.11163 7.4873 5.95158 7.70757C5.79154 7.92784 5.57098 8.09692 5.3167 8.19426L4.56806 8.48095C3.73191 8.80106 3.40388 9.81065 3.89213 10.5611L4.32938 11.2331C4.47787 11.4613 4.55691 11.7277 4.55691 12C4.55691 12.2723 4.47787 12.5387 4.32938 12.7669L3.89217 13.4389C3.40388 14.1893 3.73191 15.1989 4.56806 15.519L5.3167 15.8057C5.57098 15.903 5.79153 16.0721 5.95157 16.2924C6.11162 16.5127 6.20427 16.7747 6.2183 17.0466L6.25955 17.8472C6.30563 18.7413 7.16447 19.3653 8.02908 19.1328L8.80322 18.9247C9.06616 18.854 9.34397 18.8611 9.60293 18.9453C9.86188 19.0294 10.0908 19.1869 10.262 19.3987L10.766 20.0221C11.3288 20.7184 12.3904 20.7184 12.9532 20.0221L13.4572 19.3987C13.6283 19.1869 13.8573 19.0294 14.1162 18.9453C14.3752 18.8611 14.653 18.854 14.916 18.9247L15.6901 19.1328C16.5547 19.3653 17.4135 18.7413 17.4596 17.8472L17.5009 17.0466C17.5149 16.7747 17.6076 16.5127 17.7676 16.2924C17.9276 16.0721 18.1482 15.903 18.4025 15.8057L19.1511 15.519C19.9873 15.1989 20.3153 14.1893 19.827 13.4389L19.3898 12.7669C19.2413 12.5387 19.1623 12.2723 19.1623 12C19.1623 11.7277 19.2413 11.4613 19.3898 11.2331L19.827 10.5611C20.3153 9.81065 19.9873 8.80106 19.1511 8.48095L18.4025 8.19426C18.1482 8.09692 17.9276 7.92784 17.7676 7.70757C17.6075 7.4873 17.5149 7.2253 17.5009 6.95338L17.4596 6.15281C17.4135 5.25866 16.5547 4.63467 15.6901 4.86717L14.916 5.07529C14.653 5.146 14.3752 5.13885 14.1162 5.05472C13.8573 4.97058 13.6283 4.81308 13.4572 4.60134L12.9532 3.9779Z" fill="#63AB45"/>
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.4446 9.45177C15.6353 9.64555 15.6327 9.95717 15.4388 10.1478L11.6863 13.8382C11.1163 14.3987 10.1975 14.383 9.64705 13.8033L8.31496 12.4004C8.12779 12.2033 8.13585 11.8918 8.33296 11.7045C8.53007 11.5174 8.8416 11.5254 9.02877 11.7226L10.3609 13.1255C10.5324 13.306 10.8186 13.3109 10.9961 13.1363L14.7486 9.44596C14.9424 9.25536 15.2541 9.25794 15.4446 9.45177Z" fill="#63AB45"/>
-                                                  </svg>
-                                                  Customized Travel Experiences
-                                            </li>
-                                            <li>
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.6916 5.22013L12.1877 4.5967C12.0188 4.38782 11.7004 4.38782 11.5315 4.5967L11.0275 5.22013C10.7366 5.5801 10.3473 5.84785 9.90712 5.99089C9.46691 6.13393 8.99465 6.14609 8.54766 6.02591L7.77347 5.81779C7.51411 5.74804 7.25644 5.93521 7.24261 6.20348L7.20136 7.00406C7.17753 7.46631 7.02002 7.91171 6.74795 8.28617C6.47588 8.66064 6.10096 8.94807 5.66869 9.11357L4.92005 9.40021C4.66922 9.49626 4.57083 9.79917 4.71727 10.0243L5.15447 10.6963C5.40689 11.0842 5.54126 11.5371 5.54126 12C5.54126 12.4629 5.40689 12.9158 5.15447 13.3037L4.71727 13.9757C4.57078 14.2008 4.66922 14.5037 4.92005 14.5998L5.66869 14.8864C6.10096 15.0519 6.47588 15.3393 6.74795 15.7138C7.02002 16.0883 7.17753 16.5337 7.20136 16.9959L7.24261 17.7965C7.25644 18.0648 7.51411 18.2519 7.77347 18.1822L8.54766 17.9741C8.99464 17.8539 9.46691 17.866 9.90712 18.0091C10.3473 18.1521 10.7365 18.4198 11.0275 18.7798L11.5315 19.4033C11.7004 19.6122 12.0188 19.6122 12.1877 19.4033L12.6916 18.7798C12.9826 18.4198 13.3718 18.1521 13.8121 18.0091C14.2523 17.866 14.7245 17.8539 15.1715 17.9741L15.9457 18.1822C16.2051 18.2519 16.4627 18.0648 16.4766 17.7965L16.5178 16.9959C16.5416 16.5337 16.6992 16.0883 16.9712 15.7138C17.2433 15.3393 17.6182 15.0519 18.0505 14.8864L18.7991 14.5998C19.05 14.5037 19.1484 14.2008 19.0019 13.9757L18.5647 13.3037C18.3123 12.9158 18.1779 12.4629 18.1779 12C18.1779 11.5371 18.3123 11.0842 18.5647 10.6963L19.0019 10.0243C19.1484 9.79917 19.05 9.49626 18.7991 9.40021L18.0505 9.11357C17.6182 8.94807 17.2433 8.66064 16.9712 8.28617C16.6992 7.91171 16.5416 7.46631 16.5178 7.00406L16.4766 6.20348C16.4627 5.93521 16.2051 5.74804 15.9457 5.81779L15.1715 6.02591C14.7245 6.14609 14.2523 6.13393 13.812 5.99089C13.3718 5.84785 12.9826 5.5801 12.6916 5.22013ZM12.9532 3.9779C12.3904 3.28162 11.3288 3.28162 10.766 3.9779L10.262 4.60134C10.0908 4.81308 9.86188 4.97058 9.60293 5.05472C9.34397 5.13885 9.06616 5.146 8.80322 5.07529L8.02908 4.86717C7.16447 4.63467 6.30563 5.25866 6.25955 6.15281L6.2183 6.95338C6.20428 7.2253 6.11163 7.4873 5.95158 7.70757C5.79154 7.92784 5.57098 8.09692 5.3167 8.19426L4.56806 8.48095C3.73191 8.80106 3.40388 9.81065 3.89213 10.5611L4.32938 11.2331C4.47787 11.4613 4.55691 11.7277 4.55691 12C4.55691 12.2723 4.47787 12.5387 4.32938 12.7669L3.89217 13.4389C3.40388 14.1893 3.73191 15.1989 4.56806 15.519L5.3167 15.8057C5.57098 15.903 5.79153 16.0721 5.95157 16.2924C6.11162 16.5127 6.20427 16.7747 6.2183 17.0466L6.25955 17.8472C6.30563 18.7413 7.16447 19.3653 8.02908 19.1328L8.80322 18.9247C9.06616 18.854 9.34397 18.8611 9.60293 18.9453C9.86188 19.0294 10.0908 19.1869 10.262 19.3987L10.766 20.0221C11.3288 20.7184 12.3904 20.7184 12.9532 20.0221L13.4572 19.3987C13.6283 19.1869 13.8573 19.0294 14.1162 18.9453C14.3752 18.8611 14.653 18.854 14.916 18.9247L15.6901 19.1328C16.5547 19.3653 17.4135 18.7413 17.4596 17.8472L17.5009 17.0466C17.5149 16.7747 17.6076 16.5127 17.7676 16.2924C17.9276 16.0721 18.1482 15.903 18.4025 15.8057L19.1511 15.519C19.9873 15.1989 20.3153 14.1893 19.827 13.4389L19.3898 12.7669C19.2413 12.5387 19.1623 12.2723 19.1623 12C19.1623 11.7277 19.2413 11.4613 19.3898 11.2331L19.827 10.5611C20.3153 9.81065 19.9873 8.80106 19.1511 8.48095L18.4025 8.19426C18.1482 8.09692 17.9276 7.92784 17.7676 7.70757C17.6075 7.4873 17.5149 7.2253 17.5009 6.95338L17.4596 6.15281C17.4135 5.25866 16.5547 4.63467 15.6901 4.86717L14.916 5.07529C14.653 5.146 14.3752 5.13885 14.1162 5.05472C13.8573 4.97058 13.6283 4.81308 13.4572 4.60134L12.9532 3.9779Z" fill="#63AB45"/>
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.4446 9.45177C15.6353 9.64555 15.6327 9.95717 15.4388 10.1478L11.6863 13.8382C11.1163 14.3987 10.1975 14.383 9.64705 13.8033L8.31496 12.4004C8.12779 12.2033 8.13585 11.8918 8.33296 11.7045C8.53007 11.5174 8.8416 11.5254 9.02877 11.7226L10.3609 13.1255C10.5324 13.306 10.8186 13.3109 10.9961 13.1363L14.7486 9.44596C14.9424 9.25536 15.2541 9.25794 15.4446 9.45177Z" fill="#63AB45"/>
-                                                  </svg>
-                                                  Exclusive Travel Deals
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="activities-box-wrap">
-                                    <div class="activities-box-area">
-                                        <div class="activities-box-item">
-                                            <div class="icon">
-                                                <img src="{{ asset("/mymountains/assets/img/icon/27.svg") }}" alt="img">
-                                            </div>
-                                            <div class="content">
-                                                <span>
-                                                    Accommodation
-                                                </span>
-                                                <h6>
-                                                    5 Stare Hotel
-                                                </h6>
-                                            </div>
-                                        </div>
-                                        <div class="activities-box-item style-2">
-                                            <div class="icon">
-                                                <img src="{{ asset("/mymountains/assets/img/icon/28.svg") }}" alt="img">
-                                            </div>
-                                            <div class="content">
-                                                <span>
-                                                    Admission Free
-                                                </span>
-                                                <h6>
-                                                    No
-                                                </h6>
-                                            </div>
-                                        </div>
-                                        <div class="activities-box-item">
-                                            <div class="icon">
-                                                <img src="{{ asset("/mymountains/assets/img/icon/29.svg") }}" alt="img">
-                                            </div>
-                                            <div class="content">
-                                                <span>
-                                                    Arrival City
-                                                </span>
-                                                <h6>
-                                                    London
-                                                </h6>
-                                            </div>
-                                        </div>
-                                        <div class="activities-box-item">
-                                            <div class="icon">
-                                                <img src="{{ asset("/mymountains/assets/img/icon/30.svg") }}" alt="img">
-                                            </div>
-                                            <div class="content">
-                                                <span>
-                                                    Language
-                                                </span>
-                                                <h6>
-                                                    English
-                                                </h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="activities-box-area mb-0">
-                                        <div class="activities-box-item">
-                                            <div class="icon">
-                                                <img src="{{ asset("/mymountains/assets/img/icon/31.svg") }}" alt="img">
-                                            </div>
-                                            <div class="content">
-                                                <span>
-                                                    Hotel Transfer
-                                                </span>
-                                                <h6>
-                                                    Available
-                                                </h6>
-                                            </div>
-                                        </div>
-                                        <div class="activities-box-item">
-                                            <div class="icon">
-                                                <img src="{{ asset("/mymountains/assets/img/icon/32.svg") }}" alt="img">
-                                            </div>
-                                            <div class="content">
-                                                <span>
-                                                    Next Tour
-                                                </span>
-                                                <h6>
-                                                    Available
-                                                </h6>
-                                            </div>
-                                        </div>
-                                        <div class="activities-box-item">
-                                            <div class="icon">
-                                                <img src="{{ asset("/mymountains/assets/img/icon/33.svg") }}" alt="img">
-                                            </div>
-                                            <div class="content">
-                                                <span>
-                                                    01 Guide
-                                                </span>
-                                                <h6>
-                                                    Guided
-                                                </h6>
-                                            </div>
-                                        </div>
-                                        <div class="activities-box-item">
-                                            <div class="icon">
-                                                <img src="{{ asset("/mymountains/assets/img/icon/34.svg") }}" alt="img">
-                                            </div>
-                                            <div class="content">
-                                                <span>
-                                                    Maximum Age
-                                                </span>
-                                                <h6>
-                                                    60
-                                                </h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="faq-items">
-                                    <h3>Itinerary (Day wise)</h3>
-                                    <div class="faq-accordion">
-                                        <div class="accordion" id="accordion">
-                                            <div class="accordion-item mb-3">
-                                                <h5 class="accordion-header">
-                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
-                                                        Arrival in Phuket and Patong Beach Exploration
-                                                    </button>
-                                                </h5>
-                                                <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#accordion">
-                                                    <div class="accordion-body">
-                                                       <p>
-                                                        Consectetur adipisicing elit sed do eiusmod tempor is incididunt ut labore et dolore of magna aliqua. ut enim ad minim veniam made of owl the quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea dolor commodo consequat duis aute irure and dolor in reprehenderit. 
-                                                       </p>
-                                                        <div class="faq-image">
-                                                            <img src="{{ asset("/mymountains/assets/img/destails/faq-img.jpg") }}" alt="img">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="accordion-item mb-3">
-                                                <h5 class="accordion-header">
-                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
-                                                        Phi Phi Islands Snorkeling Adventure
-                                                    </button>
-                                                </h5>
-                                                <div id="faq2" class="accordion-collapse show" data-bs-parent="#accordion">
-                                                    <div class="accordion-body">
-                                                        <p>
-                                                            Consectetur adipisicing elit sed do eiusmod tempor is incididunt ut labore et dolore of magna aliqua. ut enim ad minim veniam made of owl the quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea dolor commodo consequat duis aute irure and dolor in reprehenderit. 
-                                                        </p>
-                                                        <div class="faq-image">
-                                                            <img src="{{ asset("/mymountains/assets/img/destails/faq-img.jpg") }}" alt="img">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="accordion-item mb-3">
-                                                <h5 class="accordion-header">
-                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
-                                                        Phang Nga Bay Cruise and Cultural Immersion
-                                                    </button>
-                                                </h5>
-                                                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#accordion">
-                                                    <div class="accordion-body">
-                                                        <p>
-                                                            Consectetur adipisicing elit sed do eiusmod tempor is incididunt ut labore et dolore of magna aliqua. ut enim ad minim veniam made of owl the quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea dolor commodo consequat duis aute irure and dolor in reprehenderit. 
-                                                           </p>
-                                                            <div class="faq-image">
-                                                                <img src="{{ asset("/mymountains/assets/img/destails/faq-img.jpg") }}" alt="img">
-                                                            </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="accordion-item">
-                                                <h5 class="accordion-header">
-                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
-                                                        Leisure Day and Departure
-                                                    </button>
-                                                </h5>
-                                                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#accordion">
-                                                    <div class="accordion-body">
-                                                        <p>
-                                                            Consectetur adipisicing elit sed do eiusmod tempor is incididunt ut labore et dolore of magna aliqua. ut enim ad minim veniam made of owl the quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea dolor commodo consequat duis aute irure and dolor in reprehenderit. 
-                                                        </p>
-                                                        <div class="faq-image">
-                                                            <img src="{{ asset("/mymountains/assets/img/destails/faq-img.jpg") }}" alt="img">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="map-area">
-                                    <h3>View in Map</h3>
-                                    <div class="google-map">
-                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6678.7619084840835!2d144.9618311901502!3d-37.81450084255415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642b4758afc1d%3A0x3119cc820fdfc62e!2sEnvato!5e0!3m2!1sen!2sbd!4v1641984054261!5m2!1sen!2sbd" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                                    </div>
-                                </div>
-                                <h3>Customer Reviews</h3>
-                                <div class="courses-reviews-box-items">
-                                    <div class="courses-reviews-box">
-                                        <div class="reviews-box">
-                                            <h2><span class="count">4.9</span></h2>
-                                            <div class="star">
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                            </div>
-                                            <p>856+ Reviews</p>
-                                        </div>
-                                        <div class="reviews-ratting-right">
-                                            <div class="reviews-ratting-item">
-                                                <div class="star">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                </div>
-                                                <div class="progress">
-                                                    <div class="progress-value style-two"></div>
-                                                </div>
-                                                <span>Services</span>
-                                            </div>
-                                            <div class="reviews-ratting-item">
-                                                <div class="star">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                </div>
-                                                <div class="progress">
-                                                    <div class="progress-value style-three"></div>
-                                                </div>
-                                                <span>Safety</span>
-                                            </div>
-                                            <div class="reviews-ratting-item">
-                                                <div class="star">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                </div>
-                                                <div class="progress">
-                                                    <div class="progress-value style-three"></div>
-                                                </div>
-                                                <span>Guides</span>
-                                            </div>
-                                            <div class="reviews-ratting-item">
-                                                <div class="star">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                </div>
-                                                <div class="progress">
-                                                    <div class="progress-value style-four"></div>
-                                                </div>
-                                                <span>Foods</span>
-                                            </div>
-                                            <div class="reviews-ratting-item">
-                                                <div class="star">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                </div>
-                                                <div class="progress">
-                                                    <div class="progress-value style-five"></div>
-                                                </div>
-                                                <span>Hotels</span>
-                                            </div>
-                                            <div class="reviews-ratting-item">
-                                                <div class="star">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="far fa-star"></i>
-                                                </div>
-                                                <div class="progress">
-                                                    <div class="progress-value style-five"></div>
-                                                </div>
-                                                <span>Places</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="cliect-review-area">
-                                    <h3>client review</h3>
-                                    <ul class="review-items">
-                                        <li>
-                                            <div class="thumb">
-                                                <img src="{{ asset("/mymountains/assets/img/destails/client-1.jpg") }}" alt="img">
-                                            </div>
-                                            <div class="content">
-                                                <div class="star">
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                </div>
-                                                <h5>Shikhon Islam</h5>
-                                                <p>Neque porro est qui dolorem ipsum quia quaed inventor veritatis et quasi architecto var sed efficitur turpis gilla sed sit amet finibus eros. Lorem Ipsum is simply dummy</p>
-                                                <span class="reply-icon">
-                                                    <i class="fa-solid fa-reply"></i> Reply
-                                                </span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="thumb">
-                                                <img src="{{ asset("/mymountains/assets/img/destails/client-2.jpg") }}" alt="img">
-                                            </div>
-                                            <div class="content">
-                                                <div class="star">
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                </div>
-                                                <h5>Ralph Edwards</h5>
-                                                <p>
-                                                    Neque porro est qui dolorem ipsum quia quaed inventor veritatis et quasi architecto var sed efficitur turpis gilla sed sit amet finibus eros.
-                                                </p>
-                                                <span class="reply-icon">
-                                                    <i class="fa-solid fa-reply"></i> Reply
-                                                </span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="thumb">
-                                                <img src="{{ asset("/mymountains/assets/img/destails/client-3.jpg") }}" alt="img">
-                                            </div>
-                                            <div class="content">
-                                                <div class="star">
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                    <i class="fa-solid fa-star"></i>
-                                                </div>
-                                                <h5>Sohel Islam</h5>
-                                                <p>
-                                                    Neque porro est qui dolorem ipsum quia quaed inventor veritatis et quasi architecto var sed efficitur turpis gilla sed sit amet finibus eros. Lorem Ipsum is simply dummy
-                                                </p>
-                                                <span class="reply-icon">
-                                                    <i class="fa-solid fa-reply"></i> Reply
-                                                </span>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="client-ratting-items">
-                                    <h3>Add Your Reviews</h3>
-                                    <ul>
-                                        <li>
-                                            Services
-                                            <div class="star">
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            Hotel
-                                            <div class="star">
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            Places
-                                            <div class="star">
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <ul class="mb-4">
-                                        <li>
-                                            Safety
-                                            <div class="star">
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            Foods
-                                            <div class="star">
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            Guides
-                                            <div class="star">
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                                <i class="far fa-star"></i>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <form action="#" id="contact-form" method="POST">
-                                        <div class="row g-4">
-                                            <div class="col-lg-6">
-                                                <div class="form-clt">
-                                                    <input type="text" name="name" id="name" placeholder="Your name">
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6">
-                                                <div class="form-clt">
-                                                    <input type="text" name="phone" id="phone" placeholder="Your phone">
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-12">
-                                                <div class="form-clt">
-                                                    <input type="text" name="email2" id="email21" placeholder="Your email">
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-12">
-                                                <div class="form-clt">
-                                                    <textarea name="message" id="message" placeholder="Your comments..."></textarea>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6">
-                                                <button type="submit" class="theme-btn text-center">
-                                                    Submit Reviews <i class="fa-sharp fa-regular fa-arrow-right"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-4">
-                            <div class="main-bar">
-                                <div class="activities-card">
-                                    <h3>
-                                        Book This Tour
-                                    </h3>
-                                    <div class="from-bar">
-                                        <ul class="from-list">
-                                            <li>From:</li>
-                                            <li>
-                                                <div id="datepicker" class="input-group date" data-date-format="dd-mm-yyyy">
-                                                    <input class="form-control" type="text" placeholder="" readonly="">
-                                                    <span class="input-group-addon"><i class="far fa-calendar"></i></span>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                        <ul class="list">
-                                            <li>
-                                                Time:                   
-                                            </li>
-                                        </ul>
-                                        <ul class="ticket">
-                                            <li>
-                                                Tickets:    
-                                            </li>
-                                            <li>
-                                                <span>
-                                                    Please, Select Date Fist
-                                                </span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="categories-list">
-                                        <h5>Add Extra:</h5>
-                                        <label class="checkbox-single d-flex align-items-center">
-                                            <span class="d-flex gap-xl-3 gap-2 align-items-center">
-                                                <span class="checkbox-area d-center">
-                                                    <input type="checkbox">
-                                                    <span class="checkmark d-center"></span>
-                                                </span>
-                                                <span class="text-color">
-                                                    Services per booking
-                                                </span>
-                                            </span>
-                                        </label>
-                                        <label class="checkbox-single d-flex align-items-center">
-                                            <span class="d-flex gap-xl-3 gap-2 align-items-center">
-                                                <span class="checkbox-area d-center">
-                                                    <input type="checkbox">
-                                                    <span class="checkmark d-center"></span>
-                                                </span>
-                                                <span class="text-color">
-                                                    Services per person
-                                                </span>
-                                            </span>
-                                        </label>
-                                    </div>
-                                    <div class="doller">
-                                        <span>Adult:</span>
-                                        <ul class="list">
-                                            <li>$20.00</li>
-                                            <li>$16.00</li>
-                                        </ul>
-                                    </div>
-                                    <ul class="price">
-                                        <li>
-                                            Total: 
-                                        </li>
-                                        <li>
-                                            $36.00
-                                        </li>
-                                    </ul>
-                                    <a href="{{ url("tour-details.html") }}" class="theme-btn">Book Now<i class="fa-sharp fa-regular fa-arrow-right"></i></a>
-                                </div>
-                                <div class="booking-bg bg-cover" style="background-image: url('mymountains/assets/img/destails/booking-bg.jpg');">
-                                    <h3 class="text-title">
-                                        Book Now And Enjoy Amazing Savings!
-                                    </h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-         </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
 
-        <!-- Footer Section Start -->
-        @include('footer')
+        <script>
+            
+            var numbers = '{{$packages->destination}}';
+           var  number = numbers.replace(/ *, */g, '<br>');
+            $("#rouu").html(number);
+        </script>
 
-        <!--<< All JS Plugins >>-->
-        <script src="{{ asset("/mymountains/assets/js/jquery-3.7.1.min.js") }}"></script>
-        <!--<< Viewport Js >>-->
-        <script src="{{ asset("/mymountains/assets/js/viewport.jquery.js") }}"></script>
-        <!--<< Bootstrap Js >>-->
-        <script src="{{ asset("/mymountains/assets/js/bootstrap.bundle.min.js") }}"></script>
-        <!--<< nice-selec Js >>-->
-        <script src="{{ asset("/mymountains/assets/js/jquery.nice-select.min.js") }}"></script>
-        <!--<< Waypoints Js >>-->
-        <script src="{{ asset("/mymountains/assets/js/jquery.waypoints.js") }}"></script>
-        <!--<< Counterup Js >>-->
-        <script src="{{ asset("/mymountains/assets/js/jquery.counterup.min.js") }}"></script>
-        <!--<< Swiper Slider Js >>-->
-        <script src="{{ asset("/mymountains/assets/js/swiper-bundle.min.js") }}"></script>
-        <!--<< MeanMenu Js >>-->
-        <script src="{{ asset("/mymountains/assets/js/jquery.meanmenu.min.js") }}"></script>
-         <!--<< Datepicker Js >>-->
-         <script src="{{ asset("/mymountains/assets/js/bootstrap-datepicker.js") }}"></script>
-        <!--<< Magnific Popup Js >>-->
-        <script src="{{ asset("/mymountains/assets/js/jquery.magnific-popup.min.js") }}"></script>
-        <!--<< Wow Animation Js >>-->
-        <script src="{{ asset("/mymountains/assets/js/wow.min.js") }}"></script>
-        <!--<< Main.js >>-->
-        <script src="{{ asset("/mymountains/assets/js/main.js") }}"></script>
-    </body>
 
-<!-- Mirrored from ex-coders.com/html/turmet/tour-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 08 Apr 2025 11:51:32 GMT -->
+
+<script>
+    
+$("#tformbooking").submit(function(e){
+
+
+e.preventDefault();
+ $.ajax({
+                       url: '/',
+                       method: 'POST',
+                       data: new FormData(this),
+                       dataType: 'JSON',
+                       contentType: false,
+                       cache: false,
+                       processData: false,
+                       beforeSend: function() {
+      
+      $("#tformbooking button").prop('disabled', true);
+             
+                           },
+                       success:function(response)
+                       {
+                         swal({
+ title: "Thank you!",
+ text: "Our destination expert will reach out to you shortly!!",
+ icon: "success",
+});
+                         
+                      $('#tformbooking').trigger("reset");
+                      $("#tformbooking button").prop('disabled', false);
+             
+                
+                       },
+                       error: function(response) {
+                         swal({
+ title: "Thank you!",
+ text: "Our destination expert will reach out to you shortly!!",
+ icon: "success",
+});
+                       $("#tformbooking button").prop('disabled', false);
+             
+                      $('#tformbooking').trigger("reset");
+                       }
+                   });
+
+});
+
+
+
+
+</script>
+</body>
+
 </html>
