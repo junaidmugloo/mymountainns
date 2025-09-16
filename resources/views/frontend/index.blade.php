@@ -32,7 +32,8 @@
         <!--<< Main.css >>-->
         <link rel="stylesheet" href="{{ asset("mymountains/assets/css/main.css") }}">
         
-         <meta name="google-site-verification" content="M78KtXPwNrhbLcZxkAiljAAuGGow6Sq7u9xt5eIuDug" />
+        
+        <meta name="google-site-verification" content="OKDOBtdKqC-xYHEzlnnGKFSAJPWOeLtZVK43jKNRxdw" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <style>
@@ -341,7 +342,7 @@
                                 </li>
                             </ul>
                             <div class="header-button mt-4">
-                                <a href="{{ url("contact.html") }}" class="theme-btn"> Request A Quote <i class="fa-sharp fa-regular fa-arrow-right"></i></a>
+                                <a href="javascript:void(0)" class="theme-btn" data-bs-toggle="modal" data-bs-target="#exampleModal5"> Login <i class="fa-sharp fa-regular fa-arrow-right"></i></a>
                             </div>
                             <div class="social-icon d-flex align-items-center">
                                 <a href="{{ url("#") }}"><i class="fab fa-facebook-f"></i></a>
