@@ -675,8 +675,10 @@
                             <a href="javascript:void(0)" data-bs-toggle="modal"
                             data-bs-target="#exampleModal" class="theme-btn">BOOK NOW <i class="fa-sharp fa-regular fa-arrow-right"></i></a>
                             <div class="cta-image">
+                                @if ($loop->iteration === 1)
                                 <img src="{{ asset("mymountains/assets/img/bag-shape.png") }}" alt="img">
-                                {{-- i want this image on 2nd iteration of loop --}}
+                                @endif
+                               
                                 @if ($loop->iteration === 2)
                                     <img src="{{ asset("mymountains/assets/img/plane-shape.png") }}" alt="img">
                                 @endif
