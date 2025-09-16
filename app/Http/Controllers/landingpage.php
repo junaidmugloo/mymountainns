@@ -96,7 +96,7 @@ class landingpage extends Controller
         return CategoryModel::where('name', '!=', 'tagline')->get();
     });
 
-    $seo=MySEO::where('page','home')->first();
+    $seo=MySEO::where('og_image','home')->first();
     
     return view('frontend.index', [
         'packages'  => $packages,
