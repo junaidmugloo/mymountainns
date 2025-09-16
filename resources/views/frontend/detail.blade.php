@@ -78,8 +78,8 @@ a{
         
         .tag-red {
             background-color: #fff;
-            color: #FF4500;
-            border: 1px solid #FF4500;
+            color: #46bfaf;
+            border: 1px solid #46bfaf;
         }
         
         .tag-purple {
@@ -235,11 +235,11 @@ a{
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
         :root {
-            --primary-color: #ef4444;
-            --secondary-color: #f97316;
+            --primary-color: #46bfaf;
+            --secondary-color: #46bfaf30;
             --bs-primary-rgb: 239, 68, 68;
             --bs-secondary-rgb: 249, 115, 22;
-            --theme-gradient: linear-gradient(90deg, #ef4444 0%, #f97316 100%);
+            --theme-gradient: linear-gradient(90deg, #46bfaf 0%, #46bfaf30 100%);
             --font-primary: 'Poppins', sans-serif;
             --font-size-xs: 0.75rem;
             --font-size-sm: 0.875rem;
@@ -258,7 +258,9 @@ a{
         }
 
         .btn-warning:hover {
-            background: linear-gradient(90deg, #f97316 0%, #ef4444 100%) !important;
+
+                background: linear-gradient(90deg, #46bfaf 0%, #46bfaf30 100%); !important;
+
             transform: translateY(-2px);
             box-shadow: 0 4px 15px rgba(239, 68, 68, 0.2);
         }
@@ -650,8 +652,8 @@ h1, h2, h3, h4, h5, h6 {
 
     <!-- Main Content -->
 
-    <main class="py-4 mt-5">
-        <div class="container mt-5">
+    <main class="py-4">
+        <div class="container">
             <!-- Tour Card -->
             <div class="card shadow-sm mb-4 fade-in">
                 <div class="row g-0">
