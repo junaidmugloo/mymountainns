@@ -244,7 +244,11 @@
                                     </h2>
                                 </div>
                                 <p class="wow fadeInUp wow" data-wow-delay=".5s">
-                                    There are many variations of passages of  available, but the majority have suffered alteration in some form, by injected humour words which don't look even slightly believable injected humour words which
+                                My Mountains – Indian travel agency/tour operators to fulfill your complete travel requirements. 
+                                Find travel in India with My Mountains,
+                                 offering you various choices at affordable prices backed by excellent service. 
+                                 We provide Indian Travel Packages, International Holidays, 
+                                 Flight Tickets, Honeymoon Packages, and several exciting deals!
                                 </p>
                                 <div class="about-items wow fadeInUp wow" data-wow-delay=".3s">
                                     <div class="about-icon-items">
@@ -280,7 +284,7 @@
                                         </p>
                                     </div>
                                 </div>
-                                <a href="{{ url("tour-details.html") }}" class="theme-btn wow fadeInUp wow" data-wow-delay=".7s">Discover More<i class="fa-sharp fa-regular fa-arrow-right"></i></a>
+                                <a href="{{ url("/kashmir") }}" class="theme-btn wow fadeInUp wow" data-wow-delay=".7s">Discover More<i class="fa-sharp fa-regular fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
