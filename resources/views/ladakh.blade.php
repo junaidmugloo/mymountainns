@@ -221,38 +221,48 @@
                             </div>
                         </div>
                         <div class="destination-content">
-                            <ul class="meta">
-                                <li>
-                                    <i class="fa-thin fa-location-dot"></i>
-                                    Indonesia
-                                </li>
-                                <li class="rating">
-                                    <div class="star">
-                                        <i class="fa-solid fa-star"></i>
-                                    </div>
-                                    <p>4.7</p>
-                                </li>
-                            </ul>
-                            <h5>
-                                <a href="{{ url("destination-details.html") }}">
-                                    Brooklyn Beach Resort Tour
-                                </a>
-                            </h5>
-                            <ul class="info">
-                                <li>
-                                    <i class="fa-regular fa-clock"></i>
-                                     10 Days
-                                </li>
-                                <li>
-                                    <i class="fa-thin fa-users"></i>
-                                     50+
-                                </li>
-                            </ul>
-                            <div class="price">
-                                <h6>$59.00<span>/Per day</span></h6>
-                                <a href="{{ url("destination-details.html") }}" class="theme-btn style-2">Book Now<i class="fa-sharp fa-regular fa-arrow-right"></i></a>
-                            </div>
+                        <h3 class="text-start text-light rounded-pill"
+                            style="background:linear-gradient(93deg,#26e2ff,#048fec);font-size:9px;cursor:text;font-weight:900; width:fit-content;padding:0 10px; height:18px;line-height:18px;">
+                            {{$p->tag_line}}</h3>
+                        <ul class="meta">
+                            <li>
+                                <i class="fa-thin fa-location-dot"></i>
+                                {{-- <span class="fw-bold">{{ $p->D1}}</span>
+                                <b>|</b>
+                                <span class="fw-bold">{{ $p->D2}}</span>
+                                <b>|</b>
+                                <span class="fw-bold">{{ $p->D3}}</span> --}}
+                            </li>
+                            <li class="rating">
+                                <div class="star">
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <p>4.7</p>
+                            </li>
+                        </ul>
+                        <h5>
+                            <a href="{{ url('/details/'.$p->id) }}">
+                                {{$p->name}}
+                            </a>
+                        </h5>
+                        <ul class="info">
+                            <li>
+                                <i class="fa-regular fa-clock"></i>
+                                {{$p->day}} days & {{$p->night}} nights
+                            </li>
+                            <li>
+                                <i class="fa-thin fa-users"></i>
+                                50+
+                            </li>
+                        </ul>
+                        <div class="price">
+                            <h6>₹{{$p->discount}}<span>/Per person</span></h6>
+                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal" class="theme-btn style-2">
+                                Book Now<i class="fa-sharp fa-regular fa-arrow-right"></i>
+                            </a>
                         </div>
+                    </div>
                     </div>
                 </div>
                 @endforeach

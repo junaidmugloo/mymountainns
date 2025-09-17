@@ -821,7 +821,7 @@
         @foreach($packages as $p)
         <div class="swiper-slide  h-100">
             <div class="destination-card-items d-flex flex-column w-100" style="height: 100%;">
-        
+        {{-- s --}}
                     <div class="destination-image">
                         <img src="{{ asset('package_images/'.$p->image) }}" alt="img">
                         <div class="heart-icon">
