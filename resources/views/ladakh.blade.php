@@ -361,7 +361,7 @@
        </section>
        
     <!-- watch-video-section Start -->
-    <section class="watch-video-section fix">
+    {{-- <section class="watch-video-section fix">
         <div class="bg-shape">
             <img src="{{ asset("/mymountains/assets/img/map-bg.png") }}" alt="img">
         </div>
@@ -530,7 +530,7 @@
                 </div>
             </div>
         </div>
-     </section>
+     </section> --}}
         <!-- Footer Section Start -->
         @include('footer')
 
