@@ -311,7 +311,7 @@
                 <div class="swiper-wrapper">
                     
                         @foreach ($banner as $b)
-                            <div class="swiper-slide">
+                            <div class="swiper-slide" data-swiper-autoplay="2000">
 
 
                                 <div class="hero-1">
