@@ -1544,30 +1544,123 @@
          </section> --}}
 
         <!-- Cta-bg-Section Start -->
-        <section class="cta-bg-section fix bg-cover" style="background-image: url(mymountains/assets/img/cta-bg.jpg);">
+         <section class="faq-section section-padding pb-0 fix">
             <div class="container">
-                <div class="row">
-                   <div class="cta-wrapper">
-                    <div class="section-title text-center">
-                        <span class="sub-title text-white wow fadeInUp">
-                            Watch Our Story
-                        </span>
-                        <h2 class="text-white wow fadeInUp wow" data-wow-delay=".3s">
-                            We Provide the Best Tour <br>
-                             Facilities
-                        </h2>
-                    </div>
-                    <div class="cta-btn wow fadeInUp wow" data-wow-delay=".5s">
-                        <a href="{{ url("tour-details.html") }}" class="theme-btn">Find Out More<i class="fa-sharp fa-regular fa-arrow-right"></i></a>
-                        <div class="watch-btn">
-                            <a href="https://www.youtube.com/watch?v=Cn4G2lZ_g2I" data-delay=".7s" class="video-btn video-popup">
-                                <i class="fa-duotone fa-play"></i></a>
-                                <h6>
-                                    Watch Video 
-                               </h6>
+                <div class="faq-wrapper">
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <div class="faq-items">
+                                <div class="faq-accordion">
+                                    <div class="accordion" id="accordion2">
+                                        <div class="accordion-item mb-3 wow fadeInUp" data-wow-delay=".1s">
+                                            <h5 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                                                    How to Install WordPress theme on cPanel?
+                                                </button>
+                                            </h5>
+                                            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#accordion">
+                                                <div class="accordion-body">
+                                                    Nullam faucibus eleifend mi eu varius. Integer vel tincidunt massa, quis semper odio.Mauris et mollis quam. Nullam fringilla erat id ante
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item mb-3 wow fadeInUp" data-wow-delay=".3s">
+                                            <h5 class="accordion-header">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                                                    Do you have Custom Hosting Service?
+                                                </button>
+                                            </h5>
+                                            <div id="faq2" class="accordion-collapse show" data-bs-parent="#accordion">
+                                                <div class="accordion-body">
+                                                    Nullam faucibus eleifend mi eu varius. Integer vel tincidunt massa, quis semper odio.Mauris et mollis quam. Nullam fringilla erat id ante
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item mb-3 wow fadeInUp" data-wow-delay=".5s">
+                                            <h5 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                                                    Better Security And Faster Server?
+                                                </button>
+                                            </h5>
+                                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#accordion">
+                                                <div class="accordion-body">
+                                                    Nullam faucibus eleifend mi eu varius. Integer vel tincidunt massa, quis semper odio.Mauris et mollis quam. Nullam fringilla erat id ante
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item mb-3 wow fadeInUp" data-wow-delay=".6s">
+                                            <h5 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                                                    Deployment Within Few Minutes
+                                                </button>
+                                            </h5>
+                                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#accordion">
+                                                <div class="accordion-body">
+                                                    Nullam faucibus eleifend mi eu varius. Integer vel tincidunt massa, quis semper odio.Mauris et mollis quam. Nullam fringilla erat id ante
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                     </div>
-                   </div>
+                        <div class="col-lg-6">
+                            <div class="faq-items">
+                                <div class="faq-accordion">
+                                    <div class="accordion" id="accordion3">
+                                        <div class="accordion-item mb-3 wow fadeInUp" data-wow-delay=".1s">
+                                            <h5 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="true" aria-controls="faq5">
+                                                    How to Install WordPress theme on cPanel?
+                                                </button>
+                                            </h5>
+                                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#accordion">
+                                                <div class="accordion-body">
+                                                    Nullam faucibus eleifend mi eu varius. Integer vel tincidunt massa, quis semper odio.Mauris et mollis quam. Nullam fringilla erat id ante
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item mb-3 wow fadeInUp" data-wow-delay=".3s">
+                                            <h5 class="accordion-header">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6">
+                                                    Do you have Custom Hosting Service?
+                                                </button>
+                                            </h5>
+                                            <div id="faq6" class="accordion-collapse show" data-bs-parent="#accordion">
+                                                <div class="accordion-body">
+                                                    Nullam faucibus eleifend mi eu varius. Integer vel tincidunt massa, quis semper odio.Mauris et mollis quam. Nullam fringilla erat id ante
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item mb-3 wow fadeInUp" data-wow-delay=".5s">
+                                            <h5 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7" aria-expanded="false" aria-controls="faq7">
+                                                    Better Security And Faster Server?
+                                                </button>
+                                            </h5>
+                                            <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#accordion">
+                                                <div class="accordion-body">
+                                                    Nullam faucibus eleifend mi eu varius. Integer vel tincidunt massa, quis semper odio.Mauris et mollis quam. Nullam fringilla erat id ante
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item mb-3 wow fadeInUp" data-wow-delay=".6s">
+                                            <h5 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8" aria-expanded="false" aria-controls="faq8">
+                                                    Deployment Within Few Minutes
+                                                </button>
+                                            </h5>
+                                            <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#accordion">
+                                                <div class="accordion-body">
+                                                    Nullam faucibus eleifend mi eu varius. Integer vel tincidunt massa, quis semper odio.Mauris et mollis quam. Nullam fringilla erat id ante
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
