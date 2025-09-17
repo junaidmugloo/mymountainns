@@ -193,7 +193,7 @@ Route::middleware(['staff_guard'])->group(function () {
 Route::middleware(['admin_guard'])->group(function () {
 
 
-// myseo
+// myseo routs
 
 Route::match(['get', 'post'], '/addseo',[MySEOController::class,'index']);
 Route::get('/viewseo',[MySEOController::class,'viewseo']);
