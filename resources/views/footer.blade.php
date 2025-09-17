@@ -68,28 +68,28 @@
                         </div>
                         <ul class="list-items">
                             <li>
-                                <a href="{{ url("tour-details.html") }}">
-                                    Wanderlust Adventures  
+                                <a href="{{ url("") }}">
+                                    Terms of Service
                                 </a>
                             </li>
                             <li>
-                                <a href="{{ url("tour-details.html") }}">
-                                    Globe Trotters Travel
+                                <a href="{{ url("") }}">
+                                    Privacy Policy
                                 </a>
                             </li>
                             <li>
-                                <a href="{{ url("tour-details.html") }}">
-                                    Odyssey Travel Services
+                                <a href="{{ url("") }}">
+                                    Refund Policy
                                 </a>
                             </li>
                             <li>
-                                <a href="{{ url("tour-details.html") }}">
-                                    Jet Set Journeys
+                                <a href="{{ url("") }}">
+                                    Adventure Travel
                                 </a>
                             </li>
                             <li>
-                                <a href="{{ url("tour-details.html") }}">
-                                    Dream Destinations Travel
+                                <a href="{{ url("") }}">
+                                    Booking Tips
                                 </a>
                             </li>
                         </ul>
