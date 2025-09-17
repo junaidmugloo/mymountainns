@@ -34,6 +34,21 @@
         <link rel="stylesheet" href="{{ asset("/mymountains/assets/css/color.css") }}">
         <!--<< Main.css >>-->
         <link rel="stylesheet" href="{{ asset("/mymountains/assets/css/main.css") }}">
+
+        <style>
+            .destination-card-items .destination-image img {
+    object-fit: cover;
+    height: 28vh;
+    }
+
+
+.feature-tour-items .feature-tour-image img {
+    height: 28vh;
+    object-fit: cover;
+   
+}
+
+        </style>
     </head>
     <body>
 
