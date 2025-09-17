@@ -1544,8 +1544,17 @@
          </section> --}}
 
         <!-- Cta-bg-Section Start -->
+       
          <section class="faq-section section-padding pb-0 fix">
             <div class="container">
+                <div class="section-title text-center">
+                    <span class="sub-title wow fadeInUp">
+                        What people ask
+                    </span>
+                    <h2 class="wow fadeInUp wow" data-wow-delay=".2s">
+                        Kashmir Tour FAQs
+                    </h2>
+                </div>
                 <div class="faq-wrapper">
                     <div class="row g-4">
                         <div class="col-lg-6">
