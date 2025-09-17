@@ -1135,10 +1135,11 @@
                         <div class="offer-slide-items">
                             <div class="swiper offer-slider">
                                 <div class="swiper-wrapper">
+                                     @foreach ($offer as $o)
                                     <div class="swiper-slide">
                                         <div class="offer-items">
                                             <div class="offer-image">
-                                                <img src="{{ asset("mymountains/assets/img/offer/01.jpg") }}" alt="img">
+                                                <img src="{{ asset($o->image) }}" alt="img">
                                                 <div class="offer-content">
                                                     <ul class="offer-btn">
                                                         <li>-50% Off</li>
@@ -1146,85 +1147,19 @@
                                                     </ul>
                                                     <div class="content">
                                                         <h3>
-                                                            <a href="{{ url("tour-details.html") }}">
-                                                                Nepal City
+                                                            <a href="{{ url("/kashmir") }}">
+                                                                {{$o->heading}}
                                                             </a>
                                                         </h3>
                                                         <span>
-                                                            $160
+                                                            {{$o->description}}
                                                         </span>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="swiper-slide">
-                                        <div class="offer-items">
-                                            <div class="offer-image">
-                                                <img src="{{ asset("mymountains/assets/img/offer/02.jpg") }}" alt="img">
-                                                <div class="offer-content">
-                                                    <ul class="offer-btn">
-                                                        <li>-50% Off</li>
-                                                    </ul>
-                                                    <div class="content">
-                                                        <h3>
-                                                            <a href="{{ url("tour-details.html") }}">
-                                                                Mishor
-                                                            </a>
-                                                        </h3>
-                                                        <span>
-                                                            $160
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="offer-items">
-                                            <div class="offer-image">
-                                                <img src="{{ asset("mymountains/assets/img/offer/03.jpg") }}" alt="img">
-                                                <div class="offer-content">
-                                                    <ul class="offer-btn">
-                                                        <li>-50% Off</li>
-                                                        <li class="bg-color">Featured</li>
-                                                    </ul>
-                                                    <div class="content">
-                                                        <h3>
-                                                            <a href="{{ url("tour-details.html") }}">
-                                                                China City
-                                                            </a>
-                                                        </h3>
-                                                        <span>
-                                                            $160
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="offer-items">
-                                            <div class="offer-image">
-                                               <img src="{{ asset("mymountains/assets/img/offer/04.jpg") }}" alt="img">
-                                                <div class="offer-content">
-                                                    <ul class="offer-btn">
-                                                        <li>-50% Off</li>
-                                                    </ul>
-                                                    <div class="content">
-                                                        <h3>
-                                                            <a href="{{ url("tour-details.html") }}">
-                                                                New York City
-                                                            </a>
-                                                        </h3>
-                                                        <span>
-                                                            $160
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
@@ -1560,15 +1495,15 @@
                         <div class="col-lg-6">
                             <div class="faq-items">
                                 <div class="faq-accordion">
-                                    <div class="accordion" id="accordion2">
+                                    <div class="accordion" id="accordion2"> 
                                         @foreach ($faq as $f)   
 
 
                                         <div class="accordion-item mb-3 wow fadeInUp" data-wow-delay=".1s"  id="faq{{$f->id}}">
                                             <h5 class="accordion-header">
-                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq{{$f->id}}" aria-expanded="true" aria-controls="faq{{$f->id}}">
+                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq{{$f->id}}" aria-expanded="true" aria-controls="faq{{$f->id}}"> 
                                                  {{$f->title}}
-                                                </button>
+                                                </button>   
                                             </h5>
                                             <div id="faq{{$f->id}}" class="accordion-collapse collapse" data-bs-parent="#accordion">
                                                 <div class="accordion-body">
