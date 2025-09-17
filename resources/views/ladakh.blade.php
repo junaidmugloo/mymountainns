@@ -189,6 +189,71 @@
         <div class="offcanvas__overlay"></div>
 
         <!-- Header Section Start -->
+
+    <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header"   style="background:linear-gradient(93deg,#20c997,#0dcaf0);">
+             
+        
+        <div class="HeaderSaleLine_saleIcon__pwEFh"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M24 0H14.5L5 38H14.5L24 0Z" fill="white" fill-opacity="0.5"></path><path d="M12 0H9.95238L0 38H2.04762L12 0Z" fill="white" fill-opacity="0.5"></path></svg></div>
+        <p id="mdh" class="m-0 p-0"></p>
+          <button type="button" class="btn-close" onclick="clear_head()" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h5 class="mx-3" style="font-weight:600;">Save up to <x style="color:#20c997;">50% OFF</x></h5>
+          <h6 class="mx-3 mb-4" style="font-size:0.8rem;">We’ll be needing some of your basic details to help you better with your trip</h6>
+          <form action="" id="tform" style=" justify-content: center;
+            display: flex !important;">
+            @csrf
+            <div class="row w-100 h-100">
+              <div class="col-12">
+                <div class="form-group mb-3">
+                  <input type="hidden" name="package" id="packagename" value="" class="form-control" >
+                  <input type="text" name="name" required class="form-control" placeholder="Enter Full Name">
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-group mb-3">
+                  <input type="email" name="email"  class="form-control" placeholder="Enter Email">
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-group mb-3">
+                  <input type="tel" name="contact" required class="form-control" placeholder="Your Phone">
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-group mb-3">
+                  <input type="date"  id="myDate2"  name="date"  class="form-control" placeholder="Travel Data">
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-group mb-3">
+                  <input type="number" name="persons"  class="form-control" placeholder="Travel Count">
+                </div>
+              </div>
+
+              <div class="col-12">
+                <div class="form-group mb-3">
+                  <textarea type="text" name="message"  class="form-control" placeholder="Message"></textarea>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-group mb-3">
+                  <button  style="background:#20c997;" class="btn text-light d-block w-100">Connect with and
+                    Experts</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
        @include('nav')
         <!-- Search Area Start -->
         <div class="search-wrap">
@@ -493,7 +558,65 @@
         <script src="{{ asset("/mymountains/assets/js/wow.min.js") }}"></script>
         <!--<< Main.js >>-->
         <script src="{{ asset("/mymountains/assets/js/main.js") }}"></script>
+         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     </body>
 
-<!-- Mirrored from ex-coders.com/html/turmet/destination.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 08 Apr 2025 11:51:28 GMT -->
-</html>
+<script>
+     $(document).ready(function () {
+                setTimeout(function () {
+                    $('#exampleModal').modal('show');
+                }, 5000);
+            });
+
+
+            // popup default on site load 
+            $("#tform").submit(function(e){
+
+
+e.preventDefault();
+ $.ajax({
+                       url: '/sendmail',
+                       method: 'POST',
+                       data: new FormData(this),
+                       dataType: 'JSON',
+                       contentType: false,
+                       cache: false,
+                       processData: false,
+                       beforeSend: function() {
+       
+$("#tform button").prop('disabled', true);
+       
+                     },
+                       success:function(response)
+                       {
+                         swal({
+ title: "Thank you!",
+ text: "Our destination expert will reach out to you shortly!!",
+ icon: "success",
+});
+                         
+                      $('#tform').trigger("reset");
+                     
+                      $("#tform button").prop('disabled', false);
+  
+                       },
+                       error: function(response) {
+                        swal({
+ title: "Thank you!",
+ text: "Our destination expert will reach out to you shortly!!",
+ icon: "success",
+});
+                         
+                      $('#tform').trigger("reset");
+                     
+                      $("#tform button").prop('disabled', false);
+                     
+                       }
+                   });
+
+});
+
+
+</script>
+
+    </html>
