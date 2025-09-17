@@ -311,7 +311,7 @@
                 <div class="swiper-wrapper">
                     
                         @foreach ($banner as $b)
-                            <div class="swiper-slide" data-swiper-autoplay="2000">
+                            <div class="swiper-slide" >
 
 
                                 <div class="hero-1">
@@ -1907,6 +1907,29 @@ e.preventDefault();
 
 });
     </script>
+
+
+
+
+<script>
+    var heroSwiper = new Swiper(".hero-slider", {
+        loop: true, // Enable looping
+        autoplay: {
+            delay: 2000, // Time between slides (in ms)
+            disableOnInteraction: false, // Keep autoplay after user interaction
+        },
+        speed: 1000, // Slide transition speed
+        effect: "fade", // Optional (fade effect)
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
     </body>
 
 <!-- Mirrored from ex-coders.com/html/turmet/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 08 Apr 2025 11:50:32 GMT -->
