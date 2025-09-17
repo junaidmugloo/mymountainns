@@ -347,9 +347,15 @@
 
 
 <!-- Elfsight WhatsApp Chat | Untitled WhatsApp Chat -->
-<script src="https://elfsightcdn.com/platform.js" async></script>
-<div class="elfsight-app-31a13f8f-ab8f-47d6-9f95-21def2003318" data-elfsight-app-lazy></div>
 
+    <script 
+      type="text/javascript"
+      src="https://d3mkw6s8thqya7.cloudfront.net/integration-plugin.js"
+      id="aisensy-wa-widget"
+      widget-id="aaamgj"
+    >
+    </script>
+	
 
 {{-- <!-- Elfsight AI Chatbot | Untitled AI Chatbot -->
 <script src="https://elfsightcdn.com/platform.js" async></script>
