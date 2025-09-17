@@ -1,4 +1,7 @@
 <style>
+  .df-bottombar-branding{
+    display: none !important;
+  }
      .login-with-google-btn {
   transition: background-color .3s, box-shadow .3s;
     
