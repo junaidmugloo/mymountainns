@@ -1139,10 +1139,9 @@
                                     <div class="swiper-slide">
                                         <div class="offer-items">
                                             <div class="offer-image">
-                                                <img src="{{ asset('/offer_images/'.$o->image) }}" alt="img">
+                                                <img style="height: 30vh; object-fit: cover;" src="{{ asset('/offer_images/'.$o->image) }}" alt="img">
                                                 <div class="offer-content">
                                                     <ul class="offer-btn">
-                                                        <li>-50% Off</li>
                                                         <li class="bg-color">Featured</li>
                                                     </ul>
                                                     <div class="content">
