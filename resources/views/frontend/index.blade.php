@@ -334,7 +334,8 @@
                                                      <div class="sub-title">
                                                     starting at <span class="fs-4 fw-bold"> INR {{$b->discount}} </span><s> INR {{$b->price}}</s>
                                                      </div>
-                                                    <form action="" method="post">
+                                                    <form action="" method="post" id="tform22">
+                                                          @csrf
                                                     <div class="booking-list-area">
                                                         <div class="booking-list">
                                                             <div class="icon">
@@ -365,7 +366,7 @@
                                                             <div class="content">
                                                                 <h6>Travel Date</h6>
                                                                 <div class="form-clt">
-                                                                    <input type="date" required id="date1" name="date1">
+                                                                    <input type="date" required id="date1" name="date" placeholder="Travel Date">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1801,6 +1802,104 @@ $(document).ready(function() {
 });
 
    
+    </script>
+    {{-- 
+    
+    tform22 --}}
+
+
+    <script>
+        
+$("#tform21").submit(function(e){
+
+
+ e.preventDefault();
+  $.ajax({
+                        url: '/sendmail2',
+                        method: 'POST',
+                        data: new FormData(this),
+                        dataType: 'JSON',
+                        contentType: false,
+                        cache: false,
+                        processData: false,
+                        beforeSend: function() {
+       
+       $("#tform21 button").prop('disabled', true);
+              
+                            },
+                        success:function(response)
+                        {
+                          swal({
+  title: "Thank you!",
+  text: "Our destination expert will reach out to you shortly!!",
+  icon: "success",
+});
+                          
+                       $('#tform21').trigger("reset");
+                       $("#tform21 button").prop('disabled', false);
+              
+                 
+                        },
+                        error: function(response) {
+                          swal({
+  title: "Thank you!",
+  text: "Our destination expert will reach out to you shortly!!",
+  icon: "success",
+});
+                        $("#tform21 button").prop('disabled', false);
+              
+                       $('#tform21').trigger("reset");
+                        }
+                    });
+
+});
+
+
+
+
+$("#tform22").submit(function(e){
+
+
+e.preventDefault();
+ $.ajax({
+                       url: '/sendmail2',
+                       method: 'POST',
+                       data: new FormData(this),
+                       dataType: 'JSON',
+                       contentType: false,
+                       cache: false,
+                       processData: false,
+                       beforeSend: function() {
+      
+      $("#tform22 button").prop('disabled', true);
+             
+                           },
+                       success:function(response)
+                       {
+                         swal({
+ title: "Thank you!",
+ text: "Our destination expert will reach out to you shortly!!",
+ icon: "success",
+});
+                         
+                      $('#tform22').trigger("reset");
+                      $("#tform22 button").prop('disabled', false);
+             
+                
+                       },
+                       error: function(response) {
+                         swal({
+ title: "Thank you!",
+ text: "Our destination expert will reach out to you shortly!!",
+ icon: "success",
+});
+                       $("#tform22 button").prop('disabled', false);
+             
+                      $('#tform22').trigger("reset");
+                       }
+                   });
+
+});
     </script>
     </body>
 
