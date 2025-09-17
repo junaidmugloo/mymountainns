@@ -1139,7 +1139,7 @@
                                     <div class="swiper-slide">
                                         <div class="offer-items">
                                             <div class="offer-image">
-                                                <img src="{{ asset($o->image) }}" alt="img">
+                                                <img src="{{ asset('/offer_images/'.$o->image) }}" alt="img">
                                                 <div class="offer-content">
                                                     <ul class="offer-btn">
                                                         <li>-50% Off</li>
