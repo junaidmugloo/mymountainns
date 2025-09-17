@@ -166,8 +166,7 @@
                             </div>
                         </div>
                         <p class="text d-none d-xl-block">
-                            Nullam dignissim, ante scelerisque the  is euismod fermentum odio sem semper the is erat, a feugiat leo urna eget eros. Duis Aenean a imperdiet risus.
-                        </p>
+                         </p>
                         <div class="mobile-menu fix mb-3"></div>
                         <div class="offcanvas__contact">
                             <h4>Contact Info</h4>
@@ -334,8 +333,8 @@
                                                     <br>
                                                      <div class="sub-title">
                                                     starting at <span class="fs-4 fw-bold"> INR {{$b->discount}} </span><s> INR {{$b->price}}</s>
-                                                        </div
-                                                    <form action="">
+                                                     </div>
+                                                    <form action="" method="post">
                                                     <div class="booking-list-area">
                                                         <div class="booking-list">
                                                             <div class="icon">
@@ -344,7 +343,7 @@
                                                             <div class="content">
                                                                 <h6>Enter Name</h6>
                                                                 <div class="form-clt">
-                                                                    <input type="text" id="name" name="name" placeholder="Enter Name">
+                                                                    <input type="text" required id="name" name="name" placeholder="Enter Name">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -355,7 +354,7 @@
                                                             <div class="content">
                                                                 <h6>Enter Contact</h6>
                                                                 <div class="form-clt">
-                                                                    <input type="text" id="contact" name="contact" placeholder="Enter Contact">
+                                                                    <input type="text" required id="contact" name="contact" placeholder="Enter Contact">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -366,7 +365,7 @@
                                                             <div class="content">
                                                                 <h6>Travel Date</h6>
                                                                 <div class="form-clt">
-                                                                    <input type="date" id="date1" name="date1">
+                                                                    <input type="date" required id="date1" name="date1">
                                                                 </div>
                                                             </div>
                                                         </div>
