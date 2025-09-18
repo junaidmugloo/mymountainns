@@ -229,7 +229,7 @@
         
         <div class="HeaderSaleLine_saleIcon__pwEFh"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M24 0H14.5L5 38H14.5L24 0Z" fill="white" fill-opacity="0.5"></path><path d="M12 0H9.95238L0 38H2.04762L12 0Z" fill="white" fill-opacity="0.5"></path></svg></div>
         <p id="mdh" class="m-0 p-0"></p>
-          <button type="button" class="btn-close" onclick="clear_head()" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close" onclick="clear_head()" data-bs-dismiss="modal" aria-label="Close" onclick="clear_head()"></button>
         </div>
         <div class="modal-body">
           <h5 class="mx-3" style="font-weight:600;">Save up to <x style="color:#20c997;">50% OFF</x></h5>
@@ -865,7 +865,7 @@
                         </ul>
                         <div class="price">
                             <h6>₹{{$p->discount}}<span>/Per person</span></h6>
-                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                            <a href="javascript:void(0)" data-bs-toggle="modal" onclick="set_head('{{$p->name}}')"
                             data-bs-target="#exampleModal" class="theme-btn style-2">
                                 Book Now<i class="fa-sharp fa-regular fa-arrow-right"></i>
                             </a>
@@ -957,7 +957,7 @@
                         </ul>
                         <div class="price">
                             <h6>₹{{$p->discount}}<span>/Per person</span></h6>
-                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                            <a href="javascript:void(0)" data-bs-toggle="modal" onclick="set_head('{{$p->name}}')"
                             data-bs-target="#exampleModal" class="theme-btn style-2">
                                 Book Now<i class="fa-sharp fa-regular fa-arrow-right"></i>
                             </a>
@@ -1049,7 +1049,8 @@
                         </ul>
                         <div class="price">
                             <h6>₹{{$p->discount}}<span>/Per person</span></h6>
-                            <a href="javascript:void(0)" data-bs-toggle="modal"
+                            <a href="javascript:void(0)" data-bs-toggle="modal" onclick="set_head('{{$p->name}}')"
+
                             data-bs-target="#exampleModal" class="theme-btn style-2">
                                 Book Now<i class="fa-sharp fa-regular fa-arrow-right"></i>
                             </a>
@@ -1694,6 +1695,18 @@
         <script src="{{ asset("mymountains/assets/js/main.js") }}"></script>
         {{-- sweet alert --}}
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+        <script>
+            
+   function set_head(title){
+    $("#mdh").html(`<h6 class="text-light m-2" style="font-weight:bold;">${title}</h6>`);
+    $("#packagename").val(title)
+  }
+   function clear_head(){
+    $("#mdh").html("");
+    $("#packagename").val("")
+   }
+        </script>
 
         <script>
             $(document).ready(function () {
