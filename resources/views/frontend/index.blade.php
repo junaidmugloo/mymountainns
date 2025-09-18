@@ -10,7 +10,7 @@
         <meta name="keywords" content="{{ $seo->meta_keywords }}">
         
         <!-- ======== Page title ============ -->
-        <title></title>
+        <title>My Mountains</title>
         <!--<< Favcion >>-->
         <link rel="shortcut icon" href="{{ asset("mymountains/assets/img/favicon.svg") }}">
         <!--<< Bootstrap min.css >>-->
