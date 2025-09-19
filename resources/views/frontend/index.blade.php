@@ -286,24 +286,125 @@
         <!-- Header Section Start -->
        @include("nav")
 
-        <!-- Search Area Start -->
-        <div class="search-wrap">
-            <div class="search-inner">
-                <i class="fas fa-times search-close" id="search-close"></i>
-                <div class="search-cell">
-                    <form method="post"  action="/search" role="search">
-                         <meta name="csrf-token" content="{{ csrf_token() }}">
-                 
-                        <div class="search-field-holder">
-                            <input id="search-input" type="search" class="main-search-input" placeholder="Search...">
-                        </div>
-                    </form>
+       <style>
+        .search-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.8); /* dark overlay */
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    backdrop-filter: blur(8px);
+    transition: opacity 0.3s ease;
+}
 
-                    <ul id="search-results">
-                    </ul>
+.search-inner {
+    background: #fff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+}
+
+.search-field-holder {
+    position: relative;
+    width: 100%;
+}
+
+.main-search-input {
+    width: 100%;
+    padding: 14px 45px 14px 20px;
+    font-size: 16px;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.main-search-input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.2);
+}
+
+.search-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6b7280;
+    font-size: 18px;
+}
+
+.search-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 20px;
+    color: #9ca3af;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.search-close:hover {
+    color: #ef4444;
+}
+
+.results-list {
+    list-style: none;
+    margin-top: 12px;
+    padding: 0;
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    background: #fff;
+    display: none;
+}
+
+.results-list li {
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.results-list li:hover {
+    background: #f9fafb;
+}
+
+.results-list li:last-child {
+    border-bottom: none;
+}
+
+       </style>
+
+        <!-- Search Area Start -->
+       <div class="search-wrap">
+    <div class="search-inner">
+        <i class="fas fa-times search-close" id="search-close"></i>
+        <div class="search-cell">
+            <form method="post" action="/search" role="search">
+                <meta name="csrf-token" content="{{ csrf_token() }}">
+                <div class="search-field-holder">
+                    <input id="search-input" type="search" class="main-search-input" placeholder="Search anything...">
+                    <i class="fas fa-search search-icon"></i>
                 </div>
-            </div>
+            </form>
+
+            <!-- Results Dropdown -->
+            <ul id="search-results" class="results-list">
+                <!-- Dynamically append results here -->
+            </ul>
         </div>
+    </div>
+</div>
+
 
         <!-- Hero section start -->
         <section class="hero-section">
