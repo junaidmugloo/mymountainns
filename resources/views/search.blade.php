@@ -153,18 +153,7 @@
           <p class="card-text p-0 mb-2 text-start rounded" style="font-size: 12px; background-color: #fffbf0; ">
                 <span class="fw-bold">
 
-                  @php
-                  $string = $p->destination;
-                  $parts = explode(',', $string);
-                  $firstPart = $parts[0];
-                  $secondPart = $parts[1];
-                  $len=0;
-                  foreach ($parts as $part) {
-                    $len+=1; // Add the length of each part to the total
-                  }
                   
-                 
-                    @endphp
                               {{ $firstPart}}</span> <b>|</b>
                               <span class="fw-bold">{{ $secondPart}} </span>
                               <span class="fw-bold text-danger" onclick="window.location.href='/details/{{$p->id}}'" style="cursor: pointer;">&nbsp;&nbsp;&nbsp;+{{ $len}}</span> 
