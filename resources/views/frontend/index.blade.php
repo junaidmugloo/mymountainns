@@ -1826,7 +1826,7 @@ $(document).ready(function() {
         }
 
         $('#search-results').html(`
-           <li class="dropdown-item text-center" >
+           <li class="dropdown-item text-center card" >
             <div class="spinner-border" role="status">
   <span class="sr-only">Loading...</span>
 </div>
