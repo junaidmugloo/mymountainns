@@ -288,6 +288,62 @@
 
         <!-- Search Area Start -->
         <div class="search-wrap">
+            <div class="bg-light">
+  <div class="container py-5">
+    <div class="search-container">
+      <div class="search-wrapper">
+        <div class="search-header">
+          <div class="search-input-group">
+            <input type="text" class="search-input form-control" placeholder="Search products, categories, brands...">
+            <i class="fas fa-search search-icon"></i>
+          </div>
+
+          <div class="quick-filters">
+            <span class="quick-filter">Price: Low to High</span>
+            <span class="quick-filter">Best Rated</span>
+            <span class="quick-filter">New Arrivals</span>
+          </div>
+        </div>
+
+        <div class="category-filters">
+          <div class="filter-chip active">
+            <i class="fas fa-globe"></i> All
+          </div>
+          <div class="filter-chip">
+            <i class="fas fa-laptop"></i> Electronics
+          </div>
+          <div class="filter-chip">
+            <i class="fas fa-tshirt"></i> Fashion
+          </div>
+          <div class="filter-chip">
+            <i class="fas fa-home"></i> Home & Living
+          </div>
+          <div class="filter-chip">
+            <i class="fas fa-dumbbell"></i> Sports
+          </div>
+          <div class="filter-chip">
+            <i class="fas fa-book"></i> Books
+          </div>
+          <div class="filter-chip">
+            <i class="fas fa-gamepad"></i> Gaming
+          </div>
+
+          <div class="suggestions">
+            <div class="suggestion-item">
+              Wireless Headphones <span class="suggestion-category">in Electronics</span>
+            </div>
+            <div class="suggestion-item">
+              Running Shoes <span class="suggestion-category">in Sports</span>
+            </div>
+            <div class="suggestion-item">
+              Smart Watch <span class="suggestion-category">in Electronics</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
             <div class="search-inner">
                 <i class="fas fa-times search-close" id="search-close"></i>
                 <div class="search-cell">
