@@ -286,101 +286,24 @@
         <!-- Header Section Start -->
        @include("nav")
 
-       <style>.search-wrap {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  backdrop-filter: blur(10px);
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-  transition: all 0.3s ease-in-out;
-}
-
-.search-inner {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
-  padding: 30px;
-  width: 90%;
-  max-width: 600px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-}
-
-.search-close {
-  background: transparent;
-  border: none;
-  font-size: 28px;
-  color: white;
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  cursor: pointer;
-}
-
-.search-field-holder {
-  width: 100%;
-}
-
-.main-search-input {
-  width: 100%;
-  padding: 16px 20px;
-  border: none;
-  border-radius: 12px;
-  font-size: 18px;
-  background: rgba(255, 255, 255, 0.9);
-  outline: none;
-  transition: 0.2s;
-}
-
-.main-search-input:focus {
-  background: #fff;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-}
-
-#search-results {
-  margin-top: 20px;
-  list-style: none;
-  padding: 0;
-}
-
-#search-results li {
-  padding: 12px 15px;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.85);
-  margin-bottom: 10px;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-#search-results li:hover {
-  background: rgba(255, 255, 255, 1);
-}
-</style>
         <!-- Search Area Start -->
-       <div class="search-wrap">
-  <div class="search-inner">
-    <button class="search-close" id="search-close">&times;</button>
-    <div class="search-cell">
-      <form method="post" action="/search" role="search">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
-        
-        <div class="search-field-holder">
-          <input id="search-input" 
-                 type="search" 
-                 class="main-search-input" 
-                 placeholder="🔍 Type to search...">
+        <div class="search-wrap">
+            <div class="search-inner">
+                <i class="fas fa-times search-close" id="search-close"></i>
+                <div class="search-cell">
+                    <form method="post"  action="/search" role="search">
+                         <meta name="csrf-token" content="{{ csrf_token() }}">
+                 
+                        <div class="search-field-holder">
+                            <input id="search-input" type="search" class="main-search-input" placeholder="Search...">
+                        </div>
+                    </form>
+
+                    <ul id="search-results">
+                    </ul>
+                </div>
+            </div>
         </div>
-      </form>
-
-      <ul id="search-results"></ul>
-    </div>
-  </div>
-</div>
-
 
         <!-- Hero section start -->
         <section class="hero-section">
