@@ -1826,7 +1826,7 @@ $(document).ready(function() {
         }
 
         $('#search-results').html(`
-           <li class="dropdown-item text-center card" >
+           <li class="dropdown-item text-center" >
             <div class="spinner-border" role="status">
   <span class="sr-only">Loading...</span>
 </div>
@@ -1842,7 +1842,7 @@ $(document).ready(function() {
             success: function(data) {
                 var resultsHtml = data.map(function(item) {
                     return `
-                        <div class="result-item">
+                        <div class="result-item result-item card mt-1 mb-1 px-2">
                             <li onclick="$('#search-input').val('${item.name}')" class="dropdown-item" style="cursor:pointer;">${item.name}</li>
                             
                         </div>
