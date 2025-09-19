@@ -3,214 +3,186 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kashmir Packages - My Mountains</title>
-
-  <!-- Boxicons + Bootstrap -->
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
- <link rel="shortcut icon" href="{{ asset("mymountains/assets/img/favicon.svg") }}">
-        <!--<< Bootstrap min.css >>-->
-        <link rel="stylesheet" href="{{ asset("mymountains/assets/css/bootstrap.min.css") }}">
-        <!--<< All Min Css >>-->
-        <link rel="stylesheet" href="{{ asset("mymountains/assets/css/all.min.css") }}">
-        <!--<< Animate.css >>-->
-        {{-- <link rel="stylesheet" href="{{ asset("mymountains/assets/css/animate.css") }}"> --}}
-        <!--<< Magnific Popup.css >>-->
-        <link rel="stylesheet" href="{{ asset("mymountains/assets/css/magnific-popup.css") }}">
-        <!--<< MeanMenu.css >>-->
-        <link rel="stylesheet" href="{{ asset("mymountains/assets/css/meanmenu.css") }}">
-        <!--<< Swiper Bundle.css >>-->
-        <link rel="stylesheet" href="{{ asset("mymountains/assets/css/swiper-bundle.min.css") }}">
-        <!--<< Datepickerboot.css >>-->
-        <link rel="stylesheet" href="{{ asset("mymountains/assets/css/datepickerboot.css") }}">
-        <!--<< Nice Select.css >>-->
-        <link rel="stylesheet" href="{{ asset("mymountains/assets/css/nice-select.css") }}">
-        <!--<< Color.css >>-->
-        <link rel="stylesheet" href="{{ asset("mymountains/assets/css/color.css") }}">
-        <!--<< Main.css >>-->
-        <link rel="stylesheet" href="{{ asset("mymountains/assets/css/main.css") }}">
-        
+  <title>Kashmir Packages</title>
+  <!-- Bootstrap CSS -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+ 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  
   <style>
-    body {
-      font-family: "Poppins", sans-serif;
-      background: #f8f9fb;
-      color: #333;
+    .card-custom {
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
-    h2 {
-      font-weight: 700;
-      color: #222;
-    }
-
-    /* Package Card */
-    .package-card {
-      transition: all 0.3s ease-in-out;
-    }
-    .package-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    }
-
-    .destination-card-items {
-      border-radius: 15px;
-      overflow: hidden;
-      background: #fff;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-    }
-
-    .destination-image img {
-      width: 100%;
-      height: 220px;
+    .card-img-custom {
+      height: 200px;
       object-fit: cover;
-      transition: 0.3s;
-    }
-    .destination-image img:hover {
-      transform: scale(1.05);
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
     }
 
-    .heart-icon {
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      background: rgba(255,255,255,0.9);
-      padding: 6px 9px;
-      border-radius: 50%;
-      color: #f37002;
-      cursor: pointer;
+    .skeleton {
+      background-color: #ddd;
+      animation: shimmer 1.5s infinite linear;
+      background: linear-gradient(90deg, #ddd 25%, #eee 50%, #ddd 75%);
+      background-size: 200% 100%;
     }
 
-    .destination-content {
-      padding: 15px;
-    }
-
-    .destination-content h5 a {
-      text-decoration: none;
-      color: #222;
-      font-weight: 600;
-    }
-
-    .destination-content h5 a:hover {
-      color: #f37002;
-    }
-
-    .meta, .info {
-      padding: 0;
-      margin: 0;
-      list-style: none;
-      font-size: 14px;
-      color: #666;
-      display: flex;
-      gap: 15px;
+    .skeleton.text {
+      height: 20px;
       margin-bottom: 10px;
     }
 
-    .meta li i, .info li i {
-      color: #f37002;
-      margin-right: 5px;
+    .skeleton.small-text {
+      height: 15px;
+      margin-bottom: 5px;
+      width: 60%;
     }
 
-    .price {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    .skeleton-btn {
+      width: 100%;
+      height: 40px;
+      background-color: #ddd;
+      border-radius: 5px;
+      margin-top: 10px;
     }
 
-    .price h6 {
-      margin: 0;
-      color: #048fec;
-      font-weight: 700;
+    .btn-warning {
+      background: var(--primary-color, #f37002) !important;
+      color: #fff !important;
     }
 
-    .theme-btn {
-      background: linear-gradient(93deg,#26e2ff,#048fec);
-      color: #fff;
-      border: none;
-      padding: 8px 16px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-size: 14px;
-      transition: 0.3s;
+    .btn-warning:hover {
+      background: var(--primary-color, #f36e02bb) !important;
+      color: #fff !important;
     }
 
-    .theme-btn:hover {
-      opacity: 0.9;
+    .btn-outline-warning:hover{
+      background: var(--primary-color, #f37002) !important;
+      color: #fff !important;
     }
 
-    /* Responsive */
-    @media (max-width: 768px) {
-      .destination-image img {
-        height: 180px;
+    .btn-outline-warning{
+      border: solid var(--primary-color, #f37002)  2px  !important;
+      color: #000000 !important;
+    }
+
+    @keyframes shimmer {
+      0% {
+        background-position: -200px 0;
+      }
+      100% {
+        background-position: 200px 0;
       }
     }
+
+    @media (max-width: 768px) {
+           
+         
+           .fxs{
+               font-size: 0.8rem;
+           }
+       }
+   
   </style>
 </head>
 <body>
 @include('nav')
+<div style="margin-top: 22vh;">
 
-<div style="margin-top: 18vh;">
   @include('pop')
 
-  <div class="container my-5">
-    @if($packages->count()==0)
-      <h4 class="text-center mb-4">No data found</h4>
-      <script>
-        setTimeout(() => { window.location.href="/"; }, 2000);
-      </script>
-    @else
-      <h2 class="text-center mb-5">Kashmir Travel Packages</h2>
-    @endif
-
-    <div class="row g-4" id="packageCards">
-      @foreach ($packages as $p)
-      <div class="col-md-6 col-lg-4 package-card" data-title="{{ $p->title }}">
-        <div class="destination-card-items position-relative">
-          <div class="destination-image position-relative">
-            <img src="package_images/{{ $p->image }}" alt="Package Image">
-            <div class="heart-icon">
-              <i class="bx bx-heart"></i>
-            </div>
-          </div>
-          <div class="destination-content">
-            <h3 class="text-start text-light rounded-pill px-3 py-1"
-                style="background:linear-gradient(93deg,#26e2ff,#048fec);font-size:10px;font-weight:600;display:inline-block;">
-              {{ $p->tag_line }}
-            </h3>
-
-            <ul class="meta">
-              <li><i class="bx bx-map"></i> Kashmir</li>
-              <li class="rating"><i class="bx bxs-star"></i> 4.7</li>
-            </ul>
-
-            <h5>
-              <a href="{{ url('/details/'.$p->id) }}">
-                {{ $p->name }}
-              </a>
-            </h5>
-
-            <ul class="info">
-              <li><i class="bx bx-time-five"></i> {{ $p->day }} days / {{ $p->night }} nights</li>
-              <li><i class="bx bx-group"></i> 50+</li>
-            </ul>
-
-            <div class="price mt-3">
-              <h6>₹{{ $p->discount }} <span style="font-size:12px;font-weight:400;">/Per person</span></h6>
-              <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#exampleModal" class="theme-btn">
-                Book Now <i class="bx bx-right-arrow-alt"></i>
-              </a>
-            </div>
-          </div>
+<div class="container my-5">
+  @if($packages->count()==0)
+  <h4 class="text-center mb-4">No data found</h2>
+  <script>
+  setTimeout(() => {
+    window.location.href="/";
+  }, 2000);
+  </script>
+  @else
+  <h2 class="text-center mb-4">Kashmir Travel Packages</h2>
+  @endif
+  <!-- Search Input -->
+ 
+  <div class="row justify-content-start" id="packageCards">
+    @foreach ($packages as $p)
+    <div class="col-md-6 col-lg-4 mt-3 mb-3 package-card" data-title="{{ $p->title }}">
+      <div class="card card-custom" id="card-{{ $p->id }}">
+        <!-- Skeleton Loader -->
+        <div class="skeleton card-img-custom"></div>
+        <div class="card-body">
+          <div class="skeleton text"></div>
+          <div class="skeleton small-text"></div>
+          <div class="skeleton text"></div>
+          <div class="skeleton-btn"></div>
         </div>
       </div>
-      @endforeach
     </div>
+    @endforeach
   </div>
+</div>
 </div>
 
 @include('footer')
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-<!-- Scripts -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Simulate content loading with a 2s delay
+    setTimeout(function() {
+    
+      @foreach ($packages as $p)
+      // Replacing Skeleton Loader with actual content
+      document.getElementById('card-{{ $p->id }}').innerHTML = `
+       <a href="/details/{{$p->id}}" style="text-decoration:none; color:black;">
+        <img src="package_images/{{ $p->image }}" alt="Trip Image" class="card-img-top card-img-custom">
+        <div class="card-body">
+          <h5 class="card-title">{{ $p->name }}</h5>
+          <div class="d-flex justify-content-between mb-2">
+            <span>({{ $p->day }} Days & {{$p->night}} Nights)</span>
+            <span class="text-success mr-2 text-end">★ 4.6</span>
+            
+          </div>
+
+          <p class="card-text p-0 mb-2 text-start rounded" style="font-size: 12px; background-color: #fffbf0; ">
+                <span class="fw-bold">
+
+                  @php
+                  $string = $p->destination;
+                  $parts = explode(',', $string);
+                  
+                  $len=0;
+                  foreach ($parts as $part) {
+                    $len+=1; // Add the length of each part to the total
+                  }
+                  
+                 
+                    @endphp
+                              
+                              <span class="fw-bold text-danger" onclick="window.location.href='/details/{{$p->id}}'" style="cursor: pointer;">&nbsp;&nbsp;&nbsp;+{{ $len}}</span> 
+                           
+              </p>
+          <p class="text-warning h5 mb-1">INR {{ $p->discount }} <del class="text-muted h6">INR {{ $p->price }}</del></p>
+          <p class="text-success small">SAVE INR {{ $p->price - $p->discount }}</p>
+      </a>
+          <div class="d-flex justify-content-between">
+           <a href="tel:+91-9906786356" class="btn btn-outline-warning  text-uppercase font-weight-bold"><i class="bx bx-phone"></i></a>
+           &nbsp; &nbsp;
+           <a href="/details/{{$p->id}}" class="btn btn-warning  text-uppercase font-weight-bold" style="flex:auto;">View Details</a>
+          </div>
+        </div>
+      `;
+      @endforeach
+    }, 2000); // Simulate a 2s delay for loading
+  });
+
+  // Search Functionality
   $(document).ready(function() {
     $('#searchInput').on('keyup', function() {
       var value = $(this).val().toLowerCase();
@@ -220,5 +192,6 @@
     });
   });
 </script>
+
 </body>
 </html>
