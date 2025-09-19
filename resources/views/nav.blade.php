@@ -206,7 +206,7 @@
           <meta name="csrf-token" content="{{ csrf_token() }}">
           @csrf
           <div class="input-group">
-            <input id="search-input" type="search" class="form-control" placeholder="Search..." />
+            <input id="search-input" type="search" name="slug" class="form-control" placeholder="Search..." />
             <button class="btn btn-primary" type="submit">
               <i class="fas fa-search"></i>
             </button>
