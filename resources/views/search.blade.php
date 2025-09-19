@@ -133,56 +133,80 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
     // Simulate content loading with a 2s delay
     setTimeout(function() {
-    
-      @foreach ($packages as $p)
-      // Replacing Skeleton Loader with actual content
-      document.getElementById('card-{{ $p->id }}').innerHTML = `
-       <a href="/details/{{$p->id}}" style="text-decoration:none; color:black;">
-        <img src="package_images/{{ $p->image }}" alt="Trip Image" class="card-img-top card-img-custom">
-        <div class="card-body">
-          <h5 class="card-title">{{ $p->name }}</h5>
-          <div class="d-flex justify-content-between mb-2">
-            <span>({{ $p->day }} Days & {{$p->night}} Nights)</span>
-            <span class="text-success mr-2 text-end">★ 4.6</span>
-            
-          </div>
-
-          <p class="card-text p-0 mb-2 text-start rounded" style="font-size: 12px; background-color: #fffbf0; ">
-                <span class="fw-bold">
-
-                  
-                              {{ $firstPart}}</span> <b>|</b>
-                              <span class="fw-bold">{{ $secondPart}} </span>
-                              <span class="fw-bold text-danger" onclick="window.location.href='/details/{{$p->id}}'" style="cursor: pointer;">&nbsp;&nbsp;&nbsp;+{{ $len}}</span> 
-                           
-              </p>
-          <p class="text-warning h5 mb-1">INR {{ $p->discount }} <del class="text-muted h6">INR {{ $p->price }}</del></p>
-          <p class="text-success small">SAVE INR {{ $p->price - $p->discount }}</p>
-      </a>
-          <div class="d-flex justify-content-between">
-           <a href="tel:+91-9906786356" class="btn btn-outline-warning  text-uppercase font-weight-bold"><i class="bx bx-phone"></i></a>
-           &nbsp; &nbsp;
-           <a href="/details/{{$p->id}}" class="btn btn-warning  text-uppercase font-weight-bold" style="flex:auto;">View Details</a>
-          </div>
-        </div>
-      `;
-      @endforeach
+        @foreach ($packages as $p)
+        // Replacing Skeleton Loader with actual content
+        const cardEl = document.getElementById('card-{{ $p->id }}');
+        if(cardEl){
+            cardEl.innerHTML = `
+                <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                    <div class="destination-card-items mt-0 package-card" data-title="{{ strtolower($p->name) }}">
+                        <div class="destination-image">
+                            <img src="{{ asset('package_images/'.$p->image) }}" alt="img">
+                            <div class="heart-icon">
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+                        </div>
+                        <div class="destination-content">
+                            <h3 class="text-start text-light rounded-pill"
+                                style="background:linear-gradient(93deg,#26e2ff,#048fec);font-size:9px;cursor:text;font-weight:900; width:fit-content;padding:0 10px; height:18px;line-height:18px;">
+                                {{ $p->tag_line }}
+                            </h3>
+                            <ul class="meta">
+                                <li>
+                                    <i class="fa-thin fa-location-dot"></i>
+                                </li>
+                                <li class="rating">
+                                    <div class="star">
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <p>4.7</p>
+                                </li>
+                            </ul>
+                            <h5>
+                                <a href="{{ url('/details/'.$p->id) }}">
+                                    {{ $p->name }}
+                                </a>
+                            </h5>
+                            <ul class="info">
+                                <li>
+                                    <i class="fa-regular fa-clock"></i>
+                                    {{ $p->day }} days & {{ $p->night }} nights
+                                </li>
+                                <li>
+                                    <i class="fa-thin fa-users"></i>
+                                    50+
+                                </li>
+                            </ul>
+                            <div class="price">
+                                <h6>₹{{ $p->discount }}<span>/Per person</span></h6>
+                                <a href="javascript:void(0)" data-bs-toggle="modal"
+                                   data-bs-target="#exampleModal" class="theme-btn style-2">
+                                    Book Now<i class="fa-sharp fa-regular fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+        @endforeach
     }, 2000); // Simulate a 2s delay for loading
-  });
+});
 
-  // Search Functionality
-  $(document).ready(function() {
+// Search Functionality
+$(document).ready(function() {
     $('#searchInput').on('keyup', function() {
-      var value = $(this).val().toLowerCase();
-      $('.package-card').filter(function() {
-        $(this).toggle($(this).attr('data-title').toLowerCase().indexOf(value) > -1);
-      });
+        var value = $(this).val().toLowerCase();
+        $('.package-card').filter(function() {
+            $(this).toggle($(this).data('title').indexOf(value) > -1);
+        });
     });
-  });
+});
 </script>
+
 
 </body>
 </html>
