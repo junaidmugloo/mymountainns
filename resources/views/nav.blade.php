@@ -189,7 +189,41 @@
 </header>
 
 
+ <!-- Search Modal -->
+<div id="searchModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content rounded-2xl shadow-lg">
+      <!-- Modal Header -->
+      <div class="modal-header border-0">
+        <h5 class="modal-title">Search</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
 
+      <!-- Modal Body -->
+      <div class="modal-body">
+        <!-- Search Form -->
+        <form method="post" action="/search" role="search" class="mb-3">
+          <meta name="csrf-token" content="{{ csrf_token() }}">
+          @csrf
+          <div class="input-group">
+            <input id="search-input" type="search" class="form-control" placeholder="Search..." />
+            <button class="btn btn-primary" type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </form>
+
+        <!-- Search Results -->
+        <ul id="search-results" class="list-group">
+          <!-- Example Result -->
+          <!-- <li class="list-group-item">Result 1</li> -->
+          <!-- <li class="list-group-item">Result 2</li> -->
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{{-- end modal --}}
 
 
  <!-- model 5 -->
@@ -486,4 +520,59 @@
                 });
             });
         });
+    </script>
+
+{{-- search script --}}
+  <script>
+
+$(document).ready(function() {
+    // Set up CSRF token for all AJAX requests
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+
+    $('#search-input').on('input', function() {
+        var query = $(this).val();
+
+        if (query.length < 3) {
+            $('#search-results').empty();
+            return;
+        }
+
+        $('#search-results').html(`
+           <li class="dropdown-item text-center" >
+            <div class="spinner-border" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+            </li>
+           
+          
+        `);
+
+        $.ajax({
+            url: '/searchfl',
+            method: 'POST',
+            data: { slug: query },
+            success: function(data) {
+                var resultsHtml = data.map(function(item) {
+                    return `
+                        <div class="result-item result-item card mt-1 mb-1 px-2">
+                            <li onclick="$('#search-input').val('${item.name}')" class="dropdown-item" style="cursor:pointer;">${item.name}</li>
+                            
+                        </div>
+                    `;
+                }).join('');
+                
+                $('#search-results').html(resultsHtml);
+            },
+            error: function(xhr) {
+                console.error('Error fetching data:', xhr);
+            }
+        });
+    });
+});
+
+   
     </script>

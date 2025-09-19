@@ -288,41 +288,7 @@
 
 
        {{-- search  modal --}} 
-       <!-- Search Modal -->
-<div id="searchModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content rounded-2xl shadow-lg">
-      <!-- Modal Header -->
-      <div class="modal-header border-0">
-        <h5 class="modal-title">Search</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-
-      <!-- Modal Body -->
-      <div class="modal-body">
-        <!-- Search Form -->
-        <form method="post" action="/search" role="search" class="mb-3">
-          <meta name="csrf-token" content="{{ csrf_token() }}">
-          @csrf
-          <div class="input-group">
-            <input id="search-input" type="search" class="form-control" placeholder="Search..." />
-            <button class="btn btn-primary" type="submit">
-              <i class="fas fa-search"></i>
-            </button>
-          </div>
-        </form>
-
-        <!-- Search Results -->
-        <ul id="search-results" class="list-group">
-          <!-- Example Result -->
-          <!-- <li class="list-group-item">Result 1</li> -->
-          <!-- <li class="list-group-item">Result 2</li> -->
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-{{-- end modal --}}
+      
 
         <!-- Search Area Start -->
         <div class="search-wrap">
