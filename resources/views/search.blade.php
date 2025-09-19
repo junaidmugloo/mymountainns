@@ -124,13 +124,13 @@
   }, 2000);
   </script>
   @else
-  <h2 class="text-center mb-4">Kashmir Travel Packages</h2>
+  <h2 class="text-center ">Kashmir Travel Packages</h2>
   @endif
   <!-- Search Input -->
  
   <div class="row justify-content-start" id="packageCards">
     @foreach ($packages as $p)
-    <div class="col-md-6 col-lg-4 mt-3 mb-3 package-card" data-title="{{ $p->title }}">
+    <div class="col-md-6 col-lg-4  mb-3 package-card" data-title="{{ $p->title }}">
       <div class="card card-custom" id="card-{{ $p->id }}">
         <!-- Skeleton Loader -->
         <div class="skeleton card-img-custom"></div>
@@ -152,7 +152,30 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+  <script src="{{ asset("mymountains/assets/js/jquery-3.7.1.min.js") }}"></script>
+        <!--<< Viewport Js >>-->
+        <script src="{{ asset("mymountains/assets/js/viewport.jquery.js") }}"></script>
+        <!--<< Bootstrap Js >>-->
+        <script src="{{ asset("mymountains/assets/js/bootstrap.bundle.min.js") }}"></script>
+        <!--<< nice-selec Js >>-->
+        <script src="{{ asset("mymountains/assets/js/jquery.nice-select.min.js") }}"></script>
+        <!--<< Waypoints Js >>-->
+        <script src="{{ asset("mymountains/assets/js/jquery.waypoints.js") }}"></script>
+        <!--<< Counterup Js >>-->
+        <script src="{{ asset("mymountains/assets/js/jquery.counterup.min.js") }}"></script>
+         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <!--<< Swiper Slider Js >>-->
+        {{-- <script src="{{ asset("mymountains/assets/js/swiper-bundle.min.js") }}"></script> --}}
+        <!--<< MeanMenu Js >>-->
+        <script src="{{ asset("mymountains/assets/js/jquery.meanmenu.min.js") }}"></script>
+         <!--<< Datepicker Js >>-->
+         <script src="{{ asset("mymountains/assets/js/bootstrap-datepicker.js") }}"></script>
+        <!--<< Magnific Popup Js >>-->
+        <script src="{{ asset("mymountains/assets/js/jquery.magnific-popup.min.js") }}"></script>
+        <!--<< Wow Animation Js >>-->
+        <script src="{{ asset("mymountains/assets/js/wow.min.js") }}"></script>
+        <!--<< Main.js >>-->
+        <script src="{{ asset("mymountains/assets/js/main.js") }}"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     // Simulate content loading with a 2s delay
