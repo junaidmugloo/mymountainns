@@ -286,123 +286,99 @@
         <!-- Header Section Start -->
        @include("nav")
 
-       <style>
-        .search-wrap {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(15, 23, 42, 0.8); /* dark overlay */
-    display: none;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-    backdrop-filter: blur(8px);
-    transition: opacity 0.3s ease;
+       <style>.search-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: all 0.3s ease-in-out;
 }
 
 .search-inner {
-    background: #fff;
-    padding: 25px;
-    border-radius: 16px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-    width: 100%;
-    max-width: 600px;
-    position: relative;
-}
-
-.search-field-holder {
-    position: relative;
-    width: 100%;
-}
-
-.main-search-input {
-    width: 100%;
-    padding: 14px 45px 14px 20px;
-    font-size: 16px;
-    border: 2px solid #e5e7eb;
-    border-radius: 12px;
-    outline: none;
-    transition: all 0.3s ease;
-}
-
-.main-search-input:focus {
-    border-color: #2563eb;
-    box-shadow: 0 0 0 3px rgba(37,99,235,0.2);
-}
-
-.search-icon {
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #6b7280;
-    font-size: 18px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 30px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
 }
 
 .search-close {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 20px;
-    color: #9ca3af;
-    cursor: pointer;
-    transition: color 0.2s;
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  color: white;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  cursor: pointer;
 }
 
-.search-close:hover {
-    color: #ef4444;
+.search-field-holder {
+  width: 100%;
 }
 
-.results-list {
-    list-style: none;
-    margin-top: 12px;
-    padding: 0;
-    max-height: 300px;
-    overflow-y: auto;
-    border: 1px solid #e5e7eb;
-    border-radius: 12px;
-    background: #fff;
-    display: none;
+.main-search-input {
+  width: 100%;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  background: rgba(255, 255, 255, 0.9);
+  outline: none;
+  transition: 0.2s;
 }
 
-.results-list li {
-    padding: 12px 16px;
-    cursor: pointer;
-    transition: background 0.2s ease;
-    border-bottom: 1px solid #f3f4f6;
+.main-search-input:focus {
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
-.results-list li:hover {
-    background: #f9fafb;
+#search-results {
+  margin-top: 20px;
+  list-style: none;
+  padding: 0;
 }
 
-.results-list li:last-child {
-    border-bottom: none;
+#search-results li {
+  padding: 12px 15px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.85);
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
 }
 
-       </style>
-
+#search-results li:hover {
+  background: rgba(255, 255, 255, 1);
+}
+</style>
         <!-- Search Area Start -->
        <div class="search-wrap">
-    <div class="search-inner">
-        <i class="fas fa-times search-close" id="search-close"></i>
-        <div class="search-cell">
-            <form method="post" action="/search" role="search">
-                <meta name="csrf-token" content="{{ csrf_token() }}">
-                <div class="search-field-holder">
-                    <input id="search-input" type="search" class="main-search-input" placeholder="Search anything...">
-                    <i class="fas fa-search search-icon"></i>
-                </div>
-            </form>
-
-            <!-- Results Dropdown -->
-            <ul id="search-results" class="results-list">
-                <!-- Dynamically append results here -->
-            </ul>
+  <div class="search-inner">
+    <button class="search-close" id="search-close">&times;</button>
+    <div class="search-cell">
+      <form method="post" action="/search" role="search">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+        
+        <div class="search-field-holder">
+          <input id="search-input" 
+                 type="search" 
+                 class="main-search-input" 
+                 placeholder="🔍 Type to search...">
         </div>
+      </form>
+
+      <ul id="search-results"></ul>
     </div>
+  </div>
 </div>
 
 
