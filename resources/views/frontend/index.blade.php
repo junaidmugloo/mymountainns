@@ -286,64 +286,46 @@
         <!-- Header Section Start -->
        @include("nav")
 
-        <!-- Search Area Start -->
-        <div class="search-wrap">
-            <div class="bg-light">
-  <div class="container py-5">
-    <div class="search-container">
-      <div class="search-wrapper">
-        <div class="search-header">
-          <div class="search-input-group">
-            <input type="text" class="search-input form-control" placeholder="Search products, categories, brands...">
-            <i class="fas fa-search search-icon"></i>
-          </div>
 
-          <div class="quick-filters">
-            <span class="quick-filter">Price: Low to High</span>
-            <span class="quick-filter">Best Rated</span>
-            <span class="quick-filter">New Arrivals</span>
-          </div>
-        </div>
+       {{-- search  modal --}} 
+       <!-- Search Modal -->
+<div id="searchModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content rounded-2xl shadow-lg">
+      <!-- Modal Header -->
+      <div class="modal-header border-0">
+        <h5 class="modal-title">Search</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
 
-        <div class="category-filters">
-          <div class="filter-chip active">
-            <i class="fas fa-globe"></i> All
+      <!-- Modal Body -->
+      <div class="modal-body">
+        <!-- Search Form -->
+        <form method="post" action="/search" role="search" class="mb-3">
+          <meta name="csrf-token" content="{{ csrf_token() }}">
+          <div class="input-group">
+            <input id="search-input" type="search" class="form-control" placeholder="Search..." />
+            <button class="btn btn-primary" type="submit">
+              <i class="fas fa-search"></i>
+            </button>
           </div>
-          <div class="filter-chip">
-            <i class="fas fa-laptop"></i> Electronics
-          </div>
-          <div class="filter-chip">
-            <i class="fas fa-tshirt"></i> Fashion
-          </div>
-          <div class="filter-chip">
-            <i class="fas fa-home"></i> Home & Living
-          </div>
-          <div class="filter-chip">
-            <i class="fas fa-dumbbell"></i> Sports
-          </div>
-          <div class="filter-chip">
-            <i class="fas fa-book"></i> Books
-          </div>
-          <div class="filter-chip">
-            <i class="fas fa-gamepad"></i> Gaming
-          </div>
+        </form>
 
-          <div class="suggestions">
-            <div class="suggestion-item">
-              Wireless Headphones <span class="suggestion-category">in Electronics</span>
-            </div>
-            <div class="suggestion-item">
-              Running Shoes <span class="suggestion-category">in Sports</span>
-            </div>
-            <div class="suggestion-item">
-              Smart Watch <span class="suggestion-category">in Electronics</span>
-            </div>
-          </div>
-        </div>
+        <!-- Search Results -->
+        <ul id="search-results" class="list-group">
+          <!-- Example Result -->
+          <!-- <li class="list-group-item">Result 1</li> -->
+          <!-- <li class="list-group-item">Result 2</li> -->
+        </ul>
       </div>
     </div>
   </div>
 </div>
+{{-- end modal --}}
+
+        <!-- Search Area Start -->
+        <div class="search-wrap">
+            
             <div class="search-inner">
                 <i class="fas fa-times search-close" id="search-close"></i>
                 <div class="search-cell">
