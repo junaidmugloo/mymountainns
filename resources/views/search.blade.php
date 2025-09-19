@@ -111,11 +111,11 @@
 </head>
 <body>
 @include('nav')
-<div style="margin-top: 22vh;">
+<div ">
 
   {{-- @include('pop') --}}
 
-<div class="container my-5">
+<div class="container my-1">
   @if($packages->count()==0)
   <h4 class="text-center mb-4">No data found</h2>
   <script>
@@ -124,7 +124,7 @@
   }, 2000);
   </script>
   @else
-  <h2 class="text-center ">Kashmir Travel Packages</h2>
+  {{-- <h2 class="text-center ">Kashmir Travel Packages</h2> --}}
   @endif
   <!-- Search Input -->
  
