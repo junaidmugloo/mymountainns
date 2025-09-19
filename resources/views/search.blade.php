@@ -35,7 +35,7 @@
 </head>
 <body>
 @include('nav')
-<section class="popular-destination-section section-padding">
+<section class="popular-destination-section pt-4 pb-4">
         <div class="container">
             <div class="row g-4">
                @foreach ($packages as $p)
@@ -84,9 +84,8 @@
                         </ul>
                         <div class="price">
                             <h6>₹{{$p->discount}}<span>/Per person</span></h6>
-                            <a href="javascript:void(0)" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal" class="theme-btn style-2">
-                                Book Now<i class="fa-sharp fa-regular fa-arrow-right"></i>
+                            <a href="tel:+91-70518 93547" class="theme-btn style-2">
+                                Call Now<i class="fa-sharp fa-regular fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
