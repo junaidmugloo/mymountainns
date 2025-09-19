@@ -303,6 +303,7 @@
         <!-- Search Form -->
         <form method="post" action="/search" role="search" class="mb-3">
           <meta name="csrf-token" content="{{ csrf_token() }}">
+          @csrf
           <div class="input-group">
             <input id="search-input" type="search" class="form-control" placeholder="Search..." />
             <button class="btn btn-primary" type="submit">
