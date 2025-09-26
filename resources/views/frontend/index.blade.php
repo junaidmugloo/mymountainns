@@ -833,7 +833,7 @@ e.preventDefault();
                                 <div class="category-image">
                                     <img loading="lazy" src="{{ asset('/category_images/'.$c->image) }}" alt="Category {{$c->name}}" style="object-fit: cover;">
                                     <div class="category-content">
-                                        <h5>
+                                        <h5 class="text-white">
                                             {{$c->name}}
                                         </h5>
                                         
