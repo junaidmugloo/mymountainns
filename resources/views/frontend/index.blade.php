@@ -1981,7 +1981,7 @@ Sameer Arora</h4>
       </div>
   </div>
 </div>
- <script src="https://ddosnotification.github.io/snow-theme/snow.js"></script>
+ {{-- <script src="https://ddosnotification.github.io/snow-theme/snow.js"></script> --}}
  <script>
     // Default configuration
 SnowTheme.config = {
