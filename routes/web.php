@@ -109,6 +109,11 @@ route::get('/booking', [Booking::class, 'index']);
 // booking end //
 
 route::get('/explore', [Booking::class, 'booking_filter']);
+
+// bizz
+route::get('/bizz', function () {
+    return view('bizz');
+});
 // route::get('/exp2', [Booking::class, 'booking_filter2']);
 
 
