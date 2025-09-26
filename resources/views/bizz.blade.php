@@ -444,7 +444,7 @@
 
     <!-- MyBiz Modal -->
     <div id="mybizModal" class="mybiz-modal">
-        <div class="mybiz-modal-backdrop" onclick="hideModal()"></div>
+        <div class="mybiz-modal-backdrop"  onclick="hideModal()"></div>
         
         <div class="mybiz-modal-dialog">
             <button class="mybiz-close-btn" onclick="hideModal()" aria-label="Close">
@@ -484,10 +484,7 @@
                 
 
                 <!-- Login Section -->
-                <div class="mybiz-section-title">
-                    <h2>LOGIN/SIGN UP</h2>
-                </div>
-
+              
                 <h5 class="mx-3" style="font-weight:300;">Save up to <x style="color:#20c997;">50% OFF</x></h5>
           <h6 class="mx-3 mb-4" style="font-size:0.8rem;">We'll be needing some of your basic details to help you better with your trip</h6>
           <form action="" id="tform" style=" justify-content: center;
@@ -528,7 +525,7 @@
               </div>
               <div class="col-12">
                 <div class="form-group mb-3">
-                  <button  style="background:#20c997;" class="btn text-light d-block w-100">Connect with and
+                  <button  style="background: linear-gradient(93deg, #26e2ff, #048fec);" class="btn text-light d-block w-100">Connect with and
                     Experts</button>
                 </div>
               </div>
