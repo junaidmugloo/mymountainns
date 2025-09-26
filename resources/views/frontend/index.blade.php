@@ -826,19 +826,21 @@ e.preventDefault();
                 <div class="swiper category-slider">
                     <div class="swiper-wrapper">
                         @foreach ($category as $c)
+                         <a  href="{{ url("/kashmir") }}">
                         <div class="swiper-slide">
                             <div class="destination-category-item">
                                 <div class="category-image">
                                     <img loading="lazy" src="{{ asset('/category_images/'.$c->image) }}" alt="Category {{$c->name}}" style="object-fit: cover;">
                                     <div class="category-content">
                                         <h5>
-                                            <a href="{{ url("/kashmir") }}">{{$c->name}}</a>
+                                            {{$c->name}}
                                         </h5>
-                                         <a href="{{ url("/kashmir") }}">view</a>
+                                        
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        </a>
                         @endforeach
                     </div>
                 </div>
