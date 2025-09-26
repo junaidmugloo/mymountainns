@@ -144,7 +144,7 @@
 
         .mybiz-content {
             position: relative;
-            padding: 2rem;
+            padding: 1rem;
             padding-bottom: 1.5rem;
         }
 
@@ -475,15 +475,7 @@
             </div>
 
             <div class="mybiz-content">
-                <!-- Logo -->
-                
-
-                <!-- Main Headline -->
-                <
-                <!-- Feature Points -->
-                
-
-                <!-- Login Section -->
+               
               
                 <h5 class="mx-3" style="font-weight:300;">Save up to <x style="color:#20c997;">50% OFF</x></h5>
           <h6 class="mx-3 mb-4" style="font-size:0.8rem;">We'll be needing some of your basic details to help you better with your trip</h6>
