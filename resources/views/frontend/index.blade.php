@@ -834,7 +834,7 @@ e.preventDefault();
                                         <h5>
                                             <a href="{{ url("/kashmir") }}">{{$c->name}}</a>
                                         </h5>
-                                         <a class="btn theme-btn " href="{{ url("/kashmir") }}">view</a>
+                                         <a href="{{ url("/kashmir") }}">view</a>
                                     </div>
                                 </div>
                             </div>
