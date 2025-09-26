@@ -5,12 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jammu And Kashmir Holiday Packages</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+     <link rel="shortcut icon" href="{{ asset("mymountains/assets/img/favicon.svg") }}">
+        <!--<< Bootstrap min.css >>-->
+        <link rel="stylesheet" href="{{ asset("mymountains/assets/css/bootstrap.min.css") }}">
+        <!--<< All Min Css >>-->
+        <link rel="stylesheet" href="{{ asset("mymountains/assets/css/all.min.css") }}">
+        <!--<< Animate.css >>-->
+        <link rel="stylesheet" href="{{ asset("mymountains/assets/css/animate.css") }}">
+        <!--<< Magnific Popup.css >>-->
+        <link rel="stylesheet" href="{{ asset("mymountains/assets/css/magnific-popup.css") }}">
+        <!--<< MeanMenu.css >>-->
+        <link rel="stylesheet" href="{{ asset("mymountains/assets/css/meanmenu.css") }}">
+        <!--<< Swiper Bundle.css >>-->
+        <link rel="stylesheet" href="{{ asset("mymountains/assets/css/swiper-bundle.min.css") }}">
+        <!--<< Datepickerboot.css >>-->
+        <link rel="stylesheet" href="{{ asset("mymountains/assets/css/datepickerboot.css") }}">
+        <!--<< Nice Select.css >>-->
+        <link rel="stylesheet" href="{{ asset("mymountains/assets/css/nice-select.css") }}">
+        <!--<< Color.css >>-->
+        <link rel="stylesheet" href="{{ asset("mymountains/assets/css/color.css") }}">
+        <!--<< Main.css >>-->
+        <link rel="stylesheet" href="{{ asset("mymountains/assets/css/main.css") }}">
+             {{-- <link rel="stylesheet" href="{{ asset("/assets/css/homepage.css") }}"> --}}
     <style>
         :root {
-            --primary-blue: linear-gradient(90deg, #ef4444 0%, #f97316 100%); /* This is your target theme gradient */
-            --orange: #ff6b35;
+            --primary-blue: linear-gradient(93deg,#20c997,#0dcaf0); /* This is your target theme gradient */
+            --orange: #20c997;
             --pink: #ff385c; /* Used for some badges in example, can be customized */
             --yellow-btn: #ffc107; /* Veena world uses a yellow for book button */
             --text-dark: #343a40;
@@ -130,7 +152,7 @@
             width: 16px;
             height: 16px;
             background-color: white;
-            border: 2px solid #f97316; /* Solid color from the gradient (orange part) */
+            border: 2px solid #20c997; /* Solid color from the gradient (orange part) */
             border-radius: 50%;
             cursor: pointer;
             box-shadow: 0 1px 3px rgba(0,0,0,0.2);
@@ -217,7 +239,7 @@
             color: white;
         }
         .badge-blue { /* For customized holidays */
-            background: linear-gradient(90deg, #ef4444 0%, #f97316 100%); /* A blue color */
+            background: linear-gradient(93deg,#20c997,#0dcaf0); /* A blue color */
             color: white;
         }
 
@@ -267,7 +289,7 @@
             margin-bottom: 0.75rem;
         }
         .all-inclusive .fa-info-circle { /* Icon within all-inclusive */
-            color: #f97316; /* Solid color from the gradient for the icon */
+            color: #20c997; /* Solid color from the gradient for the icon */
             background: none; /* Ensure no background from parent interferes */
             -webkit-text-fill-color: initial; /* Reset for icon */
             text-fill-color: initial; /* Reset for icon */
@@ -338,7 +360,7 @@
             /* background-clip: text; */
             /* text-fill-color: transparent; */
             /* text-decoration: none;  */
-            color: #f97316;
+            color: #20c997;
             font-weight: 500;
         }
 
@@ -355,17 +377,17 @@
             border: none;
         }
         .btn-book:hover {
-            background: #ffb300;
+            background: #20c997;
             transform: scale(1.03); /* Slight zoom on hover */
         }
         .btn-details {
-            background: #f97316;
+            background: #20c997;
             color: white;
-            border: #f97316;
+            border: #20c997;
             transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease; /* Added transition */
         }
         .btn-details:hover {
-            background:linear-gradient(90deg, #ef4444 0%, #f97316 100%); /* Light blue hover */
+            background:linear-gradient(93deg,#20c997,#0dcaf0); /* Light blue hover */
             transform: scale(1.03); /* Slight zoom on hover */
         }
         .btn-dates-prices { /* For customized holidays */
@@ -435,8 +457,8 @@
         .bottom-info-banner .btn-group .btn {
             font-size: 0.8rem;
             margin: 0 0.25rem;
-            border: 1px solid #ef4444; /* Solid color from gradient start for outline */
-            color: #ef4444; /* Solid color from gradient start for text */
+            border: 1px solid #20c997; /* Solid color from gradient start for outline */
+            color: #20c997; /* Solid color from gradient start for text */
             background-color: transparent; /* Ensure outline style */
         }
         .bottom-info-banner .btn-group .btn:hover {
@@ -538,8 +560,8 @@
 
 
   @include('nav')
-  
-    <div class="container" style="margin-top: 8rem;">
+  <hr>
+    <div class="container mt-5">
         <div class="d-flex justify-content-between align-items-center mb-4">
             <div>
                 <h1 class="page-header">All Tour Packages</h1>
@@ -643,6 +665,32 @@
             
         </div>
     </div>
+ <script src="{{ asset("mymountains/assets/js/jquery-3.7.1.min.js") }}"></script>
+        <!--<< Viewport Js >>-->
+        <script src="{{ asset("mymountains/assets/js/viewport.jquery.js") }}"></script>
+        <!--<< Bootstrap Js >>-->
+        <script src="{{ asset("mymountains/assets/js/bootstrap.bundle.min.js") }}"></script>
+        <!--<< nice-selec Js >>-->
+        <script src="{{ asset("mymountains/assets/js/jquery.nice-select.min.js") }}"></script>
+        <!--<< Waypoints Js >>-->
+        <script src="{{ asset("mymountains/assets/js/jquery.waypoints.js") }}"></script>
+        <!--<< Counterup Js >>-->
+        <script src="{{ asset("mymountains/assets/js/jquery.counterup.min.js") }}"></script>
+         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <!--<< Swiper Slider Js >>-->
+        {{-- <script src="{{ asset("mymountains/assets/js/swiper-bundle.min.js") }}"></script> --}}
+        <!--<< MeanMenu Js >>-->
+        <script src="{{ asset("mymountains/assets/js/jquery.meanmenu.min.js") }}"></script>
+         <!--<< Datepicker Js >>-->
+         <script src="{{ asset("mymountains/assets/js/bootstrap-datepicker.js") }}"></script>
+        <!--<< Magnific Popup Js >>-->
+        <script src="{{ asset("mymountains/assets/js/jquery.magnific-popup.min.js") }}"></script>
+        <!--<< Wow Animation Js >>-->
+        <script src="{{ asset("mymountains/assets/js/wow.min.js") }}"></script>
+        <!--<< Main.js >>-->
+        <script src="{{ asset("mymountains/assets/js/main.js") }}"></script>
+        {{-- sweet alert --}}
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
@@ -664,7 +712,7 @@
 </html>
 
     <!-- Filter Toggle Button for Small Screens -->
-    <button class="btn btn-primary btn-lg btn-filter-toggle" style=" background:linear-gradient(90deg, #ef4444 0%, #f97316 100%);" type="button">
+    <button class="btn btn-primary btn-lg btn-filter-toggle" style=" background:linear-gradient(93deg, #20c997 0%, #0dcaf0 100%);" type="button">
         <i class="fas fa-filter"></i> Filters
     </button>
 

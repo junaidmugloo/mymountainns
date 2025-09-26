@@ -190,25 +190,10 @@
         </div>
 
          <!-- breadcrumb-wrappe-Section Start -->
-        <section class="breadcrumb-wrapper fix bg-cover" style="background-image: url(/mymountains/assets/img/breadcrumb/breadcrumb.jpg);">
-            <div class="container">
-                <div class="row">
-                    <div class="page-heading">
-                        <h2>About Us</h2>
-                        <ul class="breadcrumb-list">
-                            <li>
-                                <a href="{{ url("index.html") }}">Home</a>
-                            </li>
-                            <li><i class="fa-solid fa-chevrons-right"></i></li>
-                            <li>About Us</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+       
+<hr>
         <!-- About-Section Start -->
-        <section class="about-section section-padding fix">
+        <section class="about-section fix pt-3">
             <div class="container">
                 <div class="about-wrapper-2">
                     <div class="row g-4">

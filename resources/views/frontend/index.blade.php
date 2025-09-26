@@ -8,6 +8,7 @@
         <meta name="author" content="pixel-drop">
         <meta name="description" content="{{ $seo->meta_description }}">
         <meta name="keywords" content="{{ $seo->meta_keywords }}">
+
         
         <!-- ======== Page title ============ -->
         <title>My Mountains</title>
@@ -18,7 +19,7 @@
         <!--<< All Min Css >>-->
         <link rel="stylesheet" href="{{ asset("mymountains/assets/css/all.min.css") }}">
         <!--<< Animate.css >>-->
-        {{-- <link rel="stylesheet" href="{{ asset("mymountains/assets/css/animate.css") }}"> --}}
+        <link rel="stylesheet" href="{{ asset("mymountains/assets/css/animate.css") }}">
         <!--<< Magnific Popup.css >>-->
         <link rel="stylesheet" href="{{ asset("mymountains/assets/css/magnific-popup.css") }}">
         <!--<< MeanMenu.css >>-->
@@ -33,12 +34,204 @@
         <link rel="stylesheet" href="{{ asset("mymountains/assets/css/color.css") }}">
         <!--<< Main.css >>-->
         <link rel="stylesheet" href="{{ asset("mymountains/assets/css/main.css") }}">
-        
+             {{-- <link rel="stylesheet" href="{{ asset("/assets/css/homepage.css") }}"> --}}
         
         <meta name="google-site-verification" content="OKDOBtdKqC-xYHEzlnnGKFSAJPWOeLtZVK43jKNRxdw" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<style>
+        <style>
+
+  .featured-image {
+    height: 400px;
+}
+
+.main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.thumbnail {
+    height: 100%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.thumbnail:hover img {
+    transform: scale(1.05);
+}
+
+.more-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+.gallery-item {
+    cursor: pointer;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.gallery-item img {
+    transition: transform 0.3s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+#modalGallery img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 0.25rem;
+}
+
+#modalImage {
+    max-height: 80vh;
+}
+
+#reviewText {
+    transition: max-height 0.3s ease;
+    overflow: hidden;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .featured-image {
+        height: 250px;
+    }
+    
+    .thumbnail {
+        height: 120px;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    #modalGallery img {
+        height: 150px;
+    }
+}
+
+@media (max-width: 576px) {
+    .featured-image {
+        height: 200px;
+    }
+    
+    .thumbnail {
+        height: 100px;
+    }
+}
+
+
+    .hero-1 .hero-bg::before {
+    
+    background: linear-gradient(180deg, rgba(11, 13, 17, 0.6) 0%, rgba(11, 13, 17, 0.2) 30%, #0b0d116d 100%);
+}
+    
+.swiper22 {
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   border-radius: 16px;
+}
+/* card box span */
+
+.card_box spann {
+  position: absolute;
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+  top: -10px;
+  left: -10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.card_box spann::before {
+  content: 'Premium';
+  position: absolute;
+  width: 150%;
+  height: 40px;
+  background: linear-gradient(45deg, #ff6547 0%, #ffb144  51%, #ff7053  100%);
+  /* background: linear-gradient(120deg, #e5e5e5 30%, #f0f0f0 38%, #f0f0f0 40%, #e5e5e5 48%); */
+  background-position: 100% 0;
+  background-size: 200% 100%;
+  transform: rotate(-45deg) translateY(-20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.23);
+  animation: AnimationName 2s infinite;
+
+  
+}
+
+
+.card_box spann::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  bottom: 0;
+  left: 0;
+  height: 10px;
+  z-index: -1;
+  background-size: 200% 100%;
+  box-shadow: 140px -140px #cc3f47;
+  background: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
+   /* background: linear-gradient(120deg, #e5e5e5 30%, #f0f0f0 38%, #f0f0f0  40%, #e5e5e5 48%); */
+  background-position: 100% 0;
+  animation: AnimationName 2s infinite;
+
+}
+
+
+/* card box span */
+
+
+@keyframes AnimationName {
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+
+
+     #sss{
+  background:rgb(0 0 0 / 56%);
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+    }
 .news-card-items-3 .news-image {
     height: 25vh;
       position: relative;
@@ -156,7 +349,7 @@
                         <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
                             <div class="offcanvas__logo">
                                 <a href="{{ url("index.html") }}">
-                                    <img src="{{ asset("mymountains/assets/img/logo/solutions.png") }}" alt="logo-img">
+                                    <img loading="lazy" src="{{ asset("mymountains/assets/img/logo/solutions.png") }}" alt="My Mountains Tour Company - Premium Kashmir and Ladakh Travel Services Logo">
                                 </a>
                             </div>
                             <div class="offcanvas__close">
@@ -205,7 +398,7 @@
                                 </li>
                             </ul>
                             <div class="header-button mt-4">
-                                <a href="javascript:void(0)" class="theme-btn" data-bs-toggle="modal" data-bs-target="#exampleModal5"> Login <i class="fa-sharp fa-regular fa-arrow-right"></i></a>
+                                <button href="javascript:void(0)" class="theme-btn" data-bs-toggle="modal" data-bs-target="#exampleModal5"> Login <i class="fa-sharp fa-regular fa-arrow-right"></i></button>
                             </div>
                             <div class="social-icon d-flex align-items-center">
                                 <a href="{{ url("#") }}"><i class="fab fa-facebook-f"></i></a>
@@ -221,19 +414,19 @@
         <div class="offcanvas__overlay"></div>
 
         <!-- Header top section start -->
-        <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+   <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
-        <div class="modal-header"   style="background:linear-gradient(93deg,#20c997,#0dcaf0);">
+        <div class="modal-header"   style="background: linear-gradient(93deg, #26e2ff, #048fec);">
              
         
         <div class="HeaderSaleLine_saleIcon__pwEFh"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M24 0H14.5L5 38H14.5L24 0Z" fill="white" fill-opacity="0.5"></path><path d="M12 0H9.95238L0 38H2.04762L12 0Z" fill="white" fill-opacity="0.5"></path></svg></div>
-        <p id="mdh" class="m-0 p-0"></p>
-          <button type="button" class="btn-close" onclick="clear_head()" data-bs-dismiss="modal" aria-label="Close" onclick="clear_head()"></button>
+        <p id="mdh" class="m-0 p-0 text-dark"></p>
+          <button type="button" class="btn-close" onclick="clear_head()" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <h5 class="mx-3" style="font-weight:600;">Save up to <x style="color:#20c997;">50% OFF</x></h5>
-          <h6 class="mx-3 mb-4" style="font-size:0.8rem;">We’ll be needing some of your basic details to help you better with your trip</h6>
+          <h5 class="mx-3" style="font-weight:300;">Save up to <x style="color:#20c997;">50% OFF</x></h5>
+          <h6 class="mx-3 mb-4" style="font-size:0.8rem;">We'll be needing some of your basic details to help you better with your trip</h6>
           <form action="" id="tform" style=" justify-content: center;
             display: flex !important;">
             @csrf
@@ -312,7 +505,7 @@
 
         <!-- Hero section start -->
         <section class="hero-section">
-            <div class="swiper hero-slider">
+            <div class="swiper hero-slider pt-0">
                 <div class="swiper-wrapper">
                     
                         @foreach ($banner as $b)
@@ -325,26 +518,29 @@
                                         <div class="row">
                                             <div class="col-lg-10">
                                                 <div class="hero-content">
-                                                    <div class="sub-title">
+                                                    <div class="sub-title" style="color:{{$b->offer_line_color}}!important; font-size:1.5rem;">
                                                         {{$b->offer_line}}
 
                                                     </div>
-                                                    <h1>
+                                                    <h1 style="color:{{$b->heading_color}}!important;">
                                                         {{$b->heading}}
                                                         
                                                         
                                                         
                                                     </h1>
                                                     <br>
-                                                     <div class="sub-title">
+                                                     <div class="sub-title" style="color:{{$b->offer_line_color}}!important;">
                                                     starting at <span class="fs-4 fw-bold"> INR {{$b->discount}} </span><s> INR {{$b->price}}</s>
+                                                    <button
+                class="border-0 px-3 py-1 rounded-pill fw-bold text-white"
+                style="background:linear-gradient(93deg,#ff7b26,#ec048c); font-size: 14px; cursor: text;">{{$b->tag_line}}</button>
                                                      </div>
-                                                    <form action="" method="post" id="tform22">
+                                                    <form action="" method="post" id="tform22{{$b->id}}" style=" justify-content: center;>
                                                           @csrf
                                                     <div class="booking-list-area">
                                                         <div class="booking-list">
                                                             <div class="icon">
-                                                                <img src="{{ asset("mymountains/assets/img/hero/icon-1.png") }}" alt="img">
+                                                                <img loading="lazy" src="{{ asset("mymountains/assets/img/hero/icon-1.png") }}" alt="Travel booking form icon for entering customer name">
                                                             </div>
                                                             <div class="content">
                                                                 <h6>Enter Name</h6>
@@ -355,7 +551,7 @@
                                                         </div>
                                                         <div class="booking-list">
                                                             <div class="icon">
-                                                                <img src="{{ asset("mymountains/assets/img/hero/icon-2.png") }}" alt="img">
+                                                                <img loading="lazy" src="{{ asset("mymountains/assets/img/hero/icon-2.png") }}" alt="Contact information icon for phone number field">
                                                             </div>
                                                             <div class="content">
                                                                 <h6>Enter Contact</h6>
@@ -364,30 +560,25 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="booking-list">
+                                                        <div class="booking-list ">
                                                             <div class="icon">
-                                                                <img src="{{ asset("mymountains/assets/img/hero/icon-3.png") }}" alt="img">
+                                                                <img loading="lazy" src="{{ asset("mymountains/assets/img/hero/icon-3.png") }}" alt="Calendar icon for selecting travel dates">
                                                             </div>
                                                             <div class="content">
                                                                 <h6>Travel Date</h6>
                                                                 <div class="form-clt">
-                                                                    <input type="date" required id="date1" name="date" placeholder="Travel Date">
+                                                                    <input type="date" class="no-calendar" required id="date1" name="date" placeholder="Travel Date">
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="booking-list">
                                                             <div class="icon">
-                                                                <img src="{{ asset("mymountains/assets/img/hero/icon-3.png") }}" alt="img">
+                                                                <img loading="lazy" src="{{ asset("mymountains/assets/img/hero/icon-2.png") }}" alt="Group icon for number of travelers selection">
                                                             </div>
                                                             <div class="content">
                                                                 <h6>Traveler</h6>
-                                                                <div class="form">
-                                                                    <select class="single-select w-100">
-                                                                        <option>01</option>
-                                                                        <option>02</option>
-                                                                        <option>03</option>
-                                                                        <option>04</option>
-                                                                    </select>
+                                                                <div class="form-clt">
+                                                                    <input type="number" required id="traveler" name="traveler"  value="1" min="1" >
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -396,28 +587,58 @@
                                                     </form>
                                                 </div>
 
-                                                {{-- <div class="counter-area">
-                                                    <div class="counter-items">
-                                                        <div class="counter-text">
-                                                            <h2><span class="count">5</span></h2>
-                                                            <p>Trust Index</p>
-                                                        </div>
-                                                        <div class="counter-text">
-                                                            <h2><span class="count">5</span></h2>
-                                                            <p>Google Review</p>
-                                                        </div>
-                                                        <div class="counter-text">
-                                                            <h2><span class="count">5</span><i class="fa fa-star" aria-hidden="true"></i></h2>
-                                                            <p>Just Dial</p>
-                                                        </div>
-                                                    </div>
-                                                </div> --}}
+                                                <script>
+                                                    $("#tform22{{$b->id}}").submit(function(e){
+
+
+e.preventDefault();
+ $.ajax({
+                       url: '/sendmail2',
+                       method: 'POST',
+                       data: new FormData(this),
+                       dataType: 'JSON',
+                       contentType: false,
+                       cache: false,
+                       processData: false,
+                       beforeSend: function() {
+      
+      $("#tform22{{$b->id}} button").prop('disabled', true);
+             
+                           },
+                       success:function(response)
+                       {
+                         swal({
+ title: "Thank you!",
+ text: "Our destination expert will reach out to you shortly!!",
+ icon: "success",
+});
+
+                      $('#tform22{{$b->id}}').trigger("reset");
+                      $("#tform22{{$b->id}} button").prop('disabled', false);
+
+
+                       },
+                       error: function(response) {
+                         swal({
+ title: "Thank you!",
+ text: "Our destination expert will reach out to you shortly!!",
+ icon: "success",
+});
+                       $("#tform22{{$b->id}} button").prop('disabled', false);
+
+                      $('#tform22{{$b->id}}').trigger("reset");
+                       }
+                   });
+
+});
+    </script>
+                                                </script>
 
                                                 
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                            </div>
                             </div>
                         @endforeach
                    
@@ -433,7 +654,7 @@
                     <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp wow" data-wow-delay=".2s">
                         <div class="feature-card-items">
                             <div class="icon">
-                                <img src="{{ asset("mymountains/assets/img/icon/01.svg") }}" alt="img">
+                                <img loading="lazy" src="{{ asset("mymountains/assets/img/icon/01.svg") }}" alt="Discount offers icon - special pricing and savings for Kashmir tour packages">
                             </div>
                             <div class="content">
                                 <h3>
@@ -445,7 +666,7 @@
                     <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp wow" data-wow-delay=".4s">
                         <div class="feature-card-items">
                             <div class="icon bg-color">
-                                <img src="{{ asset("mymountains/assets/img/icon/02.svg") }}" alt="img">
+                                <img loading="lazy" src="{{ asset("mymountains/assets/img/icon/02.svg") }}" alt="Professional tour guide icon - expert local guides for Kashmir and Ladakh">
                             </div>
                             <div class="content">
                                 <h3>
@@ -457,7 +678,7 @@
                     <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp wow" data-wow-delay=".6s">
                         <div class="feature-card-items">
                             <div class="icon">
-                                <img src="{{ asset("mymountains/assets/img/icon/03.svg") }}" alt="img">
+                                <img loading="lazy" src="{{ asset("mymountains/assets/img/icon/03.svg") }}" alt="24/7 customer support icon - round the clock assistance during your journey">
                             </div>
                             <div class="content">
                                 <h3>
@@ -469,7 +690,7 @@
                     <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp wow" data-wow-delay=".8s">
                         <div class="feature-card-items">
                             <div class="icon">
-                                <img src="{{ asset("mymountains/assets/img/icon/04.svg") }}" alt="img">
+                                <img loading="lazy" src="{{ asset("mymountains/assets/img/icon/04.svg") }}" alt="Travel management icon - comprehensive trip planning and coordination services">
                             </div>
                             <div class="content">
                                 <h3>
@@ -481,11 +702,103 @@
                 </div>
             </div>
         </section>
+  <div class="container rounded  text-start  py-4 d-flex flex-column flex-grow" style="color: #FCAF17;font-size:25px;">
+     <div class="section-title">
+                    <span class="sub-title wow fadeInUp">
+                        @foreach ($premium as $p)
+                        {{$p->category}}
+                        @break
+                        @endforeach
+                    </span>
+                    <h2 class="wow fadeInUp wow" data-wow-delay=".5s">
+                        unforgettable Travel Discoveries
+                    </h2>
+        </div>
+                
+    <div class="container swiper mySwiper2 p-2 m-0" id="swiper1">
+      <div class="swiper-wrapper ">
+        
+         @foreach ($premium as $p)
+             
+         
+      
+        <div class="swiper-slide swiper22" id="swiperx" style="background-image: url(package_images/{{$p->image}}); background-size: cover;border-radius: 10px; background-repeat: no-repeat;cursor:pointer;">
+          <div class="d-flex card_box flex-column justify-content-end rounded-3 " data-aos="flip-right"
+            data-aos-duration="4000" style="width: 100%;">
+            <spann id="pm{{ $p->id }}" data-before="{{ $p->tag_line }}" style="font-size: 10px !important"></spann>
 
+            <style>
+                #pm{{ $p->id }}::before {
+                    content: attr(data-before) !important;
+                    
+                }
+            </style>
+            
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    document.getElementById('pm{{ $p->id }}').setAttribute('data-before', '{{ $p->tag_line}}');
+                });
+            </script>
+            
+            
+            <div class="rounded-3 row position-absolute text-white py-3 mx-auto" style="
+               width: fit-content;" id="sss" >
+              <small class="d-flex justify-content-between" style="font-size: 13px;">{{$p->day}} Days & {{$p->night}} Nights 
+                {{-- <span style="font-size: 13px;">
+                  <i
+                    class="rounded-pill text-warning px-2 py-0 pb-2 fs-5 fa-solid fa-circle-info" onclick="window.location.href='/details/{{$p->id}}'"></i>
+                  </span> --}}
+                    <i class="rounded-pill px-2 py-2  fa-solid fa-star text-warning">{{4.9}} <span
+                      class="text-light">({{261+$p->id}}) &nbsp;
+                    <span style="font-size: 13px;">
+                  <i
+                    class="rounded-pill text-warning px-2 py-0 pb-0 fs-6 fa-solid fa-circle-info" onclick="window.location.href='/details/{{$p->id}}'"></i>
+                  </span>
+                    </span></i>
+              </small>
+              
+              <p class="text-start d-flex justify-content-between" style="font-size: 14px;">{{$p->name}}
+      
+              </p>
+             
+              <small class="text-start" style="font-size: 12px;"><span class="fw-bold">
+                @php
+                $des=explode(',',$p->destination);
+                foreach($des as $dd)
+                echo "<i class='bx bx-current-location'></i> ".$dd.'&nbsp;&nbsp;';
+                @endphp
+                </span> 
+              </small>
+                <hr class="mt-2 mb-2">
+              <h6 class="text-start text-white pb-2">INR {{$p->discount}} : P.P&nbsp;<small>
+                <s style="font-size: 14px;">INR
+                {{$p->price}}</s></small>
+                  <button class="px-2 py-1 text-white border-0 rounded"
+                    style="font-size: 12px;background-color: #AA8D63;">save INR {{$p->price-$p->discount}}</button>
+                  
+              </h6>
+              
+              
+              
+                    <div class="d-flex justify-content-between flex-wrap">
+              <button class="btn btn-light-outlined" style="border: solid white 1px;">
+                <i class="fa-solid fa-phone text-white" role="button"></i>
+              </button>
+              <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-light d-block p-2" style="width: 85%;">Request&nbsp;Callback</button>
+              </div>
+            </div>
+            <img loading="lazy" src="landing/clone26.avif" class="d-block  rounded-3 lazy" style="height: 80vh; visibility: hidden;" alt="Camera" />
+          </div>
+        </div>
+        @endforeach
+      </div>
+      {{-- <div class="swiper-pagination"></div> --}}
+    </div>
+  </div>
         <!-- Destination-category Section Start -->
-         <section class="destination-category-section section-padding pt-0">
+         <section class="destination-category-section section-padding">
             <div class="plane-shape float-bob-y">
-                <img src="{{ asset("mymountains/assets/img/destination/shape.png") }}" alt="img">
+                <img loading="lazy" src="{{ asset("mymountains/assets/img/destination/shape.png") }}" alt="Location Pin Shape">
             </div>
             <div class="container">
                 <div class="section-title text-center">
@@ -503,7 +816,7 @@
                         <div class="swiper-slide">
                             <div class="destination-category-item">
                                 <div class="category-image">
-                                    <img src="{{ asset('/category_images/'.$c->image) }}" alt="img" style="object-fit: cover;">
+                                    <img loading="lazy" src="{{ asset('/category_images/'.$c->image) }}" alt="Category {{$c->name}}" style="object-fit: cover;">
                                     <div class="category-content">
                                         <h5>
                                             <a href="{{ url("/kashmir") }}">{{$c->name}}</a>
@@ -525,16 +838,16 @@
         <!-- About Section Start -->
         <section class="about-section section-padding  fix bg-cover" style="background-image: url(mymountains/assets/img/about/about-bg.jpg);">
             <div class="right-shape float-bob-x">
-                <img src="{{ asset("mymountains/assets/img/about/right-shape.png") }}" alt="img">
+                <img loading="lazy" src="{{ asset("mymountains/assets/img/about/right-shape.png") }}" alt="Mountain Shape">
             </div>
             <div class="container">
                 <div class="about-wrapper">
                     <div class="row g-4">
                         <div class="col-lg-6">
                             <div class="about-image">
-                                <img src="{{ asset("mymountains/assets/img/about/01.png") }}" alt="img" class="wow img-custom-anim-left">
+                                <img loading="lazy" src="{{ asset("mymountains/assets/img/about/01.png") }}" alt="About Image 1" class="wow img-custom-anim-left">
                                 <div class="border-image">
-                                    <img src="{{ asset("mymountains/assets/img/about/border.png") }}" alt="">
+                                    <img loading="lazy" src="{{ asset("mymountains/assets/img/about/border.png") }}" alt="Border Image">
                                 </div>
                                 <div class="vdeo-item">
                                     <a href="https://www.youtube.com/watch?v=Cn4G2lZ_g2I" class="video-btn video-popup">
@@ -543,13 +856,13 @@
                                     <h5>WACTH VIDEO </h5>
                                 </div>
                                 <div class="about-image-2">
-                                    <img src="{{ asset("mymountains/assets/img/about/02.png") }}" alt="img" class="wow img-custom-anim-top" data-wow-duration="1.5s" data-wow-delay="0.3s">
+                                    <img loading="lazy" src="{{ asset("mymountains/assets/img/about/02.png") }}" alt="About Image 2" class="wow img-custom-anim-top" data-wow-duration="1.5s" data-wow-delay="0.3s">
                                     <div class="plane-shape float-bob-y">
-                                        <img src="{{ asset("mymountains/assets/img/about/plane-shape.png") }}" alt="">
+                                        <img loading="lazy" src="{{ asset("mymountains/assets/img/about/plane-shape.png") }}" alt="Plane Shape">
                                     </div>
                                     <div class="about-tour">
                                         <div class="icon">
-                                            <img src="{{ asset("mymountains/assets/img/icon/10.svg") }}" alt="img">
+                                            <img loading="lazy" src="{{ asset("mymountains/assets/img/icon/10.svg") }}" alt="Luxury Tour Icon">
                                         </div>
                                         <div class="content">
                                             <h4>Luxury Tour</h4>
@@ -570,44 +883,45 @@
                                 </div>
                                 <div class="about-area mt-4 mt-md-0">
                                     <div class="line-image">
-                                        <img src="{{ asset("mymountains/assets/img/about/Line-image.png") }}" alt="img">
+                                        <img loading="lazy" src="{{ asset("mymountains/assets/img/about/Line-image.png") }}" alt="Line Image">
                                     </div>
                                     <div class="about-items wow fadeInUp wow" data-wow-delay=".3s">
                                         <div class="icon">
-                                            <img src="{{ asset("mymountains/assets/img/icon/05.svg") }}" alt="img">
+                                            <img loading="lazy" src="{{ asset("mymountains/assets/img/icon/05.svg") }}" alt="Adventure Icon">
                                         </div>
                                         <div class="content">
                                             <h5>
                                                 Exclusive Trip
                                             </h5>
                                             <p>
-                                                There are many variations of passages <br> of available, but the majority
+                                                With carefully planned itineraries and personalized services,<br>every moment of your trip is tailored to give you the best possible experience. 
                                             </p>
                                         </div>
                                     </div>
                                     <div class="about-items wow fadeInUp wow" data-wow-delay=".5s">
                                         <div class="icon">
-                                            <img src="{{ asset("mymountains/assets/img/icon/06.svg") }}" alt="img">
+                                            <img loading="lazy" src="{{ asset("mymountains/assets/img/icon/06.svg") }}" alt="Safety Icon">
                                         </div>
                                         <div class="content">
                                             <h5>
                                                 Safety first always
                                             </h5>
                                             <p>
-                                                There are many variations of passages <br> of available, but the majority
+                                                 Every aspect of your travel is designed with secure arrangements,<br>
+                                                 reliable transportation, and trusted partners. 
                                             </p>
                                         </div>
                                     </div>
                                     <div class="about-items wow fadeInUp wow" data-wow-delay=".7s">
                                         <div class="icon">
-                                            <img src="{{ asset("mymountains/assets/img/icon/07.svg") }}" alt="img">
+                                            <img loading="lazy" src="{{ asset("mymountains/assets/img/icon/07.svg") }}" alt="Professional Guide Icon">
                                         </div>
                                         <div class="content">
                                             <h5>
                                                 Professional Guide
                                             </h5>
                                             <p>
-                                                There are many variations of passages <br> of available, but the majority
+                                                Our expertly trained guides bring each destination to life,<br>offering deep insights, local stories, and professional support throughout your trip. 
                                             </p>
                                         </div>
                                     </div>
@@ -619,10 +933,69 @@
             </div>
         </section>
 
+
+          
+
+  <div class="container d-block mx-auto text-center mt-5">
+    <h3 class="">People Love Our <span class="" style="color: #46bfaf;">Kashmir </span>Tours</h3>
+  </div>
+  <div class="row container mx-auto  d-flex flex-wrap p-2"  >
+    <div class=" col-md-4 d-flex align-items-center justify-content-center flex-column border-end ">
+      <img loading="lazy" src="landing/star.png" class="lazy" alt="Star Rating" style="width: 60%;" >
+      <h1 class="text-success fw-bold" >4.6</h1>
+      <span class="fw-medium text-success fs-5" >16,716 Kashmir Reviews</span>
+      <p class="text-muted" >by customers from
+        <span class="text-dark  fw-semibold" >65+ countries</span>
+      </p>
+    </div>
+    <div class="col-md-8"  >
+      
+     <div class="embedsocial-widget" data-ref="af8158ed8d6e3679b8c59fa39a3ac797"> <a href="https://embedsocial.com/google-reviews-widget/" title="Add Google reviews on a website" target="_blank" class="powered-by-es es-summary-slider" > <img loading="lazy" src="https://embedsocial.com/cdn/icon/embedsocial-logo.webp" alt="EmbedSocial" > <span> Google reviews widget </span> </a> </div> <script> (function(d, s, id) { var js; if (d.getElementById(id)) {return;} js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/cdn/aht.js"; d.getElementsByTagName("head")[0].appendChild(js); }(document, "script", "EmbedSocialWidgetScript")); </script>
+      
+    </div>
+  </div>
+  <div id="carouselExampleAutoplaying" class="carousel slide section-padding " data-bs-ride="carousel">
+    <div class="carousel-inner">
+@foreach ($offer as $index => $o)
+
+
+
+    <div class="carousel-item {{ $index == 0 ? 'active' : '' }}"">
+      <div class="container">
+        <div class="card text-left p-4 " style="background: url(offer_images/{{$o->image}});background-size:cover;">
+    
+          <div class="card-body">
+            <h5 class="card-title fw-bolder textt">{{$o->heading}}</h5>
+            <p class="card-text textt2">{{$o->description}}</p>
+            <button type="button" class=" text-capitalize btnn btn btn-white bg-white  border-0 rounded"
+              style="color: #F37205;border-color: #F37205;" data-bs-toggle="modal"
+              data-bs-target="#exampleModal">Get&nbsp;a&nbsp;Callback</button>
+    
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  
+
+ 
+      
+@endforeach
+</div>
+<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+  <span class="carousel-control-prev-icon text-dark"  aria-hidden="true"></span>
+  <span class="visually-hidden">Previous</span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+  <span class="carousel-control-next-icon text-dark" aria-hidden="true"></span>
+  <span class="visually-hidden">Next</span>
+</button>
+</div>
+        
         <!-- Cta Section Start -->
-        <section class="cta-section section-padding">
+        <section class="cta-section">
             <div class="mobile-shape">
-                <img src="{{ asset("mymountains/assets/img/mobile.png") }}" alt="img">
+                <img loading="lazy" src="{{ asset("mymountains/assets/img/mobile.png") }}" alt="Icon">
             </div>
 
 
@@ -630,179 +1003,16 @@
 
 
 
-            <div class="container">
-                <div class="row g-4">
-                    {{-- limit 2 --}}
-
-                   @foreach ($offer->take(2) as $o)
-                    <div class="col-lg-6 col-md-6 wow fadeInUp wow" data-wow-delay=".3s">
-
-                       
-
-                        <div class="cta-items  {{ $loop->iteration  == 2 ? 'style-2' : '' }}">
-                            <div class="cta-text">
-                                <h2>{{$o->heading}}</h2>
-                                <p style="width: 25vw;">
-                                   {{$o->description}}
-                                </p>
-                            </div>
-                            <a href="javascript:void(0)" data-bs-toggle="modal"
-                            data-bs-target="#exampleModal" class="theme-btn">BOOK NOW <i class="fa-sharp fa-regular fa-arrow-right"></i></a>
-                           
-                                @if ($loop->iteration === 1)
-                                 <div class="cta-image style-2">
-                                <img src="{{ asset("mymountains/assets/img/bag-shape.png") }}" alt="img">
-                                @endif
-                               
-                                @if ($loop->iteration === 2)
-                                 <div class="cta-image style-2">
-                                    <img src="{{ asset("mymountains/assets/img/plane-shape.png") }}" alt="img">
-                                @endif
-                            </div>
-                        </div>
-                    </div>
-                    @endforeach
-                </div>
-            </div>
-        </section>
+          
 
          <!-- Featured-tour-section Start -->
-         <section class="featured-tour-section section-padding section-bg">
-            <div class="left-shape">
-                <img src="{{ asset("/mymountains/assets/img/feature/plane-shape.png") }}" alt="img">
-            </div>
-            <div class="right-shape">
-                <img src="{{ asset("/mymountains/assets/img/feature/plane-shape.png") }}" alt="img">
-            </div>
-            <div class="array-button">
-                <button class="array-prev">
-                    <i class="fa-regular fa-arrow-right-long"></i>
-                </button>
-                <button class="array-next">
-                    <i class="fa-regular fa-arrow-left-long"></i>
-                </button>
-            </div>
-
-
-
-
-
-
-            
-            <div class="container">
-                <div class="section-title">
-                    <span class="sub-title wow fadeInUp">
-                        @foreach ($premium as $p)
-                        {{$p->category}}
-                        @break
-                        @endforeach
-                    </span>
-                    <h2 class="wow fadeInUp wow" data-wow-delay=".5s">
-                        unforgettable Travel Discoveries
-                    </h2>
-                </div>
-                <p class="wow fadeInUp wow" data-wow-delay=".7s">
-                    There are many variations of passages of  available, but the majority have suffered alteration in some <br> form, by injected humour words which don't look even slightly believable 
-                </p>
-                <div class="swiper tour-slider">
-                    <div class="swiper-wrapper">
-                        @foreach ($premium as $p)
-                        <div class="swiper-slide">
-                            <div class="swiper-slide swiper22" id="swiperx">
-    <div class="feature-tour-items h-100 shadow-sm rounded-3" 
-         style="box-shadow: 0 4px 12px rgba(0,0,0,0.15); display: flex; flex-direction: column; height: 100%;">
-
-        <!-- Image + Premium Tag -->
-        <div class="feature-tour-image" style="position: relative;">
-            <img src="{{ asset('package_images/'.$p->image) }}" alt="{{$p->name}}" 
-                 style="object-fit: cover; width: 100%; height: 220px; border-radius: 8px 8px 0 0;">
-            <ul class="location" style="position: absolute; top: 10px; left: 10px;">
-                <li>
-                    <i class="fa-light fa-location-dot"></i>
-                    {{$p->price - $p->discount}}
-                </li>
-            </ul>
-        </div>
-
-        <!-- Tour Details -->
-        <div class="feature-tour-content d-flex flex-column justify-content-between p-3" style="flex: 1;">
-
-            <div>
-                <!-- Title -->
-                <h4 class="mb-2" style="min-height: 45px;">
-                    <a href="{{ url('/details/'.$p->id) }}">
-                        {{$p->name}}
-                    </a>
-                </h4>
-
-                <!-- Duration + Rating -->
-                <small class="d-block mb-1" style="font-size: 13px;">
-                    {{$p->day}} Days & {{$p->night}} Nights &nbsp;|&nbsp;
-                    <i class="fa-solid fa-star text-warning"></i> 4.9 
-                    <span class="text-muted">({{ 261+$p->id }})</span>
-                </small>
-
-                <!-- Destination List -->
-                <small class="d-block mb-2" style="font-size: 12px; min-height: 35px;">
-                    @php
-                        $des = explode(',', $p->destination);
-                        foreach($des as $dd) {
-                            echo "<i class='bx bx-current-location'></i> ".$dd.'&nbsp;&nbsp;';
-                        }
-                    @endphp
-                </small>
-            </div>
-
-            <!-- Divider -->
-            <hr class="mt-2 mb-2">
-
-            <!-- Pricing -->
-            <div>
-                <h5 class="mb-2">
-                    INR {{$p->discount}} <span>/ P.P</span>
-                    <small><s style="font-size: 14px;">INR {{$p->price}}</s></small>
-                </h5>
-                {{-- <button class="px-2 py-1 text-white border-0 rounded mb-3"
-                    style="font-size: 12px; background-color: #AA8D63;">
-                    Save INR {{$p->price - $p->discount}}
-                </button> --}}
-            </div>
-
-            <!-- Actions -->
-            <div class="d-flex justify-content-between align-items-center mt-auto">
-                <button class="btn btn-light-outlined" style="border: solid #ccc 1px;">
-                    <i class="fa-solid fa-phone"></i>
-                </button>
-                <button data-bs-toggle="modal" data-bs-target="#exampleModal" 
-                    class="btn btn-custom d-block p-2" style="width: 75%;">
-                    Request Callback
-                </button>
-            </div>
-
-            <!-- Arrow Link -->
-            {{-- <div class="text-end mt-2">
-                <a href="{{ url('/details/'.$p->id) }}" class="icon">
-                    <i class="fa-sharp fa-regular fa-arrow-right"></i>
-                </a>
-            </div> --}}
-        </div>
-    </div>
-</div>
-
-                        </div>
-                        @endforeach
-                    </div>
-                </div>
-            </div>
-         </section>
+         
 
 
 
         <!-- Popular-destination Section Start 1-->
-        <section class="popular-destination-section section-padding pt-0">
-            
-            <div class="container">
-                <div class="section-title-area justify-content-between">
+ <div class="container  rounded  text-start  p-4 d-flex flex-column flex-grow" style="color: #515151;">
+   <div class="section-title-area justify-content-between">
                     <div class="section-title">
                         <span class="sub-title wow fadeInUp">
                             Best Recommended Places
@@ -814,87 +1024,81 @@
                             @endforeach
                         </h2>
                     </div>
-                    <a href="{{ url("tour-details.html") }}" class="theme-btn wow fadeInUp wow" data-wow-delay=".5s">View All Tour<i class="fa-sharp fa-regular fa-arrow-right"></i></a>
+                    <a href="{{ url("/kashmir") }}" class="theme-btn wow fadeInUp wow" data-wow-delay=".5s">View All Tour<i class="fa-sharp fa-regular fa-arrow-right"></i></a>
                 </div> 
-                <!-- Swiper Container -->
+    <div class=" container swiper mySwiper2 p-2 m-0" id="swiper1">
+      <div class="swiper-wrapper">
+        @foreach ($packages as $p)
+            
+       
+        <div class="swiper-slide swiper22 wow fadeInUp wow" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+          <div class="card rounded-3  border-0 " data-aos="flip-right" data-aos-duration="4000">
+            <img loading="lazy" src="package_images/{{$p->image}}"  onclick="window.location.href='/details/{{$p->id}}'" class="card-img-top rounded-3 lazy" alt="{{$p->name}}"
+              style="height: 40vh; cursor: pointer;" width="100px" />
+            <div class="card-body  ">
+              <small style="font-size: 14px;" class="d-flex justify-content-between fw-medium">{{$p->day}} days & {{$p->night}} nights <span
+                  style="font-size: 12px;"><i class="rounded-pill px-2 py-2  fa-solid fa-star text-success">4.9 <span
+                      class="text-muted">(261)</span></i></span>
+              </small>
+              <p class="card-title text-start text-dark" style="font-size: 15px;">{{$p->name}}</p>
+              <p class="card-text p-0 mb-2 text-start rounded" style="font-size: 12px; background-color: #fffbf0; ">
+                <span class="fw-bold">
 
-                <!-- Swiper CSS -->
-
-
- <div class="swiper tour-slider">
-        <div class="swiper-wrapper">
-        @foreach($packages as $p)
-        <div class="swiper-slide  h-100">
-            <div class="destination-card-items d-flex flex-column w-100" style="height: 100%;">
-        {{-- s --}}
-                    <div class="destination-image">
-                        <img src="{{ asset('package_images/'.$p->image) }}" alt="img">
-                        <div class="heart-icon">
-                            <i class="fa-regular fa-heart"></i>
-                        </div>
-                    </div>
-                    <div class="destination-content">
-                        <h3 class="text-start text-light rounded-pill"
-                            style="background:linear-gradient(93deg,#26e2ff,#048fec);font-size:9px;cursor:text;font-weight:900; width:fit-content;padding:0 10px; height:18px;line-height:18px;">
-                            {{$p->tag_line}}</h3>
-                        <ul class="meta">
-                            <li>
-                                <i class="fa-thin fa-location-dot"></i>
-                                {{-- <span class="fw-bold">{{ $p->D1}}</span>
-                                <b>|</b>
-                                <span class="fw-bold">{{ $p->D2}}</span>
-                                <b>|</b>
-                                <span class="fw-bold">{{ $p->D3}}</span> --}}
-                            </li>
-                            <li class="rating">
-                                <div class="star">
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <p>4.7</p>
-                            </li>
-                        </ul>
-                        <h5>
-                            <a href="{{ url('/details/'.$p->id) }}">
-                                {{$p->name}}
-                            </a>
-                        </h5>
-                        <ul class="info">
-                            <li>
-                                <i class="fa-regular fa-clock"></i>
-                                {{$p->day}} days & {{$p->night}} nights
-                            </li>
-                            <li>
-                                <i class="fa-thin fa-users"></i>
-                                50+
-                            </li>
-                        </ul>
-                        <div class="price">
-                            <h6>₹{{$p->discount}}<span>/Per person</span></h6>
-                            <a href="javascript:void(0)" data-bs-toggle="modal" onclick="set_head('{{$p->name}}')"
-                            data-bs-target="#exampleModal" class="theme-btn style-2">
-                                Book Now<i class="fa-sharp fa-regular fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                  @php
+                  $string = $p->destination;
+                  $parts = explode(',', $string);
+                  // $firstPart = $parts[0];
+                  // $secondPart = $parts[1];
+                  $len=0;
+                  foreach ($parts as $part) {
+                    $len+=1; // Add the length of each part to the total
+                  }
+                  
+                 
+                    @endphp
+                              {{ $p->D1}}</span> 
+                              <b>|</b>
+                              <span class="fw-bold">{{ $p->D2}}</span>
+                              <b>|</b>
+                              <span class="fw-bold">{{ $p->D3}}</span>
+                              <span class="fw-bold text-danger" onclick="window.location.href='/details/{{$p->id}}'" style="cursor: pointer;">&nbsp;&nbsp;&nbsp;+{{ $len}}</span> 
+                           
+              </p>
+              <p class="card-text p-0 mb-2 text-start rounded" style="font-size: 12px; background-color:  #fffbf0; ">
+                <span class="fw-bold"><i class="fa-solid fa-hotel"></i> </span> Hotel &nbsp; &nbsp; &nbsp;
+                <span class="fw-bold"><i class="fa-solid fa-utensils"></i></span> Food  &nbsp; &nbsp; &nbsp;
+                <span class="fw-bold"><i class="fa-solid fa-car"></i> </span> Transport 
+              </p>
+              <h3 class="text-start text-light rounded-pill"
+                style="background:linear-gradient(93deg,#ff7b26,#ec048c);font-size:9px;cursor:text;font-weight:900; width:fit-content;padding-right:10px; padding-left:10px; height:18px;line-height:18px;">
+                {{$p->tag_line}}</h3>
+              <h5 class="fw-bolder text-start  pb-2 pt-2" style="font-size: 18px;">INR {{$p->discount}} <small><s class=""
+                    style="font-size: 14px;">INR
+                    {{$p->price}}</s></small>&nbsp;&nbsp;&nbsp;<span>
+                  <button class="px-2 py-1  border-0 rounded text-success"
+                    style="font-size: 9px;background-color: #E7F3EA;color:#0BB22A">save INR {{$p->price-$p->discount}}</button></span></h5>
+              <div class="d-flex justify-content-between " style="align-self: center " >
+                <a href="tel:{{$p->contact}}" class="btn" style="border-color: #46bfaf; padding-top: 8px;">
+                  <i class="fa-solid fa-phone " role="button" style="color: #46bfaf"></i>
+                </a>
+                <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
+                  style="background-color: #46bfaf;" onclick="set_head('{{$p->name}}')"  data-bs-toggle="modal" data-bs-target="#exampleModal">Request
+                  Callback</a>
+                 
+              </div>
             </div>
+          </div>
+        </div>
         @endforeach
+
+      </div>
+      {{-- <div class="swiper-pagination"></div> --}}
     </div>
-</div>
-
-
-
-
-
-
-</div>
-        </section>
+  </div>
 
          <!-- Popular-destination Section Start 2 -->
-         <section class="popular-destination-section section-padding pt-0">
-           
-            <div class="container">
-                <div class="section-title-area justify-content-between">
+ <div class="container  rounded  text-start  p-4 d-flex flex-column flex-grow" style="color: #515151;">
+   <div class="section-title-area justify-content-between">
                     <div class="section-title">
                         <span class="sub-title wow fadeInUp">
                             Best Recommended Places
@@ -906,87 +1110,81 @@
                             @endforeach
                         </h2>
                     </div>
-                    <a href="{{ url("tour-details.html") }}" class="theme-btn wow fadeInUp wow" data-wow-delay=".5s">View All Tour<i class="fa-sharp fa-regular fa-arrow-right"></i></a>
+                    <a href="{{ url("/ladakh") }}" class="theme-btn wow fadeInUp wow" data-wow-delay=".5s">View All Tour<i class="fa-sharp fa-regular fa-arrow-right"></i></a>
                 </div> 
-                <!-- Swiper Container -->
+    <div class=" container swiper mySwiper2 p-2 m-0" id="swiper1">
+      <div class="swiper-wrapper">
+        @foreach ($packages1 as $p)
+            
+       
+        <div class="swiper-slide swiper22 wow fadeInUp wow" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;" >
+          <div class="card rounded-3  border-0 " data-aos="flip-right" data-aos-duration="4000">
+            <img loading="lazy" src="package_images/{{$p->image}}"  onclick="window.location.href='/details/{{$p->id}}'" class="card-img-top rounded-3 lazy" alt="{{$p->name}}"
+              style="height: 40vh; cursor: pointer;" width="100px" />
+            <div class="card-body  ">
+              <small style="font-size: 14px;" class="d-flex justify-content-between fw-medium">{{$p->day}} days & {{$p->night}} nights <span
+                  style="font-size: 12px;"><i class="rounded-pill px-2 py-2  fa-solid fa-star text-success">4.9 <span
+                      class="text-muted">(261)</span></i></span>
+              </small>
+              <p class="card-title text-start text-dark" style="font-size: 15px;">{{$p->name}}</p>
+              <p class="card-text p-0 mb-2 text-start rounded" style="font-size: 12px; background-color: #fffbf0; ">
+                <span class="fw-bold">
 
-                <!-- Swiper CSS -->
-
-
- <div class="swiper tour-slider">
-        <div class="swiper-wrapper">
-        @foreach($packages1 as $p)
-        <div class="swiper-slide h-100">
-            <div class="destination-card-items d-flex flex-column w-100" style="height: 100%;">
-        
-                    <div class="destination-image">
-                         <img src="{{ asset('package_images/'.$p->image) }}" alt="img">
-                        <div class="heart-icon">
-                            <i class="fa-regular fa-heart"></i>
-                        </div>
-                    </div>
-                    <div class="destination-content">
-                        <h3 class="text-start text-light rounded-pill"
-                            style="background:linear-gradient(93deg,#26e2ff,#048fec);font-size:9px;cursor:text;font-weight:900; width:fit-content;padding:0 10px; height:18px;line-height:18px;">
-                            {{$p->tag_line}}</h3>
-                        <ul class="meta">
-                            <li>
-                                <i class="fa-thin fa-location-dot"></i>
-                                {{-- <span class="fw-bold">{{ $p->D1}}</span>
-                                <b>|</b>
-                                <span class="fw-bold">{{ $p->D2}}</span>
-                                <b>|</b>
-                                <span class="fw-bold">{{ $p->D3}}</span> --}}
-                            </li>
-                            <li class="rating">
-                                <div class="star">
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <p>4.7</p>
-                            </li>
-                        </ul>
-                        <h5>
-                            <a href="{{ url('/details/'.$p->id) }}">
-                                {{$p->name}}
-                            </a>
-                        </h5>
-                        <ul class="info">
-                            <li>
-                                <i class="fa-regular fa-clock"></i>
-                                {{$p->day}} days & {{$p->night}} nights
-                            </li>
-                            <li>
-                                <i class="fa-thin fa-users"></i>
-                                50+
-                            </li>
-                        </ul>
-                        <div class="price">
-                            <h6>₹{{$p->discount}}<span>/Per person</span></h6>
-                            <a href="javascript:void(0)" data-bs-toggle="modal" onclick="set_head('{{$p->name}}')"
-                            data-bs-target="#exampleModal" class="theme-btn style-2">
-                                Book Now<i class="fa-sharp fa-regular fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                  @php
+                  $string = $p->destination;
+                  $parts = explode(',', $string);
+                  // $firstPart = $parts[0];
+                  // $secondPart = $parts[1];
+                  $len=0;
+                  foreach ($parts as $part) {
+                    $len+=1; // Add the length of each part to the total
+                  }
+                  
+                 
+                    @endphp
+                              {{ $p->D1}}</span> 
+                              <b>|</b>
+                              <span class="fw-bold">{{ $p->D2}}</span>
+                              <b>|</b>
+                              <span class="fw-bold">{{ $p->D3}}</span>
+                              <span class="fw-bold text-danger" onclick="window.location.href='/details/{{$p->id}}'" style="cursor: pointer;">&nbsp;&nbsp;&nbsp;+{{ $len}}</span> 
+                           
+              </p>
+              <p class="card-text p-0 mb-2 text-start rounded" style="font-size: 12px; background-color:  #fffbf0; ">
+                <span class="fw-bold"><i class="fa-solid fa-hotel"></i> </span> Hotel &nbsp; &nbsp; &nbsp;
+                <span class="fw-bold"><i class="fa-solid fa-utensils"></i></span> Food  &nbsp; &nbsp; &nbsp;
+                <span class="fw-bold"><i class="fa-solid fa-car"></i> </span> Transport 
+              </p>
+              <h3 class="text-start text-light rounded-pill"
+                style="background:linear-gradient(93deg,#ff7b26,#ec048c);font-size:9px;cursor:text;font-weight:900; width:fit-content;padding-right:10px; padding-left:10px; height:18px;line-height:18px;">
+                {{$p->tag_line}}</h3>
+              <h5 class="fw-bolder text-start  pb-2 pt-2 style="font-size: 18px;">INR {{$p->discount}} <small><s class=""
+                    style="font-size: 14px;">INR
+                    {{$p->price}}</s></small>&nbsp;&nbsp;&nbsp;<span>
+                  <button class="px-2 py-1  border-0 rounded text-success"
+                    style="font-size: 9px;background-color: #E7F3EA;color:#0BB22A">save INR {{$p->price-$p->discount}}</button></span></h5>
+              <div class="d-flex justify-content-between " style="align-self: center " >
+                <a href="tel:{{$p->contact}}" class="btn" style="border-color: #46bfaf; padding-top: 8px;">
+                  <i class="fa-solid fa-phone " role="button" style="color: #46bfaf"></i>
+                </a>
+                <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
+                  style="background-color: #46bfaf;" onclick="set_head('{{$p->name}}')"  data-bs-toggle="modal" data-bs-target="#exampleModal">Request
+                  Callback</a>
+                 
+              </div>
             </div>
+          </div>
+        </div>
         @endforeach
+
+      </div>
+      {{-- <div class="swiper-pagination"></div> --}}
     </div>
-</div>
-
-
-
-
-
-
-</div>
-        </section>
+  </div>
 
          <!-- Popular-destination Section Start 3-->
-         <section class="popular-destination-section section-padding pt-0">
-            
-            <div class="container">
-                <div class="section-title-area justify-content-between">
+<div class="container  rounded  text-start  p-4 d-flex flex-column flex-grow" style="color: #515151;">
+   <div class="section-title-area justify-content-between">
                     <div class="section-title">
                         <span class="sub-title wow fadeInUp">
                             Best Recommended Places
@@ -1000,80 +1198,75 @@
                     </div>
                     <a href="{{ url("/kashmir") }}" class="theme-btn wow fadeInUp wow" data-wow-delay=".5s">View All Tour<i class="fa-sharp fa-regular fa-arrow-right"></i></a>
                 </div> 
-                <!-- Swiper Container -->
+    <div class=" container swiper mySwiper2 p-2 m-0" id="swiper1">
+      <div class="swiper-wrapper">
+        @foreach ($packages2 as $p)
+            
+       
+        <div class="swiper-slide swiper22 wow fadeInUp wow" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+          <div class="card rounded-3  border-0 " data-aos="flip-right" data-aos-duration="4000">
+            <img loading="lazy" src="package_images/{{$p->image}}"  onclick="window.location.href='/details/{{$p->id}}'" class="card-img-top rounded-3 lazy" alt="{{$p->name}}"
+              style="height: 40vh; cursor: pointer;" width="100px" />
+            <div class="card-body  ">
+              <small style="font-size: 14px;" class="d-flex justify-content-between fw-medium">{{$p->day}} days & {{$p->night}} nights <span
+                  style="font-size: 12px;"><i class="rounded-pill px-2 py-2  fa-solid fa-star text-success">4.9 <span
+                      class="text-muted">(261)</span></i></span>
+              </small>
+              <p class="card-title text-start text-dark" style="font-size: 15px;">{{$p->name}}</p>
+              <p class="card-text p-0 mb-2 text-start rounded" style="font-size: 12px; background-color: #fffbf0; ">
+                <span class="fw-bold">
 
-                <!-- Swiper CSS -->
-
-
- <div class="swiper tour-slider">
-                    <div class="swiper-wrapper">
-        @foreach($packages2 as $p)
-        <div class="swiper-slide  h-100">
-            <div class="destination-card-items d-flex flex-column w-100" style="height: 100%;">
-        
-                    <div class="destination-image">
-                         <img src="{{ asset('package_images/'.$p->image) }}" alt="img">
-                        <div class="heart-icon">
-                            <i class="fa-regular fa-heart"></i>
-                        </div>
-                    </div>
-                    <div class="destination-content">
-                        <h3 class="text-start text-light rounded-pill"
-                            style="background:linear-gradient(93deg,#26e2ff,#048fec);font-size:9px;cursor:text;font-weight:900; width:fit-content;padding:0 10px; height:18px;line-height:18px;">
-                            {{$p->tag_line}}</h3>
-                        <ul class="meta">
-                            <li>
-                                <i class="fa-thin fa-location-dot"></i>
-                                {{-- <span class="fw-bold">{{ $p->D1}}</span>
-                                <b>|</b>
-                                <span class="fw-bold">{{ $p->D2}}</span>
-                                <b>|</b>
-                                <span class="fw-bold">{{ $p->D3}}</span> --}}
-                            </li>
-                            <li class="rating">
-                                <div class="star">
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <p>4.7</p>
-                            </li>
-                        </ul>
-                        <h5>
-                            <a href="{{ url('/details/'.$p->id) }}">
-                                {{$p->name}}
-                            </a>
-                        </h5>
-                        <ul class="info">
-                            <li>
-                                <i class="fa-regular fa-clock"></i>
-                                {{$p->day}} days & {{$p->night}} nights
-                            </li>
-                            <li>
-                                <i class="fa-thin fa-users"></i>
-                                50+
-                            </li>
-                        </ul>
-                        <div class="price">
-                            <h6>₹{{$p->discount}}<span>/Per person</span></h6>
-                            <a href="javascript:void(0)" data-bs-toggle="modal" onclick="set_head('{{$p->name}}')"
-
-                            data-bs-target="#exampleModal" class="theme-btn style-2">
-                                Book Now<i class="fa-sharp fa-regular fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                  @php
+                  $string = $p->destination;
+                  $parts = explode(',', $string);
+                  // $firstPart = $parts[0];
+                  // $secondPart = $parts[1];
+                  $len=0;
+                  foreach ($parts as $part) {
+                    $len+=1; // Add the length of each part to the total
+                  }
+                  
+                 
+                    @endphp
+                              {{ $p->D1}}</span> 
+                              <b>|</b>
+                              <span class="fw-bold">{{ $p->D2}}</span>
+                              <b>|</b>
+                              <span class="fw-bold">{{ $p->D3}}</span>
+                              <span class="fw-bold text-danger" onclick="window.location.href='/details/{{$p->id}}'" style="cursor: pointer;">&nbsp;&nbsp;&nbsp;+{{ $len}}</span> 
+                           
+              </p>
+              <p class="card-text p-0 mb-2 text-start rounded" style="font-size: 12px; background-color:  #fffbf0; ">
+                <span class="fw-bold"><i class="fa-solid fa-hotel"></i> </span> Hotel &nbsp; &nbsp; &nbsp;
+                <span class="fw-bold"><i class="fa-solid fa-utensils"></i></span> Food  &nbsp; &nbsp; &nbsp;
+                <span class="fw-bold"><i class="fa-solid fa-car"></i> </span> Transport 
+              </p>
+              <h3 class="text-start text-light rounded-pill"
+                style="background:linear-gradient(93deg,#ff7b26,#ec048c);font-size:9px;cursor:text;font-weight:900; width:fit-content;padding-right:10px; padding-left:10px; height:18px;line-height:18px;">
+                {{$p->tag_line}}</h3>
+              <h5 class="fw-bolder text-start pb-2 pt-2" style="font-size: 18px;">INR {{$p->discount}} <small><s class=""
+                    style="font-size: 14px;">INR
+                    {{$p->price}}</s></small>&nbsp;&nbsp;&nbsp;<span>
+                  <button class="px-2 py-1  border-0 rounded text-success"
+                    style="font-size: 9px;background-color: #E7F3EA;color:#0BB22A">save INR {{$p->price-$p->discount}}</button></span></h5>
+              <div class="d-flex justify-content-between " style="align-self: center " >
+                <a href="tel:{{$p->contact}}" class="btn" style="border-color: #46bfaf; padding-top: 8px;">
+                  <i class="fa-solid fa-phone " role="button" style="color: #46bfaf"></i>
+                </a>
+                <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
+                  style="background-color: #46bfaf;" onclick="set_head('{{$p->name}}')"  data-bs-toggle="modal" data-bs-target="#exampleModal">Request
+                  Callback</a>
+                 
+              </div>
             </div>
+          </div>
+        </div>
         @endforeach
+
+      </div>
+      {{-- <div class="swiper-pagination"></div> --}}
     </div>
-</div>
-
-
-
-
-
-
-</div>
-         </section>
+  </div>
 
 
 
@@ -1090,7 +1283,7 @@
     
 
     <div class="car-shape float-bob-x">
-        <img src="{{ asset("mymountains/assets/img/destination/car.png") }}" alt="img">
+        <img loading="lazy" src="{{ asset("mymountains/assets/img/destination/car.png") }}" alt="Car Shape">
     </div>
         <!-- Deals-offer Section Start -->
         <section class="deals-offer-section section-padding fix bg-cover" style="background-image: url(mymountains/assets/img/offer/bg.jpg);">
@@ -1101,7 +1294,7 @@
                     <div class="col-lg-4">
                         <div class="price-items">
                             <div class="price-image wow fadeInUp wow" data-wow-delay=".2s">
-                                <img src="{{ asset("mymountains/assets/img/offer/price.png") }}" alt="img" width="200">
+                                <img loading="lazy" src="{{ asset("mymountains/assets/img/offer/price.png") }}" alt="Price Image" width="200">
                             </div>
                             <div class="coming-soon-timer">
                                 <div class="timer-content wow fadeInUp" data-wow-delay=".2s">
@@ -1145,7 +1338,7 @@
                                     <div class="swiper-slide">
                                         <div class="offer-items">
                                             <div class="offer-image">
-                                                <img style="height: 30vh; object-fit: cover;" src="{{ asset('/offer_images/'.$o->image) }}" alt="img">
+                                                <img loading="lazy" style="height: 30vh; object-fit: cover;" src="{{ asset('/offer_images/'.$o->image) }}" alt="Offer Image">
                                                 <div class="offer-content">
                                                     <ul class="offer-btn">
                                                         <li class="bg-color">Featured</li>
@@ -1176,7 +1369,7 @@
         <!-- Testimonial Section Start -->
         <section class="testimonial-section section-padding fix bg-cover">
             <div class="bag-shape float-bob-x">
-                <img src="{{ asset("mymountains/assets/img/testimonial/bag-shape.png") }}" alt="img">
+                <img loading="lazy" src="{{ asset("mymountains/assets/img/testimonial/bag-shape.png") }}" alt="Bag Shape">
             </div>
             <div class="container">
                 <div class="section-title text-center">
@@ -1188,7 +1381,7 @@
                     </h2>
                 </div>
                 <div class="testimonial-wrapper">
-                    {{-- <div class="swiper testimonial-slider">
+                    <div class="swiper testimonial-slider">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="testimonial-card-items">
@@ -1197,19 +1390,22 @@
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
-                                        <i class="fa-regular fa-star"></i>
+                                         <i class="fas fa-star"></i>
                                     </div>
                                     <p>
-                                        Praesent ut lacus a velit tincidunt aliquam a eget urna. Sed ullamcorper tristique nisl at pharetra turpis accumsan et etiam eu sollicitudin eros. In imperdiet accumsan.
+                                    My tour Of kashmir was handled very professionally, hotels and transport service was very good.
+                                     Special thanks to Ms Asima Bhatt who took care of everything..
+                                     My mountains is a good choice for Kashmir Packages..
                                     </p>
                                     <div class="client-info-items">
                                         <div class="client-info">
                                             <div class="client-image">
-                                                <img src="{{ asset("mymountains/assets/img/testimonial/client-1.png") }}" alt="img">
+                                                <img loading="lazy" style="width:65%" src="https://lh3.googleusercontent.com/a/ACg8ocLWhtWWBxg4DUdMjF9G378SWLk-p_BkhtPy9tRHJJwOQFJcIw=w90-h90-p-rp-mo-br100" alt="google review image">
                                             </div>
                                             <div class="text">
-                                                <h4>Kristin Watson</h4>
-                                                <p>Web Designer</p>
+                                                <h4>
+Sameer Arora</h4>
+                                                <p>Traveller</p>
                                             </div>
                                         </div>
                                         <div class="icon">
@@ -1228,19 +1424,21 @@
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
-                                        <i class="fa-regular fa-star"></i>
+                                       <i class="fas fa-star"></i>
                                     </div>
                                     <p>
-                                        Praesent ut lacus a velit tincidunt aliquam a eget urna. Sed ullamcorper tristique nisl at pharetra turpis accumsan et etiam eu sollicitudin eros. In imperdiet accumsan.
+                                        Had a great experience with my mountains tour and travel ..
+                                         Ms. Maviyah gave us an amazing services .. thank you very much 🙂
+
                                     </p>
                                     <div class="client-info-items">
                                         <div class="client-info">
                                             <div class="client-image">
-                                                <img src="{{ asset("mymountains/assets/img/testimonial/client-2.png") }}" alt="img">
+                                                <img loading="lazy" style="width:65%" src="https://lh3.googleusercontent.com/a-/ALV-UjX93QdqES6S5HVve4tyeunyQwGbeCiBxUqM2hpC-6T743SIRH8=w90-h90-p-rp-mo-br100" alt="google review image">
                                             </div>
                                             <div class="text">
-                                                <h4>Wade Warren</h4>
-                                                <p>President of Sales</p>
+                                                <h4>Darshu Gupta</h4>
+                                                <p>Traveller</p>
                                             </div>
                                         </div>
                                         <div class="icon">
@@ -1259,19 +1457,21 @@
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
-                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fas fa-star"></i>
                                     </div>
                                     <p>
-                                        Praesent ut lacus a velit tincidunt aliquam a eget urna. Sed ullamcorper tristique nisl at pharetra turpis accumsan et etiam eu sollicitudin eros. In imperdiet accumsan.
-                                    </p>
+                                        Kashmir Tour means my mountains by Aliya.l am mesmerized with their arrangement, 
+                                        execution plan. I am really glad to have them as my travel partner in Kashmir. 
+                                        Thanks a lot to my TA Aliya. She did a wonderful job as my tour...
+                                     </p>
                                     <div class="client-info-items">
                                         <div class="client-info">
                                             <div class="client-image">
-                                                <img src="{{ asset("mymountains/assets/img/testimonial/client-3.png") }}" alt="img">
+                                                <img loading="lazy" style="width:65%" src="https://lh3.googleusercontent.com/a/ACg8ocLWhtWWBxg4DUdMjF9G378SWLk-p_BkhtPy9tRHJJwOQFJcIw=w90-h90-p-rp-mo-br100" alt="google review image">
                                             </div>
                                             <div class="text">
-                                                <h4>Brooklyn Simmons</h4>
-                                                <p>President of Sales</p>
+                                                <h4>Saira Mohanty</h4>
+                                                <p>Traveller</p>
                                             </div>
                                         </div>
                                         <div class="icon">
@@ -1288,46 +1488,44 @@
                             <button class="array-prevs">Previews</button>
                             <button class="array-nexts">Next</button>
                         </div>
-                    </div> --}}
+                    </div>
                     <!-- Elfsight Google Reviews | Untitled Google Reviews -->
-<script src="https://elfsightcdn.com/platform.js" async></script>
-<div class="elfsight-app-e7459153-25bb-40d1-acc5-014653ed396b" data-elfsight-app-lazy></div>
-                </div>
+               </div>
             </div>
         </section>
 
         <!-- Travel-Feature-Section Start -->
-        <section class="travel-feature-section section-padding fix" style="background-image: url('assets/img/travel-bg.jpg');">
+        <section class="travel-feature-section  fix" style="background-image: url('assets/img/travel-bg.jpg');">
             <div class="shape-1 float-bob-y">
-                <img src="{{ asset("mymountains/assets/img/plane-shape1.png") }}" alt="img">
+                <img loading="lazy" src="{{ asset("mymountains/assets/img/plane-shape1.png") }}" alt="shape 1">
             </div>
             <div class="shape-2 float-bob-x">
-                <img src="{{ asset("mymountains/assets/img/plane-shape2.png") }}" alt="img">
+                <img loading="lazy" src="{{ asset("mymountains/assets/img/plane-shape2.png") }}" alt="shape 2">
             </div>
             <div class="container">
                 <div class="feature-wrapper">
                     <div class="row g-4">
                         <div class="col-lg-6">
-                            <div class="feature-content">
+                            <div class="feature-content mt-2">
                                 <div class="section-title">
                                     <span class="sub-title wow fadeInUp">
                                         Are you ready to travel?
                                     </span>
                                     <h2 class="wow fadeInUp wow" data-wow-delay=".2s">
-                                        World Leading Online Tour Booking Platform
+                                     Leading Online Tour Booking Platform
                                     </h2>
                                 </div>
-                                <p class="wow fadeInUp wow" data-wow-delay=".3s">
-                                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+                                <p class="wow fadeInUp wow text-dark" data-wow-delay=".3s">
+                                    Discover Kashmir like never before with our trusted online tour booking platform. We specialize in curating unforgettable journeys through the breathtaking valleys, snow-capped peaks, and serene lakes of Kashmir.
                                 </p>
                                <div class="feature-area">
                                     <div class="line-shape">
-                                        <img src="{{ asset("mymountains/assets/img/line-shape.png") }}" alt="img">
+                                        <img loading="lazy" src="{{ asset("mymountains/assets/img/line-shape.png") }}" alt="line shape">
                                     </div>
                                 <div class="feature-items wow fadeInUp wow" data-wow-delay=".5s">
                                     <div class="feature-icon-item">
                                         <div class="icon">
-                                            <img src="{{ asset("mymountains/assets/img/icon/08.svg") }}" alt="img">
+                                            <img loading="lazy" src="{{ asset("mymountains/assets/img/icon/08.svg") }}" alt="icon 08">
                                         </div>
                                         <div class="content">
                                             <h5>
@@ -1341,9 +1539,9 @@
                                             <i class="fa-solid fa-badge-check"></i>
                                         </li>
                                         <li>
-                                            <span>
-                                                There are many variations of <br>
-                                                 passages of available,
+                                            <span class="text-dark">
+                                               Get ready for the journey of a lifetime!<br>
+                                               This isn’t just another trip—it’s the most adventurous tour ever.
                                             </span>
                                         </li>
                                     </ul>
@@ -1351,7 +1549,7 @@
                                 <div class="feature-items wow fadeInUp wow" data-wow-delay=".7s">
                                     <div class="feature-icon-item">
                                         <div class="icon">
-                                            <img src="{{ asset("mymountains/assets/img/icon/09.svg") }}" alt="img">
+                                            <img loading="lazy" src="{{ asset("mymountains/assets/img/icon/09.svg") }}" alt="icon 09">
                                         </div>
                                         <div class="content">
                                             <h5>
@@ -1365,9 +1563,10 @@
                                             <i class="fa-solid fa-badge-check"></i>
                                         </li>
                                        <li>
-                                            <span>
-                                                There are many variations of <br>
-                                                passages of available,
+                                            <span class="text-dark">
+                                                Your real adventure begins the moment you step in.<br>
+                                                No more ordinary trips—this is where true exploration starts. 
+                                               
                                             </span>
                                        </li>
                                     </ul>
@@ -1378,7 +1577,7 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="feature-image wow img-custom-anim-left">
-                                <img src="{{ asset("mymountains/assets/img/man-image.png") }}" alt="img">
+                                <img loading="lazy" src="{{ asset("mymountains/assets/img/man-image.png") }}" alt="man image">
                             </div>
                         </div>
                     </div>
@@ -1386,106 +1585,12 @@
             </div>
         </section>
 
-        <!-- Team Section Start -->
-        {{-- <section class="team-section fix section-padding">
-            <div class="jip-shape float-bob-x">
-                <img src="{{ asset("mymountains/assets/img/team/jip.png") }}" alt="img">
-            </div>
-            <div class="container">
-                <div class="section-title text-center">
-                    <span class="sub-title wow fadeInUp">
-                        Meet with Guide
-                    </span>
-                    <h2 class="wow fadeInUp wow" data-wow-delay=".2s">Tour Guide</h2>
-                </div>
-                <div class="row">
-                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp wow" data-wow-delay=".2s">
-                        <div class="team-card-item">
-                            <div class="team-image">
-                                <img src="{{ asset("mymountains/assets/img/team/01.jpg") }}" alt="img">
-                            </div>
-                            <div class="team-content">
-                                <h4><a href="{{ url("team-details.html") }}">Darlene Robertson</a></h4>
-                                <p>Tourist Guide</p>
-                                <div class="social-profile">
-                                    <ul>
-                                        <li><a href="{{ url("#") }}"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="{{ url("#") }}"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="{{ url("#") }}"><i class="fab fa-linkedin-in"></i></a></li>
-                                        <li><a href="{{ url("#") }}"><i class="fab fa-instagram"></i></a></li>
-                                    </ul>
-                                    <span class="plus-btn"><i class="fas fa-share-alt"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp wow" data-wow-delay=".4s">
-                        <div class="team-card-item">
-                            <div class="team-image">
-                                <img src="{{ asset("mymountains/assets/img/team/02.jpg") }}" alt="img">
-                            </div>
-                            <div class="team-content">
-                                <h4><a href="{{ url("team-details.html") }}">Leslie Alexander</a></h4>
-                                <p>Tourist Guide</p>
-                                <div class="social-profile">
-                                    <ul>
-                                        <li><a href="{{ url("#") }}"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="{{ url("#") }}"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="{{ url("#") }}"><i class="fab fa-linkedin-in"></i></a></li>
-                                        <li><a href="{{ url("#") }}"><i class="fab fa-instagram"></i></a></li>
-                                    </ul>
-                                    <span class="plus-btn"><i class="fas fa-share-alt"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp wow" data-wow-delay=".6s">
-                        <div class="team-card-item">
-                            <div class="team-image">
-                                <img src="{{ asset("mymountains/assets/img/team/03.jpg") }}" alt="img">
-                            </div>
-                            <div class="team-content">
-                                <h4><a href="{{ url("team-details.html") }}">Ralph Edwards</a></h4>
-                                <p>Tourist Guide</p>
-                                <div class="social-profile">
-                                    <ul>
-                                        <li><a href="{{ url("#") }}"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="{{ url("#") }}"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="{{ url("#") }}"><i class="fab fa-linkedin-in"></i></a></li>
-                                        <li><a href="{{ url("#") }}"><i class="fab fa-instagram"></i></a></li>
-                                    </ul>
-                                    <span class="plus-btn"><i class="fas fa-share-alt"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp wow" data-wow-delay=".8s">
-                        <div class="team-card-item">
-                            <div class="team-image">
-                                <img src="{{ asset("mymountains/assets/img/team/04.jpg") }}" alt="img">
-                            </div>
-                            <div class="team-content">
-                                <h4><a href="{{ url("team-details.html") }}">Kathryn Murphy</a></h4>
-                                <p>Tourist Guide</p>
-                                <div class="social-profile">
-                                    <ul>
-                                        <li><a href="{{ url("#") }}"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="{{ url("#") }}"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="{{ url("#") }}"><i class="fab fa-linkedin-in"></i></a></li>
-                                        <li><a href="{{ url("#") }}"><i class="fab fa-instagram"></i></a></li>
-                                    </ul>
-                                    <span class="plus-btn"><i class="fas fa-share-alt"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-         </section> --}}
+     
+        
 
         <!-- Cta-bg-Section Start -->
        
-         <section class="faq-section section-padding pb-0 fix">
+         <section class="faq-section pt-2 pb-5 fix">
             <div class="container">
                 <div class="section-title text-center">
                     <span class="sub-title wow fadeInUp">
@@ -1506,7 +1611,7 @@
 
                                         <div class="accordion-item mb-3 wow fadeInUp" data-wow-delay=".1s"  id="faq{{$f->id}}">
                                             <h5 class="accordion-header">
-                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq{{$f->id}}" aria-expanded="true" aria-controls="faq{{$f->id}}"> 
+                                                <button class="accordion-button collapsed" style="font-size: 1rem;" type="button" data-bs-toggle="collapse" data-bs-target="#faq{{$f->id}}" aria-expanded="true" aria-controls="faq{{$f->id}}"> 
                                                  {{$f->title}}
                                                 </button>   
                                             </h5>
@@ -1585,90 +1690,436 @@
         </section>
 
         <!-- News-Section Start -->
-        <section class="news-section section-padding fix">
-            <div class="container">
-                <div class="section-title text-center">
+        {{-- gallery v0 --}}
+
+
+
+
+<div class="container mt-4">
+  
+   <div class="section-title text-center">
                     <span class="sub-title wow fadeInUp">
-                        Blogs & Updates
+                       Gallery
                     </span>
                     <h2 class="wow fadeInUp wow" data-wow-delay=".2s">
-                        Our Latest Blogs
+                       Traveller image gallery
                     </h2>
                 </div>
-                <div class="row">
-                    @foreach ($blogs as $b)
-                    <div class="col-xl-4 col-md-6 col-lg-6 wow fadeInUp mb-3" data-wow-delay=".3s">
-                        <div class="news-card-items-3 mt-0">
-                            <div class="news-image">
-                                <img src="{{ asset('blog_images/' . $b->image) }}" alt="img">
-                            </div>
-                            <div class="news-content">
-                                <ul class="post-meta">
-                                    <li class="post">{{$b->created_at->format('d M')}}</li>
-                                    <li>
-                                        <i class="fa-regular fa-user"></i>
-                                        By Admin
-                                    </li>
-                                    <li>
-                                        <i class="fa-regular fa-tag"></i>
-                                        Travel
-                                    </li>
-                                </ul>
-                                <h4>
-                                    <a href="https://mymountains.in/blogs/{{ $b->slug }}">
-                                        {!! Str::limit(strip_tags($b->content), 100) !!}
-                                    </a>
-                                </h4>
-                                <a href="https://mymountains.in/blogs/{{ $b->slug }}" class="link-btn">Read More <i class="fa-sharp fa-regular fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    @endforeach
+  <!-- Gallery Section -->
+  <div class="row gallery-container">
+      <!-- Main Featured Image -->
+      <div class="col-md-8 mb-4">
+          <div class="featured-image position-relative gallery-item" data-index="0">
+              @if(count($images) > 0)
+                  <img loading="lazy" src="{{ asset("gallery_images/".$images[0]['image']) }}"  class="img-fluid rounded main-image" alt="{{ $images[0]['title'] ?? 'Kashmir Tour' }}">
+              @else
+                  <img loading="lazy" src="{{ asset("gallery_images/".$images[0]['image']) }}" alt="Kashmir Tour" class="img-fluid rounded main-image" alt="Tour Image">
+              @endif
+              <button class="btn btn-light btn-sm position-absolute bottom-0 start-0 m-3" id="viewAllBtn">
+                  <i class="fas fa-images"></i> View All ({{ count($images) }})
+              </button>
+          </div>
+      </div>
+      
+      <!-- Thumbnail Grid -->
+      <div class="col-md-4 mb-4">
+          <div class="row g-2">
+              @for($i = 1; $i <= 4; $i++)
+                  <div class="col-6">
+                      <div class="thumbnail gallery-item" data-index="{{ $i }}">
+                          @if(isset($images[$i]))
+                              <img loading="lazy" src="{{ asset("gallery_images/".$images[$i]['image']) }}" 
+                                   alt="{{ $images[$i]['title'] ?? 'Tour Image '.$i }}" 
+                                   class="img-fluid rounded">
+                          @else
+                              <img loading="lazy" src="{{ asset('images/placeholder.jpg') }}" alt="Tour Image" class="img-fluid rounded">
+                          @endif
+                      </div>
+                  </div>
+              @endfor
+          </div>
+      </div>
+  </div>
+  
+  <!-- Review Section -->
+
+
+
+     <div class="container row mx-auto deals ">
+ 
+     <div class="section-title text-center">
+                    <span class="sub-title wow fadeInUp">
+                       Attractions
+                    </span>
+                    <h2 class="wow fadeInUp wow" data-wow-delay=".2s">
+                       Popular Kashmir Attractions
+                    </h2>
                 </div>
-            </div>
-        </section>
-        
-        <!-- Brand Section Start -->
-         <!----        <div class="brand-section section-padding pt-0">
-            <div class="left-shape">
-                <img src="assets/img/brand/shape.png" alt="">
-            </div>
-            <div class="container">
-                <div class="brand-wrapper">
-                    <h4 class="brand-title wow fadeInUp" data-wow-delay=".3s">1k + Brands Trust Us</h4>
-                        <div class="swiper brand-slider">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="brand-image">
-                                        <img src="assets/img/brand/01.png" alt="brand-img">
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="brand-image">
-                                        <img src="assets/img/brand/01.png" alt="brand-img">
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="brand-image">
-                                        <img src="assets/img/brand/01.png" alt="brand-img">
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="brand-image">
-                                        <img src="assets/img/brand/01.png" alt="brand-img">
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="brand-image">
-                                        <img src="assets/img/brand/01.png" alt="brand-img">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                   </div>
+    <div class="d-flex flex-row flex-wrap justify-content-between ">
+      <div class="col-md-5  my-3 ">
+        <div class="card border-0 rounded-3" data-aos="zoom-in-up" data-aos-duration="4000">
+          <img loading="lazy" class="card-img-top rounded-3 lazy" src="landing/clone74.avif" alt="Card image" style="height: 280px;">
+          <div class="card-img-overlay text-white d-flex flex-column justify-content-end rounded-3 border-0" style="background: rgba( 0, 0, 0, 0.2 );
+                  backdrop-filter: blur( 0px );
+          -webkit-backdrop-filter: blur( 0px );">
+            <h4 class="card-title fw-bolder " style="width: fit-content;  border-bottom: 2px solid#46bfaf;">
+              DAL&nbsp;LAKE</h4>
+            <p class="card-text fw-bold">Known to be “The Jewel of Srinagar”, Dal Lake spreads across an area of around
+              26 square kilometers and is one of the major attractions included in our Kashmir tour packages.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5  my-3">
+        <div class="card  rounded-3 border-0" data-aos="zoom-in-up" data-aos-duration="4000">
+          <img loading="lazy" class="card-img-top rounded-3 lazy" src="landing/clone75.avif" alt="Card image" style="height: 280px;">
+          <div class="card-img-overlay text-white d-flex flex-column justify-content-end border-0 rounded-3" style="background: rgba( 0, 0, 0, 0.2 );
+                  backdrop-filter: blur( 0px );
+          -webkit-backdrop-filter: blur( 0px );">
+            <h4 class="card-title fw-bolder " style="width: fit-content;  border-bottom: 2px solid#46bfaf;">
+              SHANKARACHARYA&nbsp;TEMPLE</h4>
+            <p class="card-text fw-bold">The Shankaracharya Temple, located on the Shankaracharya Hill in Srinagar, is a
+              prominent religious site to visit with our Kashmir tour packages.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5 my-3">
+        <div class="card  rounded-3 border-0" data-aos="zoom-in-up" data-aos-duration="4000">
+          <img loading="lazy" class="card-img-top rounded-3 lazy" src="landing/clone10.avif" alt="Card image" style="height: 280px;">
+          <div class="card-img-overlay text-white d-flex flex-column justify-content-end rounded-3 border-0" style="background: rgba( 0, 0, 0, 0.25 );       
+          backdrop-filter: blur( 0px );
+          -webkit-backdrop-filter: blur( 0px );">
+            <h4 class="card-title fw-bolder " style="width: fit-content;  border-bottom: 2px solid#46bfaf;">
+              GULMARG&nbsp;GONDOLA</h4>
+            <p class="card-text fw-bold">Gulmarg Gondola is the second highest and second longest cable car ride in the
+              world.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5 my-3">
+        <div class="card  rounded-3 border-0" data-aos="zoom-in-up" data-aos-duration="4000">
+          <img loading="lazy" class="card-img-top rounded-3 lazy" src="landing/clone21.avif" alt="Card image" style="height: 280px;">
+          <div class="card-img-overlay text-white d-flex flex-column justify-content-end rounded-3 border-0" style="background: rgba( 0, 0, 0, 0.2 );
+          backdrop-filter: blur( 0px );
+          -webkit-backdrop-filter: blur( 0px );">
+            <h4 class="card-title fw-bolder " style="width: fit-content;  border-bottom: 2px solid#46bfaf;">
+              TULIP&nbsp;GARDEN</h4>
+            <p class="card-text fw-bold">Opened for public in the year 2007, the Indira Gandhi Memorial Tulip Garden was
+              built with the aim of improving floriculture as well as tourism in Kashmir.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5 my-3">
+        <div class="card  rounded-3 border-0" data-aos="zoom-in-up" data-aos-duration="4000">
+          <img loading="lazy" class="card-img-top rounded-3 lazy" src="landing/clone76.avif" alt="Card image" style="height: 280px;">
+          <div class="card-img-overlay text-white d-flex flex-column justify-content-end rounded-3 border-0" style="background: rgba( 0, 0, 0, 0.25 );
+          backdrop-filter: blur( 0px );
+          -webkit-backdrop-filter: blur( 0px );;">
+            <h4 class="card-title fw-bolder " style="width: fit-content;  border-bottom: 2px solid#46bfaf;">
+              APHARWAT&nbsp;PEAK</h4>
+            <p class="card-text fw-bold">Located at a height of 4,200 m above sea level, Apharwat Peak is one of the
+              most significant places in Gulmarg that attributes to the beauty of this attraction.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5 my-3">
+        <div class="card rounded-3 border-0" data-aos="zoom-in-up" data-aos-duration="4000">
+          <img loading="lazy" class="card-img-top rounded-3 lazy" src="landing/clone77.avif" alt="Card image" style="height: 280px;">
+          <div class="card-img-overlay text-white d-flex flex-column justify-content-end rounded-3 border-0" style="background: rgba( 0, 0, 0, 0.25 );
+          backdrop-filter: blur( 0px );
+          -webkit-backdrop-filter: blur( 0px );">
+            <h4 class="card-title fw-bolder " style="width: fit-content;  border-bottom: 2px solid#46bfaf;">
+              MUGHAL&nbsp;GARDEN</h4>
+            <p class="card-text fw-bold">Forming the largest garden of the 3 breathtaking Mughal Gardens, the amazingly
+              laid out Shalimar Bagh makes for one of the most sublime places to see in Srinagar.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="deals">
+    <div class="container row mx-auto  ">
+     
+      <div class="section-title text-center">
+                    <span class="sub-title wow fadeInUp">
+                       Destinations
+                    </span>
+                    <h2 class="wow fadeInUp wow" data-wow-delay=".2s">
+                      Popular Related Destinations
+                    </h2>
+                </div>
+      <div class="col-md-3 ">
+        <div class="card  border-0 rounded-3 my-3" data-aos="flip-right" data-aos-duration="4000" style="background: rgba( 0, 0, 0, 0.25 );       
+      backdrop-filter: blur( 0px );
+      -webkit-backdrop-filter: blur( 0px );">
+          <img loading="lazy" class="card-img-top rounded-3 lazy" src="landing/clone78.avif" alt="Card image" style="height: 200px;">
+          <div class="card-img-overlay text-white d-flex flex-column justify-content-end ">
+            <h5 class="card-title">Jammu and Kashmir</h5>
+            <p class="card-text ">Tour Packages</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 ">
+        <div class="card  border-0 rounded-3 my-3" data-aos="flip-right" data-aos-duration="4000" style="background: rgba( 0, 0, 0, 0.25 );       
+      backdrop-filter: blur( 0px );
+      -webkit-backdrop-filter: blur( 0px );">
+          <img loading="lazy" class="card-img-top rounded-3 lazy" src="landing/clone79.avif" alt="Card image" style="height: 200px;">
+          <div class="card-img-overlay text-white d-flex flex-column justify-content-end ">
+            <h5 class="card-title">Srinagar</h5>
+            <p class="card-text ">Tour Packages</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 ">
+        <div class="card  border-0 rounded-3 my-3" data-aos="flip-right" data-aos-duration="4000" style="background: rgba( 0, 0, 0, 0.25 );       
+      backdrop-filter: blur( 0px );
+      -webkit-backdrop-filter: blur( 0px );">
+          <img loading="lazy" class="card-img-top rounded-3 lazy" src="landing/clone80.avif" alt="Card image" style="height: 200px;">
+          <div class="card-img-overlay text-white d-flex flex-column justify-content-end ">
+            <h5 class="card-title">Ladakh</h5>
+            <p class="card-text ">Tour Packages</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 ">
+        <div class="card border-0 rounded-3 my-3 " data-aos="flip-right" data-aos-duration="4000" style="background: rgba( 0, 0, 0, 0.25 );       
+      backdrop-filter: blur( 0px );
+      -webkit-backdrop-filter: blur( 0px );">
+          <img loading="lazy" class="card-img-top rounded-3 lazy" src="landing/clone81.avif" alt="Card image" style="height: 200px;">
+          <div class="card-img-overlay text-white d-flex flex-column justify-content-end ">
+            <h5 class="card-title">Pahalgam</h5>
+            <p class="card-text ">Tour Packages</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 ">
+        <div class="card border-0 rounded-3 my-3 " data-aos="flip-right" data-aos-duration="4000" style="background: rgba( 0, 0, 0, 0.25 );       
+      backdrop-filter: blur( 0px );
+      -webkit-backdrop-filter: blur( 0px );">
+          <img loading="lazy" class="card-img-top rounded-3 lazy" src="landing/clone82.avif" alt="Card image" style="height: 200px;">
+          <div class="card-img-overlay text-white d-flex flex-column justify-content-end ">
+            <h5 class="card-title">Gulmarg</h5>
+            <p class="card-text ">Tour Packages</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 ">
+        <div class="card  border-0 rounded-3 my-3" data-aos="flip-right" data-aos-duration="4000" style="background: rgba( 0, 0, 0, 0.25 );       
+      backdrop-filter: blur( 0px );
+      -webkit-backdrop-filter: blur( 0px );">
+          <img loading="lazy" class="card-img-top rounded-3 lazy" src="landing/clone83.avif" alt="Card image" style="height: 200px;">
+          <div class="card-img-overlay text-white d-flex flex-column justify-content-end ">
+            <h5 class="card-title">Jammu</h5>
+            <p class="card-text ">Tour Packages</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+<!-- Modal for Gallery -->
+<div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-fullscreen-md-down">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title">Kashmir Tour Gallery</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <div class="row g-3" id="modalGallery">
+                  @foreach($images as $index => $image)
+                      <div class="col-6 col-md-4 col-lg-3">
+                          <div class="gallery-item" data-index="{{ $index }}">
+                              <img loading="lazy" src="{{ asset("gallery_images/".$image['image']) }}" 
+                                   alt="{{ $image['title'] ?? 'Gallery Image '.$index }}" 
+                                   class="img-fluid">
+                          </div>
+                      </div>
+                  @endforeach
               </div>
-         </div>
-        -->
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Modal for Single Image View -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+      <div class="modal-content bg-dark">
+          <div class="modal-header border-0">
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body text-center p-0">
+              <img loading="lazy" src="/placeholder.svg" id="modalImage" class="img-fluid" alt="Full size image">
+          </div>
+          <div class="modal-footer border-0 justify-content-center">
+              <button type="button" class="btn btn-outline-light me-2" id="prevImageBtn">
+                  <i class="fas fa-chevron-left"></i> Previous
+              </button>
+              <button type="button" class="btn btn-outline-light" id="nextImageBtn">
+                  Next <i class="fas fa-chevron-right"></i>
+              </button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Initialize Bootstrap components
+    const galleryModal = new bootstrap.Modal(document.getElementById('galleryModal'));
+    const imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
+    
+    // DOM elements
+    const modalImage = document.getElementById('modalImage');
+    const prevImageBtn = document.getElementById('prevImageBtn');
+    const nextImageBtn = document.getElementById('nextImageBtn');
+    const readMoreBtn = document.getElementById('readMoreBtn');
+    const reviewText = document.getElementById('reviewText');
+    
+    // Gallery state
+    let currentImageIndex = 0;
+    let galleryImages = [];
+    
+    // Get image data from PHP
+    function initializeGalleryData() {
+        // This will be populated with data from the Blade template
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        
+        // Create an array to store image data
+        galleryImages = Array.from(galleryItems).map(item => {
+            const index = parseInt(item.getAttribute('data-index'));
+            const img = item.querySelector('img');
+            return {
+                index: index,
+                url: img.src,
+                title: img.alt
+            };
+        });
+        
+        // Sort by index to ensure correct order
+        galleryImages.sort((a, b) => a.index - b.index);
+    }
+    
+    // Open image modal with specific image
+    function openImageModal(index) {
+        if (index >= 0 && index < galleryImages.length) {
+            currentImageIndex = index;
+            modalImage.src = galleryImages[index].url;
+            modalImage.alt = galleryImages[index].title;
+            
+            // If gallery modal is open, close it
+            if (document.querySelector('#galleryModal.show')) {
+                galleryModal.hide();
+                setTimeout(() => {
+                    imageModal.show();
+                }, 500);
+            } else {
+                imageModal.show();
+            }
+        }
+    }
+    
+    // Navigate to previous image
+    function showPreviousImage() {
+        currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+        modalImage.src = galleryImages[currentImageIndex].url;
+        modalImage.alt = galleryImages[currentImageIndex].title;
+    }
+    
+    // Navigate to next image
+    function showNextImage() {
+        currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+        modalImage.src = galleryImages[currentImageIndex].url;
+        modalImage.alt = galleryImages[currentImageIndex].title;
+    }
+    
+    // Event listener for "View All" button
+    document.getElementById('viewAllBtn').addEventListener('click', function(e) {
+        e.preventDefault();
+        galleryModal.show();
+    });
+    
+    // Event listener for the "More" overlay in review section
+    const moreOverlay = document.querySelector('.more-overlay');
+    if (moreOverlay) {
+        moreOverlay.addEventListener('click', function() {
+            galleryModal.show();
+        });
+    }
+    
+    // Make all gallery items clickable
+    document.querySelectorAll('.gallery-item').forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            const index = parseInt(this.getAttribute('data-index'));
+            
+            // If it has the more-overlay, open the gallery modal
+            if (this.querySelector('.more-overlay')) {
+                galleryModal.show();
+            } else {
+                // Otherwise open the image modal
+                openImageModal(index);
+            }
+        });
+    });
+    
+    // Make modal gallery items clickable
+    document.querySelectorAll('#modalGallery .gallery-item').forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            const index = parseInt(this.getAttribute('data-index'));
+            openImageModal(index);
+        });
+    });
+    
+    // Navigation button event listeners
+    prevImageBtn.addEventListener('click', showPreviousImage);
+    nextImageBtn.addEventListener('click', showNextImage);
+    
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+        if (document.querySelector('#imageModal.show')) {
+            if (e.key === 'ArrowLeft') {
+                showPreviousImage();
+            } else if (e.key === 'ArrowRight') {
+                showNextImage();
+            } else if (e.key === 'Escape') {
+                imageModal.hide();
+            }
+        }
+    });
+    
+    // Read more button functionality
+    if (readMoreBtn && reviewText) {
+        // Set initial state
+        const fullText = reviewText.textContent;
+        const shortText = fullText.substring(0, 200) + '...';
+        let isExpanded = false;
+        
+        // Initial state - collapsed
+        reviewText.textContent = shortText;
+        
+        readMoreBtn.addEventListener('click', function() {
+            if (isExpanded) {
+                reviewText.textContent = shortText;
+                readMoreBtn.textContent = 'Read More';
+            } else {
+                reviewText.textContent = fullText;
+                readMoreBtn.textContent = 'Read Less';
+            }
+            isExpanded = !isExpanded;
+        });
+    }
+    
+    // Initialize gallery data
+    initializeGalleryData();
+});
+</script>
+{{-- gallery end --}}
+        
+        
         <!-- Footer Section Start -->
        @include("footer")
         
@@ -1701,10 +2152,43 @@
         {{-- sweet alert --}}
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
+
+
+
+        <script>
+               var swiper2 = new Swiper("#swiper1", {
+      slidesPerView: 3,
+      type: 'loop',
+      autoplay: true,
+      spaceBetween: 30,
+      pagination: {
+        clickable: true,
+      },
+      breakpoints: {
+        // when window width is <= 499px
+        300: {
+
+          slidesPerView: 1,
+          // centeredSlides: true,
+          spaceBetweenSlides: 10
+        },
+        600: {
+          slidesPerView: 2,
+          spaceBetweenSlides: 30
+        },
+        // when window width is <= 999px
+        999: {
+          slidesPerView: 3,
+          spaceBetweenSlides: 40
+        }
+      }
+    });
+        </script>
+
         <script>
             
    function set_head(title){
-    $("#mdh").html(`<h6 class="text-light m-2" style="font-weight:bold;">${title}</h6>`);
+    $("#mdh").html(`<h6 class="text-dark m-2" style="font-weight:bold;">${title}</h6>`);
     $("#packagename").val(title)
   }
    function clear_head(){
@@ -1935,6 +2419,7 @@ e.preventDefault();
         autoplay: {
             delay: 2000, // Time between slides (in ms)
             disableOnInteraction: false, // Keep autoplay after user interaction
+
         },
         speed: 1000, // Slide transition speed
         effect: "fade", // Optional (fade effect)
@@ -1947,6 +2432,23 @@ e.preventDefault();
             prevEl: ".swiper-button-prev",
         },
     });
+
+
+    const heroEl = document.querySelector(".hero-slider");
+
+heroEl.addEventListener("mouseenter", () => {
+    heroSwiper.autoplay.stop();
+});
+heroEl.addEventListener("mouseleave", () => {
+    heroSwiper.autoplay.start();
+});
+
+heroEl.addEventListener("focusin", () => {
+    heroSwiper.autoplay.stop();
+});
+heroEl.addEventListener("focusout", () => {
+    heroSwiper.autoplay.start();
+});
 </script>
     </body>
 

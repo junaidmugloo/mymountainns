@@ -30,66 +30,95 @@
         <link rel="stylesheet" href="{{ asset("mymountains/assets/css/color.css") }}">
         <!--<< Main.css >>-->
         <link rel="stylesheet" href="{{ asset("mymountains/assets/css/main.css") }}">
+        <style>
+            .sp22 {
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   border-radius: 16px;
+}
+        </style>
         
  
 </head>
 <body>
 @include('nav')
+<hr>
 <section class="popular-destination-section pt-4 pb-4">
         <div class="container">
+            <div class="section-title">
+                   
+                    <h2 class="wow fadeInUp wow text-center" data-wow-delay=".5s">
+                       
+                        @foreach ($packages as $p)
+                        {{$p->category}}
+                        @break
+                        @endforeach
+                    </h2>
+             </div>
             <div class="row g-4">
                @foreach ($packages as $p)
-                <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp wow" data-wow-delay=".2s">
-                    <div class="destination-card-items mt-0">
-                        <div class="destination-image">
-                            <img src="package_images/{{ $p->image }}" alt="img">
-                            <div class="heart-icon">
-                                <i class="fa-regular fa-heart"></i>
-                            </div>
-                        </div>
-                       <div class="destination-content">
-                        <h3 class="text-start text-light rounded-pill"
-                            style="background:linear-gradient(93deg,#26e2ff,#048fec);font-size:9px;cursor:text;font-weight:900; width:fit-content;padding:0 10px; height:18px;line-height:18px;">
-                            {{$p->tag_line}}</h3>
-                        <ul class="meta">
-                            <li>
-                                <i class="fa-thin fa-location-dot"></i>
-                                {{-- <span class="fw-bold">{{ $p->D1}}</span>
-                                <b>|</b>
-                                <span class="fw-bold">{{ $p->D2}}</span>
-                                <b>|</b>
-                                <span class="fw-bold">{{ $p->D3}}</span> --}}
-                            </li>
-                            <li class="rating">
-                                <div class="star">
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <p>4.7</p>
-                            </li>
-                        </ul>
-                        <h5>
-                            <a href="{{ url('/details/'.$p->id) }}">
-                                {{$p->name}}
-                            </a>
-                        </h5>
-                        <ul class="info">
-                            <li>
-                                <i class="fa-regular fa-clock"></i>
-                                {{$p->day}} days & {{$p->night}} nights
-                            </li>
-                            <li>
-                                <i class="fa-thin fa-users"></i>
-                                50+
-                            </li>
-                        </ul>
-                        <div class="price">
-                            <h6>₹{{$p->discount}}<span>/Per person</span></h6>
-                            <a href="tel:+91-70518 93547" class="theme-btn style-2">
-                                Call Now<i class="fa-sharp fa-regular fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                    </div>
+                <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp wow" data-wow-delay=".2s">
+                   
+            
+       
+        <div class="sp22 wow fadeInUp wow" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+          <div class="card rounded-3  border-0 " data-aos="flip-right" data-aos-duration="4000">
+            <img src="package_images/{{$p->image}}"  onclick="window.location.href='/details/{{$p->id}}'" class="card-img-top rounded-3 lazy" alt="Fissure in Sandstone"
+              style="height: 40vh; cursor: pointer;" width="100px" />
+            <div class="card-body  ">
+              <small style="font-size: 14px;" class="d-flex justify-content-between fw-medium">{{$p->day}} days & {{$p->night}} nights <span
+                  style="font-size: 12px;"><i class="rounded-pill px-2 py-2  fa-solid fa-star text-success">4.9 <span
+                      class="text-muted">(261)</span></i></span>
+              </small>
+              <p class="card-title text-start text-dark" style="font-size: 15px;">{{$p->name}}</p>
+              <p class="card-text p-0 mb-2 text-start rounded" style="font-size: 12px; background-color: #fffbf0; ">
+                <span class="fw-bold">
+
+                  @php
+                  $string = $p->destination;
+                  $parts = explode(',', $string);
+                  // $firstPart = $parts[0];
+                  // $secondPart = $parts[1];
+                  $len=0;
+                  foreach ($parts as $part) {
+                    $len+=1; // Add the length of each part to the total
+                  }
+                  
+                 
+                    @endphp
+                              {{ $p->D1}}</span> 
+                              <b>|</b>
+                              <span class="fw-bold">{{ $p->D2}}</span>
+                              <b>|</b>
+                              <span class="fw-bold">{{ $p->D3}}</span>
+                              <span class="fw-bold text-danger" onclick="window.location.href='/details/{{$p->id}}'" style="cursor: pointer;">&nbsp;&nbsp;&nbsp;+{{ $len}}</span> 
+                           
+              </p>
+              <p class="card-text p-0 mb-2 text-start rounded" style="font-size: 12px; background-color:  #fffbf0; ">
+                <span class="fw-bold"><i class="fa-solid fa-hotel"></i> </span> Hotel &nbsp; &nbsp; &nbsp;
+                <span class="fw-bold"><i class="fa-solid fa-utensils"></i></span> Food  &nbsp; &nbsp; &nbsp;
+                <span class="fw-bold"><i class="fa-solid fa-car"></i> </span> Transport 
+              </p>
+              <h3 class="text-start text-light rounded-pill"
+                style="background:linear-gradient(93deg,#ff7b26,#ec048c);font-size:9px;cursor:text;font-weight:900; width:fit-content;padding-right:10px; padding-left:10px; height:18px;line-height:18px;">
+                {{$p->tag_line}}</h3>
+              <h5 class="fw-bolder text-start  pb-2 pt-2" style="font-size: 18px;">INR {{$p->discount}} <small><s class=""
+                    style="font-size: 14px;">INR
+                    {{$p->price}}</s></small>&nbsp;&nbsp;&nbsp;<span>
+                  <button class="px-2 py-1  border-0 rounded text-success"
+                    style="font-size: 9px;background-color: #E7F3EA;color:#0BB22A">save INR {{$p->price-$p->discount}}</button></span></h5>
+              <div class="d-flex justify-content-between " style="align-self: center " >
+                <a href="tel:{{$p->contact}}" class="btn" style="border-color: #46bfaf; padding-top: 8px;">
+                  <i class="fa-solid fa-phone " role="button" style="color: #46bfaf"></i>
+                </a>
+                <a href="/details/{{ $p->id }}" class="text-capitalize btn  text-white px-5 py-2 border rounded"
+                  style="background-color: #46bfaf;" >
+                  Book Now</a>
+                 
+              </div>
+            </div>
+          </div>
+        </div>
+       
                 </div>
                 @endforeach
                

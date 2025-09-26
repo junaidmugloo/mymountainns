@@ -1,4 +1,9 @@
+ <link rel="stylesheet" href="{{ asset("/assets/css/homepage.css") }}">
 <style>
+  .header-top-wrapper-new {
+ 
+    padding: 0.5rem 0;
+}
   .df-bottombar-branding{
     display: none !important;
   }
@@ -62,10 +67,36 @@
     opacity: 0;
 }
   }</style>
-<header class="header-section-10">
+
+
+  <style>
+.animated-gradient {
+  background: linear-gradient(93deg, #26e2ff, #048fec, #26e2ff);
+  background-size: 300% 300%;
+  animation: gradientMove 8s ease infinite;
+
+ 
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+</style>
+<header class="header-section-10" >
     <div class="header-top-section-new">
-        <div class="container-fluid">
+
+        <div class="container-fluid animated-gradient" style=" font-size: 0.9rem;">
+           
             <div class="header-top-wrapper-new">
+              
                 <div class="social-icon d-flex align-items-center">
                     <span>Follow Us</span>
                     <a href="{{ url("https://www.facebook.com/mymountains") }}"><i class="fab fa-facebook-f"></i></a>
@@ -113,16 +144,7 @@
                                             </a>
                                             
                                         </li>
-                                        <li class="has-dropdown active d-xl-none">
-                                            <a href="{{ url("team.html") }}" class="border-none">
-                                            Home
-                                            </a>
-                                            <ul class="submenu">
-                                                <li><a href="{{ url("index.html") }}">Home 01</a></li>
-                                                <li><a href="{{ url("index-2.html") }}">Home 02</a></li>
-                                                <li><a href="{{ url("index-3.html") }}">Home 03</a></li>
-                                            </ul>
-                                        </li>
+                                        
 
                                         <li>
                                             <a href="{{ url("destination-details.html") }}">
@@ -135,28 +157,13 @@
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="{{ url("tour-details.html") }}">
+                                            <a href="{{ url("/explore") }}">
                                                 Tour
-                                                <i class="fa-solid fa-chevron-down"></i>
+                                               
                                             </a>
-                                            <ul class="submenu">
-                                                <li><a href="{{ url("tour.html") }}">Our Tour</a></li>
-                                                <li><a href="{{ url("tour-details.html") }}">Tour Details</a></li>
-                                            </ul>
+                                            
                                         </li>
-                                        {{-- <li class="has-dropdown">
-                                            <a href="{{ url("news.html") }}">
-                                                Pages
-                                                <i class="fa-solid fa-chevron-down"></i>
-                                            </a>
-                                            <ul class="submenu">
-                                                <li><a href="{{ url("activities.html") }}">Activities</a></li>
-                                                <li><a href="{{ url("activities-details.html") }}">Activities Details</a></li>
-                                                <li><a href="{{ url("team.html") }}">Our Team</a></li>
-                                                <li><a href="{{ url("team-details.html") }}">Team Details</a></li>
-                                                <li><a href="{{ url("faq.html") }}">Our Faq</a></li>
-                                            </ul>
-                                        </li> --}}
+                                       
                                        <li>
                                             <a href="{{ url("/blogs") }}">
                                                 Blog   
@@ -173,9 +180,9 @@
                                 </nav>
                             </div>
                         </div>
-                        <a href="{{ url("javascript:void(0)") }}" data-bs-toggle="modal" data-bs-target="#searchModal" class=" search-icon"><i class="fa-regular fa-magnifying-glass"></i></a>
+                        <button  data-bs-toggle="modal" data-bs-target="#searchModal" class=" search-icon"><i class="fa-regular fa-magnifying-glass"></i></button>
 
-                        <a href="javascript:void(0)" class="theme-btn"  data-bs-toggle="modal" data-bs-target="#exampleModal5"> Login <i class="fa-sharp fa-regular fa-arrow-right"></i></a>
+                        <button  class="theme-btn"  data-bs-toggle="modal" data-bs-target="#exampleModal5"> Login <i class="fa-sharp fa-regular fa-arrow-right"></i></button>
                         <div class="header__hamburger d-xl-none my-auto">
                             <div class="sidebar__toggle">
                                 <i class="fas fa-bars"></i>

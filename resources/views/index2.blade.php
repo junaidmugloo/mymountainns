@@ -28,6 +28,35 @@
   <!-- ANIMATE CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <style>
+    
+AnimationName animation {
+    background-position-x: -66.285%;
+    background-position-y: 0px;
+}
+#pm24::before {
+    content: attr(data-before) !important;
+}
+.card_box spann::before {
+    content: 'Premium';
+    position: absolute;
+    width: 150%;
+    height: 40px;
+    background: linear-gradient(45deg, #ff6547 0%, #ffb144 51%, #ff7053 100%);
+    /* background: linear-gradient(120deg, #e5e5e5 30%, #f0f0f0 38%, #f0f0f0 40%, #e5e5e5 48%); */
+    background-position: 100% 0;
+    background-size: 200% 100%;
+    transform: rotate(-45deg) translateY(-20px);
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.23);
+    animation: AnimationName 2s infinite;
+}
     #sss{
   background:rgb(0 0 0 / 56%);
 box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );

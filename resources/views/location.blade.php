@@ -191,25 +191,10 @@
         </div>
         
         <!-- breadcrumb-wrappe-Section Start -->
-        <section class="breadcrumb-wrapper fix bg-cover" style="background-image: url(/mymountains/assets/img/breadcrumb/breadcrumb.jpg);">
-            <div class="container">
-                <div class="row">
-                    <div class="page-heading">
-                        <h2>Contact Us</h2>
-                        <ul class="breadcrumb-list">
-                            <li>
-                                <a href="{{ url("index.html") }}">Home</a>
-                            </li>
-                            <li><i class="fa-solid fa-chevrons-right"></i></li>
-                            <li>Contact Us</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <hr>
 
          <!-- Contact-us Section Start -->
-        <section class="contact-us-section fix section-padding">
+        <section class="contact-us-section fix pt-3">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-4 col-lg-6 col-md-6">
