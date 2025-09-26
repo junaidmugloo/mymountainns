@@ -1981,7 +1981,24 @@ Sameer Arora</h4>
       </div>
   </div>
 </div>
- {{-- <script src="https://ddosnotification.github.io/snow-theme/snow.js"></script> --}}
+ <script src="https://ddosnotification.github.io/snow-theme/snow.js"></script>
+ <script>
+    // Default configuration
+SnowTheme.config = {
+    // snowflakes: ['❄', '❅', '❆'],      // Snowflake characters
+     snowflakes: ['🍂', '🍂', '🍂'],      // Snowflake characters
+
+    
+    density: 50,                        // Maximum number of snowflakes
+    interval: 200,                      // How often new snowflakes are created (ms)
+    minSize: 0.8,                      // Minimum snowflake size
+    maxSize: 1.5,                      // Maximum snowflake size
+    minDuration: 5,                    // Minimum fall duration (seconds)
+    maxDuration: 15,                   // Maximum fall duration (seconds)
+    wind: 20,                          // Wind effect strength
+    zIndex: 999999                     // Layer level of snowflakes
+}
+ </script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     // Initialize Bootstrap components
