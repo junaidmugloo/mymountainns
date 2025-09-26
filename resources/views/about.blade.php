@@ -211,9 +211,9 @@
                                     <div class="plane-shape">
                                         <img src="{{ asset("/mymountains/assets/img/about/plane-shape2.png") }}" alt="img">
                                     </div>
-                                    <div class="circle-image">
+                                    {{-- <div class="circle-image">
                                         <img src="{{ asset("/mymountains/assets/img/about/circle.png") }}" alt="img">
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                         </div>
