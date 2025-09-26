@@ -278,37 +278,37 @@
         </section>
 
         <!-- Travel-Feature-Section Start -->
-        <section class="travel-feature-section section-padding fix section-bg">
-            <div class="shape-1">
-                <img src="{{ asset("/mymountains/assets/img/plane-shape1.png") }}" alt="img">
+         <section class="travel-feature-section  fix" style="background-image: url('assets/img/travel-bg.jpg');">
+            <div class="shape-1 float-bob-y">
+                <img loading="lazy" src="{{ asset("mymountains/assets/img/plane-shape1.png") }}" alt="shape 1">
             </div>
-            <div class="shape-2">
-                <img src="{{ asset("/mymountains/assets/img/plane-shape2.png") }}" alt="img">
+            <div class="shape-2 float-bob-x">
+                <img loading="lazy" src="{{ asset("mymountains/assets/img/plane-shape2.png") }}" alt="shape 2">
             </div>
             <div class="container">
                 <div class="feature-wrapper">
                     <div class="row g-4">
                         <div class="col-lg-6">
-                            <div class="feature-content">
+                            <div class="feature-content mt-2">
                                 <div class="section-title">
                                     <span class="sub-title wow fadeInUp">
                                         Are you ready to travel?
                                     </span>
                                     <h2 class="wow fadeInUp wow" data-wow-delay=".2s">
-                                        World Leading Online Tour Booking Platform
+                                     Leading Online Tour Booking Platform
                                     </h2>
                                 </div>
-                                <p class="wow fadeInUp wow" data-wow-delay=".3s">
-                                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+                                <p class="wow fadeInUp wow text-dark" data-wow-delay=".3s">
+                                    Discover Kashmir like never before with our trusted online tour booking platform. We specialize in curating unforgettable journeys through the breathtaking valleys, snow-capped peaks, and serene lakes of Kashmir.
                                 </p>
                                <div class="feature-area">
                                     <div class="line-shape">
-                                        <img src="{{ asset("/mymountains/assets/img/line-shape.png") }}" alt="img">
+                                        <img loading="lazy" src="{{ asset("mymountains/assets/img/line-shape.png") }}" alt="line shape">
                                     </div>
                                 <div class="feature-items wow fadeInUp wow" data-wow-delay=".5s">
                                     <div class="feature-icon-item">
                                         <div class="icon">
-                                            <img src="{{ asset("/mymountains/assets/img/icon/08.svg") }}" alt="img">
+                                            <img loading="lazy" src="{{ asset("mymountains/assets/img/icon/08.svg") }}" alt="icon 08">
                                         </div>
                                         <div class="content">
                                             <h5>
@@ -322,15 +322,17 @@
                                             <i class="fa-solid fa-badge-check"></i>
                                         </li>
                                         <li>
-                                            There are many variations of <br>
-                                             passages of available,
+                                            <span class="text-dark">
+                                               Get ready for the journey of a lifetime!<br>
+                                               This isn’t just another trip—it’s the most adventurous tour ever.
+                                            </span>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="feature-items wow fadeInUp wow" data-wow-delay=".7s">
                                     <div class="feature-icon-item">
                                         <div class="icon">
-                                            <img src="{{ asset("/mymountains/assets/img/icon/09.svg") }}" alt="img">
+                                            <img loading="lazy" src="{{ asset("mymountains/assets/img/icon/09.svg") }}" alt="icon 09">
                                         </div>
                                         <div class="content">
                                             <h5>
@@ -343,10 +345,13 @@
                                         <li>
                                             <i class="fa-solid fa-badge-check"></i>
                                         </li>
-                                        <li>
-                                            There are many variations of <br>
-                                             passages of available,
-                                        </li>
+                                       <li>
+                                            <span class="text-dark">
+                                                Your real adventure begins the moment you step in.<br>
+                                                No more ordinary trips—this is where true exploration starts. 
+                                               
+                                            </span>
+                                       </li>
                                     </ul>
                                 </div>
                                </div>
@@ -354,8 +359,8 @@
                             </div>
                         </div>
                         <div class="col-lg-6">
-                            <div class="feature-image wow fadeInUp wow" data-wow-delay=".3s">
-                                <img src="{{ asset("/mymountains/assets/img/man-image.png") }}" alt="img">
+                            <div class="feature-image wow img-custom-anim-left">
+                                <img loading="lazy" src="{{ asset("mymountains/assets/img/man-image.png") }}" alt="man image">
                             </div>
                         </div>
                     </div>
