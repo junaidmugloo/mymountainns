@@ -278,7 +278,7 @@
         </section>
 
         <!-- Travel-Feature-Section Start -->
-         <section class="travel-feature-section  fix" style="background-image: url('assets/img/travel-bg.jpg');">
+         <section class="travel-feature-section section-padding fix section-bg" style="background-image: url('assets/img/travel-bg.jpg');">
             <div class="shape-1 float-bob-y">
                 <img loading="lazy" src="{{ asset("mymountains/assets/img/plane-shape1.png") }}" alt="shape 1">
             </div>
