@@ -27,7 +27,7 @@ class MailController extends Controller
       'totalpax'=>$request->get('persons',''),
 
    );
-   $response = Http::get('https://crm.joytourandtravels.com/landingpageenquiry.sys', $data2);
+   // $response = Http::get('https://crm.joytourandtravels.com/landingpageenquiry.sys', $data2);
  
       Mail::send('mail', $data, function($message) {
           $message->to('mymountainstourandtravel@gmail.com', 'My Mountains')->subject
@@ -56,7 +56,7 @@ class MailController extends Controller
       'totalpax'=>$request->get('persons',''),
 
    );
-   $response = Http::get('https://crm.joytourandtravels.com/landingpageenquiry.sys', $data2);
+   // $response = Http::get('https://crm.joytourandtravels.com/landingpageenquiry.sys', $data2);
  
       Mail::send('mail2', $data, function($message) {
          $message->to('mymountainstourandtravel@gmail.com', 'My Mountains')->subject
@@ -84,7 +84,7 @@ class MailController extends Controller
       'totalpax'=>$request->get('persons',''),
 
    );
-   $response = Http::get('https://crm.joytourandtravels.com/landingpageenquiry.sys', $data2);
+   // $response = Http::get('https://crm.joytourandtravels.com/landingpageenquiry.sys', $data2);
  
       Mail::send('mail', $data, function($message) {
           $message->to('mymountainstourandtravel@gmail.com', 'My Mountains')->subject
