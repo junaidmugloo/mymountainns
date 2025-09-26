@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!--<< Bootstrap min.css >>-->
+        <link rel="stylesheet" href="{{ asset("mymountains/assets/css/bootstrap.min.css") }}">
+        <!--<< All Min Css >>-->
+        <link rel="stylesheet" href="{{ asset("mymountains/assets/css/all.min.css") }}">
     <title>MyBiz Modal</title>
     <style>
         /* MyBiz Modal Design System */
