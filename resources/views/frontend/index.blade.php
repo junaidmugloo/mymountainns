@@ -1982,7 +1982,7 @@ Sameer Arora</h4>
   </div>
 </div>
  {{-- <script src="https://ddosnotification.github.io/snow-theme/snow.js"></script> --}}
- <script>
+ {{-- <script>
  
 (function() {
     // Create and inject CSS
@@ -2100,7 +2100,9 @@ Sameer Arora</h4>
         createSnowflake: createSnowflake
     };
 })();
- </script>
+ </script> --}}
+
+ 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     // Initialize Bootstrap components
