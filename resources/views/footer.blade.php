@@ -20,8 +20,8 @@
                             </div>
                             <div class="social-icon d-flex align-items-center justify-content-center">
                                 <a href="{{ url("https://www.facebook.com/mymountains") }}"><i class="fab fa-facebook-f"></i></a>
-                                <a href="{{ url("#") }}"><i class="fab fa-twitter"></i></a>
-                                <a href="{{ url("#") }}"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="{{ url("https://x.com/MyMountains_in") }}"><i class="fab fa-twitter"></i></a>
+                                <a href="{{ url("https://www.linkedin.com/in/my-mountains-tour-and-travel-ab41a5387/") }}"><i class="fab fa-linkedin-in"></i></a>
                                 <a href="{{ url("https://www.instagram.com/mymountainstourandtravel/") }}"><i class="fab fa-instagram"></i></a>
                             </div>
                         </div>
