@@ -472,98 +472,64 @@
 
             <div class="mybiz-content">
                 <!-- Logo -->
-                <div class="mybiz-logo">
-                    <div class="mybiz-logo-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
-                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
-                            <line x1="3" y1="6" x2="21" y2="6"/>
-                            <path d="M16 10a4 4 0 0 1-8 0"/>
-                        </svg>
-                    </div>
-                    <div class="mybiz-logo-text">Biz</div>
-                </div>
+                
 
                 <!-- Main Headline -->
-                <div class="mybiz-headline">
-                    Preferred by 
-                    <span class="mybiz-brand-highlight">Netflix</span>, 
-                    <span class="mybiz-brand-highlight">Godrej</span>, 
-                    <span class="mybiz-brand-highlight">Vedanta</span>, 
-                    <span class="mybiz-brand-highlight">Bajaj</span> & 
-                    <span class="mybiz-brand-highlight">59,000+</span> 
-                    business. Join the big league!
-                </div>
-
+                <
                 <!-- Feature Points -->
-                <div class="mybiz-features">
-                    <div class="mybiz-feature">
-                        <div class="mybiz-feature-dot"></div>
-                        <div class="mybiz-feature-text">
-                            <span class="mybiz-brand-highlight">GST Invoice</span> Assurance & Solutions
-                        </div>
-                    </div>
-                    <div class="mybiz-feature">
-                        <div class="mybiz-feature-dot"></div>
-                        <div class="mybiz-feature-text">
-                            <span class="mybiz-brand-highlight">Free Cancellation</span> On Flights
-                        </div>
-                    </div>
-                    <div class="mybiz-feature">
-                        <div class="mybiz-feature-dot"></div>
-                        <div class="mybiz-feature-text">
-                            <span class="mybiz-brand-highlight">Zero Subscription</span> Cost
-                        </div>
-                    </div>
-                </div>
+                
 
                 <!-- Login Section -->
                 <div class="mybiz-section-title">
                     <h2>LOGIN/SIGN UP</h2>
                 </div>
 
-                <!-- Email Form -->
-                <form class="mybiz-form" onsubmit="handleSubmit(event)">
-                    <div class="mybiz-form-group">
-                        <div class="mybiz-form-header">
-                            <label class="mybiz-form-label" for="work_email">Work Email</label>
-                            <a href="#" class="mybiz-forgot-link">Forgot Login Id?</a>
-                        </div>
-                        <input 
-                            type="email" 
-                            id="work_email" 
-                            name="work_email" 
-                            class="mybiz-input" 
-                            placeholder="Enter your work email id"
-                            required
-                        >
-                    </div>
-                    
-                    <button type="submit" class="mybiz-btn mybiz-btn-primary" id="continueBtn" disabled>
-                        CONTINUE
-                    </button>
-                </form>
-
-                <!-- Divider -->
-                <div class="mybiz-divider">
-                    <div class="mybiz-divider-text">
-                        OR USE YOUR BUSINESS ACCOUNT WITH
-                    </div>
+                <h5 class="mx-3" style="font-weight:300;">Save up to <x style="color:#20c997;">50% OFF</x></h5>
+          <h6 class="mx-3 mb-4" style="font-size:0.8rem;">We'll be needing some of your basic details to help you better with your trip</h6>
+          <form action="" id="tform" style=" justify-content: center;
+            display: flex !important;">
+            @csrf
+            <div class="row w-100 h-100">
+              <div class="col-12">
+                <div class="form-group mb-3">
+                  <input type="hidden" name="package" id="packagename" value="" class="form-control" >
+                  <input type="text" name="name" required class="form-control" placeholder="Enter Full Name">
                 </div>
-
-                <!-- Google Sign In -->
-                <a href="#" class="mybiz-btn mybiz-btn-outline">
-                    <div class="mybiz-google-icon">G</div>
-                    <span>Google</span>
-                </a>
-
-                <!-- Terms -->
-                <div class="mybiz-terms">
-                    By proceeding, you agree to MakeMyTrip's 
-                    <a href="#">Terms of use</a>, 
-                    <a href="#">Terms of services</a> 
-                    and 
-                    <a href="#">Privacy</a>
+              </div>
+              <div class="col-12">
+                <div class="form-group mb-3">
+                  <input type="email" name="email"  class="form-control" placeholder="Enter Email">
                 </div>
+              </div>
+              <div class="col-12">
+                <div class="form-group mb-3">
+                  <input type="tel" name="contact" required class="form-control" placeholder="Your Phone">
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-group mb-3">
+                  <input type="date"  id="myDate2"  name="date"  class="form-control" placeholder="Travel Data">
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="form-group mb-3">
+                  <input type="number" name="persons"  class="form-control" placeholder="Travel Count">
+                </div>
+              </div>
+
+              <div class="col-12">
+                <div class="form-group mb-3">
+                  <textarea type="text" name="message"  class="form-control" placeholder="Message"></textarea>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-group mb-3">
+                  <button  style="background:#20c997;" class="btn text-light d-block w-100">Connect with and
+                    Experts</button>
+                </div>
+              </div>
+            </div>
+          </form>
             </div>
         </div>
     </div>
