@@ -174,7 +174,7 @@
                                             <a href="{{ url("/about") }}">About Us</a>
                                         </li>
                                         <li>
-                                            <a href="{{ url("/location") }}">Contact Us</a>
+                                            <a href="{{ url("/contact") }}">Contact Us</a>
                                         </li>
                                     </ul>
                                 </nav>

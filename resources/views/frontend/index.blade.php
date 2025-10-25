@@ -1533,8 +1533,14 @@ Sameer Arora</h4>
                                     </h2>
                                 </div>
                                 <p class="wow fadeInUp wow text-dark" data-wow-delay=".3s">
-                                    Discover Kashmir like never before with our trusted online tour booking platform. We specialize in curating unforgettable journeys through the breathtaking valleys, snow-capped peaks, and serene lakes of Kashmir.
-                                </p>
+                                    Welcome to MyMountains.in, where your Himalayan adventure begins.
+                                     We make exploring Kashmir and Ladakh simple and memorable.
+                                      From floating on a Shikara in Dal Lake, skiing in Gulmarg,
+                                       to watching the sunset over Pangong Lake,
+                                        we handle all the planning so you can focus on creating memories.
+                                    Our carefully designed tours, hassle-free bookings, and local insights ensure every trip feels personal and unique. Start your journey today and let the mountains call you.
+
+                                 </p>
                                <div class="feature-area">
                                     <div class="line-shape">
                                         <img loading="lazy" src="{{ asset("mymountains/assets/img/line-shape.png") }}" alt="line shape">

@@ -5,13 +5,30 @@
 <!-- Mirrored from ex-coders.com/html/turmet/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 08 Apr 2025 11:50:41 GMT -->
 <head>
         <!-- ========== Meta Tags ========== -->
+            <!-- ========== Meta Tags ========== -->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="author" content="pixel-drop">
-        <meta name="description" content="Turmet - Travel & Tour Agency HTML Template">
+        <meta name="author" content="My Mountains Tour Company">
+        <meta name="robots" content="index,follow"/>
+        <meta name="language" content="english"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://www.mymountains.in/"/>
+        <meta property="og:site_name" content="https://www.mymountains.in/"/>
+        <meta name="og:description" content="{{ $seo->meta_description }}"/>
+        <meta name="twitter:card" content="summary"/>
+        <meta name="twitter:creator" content="@MyMountains"/>
+        <meta name="twitter:title" content="My Mountains - #1 Travel & Holiday Tour Packages Company in kashmir"/>
+        <meta name="twitter:description" content="{{ $seo->meta_description }}"/>
+        <meta name="description" content="{{ $seo->meta_description }}">
+        <meta name="keywords" content="{{ $seo->meta_keywords }}">
+        <meta name="image" content="https://mymountains.in/mymountains/assets/img/logo/solutions.png">
+        <meta property="og:image" content="https://mymountains.in/mymountains/assets/img/logo/solutions.png"/>
+
+
+        
         <!-- ======== Page title ============ -->
-        <title>My Mountains</title>
+        <title>{{ $seo->meta_title}}</title>
         <!--<< Favcion >>-->
         <link rel="shortcut icon" href="{{ asset("/mymountains/assets//img/favicon.svg") }}">
         <!--<< Bootstrap min.css >>-->
@@ -97,8 +114,7 @@
         </button>
 
         <!--<< Mouse Cursor Start >>-->  
-        <div class="mouse-cursor cursor-outer"></div>
-        <div class="mouse-cursor cursor-inner"></div>
+      
 
         <!-- Offcanvas Area Start -->
         <div class="fix-area">

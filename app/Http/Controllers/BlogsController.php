@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blogs;
+use App\Models\MySEO;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\File;
@@ -21,8 +22,9 @@ class BlogsController extends Controller
     }
 
     public function blogs(){
+         $seo=MySEO::where('og_image','blog')->first();
         $blogs = Blogs::all();
-        return view('blogs', compact('blogs'));
+        return view('blogs', compact('blogs','seo'));
     }
 
     public function detail($slug){

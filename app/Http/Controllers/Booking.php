@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\CategoryModel;
+use App\Models\MySEO;
 use App\Models\PackagesModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
@@ -17,6 +18,7 @@ class Booking extends Controller
         return view('Booking/booking');
     }
     public function booking_filter(Request $request){
+
         // Cache categories for 60 minutes
         if(isset($request->budget)){
            
@@ -41,9 +43,9 @@ class Booking extends Controller
 
     // Cache packages for 60 minutes
     $packages =  PackagesModel::paginate(5);
-    
+    $seo=MySEO::where('og_image','tour')->first();
 
-    return view('filter', compact('category', 'packages'));
+    return view('filter', compact('category', 'packages','seo'));
         }    
 }
 

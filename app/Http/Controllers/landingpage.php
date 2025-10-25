@@ -217,7 +217,14 @@ class landingpage extends Controller
 
 
     public function about(){
-        return view('about');
+        $seo=MySEO::where('og_image','about-us')->first();
+        return view('about',compact('seo'));
+    }
+    public function contact(){  
+
+    $seo=MySEO::where('og_image','contact-us')->first();
+    return view('location',compact('seo'));
+
     }
 
     public function kashmir(){
@@ -228,13 +235,15 @@ class landingpage extends Controller
         $banner= TopSlider::all();
         $faq= FAQ::all();
         $offer= Offer::all();
+        $seo=MySEO::where('og_image','kashmir')->first();
         return view('kashmir',['packages'=>$packages,
         'packages1'=>$packages1,
         'packages2'=>$packages2,
         'premium'=>$premium,
         'faq'=>$faq,
         'offer'=>$offer,
-        'banner'=>$banner
+        'banner'=>$banner,
+        'seo'=>$seo
     ]);
     }
     public function ladakh(){
@@ -245,13 +254,15 @@ class landingpage extends Controller
         $banner= TopSlider::all();
         $faq= FAQ::all();
         $offer= Offer::all();
+        $seo=MySEO::where('og_image','ladakh')->first();
         return view('ladakh',['packages'=>$packages,
         'packages1'=>$packages1,
         'packages2'=>$packages2,
         'premium'=>$premium,
         'faq'=>$faq,
         'offer'=>$offer,
-        'banner'=>$banner
+        'banner'=>$banner,
+        'seo'=>$seo
     ]);
     }
 

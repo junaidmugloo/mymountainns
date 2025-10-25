@@ -1,9 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jammu And Kashmir Holiday Packages</title>
+       <!-- ========== Meta Tags ========== -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="My Mountains Tour Company">
+        <meta name="robots" content="index,follow"/>
+        <meta name="language" content="english"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://www.mymountains.in/"/>
+        <meta property="og:site_name" content="https://www.mymountains.in/"/>
+        <meta name="og:description" content="{{ $seo->meta_description }}"/>
+        <meta name="twitter:card" content="summary"/>
+        <meta name="twitter:creator" content="@MyMountains"/>
+        <meta name="twitter:title" content="My Mountains - #1 Travel & Holiday Tour Packages Company in kashmir"/>
+        <meta name="twitter:description" content="{{ $seo->meta_description }}"/>
+        <meta name="description" content="{{ $seo->meta_description }}">
+        <meta name="keywords" content="{{ $seo->meta_keywords }}">
+        <meta name="image" content="https://mymountains.in/mymountains/assets/img/logo/solutions.png">
+        <meta property="og:image" content="https://mymountains.in/mymountains/assets/img/logo/solutions.png"/>
+
+
+        
+        <!-- ======== Page title ============ -->
+        <title>{{ $seo->meta_title}}</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">

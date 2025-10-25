@@ -17,6 +17,7 @@ use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\Top_Slider;
 use App\Http\Controllers\Users;
 use App\Http\Controllers\vehicle_Controller;
+use App\Models\MySEO;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MySEOController;
@@ -87,9 +88,6 @@ Route::get('/car', function () {
 //     return view('kashmir');
 // });
 
-Route::get('/location', function () {
-    return view('location');
-});
 
 
 // Route::get('/blogs/tulip-festival', function () {
@@ -118,7 +116,8 @@ route::get('/bizz', function () {
 
 
 
-Route::get('/blogs/{slug}',[BlogsController::class,'detail']);       
+Route::get('/blogs/{slug}',[BlogsController::class,'detail']);   
+    
 Route::get('/blogs',[BlogsController::class,'blogs']);  
 Route::match(['get', 'post'], 'updateblog',[BlogsController::class,'update']); 
 
@@ -126,6 +125,8 @@ Route::match(['get', 'post'], 'updateblog/{id}',[BlogsController::class,'edit'])
 
 Route::get('/',[landingpage::class,'index']);
 Route::get('/about',[landingpage::class,'about']);
+Route::get('/contact',[landingpage::class,'contact']);
+
 Route::get('ladakh',[landingpage::class,'ladakh']);
 Route::get('kashmir',[landingpage::class,'kashmir']);
 
