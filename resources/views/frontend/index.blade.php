@@ -867,7 +867,7 @@ e.preventDefault();
                                     <img loading="lazy" src="{{ asset("mymountains/assets/img/about/border.png") }}" alt="Border Image">
                                 </div>
                                 <div class="vdeo-item">
-                                    <a href="https://www.youtube.com/watch?v=Cn4G2lZ_g2I" class="video-btn video-popup">
+                                    <a href="https://youtu.be/rFyO1NvOfsg?si=sT_W91HpGyb5O9it" class="video-btn video-popup">
                                         <i class="fa-duotone fa-play"></i>
                                     </a>
                                     <h5>WACTH VIDEO </h5>
