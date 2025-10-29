@@ -27,31 +27,29 @@
 
   <!-- Packages Page -->
   <url>
-    <loc>https://mymountais.in/packages</loc>
+    <loc>https://mymountais.in/explore</loc>
     <lastmod>2025-10-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- Transport Page -->
   <url>
-    <loc>https://mymountais.in/transport</loc>
+    <loc>https://mymountais.in/kashmir</loc>
     <lastmod>2025-10-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- Gallery Page -->
   <url>
-    <loc>https://mymountais.in/gallery</loc>
+    <loc>https://mymountais.in/ladakh</loc>
     <lastmod>2025-10-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
-
+  
   <!-- Blog Page -->
   <url>
-    <loc>https://mymountais.in/blog</loc>
+    <loc>https://mymountais.in/blogs</loc>
     <lastmod>2025-10-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
