@@ -72,11 +72,7 @@
                                     Terms of Service
                                 </a>
                             </li>
-                            <li>
-                                <a href="{{ url("/terms") }}">
-                                    Privacy Policy
-                                </a>
-                            </li>
+                            
                             <li>
                                 <a href="{{ url("/policy") }}">
                                     Refund Policy
