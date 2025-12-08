@@ -68,17 +68,17 @@
                         </div>
                         <ul class="list-items">
                             <li>
-                                <a href="{{ url("") }}">
+                                <a href="{{ url("/terms") }}">
                                     Terms of Service
                                 </a>
                             </li>
                             <li>
-                                <a href="{{ url("") }}">
+                                <a href="{{ url("/terms") }}">
                                     Privacy Policy
                                 </a>
                             </li>
                             <li>
-                                <a href="{{ url("") }}">
+                                <a href="{{ url("/policy") }}">
                                     Refund Policy
                                 </a>
                             </li>
