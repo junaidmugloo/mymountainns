@@ -2034,8 +2034,8 @@ Sameer Arora</h4>
     // Configuration options
     const config = {
         // change accordion to seasional snowflakes if desired
-        
-        snowflakes: ['❆', '❄️', '⚪'],      // Snowflake characters
+
+        snowflakes: ['❆', '❆', '❆'],      // Snowflake characters
         density: 50,                        // Maximum number of snowflakes
         interval: 200,                      // Interval between snowflake creation (ms)
         minSize: 0.8,                      // Minimum snowflake size
