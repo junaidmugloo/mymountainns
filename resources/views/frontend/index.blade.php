@@ -1987,8 +1987,8 @@ Sameer Arora</h4>
       </div>
   </div>
 </div>
- {{-- <script src="https://ddosnotification.github.io/snow-theme/snow.js"></script> --}}
- {{-- <script>
+<script src="https://ddosnotification.github.io/snow-theme/snow.js"></script> --}}
+ <script>
  
 (function() {
     // Create and inject CSS
@@ -2033,7 +2033,9 @@ Sameer Arora</h4>
 
     // Configuration options
     const config = {
-        snowflakes: ['🍂', '🍂', '🍂'],      // Snowflake characters
+        // change accordion to seasional snowflakes if desired
+        
+        snowflakes: ['❆', '❄️', '⚪'],      // Snowflake characters
         density: 50,                        // Maximum number of snowflakes
         interval: 200,                      // Interval between snowflake creation (ms)
         minSize: 0.8,                      // Minimum snowflake size
@@ -2106,7 +2108,7 @@ Sameer Arora</h4>
         createSnowflake: createSnowflake
     };
 })();
- </script> --}}
+ </script> 
 
  
 <script>
