@@ -393,14 +393,51 @@
 
 <!-- Elfsight WhatsApp Chat | Untitled WhatsApp Chat -->
 
-    <script 
+    <script
       type="text/javascript"
       src="https://d3mkw6s8thqya7.cloudfront.net/integration-plugin.js"
       id="aisensy-wa-widget"
       widget-id="aaamgj"
     >
     </script>
-	
+
+    <!-- Floating Call Widget -->
+    <a href="tel:+919906786356" class="floating-call-btn" title="Call Us">
+        <i class="fa-solid fa-phone"></i>
+    </a>
+    <style>
+    .floating-call-btn {
+        position: fixed;
+        bottom: 90px; /* Adjust based on WhatsApp widget position */
+        right: 25px;
+        background-color: #20c997;
+        color: white;
+        border-radius: 50%;
+        width: 45px;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        z-index: 9999;
+        transition: transform 0.3s, background-color 0.3s;
+    }
+    .floating-call-btn:hover {
+        background-color: #17a589;
+        color: white;
+        transform: scale(1.1);
+    }
+    /* Add pulse animation */
+    @keyframes pulse-call {
+        0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(32, 201, 151, 0.7); }
+        70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(32, 201, 151, 0); }
+        100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(32, 201, 151, 0); }
+    }
+    .floating-call-btn {
+        animation: pulse-call 2s infinite;
+    }
+    </style>	
 
 {{-- <!-- Elfsight AI Chatbot | Untitled AI Chatbot -->
 <script src="https://elfsightcdn.com/platform.js" async></script>

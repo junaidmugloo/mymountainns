@@ -103,6 +103,14 @@
         </ul>
     </li>
 
+    <li class="submenu" id="seo">
+        <a href="javascript:void(0);"><i class='text-muted jx bx bx-globe'></i><span>SEO</span> <span class="menu-arrow"></span></a>
+        <ul>
+        <li><a href="/addseo">Add SEO</a></li>
+        <li><a href="/viewseo">View SEO</a></li>
+        </ul>
+    </li>
+
 
 </ul>
 

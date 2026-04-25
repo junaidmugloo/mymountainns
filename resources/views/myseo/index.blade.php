@@ -52,7 +52,12 @@
    
 <div class="row">
 
-<input type="hidden" name="og_image" >
+<div class="col-lg-6 col-sm-6 col-12">
+<div class="form-group">
+<label>Page / OG Image Slug</label>
+<input type="text" name="og_image" required>
+</div>
+</div>
 
 <div class="col-lg-6 col-sm-6 col-12">
 <div class="form-group">
@@ -119,7 +124,7 @@
 
 <script>
   $("#dashboard").removeClass("active");
-  $("#banners").addClass("act");
+  $("#seo").addClass("active");
 
   
        $(document).ready(function(){

@@ -128,7 +128,7 @@
             <td>{{$s->meta_keywords}}</td>
             <td>
                 <meta name="csrf-token" content="{{ csrf_token() }}">
-            <a class="me-3" href="/seo/{{$s->id}}">
+            <a class="me-3" href="/editseo/{{$s->id}}">
             <img src="assets/img/icons/edit.svg" alt="img">
             </a>
             <a onclick="Delete2('{{$s->id}}')" class="me-3 confirm-text" href="javascript:void(0);">
@@ -169,7 +169,7 @@
 
 <script>
      $("#dashboard").removeClass("active");
-     $("#blogs").addClass("act");
+     $("#seo").addClass("active");
 
      function Delete2(id){
         var token = $("meta[name='csrf-token']").attr("content");
@@ -186,7 +186,7 @@
 
     $.ajax(
     {
-        url: "viewblog/"+id,
+        url: "/viewseo/"+id,
         type: 'DELETE',
         data: {
             "id": id,
@@ -199,7 +199,7 @@
 
     Swal.fire({
       title: "Deleted!",
-      text: "Your blog has been deleted.",
+      text: "Your SEO detail has been deleted.",
       icon: "success"
     });
     
