@@ -66,22 +66,9 @@ class LoginController extends Controller
             $user->password = Hash::make($request->password);
            
 // sending email
-config([
-    'mail.mailers.smtp' => [
-        'transport' => 'smtp',
-        'host' => 'smtp.hostinger.com',  // Hostinger SMTP server
-        'port' => 465,
-        'encryption' => 'ssl',
-        'username' => 'verify@joytourandtravels.com',  // Replace with your Hostinger email
-        'password' => 'Joytravels@123',        // Replace with your Hostinger email password
-    ],
-    'mail.from.address' => 'verify@joytourandtravels.com',  // Sender email
-    'mail.from.name' => 'Joy Tour & Travels',         // Sender name
-]);
-
 $details = [
     'title' => 'Activate your account',
-    'body' => 'Click Activate button to activate your account.https://joytourandtravels.com/verify/'.$token,
+    'body' => 'Click Activate button to activate your account. https://mymountains.in/verify/'.$token,
 ];
 
 Mail::to($request->email)->send(new VerifyEmail($details));

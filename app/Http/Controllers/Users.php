@@ -17,7 +17,7 @@ class Users extends Controller
      */
     public function index()
     {
-        $topslider = User::all()->where('email','!=','admin@joy.com')->where('google_id',null);
+        $topslider = User::all()->where('email','!=','bookings@mymountains.in')->where('google_id',null);
       
         return view('viewstaff',['topslider'=>$topslider]);
     }

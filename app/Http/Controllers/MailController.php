@@ -30,7 +30,7 @@ class MailController extends Controller
    // $response = Http::get('https://crm.joytourandtravels.com/landingpageenquiry.sys', $data2);
  
       Mail::send('mail', $data, function($message) {
-          $message->to('mymountainstourandtravel@gmail.com', 'My Mountains')->subject
+          $message->to('bookings@mymountains.in', 'My Mountains')->subject
           ('New Query');
           $message->from('bookings@mymountains.in','My Mountains');
       });
@@ -59,7 +59,7 @@ class MailController extends Controller
    // $response = Http::get('https://crm.joytourandtravels.com/landingpageenquiry.sys', $data2);
  
       Mail::send('mail2', $data, function($message) {
-         $message->to('mymountainstourandtravel@gmail.com', 'My Mountains')->subject
+         $message->to('bookings@mymountains.in', 'My Mountains')->subject
           ('New Query');
           $message->from('bookings@mymountains.in','My Mountains');
       });
@@ -87,7 +87,7 @@ class MailController extends Controller
    // $response = Http::get('https://crm.joytourandtravels.com/landingpageenquiry.sys', $data2);
  
       Mail::send('mail', $data, function($message) {
-          $message->to('mymountainstourandtravel@gmail.com', 'My Mountains')->subject
+          $message->to('bookings@mymountains.in', 'My Mountains')->subject
           ('New Query');
           $message->from('bookings@mymountains.in','My Mountains');
       });
@@ -99,21 +99,19 @@ class MailController extends Controller
 
 
     public function basic_email() {
-        $data = array('name'=>"Joy Tour & Travels");
+        $data = array('name'=>"My Mountains");
      
         Mail::send(['text'=>'mail'], $data, function($message) {
-           $message->to('junaidmugloo@gmail.com', 'Joy Tour & Travels')->subject
+           $message->to('bookings@mymountains.in', 'My Mountains')->subject
               ('Query Submit');
-           $message->from('info@joytourandtravel.com','Joy Tour & Travels');
         });
         echo "Basic Email Sent. Check your inbox.";
      }
      public function html_email() {
-        $data = array('name'=>"Virat Gandhi");
+        $data = array('name'=>"My Mountains");
         Mail::send('mail', $data, function($message) {
-            $message->to('junaidmugloo@gmail.com', 'Jazza Grocery')->subject
+            $message->to('bookings@mymountains.in', 'My Mountains')->subject
             ('Order Placed');
-            $message->from('verifiy@jazza.in','Jazza Grocery');
         });
         echo "HTML Email Sent. Check your inbox.";
      }
